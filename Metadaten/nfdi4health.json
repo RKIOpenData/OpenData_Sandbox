@@ -1,0 +1,96 @@
+{
+  "data": {
+    "type": "studyhub_resources",
+    "attributes": {
+      "commit_button": "Submit",
+      "content_blobs": [
+        {
+          "content_type": "text/html",
+          "url": "https://github.com/robert-koch-institut/OpenData_Sandbox",
+          "original_filename": "Github Link"
+        }
+      ],
+      "resource": {
+        "resource_type": "Dataset",
+        "resource_type_general": "Dataset",
+        "resource_titles": [
+          {
+            "title": "Open Data - Sandbox",
+            "title_language": "DE (German)"
+          }
+        ],
+        "resource_acronyms": [],
+        "resource_descriptions": [
+          {
+            "description": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsum (http://rki.de).\n\n- lorem ipsum\n- lorem ipsumlorem ipsum",
+            "description_language": "DE (German)"
+          }
+        ],
+        "resource_format": "",
+        "resource_keywords": [
+          {
+            "resource_keywords_label": "Open Data",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "RKI",
+            "resource_keywords_label_code": ""
+          }
+        ],
+        "resource_language": [
+          "DE (German)"
+        ],
+        "resource_version": "2023-08-11",
+        "resource_web_page": "https://www.github.io/robert-koch-institut/Open_Data_-_Sandbox",
+        "resource_use_rights_label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)",
+        "resource_use_rights_description": "",
+        "resource_use_rights_authors_confirmation_1": true,
+        "resource_use_rights_authors_confirmation_2": true,
+        "resource_use_rights_authors_confirmation_3": true,
+        "resource_use_rights_support_by_licencing": true,
+        "provenance": {
+          "data_source": ""
+        },
+        "roles": [
+          {
+            "role_type": "Creator/Author",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_name": "Open Data Team",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Organisational",
+            "role_name_organisational": "Open Data Team"
+          }
+        ],
+        "ids": [
+          {
+            "id_identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
+            "id_date": "",
+            "id_type": "URL",
+            "id_relation_type": "describes",
+            "id_resource_type_general": "Dataset"
+          },
+          {
+            "id_identifier": "10.5072/zenodo.1230551",
+            "id_date": "",
+            "id_type": "DOI",
+            "id_relation_type": "has part",
+            "id_resource_type_general": "Dataset"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "projects": {
+        "data": [
+          {
+            "id": "1",
+            "type": "projects"
+          }
+        ]
+      }
+    }
+  }
+}
