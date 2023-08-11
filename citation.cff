@@ -18,6 +18,7 @@ keywords:
 message: Cite me!
 url: https://www.github.io/robert-koch-institut/Open_Data_-_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.1230551
+doi: 10.5072/zenodo.1230567
+version: '2023-08-11T15:08:32+02:00'
 authors:
   - name: Open Data Team
