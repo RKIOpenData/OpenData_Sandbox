@@ -1,4 +1,5 @@
-![Robert Koch-Institut](/.github/pictures/RKI_Logo.jpeg)
+![Robert Koch-Institut](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/.github/pictures/RKI_Logo.jpeg)  
+
 # Sandbox Respository des Open Data Teams
 
 [Robert Koch-Institut | RKI](https://rki.de)  
@@ -9,7 +10,7 @@ Nordufer 20
 
 ---
 **Zitieren**  
-Open Data Team (**2023**): Sandbox Respository des Open Data Teams. [DOI: 10.5072/zenodo.1230572](https://doi.org/10.5072/zenodo.1230572)
+Open Data Team (**2023**): Sandbox Respository des Open Data Teams. [DOI: 10.5072/zenodo.1230575](https://doi.org/10.5072/zenodo.1230575)
 
 
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. 
