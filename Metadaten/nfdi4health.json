@@ -5,7 +5,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.1230576",
+        "identifier": "10.5072/zenodo.1231181",
         "type": "DOI",
         "resource_type_general": "Dataset",
         "relation_type": "A references B"
@@ -55,7 +55,7 @@
         },
         "resource_use_rights_label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "resource_version": "2023-08-11"
+      "resource_version": "2023-08-14"
     },
     "resource_titles": [
       {
