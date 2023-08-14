@@ -1,9 +1,8 @@
 name: Send metadata to Govdata
 on:
-  workflow_dispatch:
   push:
     paths:
-      - 'Metadaten/**.ttl'
+      - Metadaten/govdata.ttl'
 jobs:
   Push_Govdata_ttl:
     name: Push metadata to Govdata-Repository
