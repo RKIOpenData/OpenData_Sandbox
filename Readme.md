@@ -8,7 +8,7 @@ Nordufer 20
 
 ---
 **Zitieren**  
-Open Data Team (**2023**): Sandbox Respository des Open Data Teams. [DOI: 10.5072/zenodo.1241031](https://doi.org/10.5072/zenodo.1241031)
+Open Data Team (**2023**): Sandbox Respository des Open Data Teams. [DOI: 10.5072/zenodo.1246974](https://doi.org/10.5072/zenodo.1246974)
 
 
 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum. 
