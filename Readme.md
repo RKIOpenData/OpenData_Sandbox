@@ -15,7 +15,7 @@ E-Mail-Adresse für Rückmeldungen: [krebsdaten@rki.de](mailto:krebsdaten@rki.de
 ---
 
 **Zitieren**  
-Meisegeier, S., Imhoff, M., Berg, K. und Kraywinkel, K. (2023): Bundesweiter klinischer Krebsregisterdatensatz - Datenschema und Klassifikationen (oBDS_v3.0.0.8a_RKI). Zenodo. DOI:[Currently no DOI available](https://doi.org/Currently no DOI available)  
+Meisegeier, S., Imhoff, M., Berg, K. und Kraywinkel, K. (2023): Bundesweiter klinischer Krebsregisterdatensatz - Datenschema und Klassifikationen (oBDS_v3.0.0.8a_RKI). Zenodo. DOI:[Currently/no/DOI/available](https://doi.org/Currently/no/DOI/available)  
 
 ## Einleitung
 
