@@ -1,403 +1,214 @@
-# Bundesweiter klinischer Krebsregisterdatensatz - Datenschema und Klassifikationen
+Datensatzdokumentation
+# Hochfrequente Mental Health Surveillance 
+*Hochfrequente Beobachtung der psychischen Gesundheit der erwachsenen Bevölkerung in Deutschland*  
 
-**[Robert Koch-Institut | RKI](https://rki.de)**  
+
+[Robert Koch-Institut | RKI](https://rki.de)  
 Nordufer 20  
 13353 Berlin  
 
-**Zentrum für Krebsregisterdaten | ZfKD**  
-[Stefan Meisegeier](https://orcid.org/0000-0003-2347-1836 "ORCiD") (Projektleitung)  
-[Maren Imhoff](https://orcid.org/0009-0001-0030-566X "ORCiD") (Data Manager)  
-Karsten Berg (Data Analyst)  
-[Klaus Kraywinkel](https://orcid.org/0000-0002-9250-6003 "ORCiD") (Leitung ZfKD)  
-
-E-Mail-Adresse für Rückmeldungen: [krebsdaten@rki.de](mailto:krebsdaten@rki.de)  
+[Stephan Junker](0000-0001-8612-9347), [Stefan Damerow](0000-0002-7265-1123), [Lena Walther](0000-0002-2703-5022) und [Elvira Mauz](0000-0003-1988-9789)  
+[Fachgebiet 26 | Psychische Gesundheit](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt2/FG26/fg26_node.html)
 
 ---
 
 **Zitieren**  
-Meisegeier, S., Imhoff, M., Berg, K. und Kraywinkel, K. (2023): Bundesweiter klinischer Krebsregisterdatensatz - Datenschema und Klassifikationen (oBDS_v3.0.0.8a_RKI). Zenodo. DOI:[Currently/no/DOI/available](https://doi.org/Currently/no/DOI/available)  
+Junker, Damerow, Walther und Mauz (2023): Hochfrequente Mental Health Surveillance, Berlin: Zenodo. [DOI: 10.5281/zenodo.8366841](https://doi.org/10.5281/zenodo.8366841) 
+
 
 ## Einleitung
 
-Die Krebsregistrierung in Deutschland erfolgt auf der Basis von Landesgesetzen. Diese verpflichten medizinische Einrichtungen (v. a. niedergelassene Ärztinnen und Ärzte, pathologische Institute, Kliniken, Screening-Einheiten), neu auftretende Krebsfälle und definierte Ereignisse im Krankheits- bzw. Behandlungsverlauf an das zuständige Krebsregister zu melden.
+Im Rahmen der Mental Health Surveillance (MHS) am Robert Koch-Institut (RKI) werden für eine Auswahl an Indikatoren der psychischen Gesundheit von Erwachsenen basierend auf Surveydaten Zeitreihen bestehend aus gleitenden Drei-Monats-Schätzern und Glättungskurven berechnet. Dadurch sollen Entwicklungen in der psychischen Gesundheit der erwachsenen Bevölkerung in Deutschland mit möglichst geringem Zeitverzug beobachtet und insbesondere negative Entwicklungen frühzeitig erkannt werden. Diese hochfrequente Surveillance wurde ursprünglich vor dem Hintergrund neuer Informationsbedarfe zur Entwicklung der psychischen Gesundheit der Bevölkerung in der COVID-19-Pandemie entwickelt.
 
-Die Krebsregister der Bundesländer wiederum übermitteln nach Vorgabe des [Bundeskrebsregisterdatengesetzes (BKRG)](https://www.gesetze-im-internet.de/bkrg/BJNR270700009.html) einmal jährlich Angaben zu neu erfassten Erkrankungsfällen an das Zentrum für Krebsregisterdaten (ZfKD) am Robert Koch-Institut. Das ZfKD prüft die Qualität der Daten, führt sie zu einem bundesweiten Datensatz zusammen und stellt sie [auf Antrag für wissenschaftliche Forschungsprojekte](https://www.krebsdaten.de/info_antrag) zur Verfügung.
 
-In diesem Repository werden begleitende Informationen zu [Struktur](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#struktur-des-bundesweiten-klinischen-krebsregisterdatensatzes) und [Klassifikationen](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#klassifikationen) des bundesweiten ZfKD-Datensatzes bereitgestellt.
+## Datensatz und Entstehungskontext
 
-Die hier verwendeten [Klassifikationen](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#klassifikationen) spiegeln den derzeitigen Arbeitsstand des ZfKD wider. Ein wesentliches Ziel des Repositories ist es, diesen Stand möglichst transparent abzubilden und beteiligte Akteure zur weiteren gemeinsamen Harmonisierung von Standards einzuladen.
+Im Datensatz „Hochfrequente Mental Health Surveillance“ werden aktuelle Zeitreihen bestehend aus gleitenden Drei-Monats-Schätzern samt Konfidenzintervallen sowie wöchentlichen Schätzern für die Glättungskurven zu den folgenden Indikatoren der psychischen Gesundheit Erwachsener bereitgestellt: 
+- depressive Symptome
+- Angstsymptome
+- selbsteingeschätzte psychische Gesundheit
 
-> 💡 Der ZfKD-Datensatz ist nicht öffentlich zugänglich, kann aber auf Antrag für wissenschaftliche Forschungszwecke genutzt werden. Bitte verwenden Sie für Fragen zur Antragstellung die oben genannte E-Mail-Adresse oder das auf der Internetseite des ZfKD bereitgestellte [Kontaktformular](https://www.krebsdaten.de/SharedDocs/Kontaktformulare/A/Antrag-krebsdaten/Integrator_SCU.html). Informationen zum gesetzlichen Auftrag, zu Methoden und Veröffentlichungen des ZfKD erhalten Sie ebenfalls auf den [Internetseiten des ZfKD](https://www.krebsdaten.de/). Bitte beachten Sie, dass das ZfKD an den Daten, die von den Krebsregistern übermittelt wurden, keine Änderungen vornimmt.
+Der Datensatz umfasst je Indikator sowohl Schätzer für die kategoriale Auswertung der entsprechenden Messinstrumente als auch Mittelwerte von Summenwerten. Neben den Schätzern für die erwachsene Gesamtbevölkerung sind auch Schätzer für Bevölkerungsgruppen stratifiziert (aufgeteilt) nach Geschlecht (wie bei Geburt zugewiesen), Alter und Bildung enthalten. Für die Bevölkerungsgruppen werden standardisierte (nach den jeweiligen anderen beiden Charakteristika aus Geschlecht, Alter und Bildung) und nicht standardisierte Schätzer angegeben.
 
-## Informationen zum Entstehungskontext des ZfKD-Datensatzes
+Die 2019 bzw. 2021 beginnenden Zeitreihen werden in der Regel monatlich aktualisiert, sobald neue Daten aus der [GEDA-Studie](https://www.geda-studie.de/deutsch/home.html) (siehe Datenerhebung) verfügbar sind. 
 
-Für die Erhebung klinischer Krebsregisterdaten wurde mit dem [Krebsfrüherkennungs- und -registergesetz (KFRG)](https://www.bgbl.de/xaver/bgbl/start.xav?start=//*%5B@attr_id=%27bgbl113s0617.pdf%27%5D#__bgbl__%2F%2F*%5B%40attr_id%3D%27bgbl113s0617.pdf%27%5D__1697181091765) im [§ 65c Fünftes Buch Sozialgesetzbuch (SGB V)](https://www.gesetze-im-internet.de/sgb_5/__65c.html) ein bundesrechtlicher Rahmen geschaffen. Die von den klinischen Krebsregistern zu erfassenden Angaben werden in dem von der Arbeitsgemeinschaft Deutscher Tumorzentren (ADT) und der Gesellschaft der epidemiologischen Krebsregister in Deutschland (GEKID) erarbeiteten [onkologischen Basisdatensatz (oBDS)](https://basisdatensatz.de/) spezifiziert und regelmäßig überarbeitet. Die letzte Anpassung des oBDS wurde am 12. Juli 2021 [im Bundesanzeiger publiziert](https://www.bundesanzeiger.de/pub/publication/bRrUsRox5lQ14casCXs/content/bRrUsRox5lQ14casCXs/BAnz%20AT%2012.07.2021%20B4.pdf). Einmal jährlich übermitteln die Krebsregister Daten nach Maßgabe des [Bundeskrebsregisterdatengesetzes (BKRG)](https://www.gesetze-im-internet.de/bkrg/BJNR270700009.html) an das ZfKD.
 
-Seit der Novellierung des BKRG durch das [Gesetz zur Zusammenführung von Krebsregisterdaten](https://www.bgbl.de/xaver/bgbl/start.xav#__bgbl__%2F%2F*%5B%40attr_id%3D%27bgbl121s3890.pdf%27%5D__1697190045694) enthalten die ans ZfKD übermittelten Daten auch klinische Angaben, u. a. zum Krankheitsverlauf und zur Behandlung (ab Diagnosejahr 2020).
-
-Die Inhalte und die Struktur der ans ZfKD zu übermittelnden Daten wurden in einer AG mit Vertretern des ZfKD und der Krebsregister abgestimmt, dabei diente der oBDS und das novellierte Bundeskrebsregisterdatengesetz (§5) als Arbeitsgrundlage.
-
-Das Arbeitsergebnis ist das hier beschriebene, für die Datenübermittlung ans ZfKD zu verwendende XML-Schema (alternativ als oBDS-RKI oder ZfKD-Lieferdatensatz bezeichnet, siehe dazu [Struktur des bundesweiten klinischen Krebsregisterdatensatzes](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#struktur-des-bundesweiten-klinischen-krebsregisterdatensatzes)).
-
-Umfassende Informationen zur Krebsregistrierung sind hier verfügbar: [Manual der klinischen und epidemiologischen Krebsregistrierung](https://www.gekid.de/download/1228/?tmstv=1697113791) (Veröffentlichung 2019)
 
 ### Administrative und organisatorische Angaben
 
-Das [Zentrum für Krebsregisterdaten (ZfKD)](https://www.krebsdaten.de/) des RKI ist zuständig für die bundesweite Krebsberichterstattung und stellt Dritten auf Antrag Daten für überregionale Forschungsprojekte zur Verfügung. Es prüft die Qualität der von den Krebsregistern übermittelten Daten und gibt den Krebsregistern diesbezüglich Rückmeldung.  
+Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-) Daten erfolgen durch das RKI-Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/MF4/mf4_node.html). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.
 
-Inhaltliche Fragen zur Datenerhebung, Datenauswertung und Datenkuration können direkt an das ZfKD gestellt werden (E-Mail-Adresse für Anfragen: [krebsdaten@rki.de](mailto:krebsdaten@rki.de)).
+## Datenerhebung und Datenauswertung  
 
-### Datenübermittlung an das ZfKD  
+Die Datengrundlage der Zeitreihen sind vor allem verschiedene Erhebungswellen der im Rahmen des Gesundheitsmonitorings durchgeführten Studie [„Gesundheit in Deutschland aktuell (GEDA)“: GEDA/EHIS 2019-2020, GEDA 2021, GEDA 2022 und GEDA 2023](https://www.geda-studie.de/deutsch/home.html). Eine Erhebungslücke in 2021 konnte mit Daten des „[COVID-19 Impfquoten-Monitoring in Deutschland (COVIMO)](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/covimo_studie_Ergebnisse.html)“ geschlossen werden. Alle Studien wurden durch das Bundesministerium für Gesundheit beauftragt und für die Auswertungen zusammengeführt. Diese repräsentativ angelegten telefonischen Gesundheitssurveys umfassen monatliche Erhebungen in Zufallsstichproben von zunächst jeweils ca. 1.000 in Deutschland lebenden Erwachsenen (2019-2021), dann von ca. 3.000 Erwachsenen (2022-2023) und aktuell von ca. 1.000 bzw. für depressive Symptome 2.000 Erwachsenen (ab Mitte April 2023). Die Stichprobenziehung erfolgte in diesen Studien über ein sogenanntes Dual-Frame-Verfahren, das eine Mobilfunk- und eine Festnetzgesamtheit als Auswahlgesamtheiten nutzt ([Allen et al., 2021](https://www.rki.de/DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GBEDownloadsJ/JoHM_03_2021_GEDA_2019_2020_EHIS.pdf?__blob=publicationFile)).
 
-Das 2009 verabschiedete BKRG regelt die jährliche Zusammenführung der wesentlichen Daten aus den Krebsregistern am ZfKD. Die Übermittlung erfolgt jeweils am Jahresende und enthält Informationen zu allen Fällen, die bis zum Ende des vorherigen Kalenderjahres diagnostiziert wurden, so dass auch Nachmeldungen und Korrekturen sowie Informationen zum Follow-up (z. B. Sterbefälle und Wegzüge) früherer Erkrankungsfälle enthalten sind.
+Zur Durchführung der telefonischen Befragungen arbeitet das RKI mit einem externen Markt- und Sozialforschungsinstitut (USUMA GmbH) zusammen, welches im Auftrag des Epidemiologischen Daten- und Befragungszentrums der Abteilung 2 des Robert Koch-Instituts die Daten erhebt und unter Einhaltung der Datenschutz- und Sicherheitsbestimmungen anonymisiert zur Verfügung stellt. Bevor die Daten für Auswertungen bereitgestellt werden, findet eine standardisierte Datenaufbereitung inklusive Datenqualitätssicherung statt. So werden z.B. unplausible Angaben identifiziert, Fälle bereinigt oder Variablen generiert ([Allen et al., 2021](https://www.rki.de/DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GBEDownloadsJ/JoHM_03_2021_GEDA_2019_2020_EHIS.pdf?__blob=publicationFile)). Nach der Bereitstellung der Daten für die MHS erfolgt eine inhaltliche Datenprüfung bezügliche der Angaben zur psychischen Gesundheit und es werden Gewichtungsfaktoren berechnet, die unterschiedliche Teilnahmebereitschaften in verschiedenen Bevölkerungsgruppen sowie die verschiedenen Auswahlwahrscheinlichkeiten der befragten Personen berücksichtigen. Nähere Studieninformationen sind abrufbar unter:
 
-Vor der Novellierung des BKRG in 2021 wurde lediglich der deutlich kleinere epidemiologische Datensatz (mit Angaben zur Diagnose und zum Sterbezeitpunkt) an das ZfKD übermittelt. Dieser Datensatz wird bundesweit seit 2009 erfasst. Die Mehrzahl der Bundesländer hat zwischen 1998 und 2007 mit der landesweiten Erfassung begonnen.
+“Gesundheit in Deutschland aktuell - European Health Interview Survey” | GEDA-EHIS 2019-2020, GEDA 2021, GEDA 2022, GEDA 2023:
+[https://www.rki.de/DE/Content/Gesundheitsmonitoring/Studien/Geda/Geda_node.html](https://www.rki.de/DE/Content/Gesundheitsmonitoring/Studien/Geda/Geda_node.html)
 
-Seit der Datenlieferung zum 31. Dezember 2022 und rückwirkend ab dem Diagnosejahr 2020 liefern die Krebsregister [auch klinische Angaben](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#informationen-zum-entstehungskontext-des-zfkd-datensatzes). Die am ZfKD vorliegenden Daten enthalten allerdings nicht den gesamten Datenbestand der Register, beispielsweise sind keine Angaben zu den behandelnden Einrichtungen verfügbar.
+COVIMO-Studie: Impfverhalten, Impfbereitschaft und -akzeptanz in Deutschland:
+[https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/covimo_studie_Ergebnisse.html](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/covimo_studie_Ergebnisse.html)
 
-Außerdem sind die Daten in den Krebsregistern bearbeitet worden: So wurden Meldungen aus verschiedenen Quellen zum gleichen Erkrankungsfall zusammengeführt und weitgehend um Widersprüche bereinigt („best-of“). Der Datensatz des ZfKD ist daher fall- und nicht meldungsbasiert, mehrere Tumorerkrankungen derselben Person können anhand einer von den Registern einmal vergebenen Personidentifikationsnummer zugeordnet werden. Die Übermittlung der Daten an das ZfKD erfolgt nach dem Wohnortprinzip (zum Zeitpunkt der Diagnose), so dass Doppelmeldungen weitgehend ausgeschlossen sind. Zwischen den Bundesländern erfolgt ein regelmäßiger Austausch von Daten, die außerhalb des Wohnortbundeslandes der Erkrankten erhoben und zunächst an das Krebsregister des Behandlungsortes gemeldet wurden.
 
-> 💡 Eine fallweise Verknüpfung (Record Linkage) der am ZfKD vorliegenden Daten mit externen Datensätzen (Studien, Krankenkassen) ist nicht möglich.
+### Untersuchungszeitraum  
 
-## Struktur des bundesweiten klinischen Krebsregisterdatensatzes  
+Die Untersuchungszeiträume unterscheiden sich für die verschiedenen Indikatoren. Dies ergibt sich aus Unterschieden zwischen den Datengrundlagen mit Blick auf die eingesetzten Messinstrumente. Depressive Symptome werden seit April 2019 beobachtet; Angstsymptome und die selbsteingeschätzte psychische Gesundheit seit März 2021.
 
-Der klinische Datensatz wird als `oBDS-RKI` bezeichnet. Die Bezeichnung geht zurück auf den zwischen ADT, GEKID und Plattform § 65c abgestimmten `einheitlichen onkologischen Basisdatensatz` (`oBDS`), der für die Entwicklung des `oBDS-RKI` als Vorlage und Arbeitsgrundlage diente (siehe [Informationen zum Datensatz und Entstehungskontext](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#informationen-zum-entstehungskontext-des-zfkd-datensatzes)).
+### Grundgesamtheit  
 
-Weil er die Struktur und Inhalte der von den Landeskrebsregistern ans ZfKD zu liefernden Daten definiert, wird der `oBDS-RKI` auch als `ZfKD-Lieferdatensatz` bezeichnet.
+Die Grundgesamtheit der GEDA- und COVIMO-Erhebungen umfasst die deutschsprachige, in Privathaushalten lebende Bevölkerung ab 15 Jahren (GEDA-EHIS 2019/2020), 16 Jahren (GEDA 2021, 2022) bzw. 18 Jahren (GEDA 2023, COVIMO), deren üblicher Aufenthaltsort zum Zeitpunkt der Datenerhebung in Deutschland liegt. Hierbei sind sowohl Einpersonen- als auch Mehrpersonenhaushalte inbegriffen, die eigenständig wirtschaften und sich selbständig mit für den Lebensunterhalt notwendigen Dingen versorgen. Diese Definition umfasst keine kollektiven Haushalte wie Krankenhäuser, Pflege- oder Wohnheime, Gefängnisse, Kasernen, religiöse Einrichtungen, Pensionen oder Wohnheime. "Üblicher Aufenthaltsort" beschreibt den Ort, an dem eine Person normalerweise lebt oder ihren Lebensmittelpunkt sieht – ungeachtet vorübergehender Abwesenheit zu Zwecken der Erholung, der beruflichen Tätigkeit, der medizinischen Behandlung oder ähnlichem.
 
-Zur Veranschaulichung der Datenstruktur werden zufällig generierte [Beispieldaten](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#beispieldaten) bereitgestellt.
+Die Auswertungen für den vorliegenden Datensatz wurden mit GEDA- und COVIMO-Daten von Erwachsenen (ab 18 Jahren) durchgeführt, weil die Entwicklung der psychischen Gesundheit Erwachsener im Fokus stehen. Ab 2022 sind die untersuchten Indikatoren außerdem nicht mehr bei unter 18-Jährigen abgefragt worden.
 
-Folgende Informationen sind enthalten:
 
-- [**Datenschema**](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#datenschema) des Datensatzes in verschieden Formaten
-- [**Klassifikationen**](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#klassifikationen): Referenztabellen für Variablen des Datensatzes und ihre definierten Ausprägungen
-- [**Beispieldaten**](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#beispieldaten): zur Veranschaulichung des Bereitstellungsprozesses der Daten
+### Erhebungsinstrumente  
 
-### Datenschema
+Der vorliegende Datensatz enthält aggregierte Daten aus den Studien GEDA/EHIS 2019-2020, COVIMO, GEDA 2021, GEDA 2022 und GEDA 2023 zu drei Indikatoren: 
 
-Das Datenschema umfasst mehr als 120 Variablen, die verschiedenen Elementen zugeordnet sind. Die klinischen Daten können nicht in einer einfachen „Rechtecktabelle“ wiedergegeben werden, da sie zum Teil komplexe Krankheitsverläufe abbilden. Im klinischen Datensatz sind die Daten daher in einem verschachtelten XML-Schema strukturiert.  
+#### Indikator „selbsteingeschätzte psychische Gesundheit“
 
-Der klinische Datensatz wird durch folgende Elemente gegliedert:
+Der Indikator „selbsteingeschätzte psychische Gesundheit“ beinhaltet eine Selbsteinschätzung der eigenen psychischen Gesundheit im Allgemeinen. Die Messung erfolgt über ein etabliertes Einzelitem ([Ahmad et al., 2014](https://doi.org/10.1186/1472-6963-14-398)):
 
-- Die _Person_ bildet die grundlegende Einheit im Datensatz.
-- Der Person zugeordnet ist mindestens ein Element _Tumor_.
-- Das Element _Tumor_ enthält ein verpflichtendes Element _Primärdiagnose_. Dieses enthält u. a. Angaben zum Tumorstadium, zur Histologie und Lokalisation des Tumors.
-- Darüber hinaus sind dem Element _Tumor_ mehrere optionale Elemente zugeordnet, in denen Angaben zur Behandlung (Elemente _OP_, _ST_ und _SYST_) und zu Folgeereignissen (Element _Folgeereignis_) wie Remissionen und Rezidiven erfasst werden können.
+>„Wie würden Sie Ihren psychischen Gesundheitszustand im Allgemeinen beschreiben?“ 
 
-Bestimmte Variablen sind Pflichtangaben, z. B. das _Geburtsdatum_, der _Inzidenzort_ und der _Diagnoseschlüssel_. Viele Angaben sind optional, z. B. die den Elementen cTNM und pTNM zugeordneten Variablen (_T-Kategorie_, _UICC-Stadium_, _m-Suffix_ usw.). Einige Angaben sind nur unter der Bedingung verpflichtend, dass das übergeordnete, optionale Element verwendet wird: Beispielsweise ist das Element Histologie optional. Wird jedoch in der zugehörigen Variable _Morphologie_ ein Eintrag vorgenommen, ist auch eine Angabe zum _Grading_ verpflichtend. Angaben zur Zahl untersuchter Lymphknoten bleiben optional.
 
-Bei Auswertungen ist zu beachten, dass optionale Inhalte möglicherweise nicht gleichermaßen aus allen Bundesländern vorliegen.
+Antwortoptionen: `ausgezeichnet` = 5, `sehr gut` = 4, `gut` = 3, `weniger gut` = 2, `schlecht` = 1  
 
-Die Elemente _Primärdiagnose_, _Folgeereignis_, _OP_, _ST_ und _SYST_ können mehrfach verwendet werden, so dass auch komplexe Krankheitsverläufe abgebildet werden können. Die Inhalte eines Elements können in ein tabellarisches Format überführt und über eine fallbezogene Nummer mit anderen Tabellen aus dem Datensatz verknüpft werden. Auf diese Weise entsteht ein auswertbares Format, in dem die bewilligten Daten an den Datenempfänger übermittelt werden können (siehe [Beispieldaten](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#beispieldaten)).  
+Der Datensatz enthält Schätzer zum Bevölkerungsmittelwert sowie zum Anteil mit einem Wert ≥ 4, also dem Anteil in Deutschland lebender Erwachsener mit einer sehr guten bis ausgezeichneten selbsteingeschätzten psychischen Gesundheit.
 
-Protokollierte Änderungen am Datenschema sind in den beigefügten [Release Notes](release-notes.md) der Versionen zu finden.
+#### Indikator "depressive Symptome"
 
-![Abbildung: Vereinfachtes Datenschema (mit ausgewählten Variablen). Quelle: [krebsdaten.de](https://www.krebsdaten.de/Krebs/DE/Content/Forschungsdatensatz/forschungsdatensatz_node.html).](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/.github/images/2023-06-30_Datenschema_einfach.png)  
-> Abbildung: Vereinfachtes Datenschema (mit ausgewählten Variablen). Quelle: [krebsdaten.de](https://www.krebsdaten.de/Krebs/DE/Content/Forschungsdatensatz/forschungsdatensatz_node.html).
+Der Indikator “depressive Symptome” wird mit dem validierten Messinstrument „Patient Health Questionnaire-2“ (PHQ-2) erfasst ([Löwe et al., 2005](C:\Users\persekek\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\HKNYBDLS\10.1016\j.jpsychores.2004.09.006)). Der PHQ-2 fragt:
 
-#### Downloads
+> „Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt“: 
+> 1) „Wenig Interesse oder Freude an Ihren Tätigkeiten“
+> 2) „Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit“ 
 
-Das Datenschema wird in verschiedenen Formaten zum Download angeboten:
 
-| Datei | Beschreibung | Download |
-| ----- | ------------ | -------- |
-| XML-Schema | Die XML-Schema-Definition `.xsd` als eindeutige, vollständige und maschinenlesbare Repräsentation des gesamten Schemas mit allen Details.   | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/oBDS_v3.0.0.8a_RKI_Schema.xsd) |
-| CSV-Schema | Variablen und mögliche Ausprägungen in tabellarischer Darstellung als `.csv`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/oBDS_v3.0.0.8a_RKI_Schema.csv) |
-| TXT-Schema | Variablen und mögliche Ausprägungen in stark vereinfachter textueller Darstellung zur erleichterten Erkennung von Änderungen. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/oBDS_v3.0.0.8a_RKI_Schema.txt) |
-| PDF-Schema (Abbildung) | Die grafische Darstellung des XML-Schemas als `.pdf`. Aufgrund der Komplexität des Gesamtschemas sind nicht alle Elemente abgebildet. Hinweise zur Notation des XML-Schemas sind [hier](https://plattform65c.atlassian.net/wiki/spaces/P6/pages/59015169/Legende+zur+grafischen+Notation+des+XML-Schemas) zu finden. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/oBDS_v3.0.0.8a_RKI_Schema_Abbildung.pdf) |
-| PDF-Schema (Liste) | Optisch gestaltete und "druckerfreundliche" Kurzübersicht zu Variablen und möglichen Ausprägungen als `.pdf`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/oBDS_v3.0.0.8a_RKI_Schema_Liste.pdf) |
+Antworten und Punktzahlen jeweils:`überhaupt nicht` = 0, `an einzelnen Tagen` = 1, `an mehr als der Hälfte der Tage` = 2, `beinahe jeden Tag` = 3
 
-#### XML-Schema des Datensatzes
+Der Summenwert des PHQ-2 beträgt 0 (min) bis 6 (max) und weist auf keine bis sehr starke Belastung durch depressive Symptome hin. Werte ≥3 deuten darauf hin, dass eine auffällige Belastung durch depressive Symptome vorliegt. Der Datensatz enthält Schätzer zum Bevölkerungsmittelwert sowie zum Bevölkerungsanteil im auffälligen Wertebereich.
 
-Eine vollständige und maschinenlesbare Repräsentation des gesamten Datenschemas mit allen Details ist wird über das [XML-Schema](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/oBDS_v3.0.0.8a_RKI_Schema.xsd) bereitgestellt.
+#### Indikator "Angstsymptome"
 
-XML (Extensible Markup Language)-Schemata definieren den erlaubten Aufbau der ihnen zugeordneten XML-Dokumente. XML ist eine Auszeichnungssprache mit definierter Struktur und Syntax. XML-Dokumente sind textbasiert und repräsentieren Daten in einer hierarchischen und strukturierten Weise. Der Hauptzweck von XML besteht darin, Daten so zu beschreiben, dass sie sowohl für Menschen als auch für Maschinen leicht verständlich und interpretierbar sind.
+Der Indikator “Angstsymptome” wird mit dem validierten Messinstrument „Generalized Anxiety Disorder-2“ (GAD-2) erfasst ([Kroenke et al., 2007](https://doi.org/10.7326/0003-4819-146-5-200703060-00004)). Der GAD-2 fragt: 
+>„Wie oft fühlten Sie sich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt“:
+> 1) „Nervosität, Ängstlichkeit oder Anspannung“ 
+> 2) „Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren“ 
 
-Ein XML-Schema, oft auch als XSD (XML Schema Definition) bezeichnet, bietet einen Rahmen zur Beschreibung der Struktur und Datentypen eines XML-Dokuments. XML-Schemata legen fest, welche Elemente und Attribute in einem XML-Dokument erscheinen können, wie diese strukturiert und organisiert sind und welche Datentypen sie enthalten können. XML-Schemata können dazu verwendet werden, um XML-Dokumente zu validieren. Hierbei wird überprüft, ob ein XML-Dokument der im Schema definierten Struktur entspricht.
+Antworten und Punktzahlen jeweils: `überhaupt nicht` = 0, `an einzelnen Tagen` = 1, `an mehr als der Hälfte der Tage` = 2, `beinahe jeden Tag` = 3
 
-Detaillierte technische Informationen zum abgestimmten XML-Schema sind auf der [Internetseite der Plattform § 65c abrufbar](https://plattform65c.atlassian.net/wiki/spaces/P6/pages/2064400/XML-Schema) (bis Version `3.0.0.8_RKI`).
+Der Summenwert des GAD-2 beträgt 0 (min) bis 6 (max) und weist auf keine bis sehr starke Belastung durch Angstsymptome hin. Werte ≥3 deuten darauf hin, dass eine auffällige Belastung durch Angstsymptome vorliegt. Der Datensatz enthält Schätzer zum Bevölkerungsmittelwert sowie zum Bevölkerungsanteil im auffälligen Wertebereich.
 
-![Abbildung: Übersicht zum XML-Schema des klinischen Datensatzes
-Die obenstehende Abbildung veranschaulicht die Struktur des klinischen Datensatzes. ](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/.github/images/2023-06-28_XML-Schema_grob.png)
-> Abbildung: Übersicht zum XML-Schema des klinischen Datensatzes. Quelle: eigene Darstellung.
 
-### Klassifikationen
+### Datenauswertung  
 
-Die für einzelne Variablen erwarteten Ausprägungen und ihre Beschreibung sind in [Referenztabellen](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#referenztabellen) hinterlegt. Einzelne Referenzen werden für mehrere Variablen genutzt: Beispielsweise wird für den Östrogen-Rezeptorstatus und den Progesteron-Rezeptorstatus die gleiche Kodierung verwendet. Ebenso werden für die Angaben zur klinischen und pathologischen TNM die gleichen Referenztabellen genutzt.
+Um die Entwicklung mehrerer Indikatoren der psychischen Gesundheit der in Deutschland lebenden erwachsenen Bevölkerung über die Zeit zu untersuchen, werden Zeitreihen bestehend aus monatlichen geschätzten Werten samt Konfidenzintervallen sowie Glättungskurven berechnet.
 
-Größtenteils handelt es sich bei den Referenzen um Vereinbarungen, die bei der Erarbeitung des ZfKD-Lieferdatensatzes getroffen wurden (z. B. Ausprägungen von Variablen im Element Strahlentherapie, Ausprägungen von _Diagnosesicherung_). Teilweise handelt es sich bei den Referenzen um internationale oder nationale Standards (z. B. TNM, ATC-Klassifikation für den deutschen Arzneimittelmarkt). Informationen zu Quelle und Version der jeweiligen Referenzwerte, zu ihrer Interpretation und zu gegebenenfalls bestehenden Nutzungsbedingungen der Herausgeber sind im Abschnitt [Ergänzungen zu den Referenztabellen](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#ergänzungen-zu-den-referenztabellen) zusammengestellt.
+#### Gleitende Drei-Monats-Schätzer
 
-> 💡 Einige Referenztabellen geben Inhalte von Standards wieder, die von Dritten herausgegeben werden. Unter Umständen verbinden diese Anbieter die Nutzung ihrer Produkte mit Bedingungen. Die Nutzungsbedingungen sind an den jeweils zutreffenden Stellen verlinkt. Wir bitten Sie diese zu beachten.
+Bei den monatlichen Schätzern handelt es sich um gleitende Drei-Monats-Schätzer: Sie beruhen jeweils auf Daten aus drei aufeinanderfolgenden Befragungsmonaten und rücken stets um einen Monat weiter. Der erste Drei-Monats-Schätzer der berechneten Zeitreihen zu depressiven Symptomen umfasst zum Beispiel Daten aus dem Zeitraum Mitte April bis Mitte Juli 2019. Der nächste Drei-Monats-Schätzer umfasst dann die Monate Mitte Mai bis Mitte August. Alle Drei-Monats-Fenster beginnen und enden mit einer Monatsmitte, weil die monatlichen Erhebungswellen der ausgewerteten Surveys meist etwa zur Monatsmitte begannen. In der zeitlichen Umgebung von Datenlücken werden teilweise Schätzer basierend auf Daten aus zwei Monaten innerhalb eines Drei-Monats-Fensters berechnet, niemals jedoch werden Schätzer basierend auf Daten aus nur einem Monat berechnet.
 
-#### Referenztabellen
+Vorteil der Verwendung von Drei-Monats-Schätzern: Durch die Berechnung von gleitendenden monatlichen Schätzern von Indikatoren der psychischen Gesundheit basierend auf Daten aus jeweils drei (oder zwei) Monaten werden die Stichprobengrößen je Schätzer erhöht und somit auch eine höhere statistische Genauigkeit der Schätzer erreicht. Außerdem trägt dieser Ansatz zur Glättung der Zeitreihen bei, indem zufällige, Stichprobengrößen-bedingte Schwankungen reduziert werden. Bei Ein-Monats-Schätzern käme es zu größeren Fluktuationen durch zufällige Abweichungen zwischen Schätzern, wodurch Trends weniger gut erkennbar bzw. interpretierbar wären. Dies kann besonders bei Indikatoren mit einer geringen Prävalenz und entsprechend geringen Fallzahlen in den Stichproben zum Problem werden sowie bei nach Geschlecht, Alter oder Bildung stratifizierten Zeitreihen.
 
-In der folgenden Übersicht sind die verwendeten Referenztabellen aufgeführt. Die Tabellen bilden den Wertebereich aller _kodierten_ Variablen als Klassifikationen ab.
+#### Glättungskurven
 
-Bedeutung der Spalten:
+Obwohl die gleitenden Drei-Monats-Schätzer bereits geglättete Zeitreihen bilden, kann es dennoch zu Fluktuationen kommen, die die Interpretation der Zeitreihen erschweren. Damit die allgemeinen Verläufe in den Indikatoren der psychischen Gesundheit besser erkennbar sind, werden daher zusätzlich zu den Drei-Monats-Schätzern Glättungskurven berechnet. Diese beruhen auf „Generalized Additive Models“, die sogenannte „Smoothing Splines“ als Terme enthalten ([Wood, 2003](https://doi.org/10.1111/1467-9868.00374)). Sie sollen den zeitlichen Verlauf der Mittelwert- und Anteilsschätzungen kontinuierlich und geglättet approximieren. Die Modellierung basiert hierbei auf wöchentlichen Datenpunkten und resultiert in wöchentlichen Schätzern, durch die eine Kurve gezogen wird. Diese wöchentlichen Schätzer sind im vorliegenden Datensatz enthalten. Nach der aktuellen Methode können die Glättungskurven nur für längere Zeitreihen geschätzt werden. Es können keine Konfidenzintervalle berechnet werden, die die statistische Unsicherheit der Glättungskurven quantifizieren würden. Auch deshalb sollten die Glättungskurven gemeinsam mit den gleitenden Drei-Monats-Schätzern und ihren Konfidenzintervallen betrachtet werden.
 
-- **Klassifikation** ausformulierte Bezeichnung der Klassifikation
-- **Element** `technische Variablenbezeichnung` Elternknoten im XML-Schema sowie der technische Name der entsprechenden Variable. Dieser Name wird u.a. auch im exportierten Datensatz verwendet.
-- **Datei** Name der Klassifikationsdatei
+#### Gewichtung
 
-| Klassifikation | *Element* `technische Variablenbezeichnung` | Datei |
-| -------------- | ------------------------------------------- | ----- |
-| Angabe zur perkutanen Strahlentherapie |*Strahlentherapie* `Atemgetriggert` | [atemgetriggert.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/atemgetriggert.csv) |
-| Folgeereignis - Gesamtbeurteilung Tumorstatus |*Folgeereignis* `Gesamtbeurteilung_Tumorstatus` | [beurteilung_gesamt.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/beurteilung_gesamt.csv) |
-| Folgeereignis - Beurteilung Primärtumor |*Folgeereignis* `Verlauf_Lokaler_Tumorstatus` | [beurteilung_lokal.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/beurteilung_lokal.csv) |
-| Wertigkeit der Diagnosesicherung |*Primärdiagnose* `Diagnosesicherung` | [diagnosesicherung.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/diagnosesicherung.csv) |
-| Lokalisation der Fernmetastasen |*Primärdiagnose* `Lokalisation`, *Folgeereignis* `Lokalisation` | [fm_lokalisation.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/fm_lokalisation.csv) |
-| Geschlecht |*Person* `Geschlecht` | [geschlecht.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/geschlecht.csv) |
-| Modul Prostata: Anlass der Probenahme |*Primärdiagnose* `AnlassGleasonScore` | [gleason_anlass.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/gleason_anlass.csv) |
-| Modul Prostata: Gleason-Score |*Primärdiagnose* `ScoreErgebnis` | [gleason_score.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/gleason_score.csv) |
-| Differenzierungsgrad |*Primärdiagnose* `Grading` | [grading.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/grading.csv) |
-| Modul Mamma: Hormonrezeptorstatus |*Primärdiagnose* `HormonrezeptorStatus_Oestrogen`, *Primärdiagnose* `HormonrezeptorStatus_Progesteron` | [hormonrezeptor.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/hormonrezeptor.csv) |
-| [Todesursache, Grundleiden nach ICD-10](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#todesursache-grundleiden-nach-icd-10) |*Todesursachen* `Code` | [icd10_todesursache.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/icd10_todesursache.csv) |
-| Ausgabe der ICD-10 |*Todesursachen* `Version`, *Primärdiagnose* `Diagnose_ICD10_Version` | [icd10_version.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/icd10_version.csv) |
-| [Diagnose nach ICD-10](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#diagnose-nach-icd-10) |*Primärdiagnose* `Diagnose_ICD10_Code` | [icd10.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/icd10.csv) |
-| Angabe zur Kontaktbestrahlung |*Strahlentherapie* `Interstitiell_endokavitaer` | [interstitiell.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/interstitiell.csv) |
-| Wohnort bei Diagnose |*Primärdiagnose* `Inzidenzort`, *Primärdiagnose* `Inzidenzort_BL` | [landkreis.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/landkreis.csv) |
-| Modul Mamma: Menopausenstatus |*Primärdiagnose* `Praetherapeutischer_Menopausenstatus` | [menopausenstatus.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/menopausenstatus.csv) |
-| Typ der metabolischen Strahlentherapie |*Strahlentherapie* `Metabolisch_Typ` | [metabolisch.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/metabolisch.csv) |
-| Quelle Morphologie |*Primärdiagnose* `Morphologie_Version` | [morphologie_version.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/morphologie_version.csv) |
-| Morphologie |*Primärdiagnose* `Morphologie_Code` | [morphologie.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/morphologie.csv) |
-| Intention der OP |*Operation* `Intention` | [op_intention.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/op_intention.csv) |
-| [Operationen- und Prozedurenschlüssel (OPS)](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#operationen--und-prozedurenschlüssel-ops) |*Operation* `Code` | [ops.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/ops.csv) |
-| [Therapieprotokoll](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#therapieprotokoll) |*Systemische Therapie* `Protokoll_TypProtokollschluessel_Code` | [protokoll.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/protokoll.csv) |
-| Ausführung der perkutanen Radiochemotherapie |*Strahlentherapie* `Radiochemo` | [radiochemo.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/radiochemo.csv) |
-| Modul Darm: Mutation K-ras-Onkogen |*Primärdiagnose* `RASMutation` | [rasmutation.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/rasmutation.csv) |
-| Dosisleistung Kontaktbestrahlung |*Strahlentherapie* `Rate_Type` | [rate_type.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/rate_type.csv) |
-| Körperseite der bestrahlten Region |*Strahlentherapie* `Seite_Zielgebiet` | [seite_zielgebiet.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/seite_zielgebiet.csv) |
-| Seitenlokalisation bei paarigen Organen |*Primärdiagnose* `Seitenlokalisation` | [seitenlokalisation.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/seitenlokalisation.csv) |
-| Intention der Strahlentherapie |*Strahlentherapie* `Intention` | [st_intention.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/st_intention.csv) |
-| Bezug Strahlentherapie - OP |*Strahlentherapie* `Stellung_OP` | [st_op_stellung.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/st_op_stellung.csv) |
-| Angabe zur perkutanen Strahlentherapie |*Strahlentherapie* `Stereotaktisch` | [stereotaktisch.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/stereotaktisch.csv) |
-| [Verwendete Substanzen](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#verwendete-substanzen) |*Systemische Therapie* `TypeOfSYST_TypSubstanz` | [substanz.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/substanz.csv) |
-| Intention der systemischen Therapie |*Systemische Therapie* `Intention` | [syst_intention.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/syst_intention.csv) |
-| Bezug systemische Therapie - OP |*Systemische Therapie* `Stellung_OP` | [syst_op_stellung.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/syst_op_stellung.csv) |
-| Art der systemischen Therapie |*Systemische Therapie* `Therapieart` | [therapieart.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/therapieart.csv) |
-| TNM-Ausgabe |*Primärdiagnose* `TNM_Auflage_c`, *Primärdiagnose* `TNM_Auflage_p`, *Folgeereignis* `Version` | [tnm_auflage.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_auflage.csv) |
-| TNM-Präfix (c, p, u) |*Primärdiagnose* `c_p_u_Praefix_T_c`, *Primärdiagnose* `c_p_u_Praefix_N_c`, *Primärdiagnose* `c_p_u_Praefix_M_c`, *Primärdiagnose* `c_p_u_Praefix_T_p`, *Primärdiagnose* `c_p_u_Praefix_N_p`, *Primärdiagnose* `c_p_u_Praefix_M_p`, *Folgeereignis* `c_p_u_Praefix_T`, *Folgeereignis* `c_p_u_Praefix_N`, *Folgeereignis* `c_p_u_Praefix_M` | [tnm_cpu.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_cpu.csv) |
-| TNM: Lymphgefäßinvasion |*Primärdiagnose cTNM* `L_p`, *Primärdiagnose pTNM* `L_p`, *Folgeereignis* `L` | [tnm_l.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_l.csv) |
-| TNM: Fernmetastasierung |*Primärdiagnose cTNM* `M_c`, *Primärdiagnose pTNM* `M_p`, *Folgeereignis* `M` | [tnm_m.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_m.csv) |
-| [TNM: Regionäre Lymphknotenmetastasierung](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#tnm-regionäre-lymphknotenmetastasierung) |*Primärdiagnose cTNM* `N_c`, *Primärdiagnose pTNM* `N_p`, *Folgeereignis* `N` | [tnm_n.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_n.csv) |
-| TNM: Perineuralinvasion |*Primärdiagnose cTNM* `Pn_c`, *Primärdiagnose pTNM* `Pn_p`, *Folgeereignis* `Pn` | [tnm_pn.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_pn.csv) |
-| TNM: Serumtumormarker |*Primärdiagnose cTNM* `S_c`, *Primärdiagnose pTNM* `S_p`, *Folgeereignis* `S` | [tnm_s.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_s.csv) |
-| TNM: Ausdehnung des Primärtumors |*Primärdiagnose cTNM* `T_c`, *Primärdiagnose pTNM* `T_p`, *Folgeereignis* `T` | [tnm_t.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_t.csv) |
-| TNM: UICC-Stadium |*Primärdiagnose cTNM* `UICC_Stadium_c`, *Primärdiagnose pTNM* `UICC_Stadium_p`, *Folgeereignis* `UICC_Stadium` | [tnm_uicc.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_uicc.csv) |
-| TNM: Veneninvasion |*Primärdiagnose cTNM* `V_c`, *Primärdiagnose pTNM* `V_p`, *Folgeereignis* `V` | [tnm_v.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_v.csv) |
-| Ausgabe der ICD-O |*Primärdiagnose* `Topographie_Version` | [topographie_version.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/topographie_version.csv) |
-| [ICD-O Topographie](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#icd-o-topographie) |*Primärdiagnose* `Topographie_Code` | [topographie.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/topographie.csv) |
-| Verlauf: Fernmetastasierung |*Folgeereignis* `Verlauf_Tumorstatus_Fernmetastasen` | [verlauf_fern.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/verlauf_fern.csv) |
-| Verlauf: Lokaler Tumorstatus |*Folgeereignis* `Verlauf_Lokaler_Tumorstatus` | [verlauf_lokal.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/verlauf_lokal.csv) |
-| Verlauf: Regionärer Lymphknotenstatus |*Folgeereignis* `Verlauf_Tumorstatus_Lymphknoten` | [verlauf_lymphe.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/verlauf_lymphe.csv) |
-| Zielgebiet Strahlentherapie oBDS2014 |*Strahlentherapie Perkutan* `CodeVersion2014`, *Strahlentherapie Kontakt* `CodeVersion2014`, *Strahlentherapie Metabolisch* `CodeVersion2014`, *Strahlentherapie Sonstige* `CodeVersion2014`, *Strahlentherapie Unbekannt* `CodeVersion2014` | [zielgebiet_2014.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/zielgebiet_2014.csv) |
-| Zielgebiet Strahlentherapie oBDS2021 |*Strahlentherapie Perkutan* `CodeVersion2021`, *Strahlentherapie Kontakt* `CodeVersion2021`, *Strahlentherapie Metabolisch* `CodeVersion2021`, *Strahlentherapie Sonstige* `CodeVersion2021`, *Strahlentherapie Unbekannt* `CodeVersion2021` | [zielgebiet_2021.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/zielgebiet_2021.csv) |
-
-#### Datumsangaben
-
-Die Angabe *Tag* wird von den Registern grundsätzlich *nicht* ans ZfKD übermittelt. Das ZfKD legt den Tag auf einen beliebigen Wert fest (i. d. R. 15), so dass immer ein Datum im Format `Jahr-Monat-Tag` vorliegt. Für jede Datumsangabe im Datensatz liegen jeweils zwei Variablen vor:
-
-- das *Datum* im internationalen Datumsformat (ISO 8601) `yyyy-mm-dd` und
-- die *Genauigkeit* des Datums in einer von drei möglichen Ausprägungen (`M`, `T`, `V`):
-  `M` = nur das Jahr ist bekannt (jahrgenau)
-  `T` = Jahr und Monat sind bekannt (monatsgenau)
-  `V` = Jahr und Monat wurden geschätzt
-
-#### Ergänzungen zu den Referenztabellen
-
-In diesem Abschnitt werden ergänzende Informationen zu den Inhalten der [Referenztabellen](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#referenztabellen) bereitgestellt.
-
-##### Diagnose nach ICD-10
-
-Die Erstellung der Referenztabelle erfolgte unter Verwendung der maschinenlesbaren Fassung der [ICD-10-GM (Version 2008) des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)](https://www.bfarm.de/DE/Kodiersysteme/Services/Downloads/_node.html), unter Verwendung der [Empfehlungen des GKV-Spitzenverbands für die klinische Krebsregistrierung (Stand: 14.05.2020)](https://www.gkv-spitzenverband.de/krankenversicherung/qualitaetssicherung_2/klinisches_krebsregister.jsp) und unter Verwendung des [Umsetzungsleitfadens der Plattform § 65c (Stand: 06.06.2023)](https://confluence.basisdatensatz.de/display/UMK/Meldepflichtige+Diagnosen+nach+ICD).  
-Die Nutzungsbedingungen der ICD-10 des BfArM sind [hier](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Kontextmaterialien/Nutzungsbedingungen_bfarm_tou_icd10_ops.pdf) hinterlegt.
-
-> [Klassifikationen/icd10.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/icd10.csv)
-
-Variablen und Ausprägungen der Referenztabelle:
-
-| Variable  | Typ | Ausprägungen | Beschreibung |
-| --------- | --- | ------------ | ------------ |
-| id        | String | z. B. `C021`  | ICD-10-Diagnoseschlüssel, 4-Steller werden ohne Trennzeichen dargestellt |
-| code      | String | z. B. `C02.1`  | ICD-10-Diagnoseschlüssel, 4-Steller werden mit Trennzeichen dargestellt |
-| name      | String | z. B. `Bösartige Neubildung...`  | Beschreibung der Diagnose  |
-| id3       | String | z. B. `C02`  |  ICD-10-Diagnoseschlüssel, 3-stellig |
-| epi_valide| Boolean | `TRUE`, `FALSE`  | Information, ob die Diagnose im [epidemiologischen Datensatz](https://www.krebsdaten.de/Krebs/DE/Content/Forschungsdatensatz/Informationen_datensatz/epidemiologischer_datensatz/epidemiologischer_datensatz_node.html) des ZfKD enthalten ist |
-| p65_valide| Boolean| `TRUE`, `FALSE`  | Es besteht eine Meldepflicht für den klinischen Datensatz (lt. Plattform § 65c-Umsetzungsleitfaden). |
-
-##### Todesursache, Grundleiden nach ICD-10
+Die Drei-Monats-Schätzer werden unter Berücksichtigung von Stichprobengewichten mit Surveyprozeduren berechnet (siehe [Allen et al., 2021](https://www.rki.de/DE/Content/Gesundheitsmonitoring/Gesundheitsberichterstattung/GBEDownloadsJ/JoHM_03_2021_GEDA_2019_2020_EHIS.pdf?__blob=publicationFile)). Die Stichprobengewichte berücksichtigen in der sogenannten Designgewichtung die unterschiedlichen Ziehungswahrscheinlichkeiten der Teilnehmenden im Rahmen des telefonischen Dual-Frame-Verfahrens (Festnetz, Mobilfunk). Darauf aufbauend wird die Stichprobe aus den RKI-Studien GEDA-EHIS, GEDA und COVIMO an öffentliche Bevölkerungsstatistiken (d.h., aktuelle Bevölkerungsstruktur und Zusammensetzung) nach Alter, Geschlecht, Bildung und Region angepasst. Die Gewichtungsfaktoren werden vom Epidemiologischen Daten- und Befragungszentrum (EDZ) des RKI bereitgestellt.
 
-Die Erstellung der Referenztabelle erfolgte unter Verwendung der maschinenlesbaren Fassung der [ICD-10-GM (Version 2022) des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)](https://www.bfarm.de/DE/Kodiersysteme/Services/Downloads/_node.html). Die Nutzungsbedingungen der ICD-10 des BfArM sind [hier](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Kontextmaterialien/Nutzungsbedingungen_bfarm_tou_icd10_ops.pdf) hinterlegt.
-
-Um die internationale Vergleichbarkeit zu gewährleisten, ist für die [Verschlüsselung von Todesursachen die ICD-10-WHO](https://www.bfarm.de/DE/Kodiersystemehttps://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/ICD/ICD-10-WHO/Todesursachenstatistik/_node.html) vorgesehen. Aktuell wird bei der Übermittlung von Todesursachen ans ZfKD vorwiegend (noch) die Verwendung der ICD-10-GM angegeben.
-
-> [Klassifikationen/icd10_todesursache.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/icd10_todesursache.csv)
-
-Variablen und Ausprägungen der Referenztabelle:
+#### Standardisierung
 
-| Variable  | Typ | Ausprägungen | Beschreibung |
-| --------- | --- | ------------ | ------------ |
-| id        | String | z. B. `C021`  | ICD-10-Diagnoseschlüssel, 4-Steller werden ohne Trennzeichen dargestellt |
-| code      | String | z. B. `C02.1`  | ICD-10-Diagnoseschlüssel, 4-Steller werden mit Trennzeichen dargestellt |
-| name      | String | z. B. `Bösartige Neubildung...`  | Beschreibung der Diagnose  |
-| id3       | String | z. B. `C02`  |  ICD-10-Diagnoseschlüssel, 3-stellig |
-| chapter   | Integer | z. B. `1`  |  ICD-10-Kapitelnummer |
-
+Zusätzlich standardisiert wird in den Berechnungen der Drei-Monats-Schätzer und Glättungskurven nach Alter, Geschlecht und Bildung gemäß CASMIN-Klassifikation ([Brauns et al., 2003](https://doi.org/10.1007/978-1-4419-9186-7_11)). Damit werden Abweichungen in der Stichprobenzusammensetzung zwischen den Erhebungszeitpunkten ausgeglichen. Diese Standardisierung erfolgt unter Einbeziehung des Mikrozensus (Schwarz, 2001) von 2018 als Standardbevölkerung. Als Grundlage für diese Standardisierung werden die Schätzer anhand von Geschlecht, Alter und Bildung modelliert: Drei-Monats-Schätzer und Konfidenzintervalle, die Bevölkerungsmittelwerte von Skalen (z.B. PHQ-2-Mittelwerte) abbilden, beruhen auf linearen Regressionen, die die analysierten Indikatoren der psychischen Gesundheit innerhalb von jedem Drei-Monats-Fenster auf Geschlecht, Alter und Bildung regressieren. Bei dichotomen Merkmalen (z.B. Bevölkerungsanteil mit oder ohne Belastung durch depressive Symptome im auffälligen PHQ-2-Wertebereich) werden äquivalent logistische Regressionen geschätzt. In den linearen Regressionen werden alle Drei-Weg-Interaktionen zwischen Geschlecht, Alter und Bildung berücksichtigt. In den logistischen Regressionen werden dagegen nur Zwei-Weg-Interaktionen berücksichtigt, weil es durch teilweise niedrige Fallzahlen in den Stichproben oder einzelnen Stichproben-Subgruppen bei Drei-Weg-Interaktionen häufiger zu leeren Interaktionszellen käme. Die Berechnung der Glättungskurven über „Generalized Additive Models“ mit „Smoothing Splines“ basiert ebenfalls auf nach Geschlecht, Alter, Bildung und Region gewichteter Modellierung sowie um Geschlecht, Alter und Bildung standardisierten Vorhersagen.
 
-##### ICD-O Topographie
+Diese Berechnungsweise ermöglicht bei Stratifizierung der Zeitreihen nach Geschlecht, Alter und Bildung eine weitere Form der Standardisierung: Die jeweiligen Bevölkerungssubgruppen werden einander mit Blick auf die anderen beiden Charakteristika angeglichen. Für Geschlechtervergleiche wird die Alters- und Bildungsverteilung bei Frauen und Männern in der Berechnung angeglichen, für Altersvergleiche die Geschlechter- und Bildungsverteilung und für Bildungsvergleiche die Geschlechter- und Altersverteilung. So kann ausgeschlossen werden, dass sich Unterschiede aus ungleichen Verteilungen der jeweiligen anderen Charakteristika ergeben. Bei der Interpretation standardisierter Schätzer ist zu beachten, dass sie wegen dieser Angleichungen zwischen Gruppen nicht als repräsentative Schätzer für die tatsächlichen Mittelwerte und Anteile der jeweiligen Bevölkerungsgruppen mit ihren realen Zusammensetzungen interpretiert werden können. Der Datensatz enthält neben standardisierten Schätzern daher auch nicht standardisierte Schätzer. Diese lassen sich als repräsentative Schätzer interpretieren. Allerdings ist bei nicht standardisierten Schätzern nicht auszuschließen, dass sich Unterschiede zwischen Bevölkerungsgruppen aus ungleichen Verteilungen von Alter, Geschlecht oder Bildung ergeben. 
 
-Die Erstellung der Referenztabelle erfolgte unter Verwendung der maschinenlesbaren Fassung der [ICD-O-3 (2. Revision, Version 2019) des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)](https://www.bfarm.de/DE/Kodiersysteme/Services/Downloads/_node.html) und unter Zuhilfenahme des [Umsetzungsleitfadens der Plattform § 65c (Stand: 10.05.2023)](https://confluence.basisdatensatz.de/display/UMK/Paarige+Organe).
-Die Nutzungsbedingungen der ICD-O-3 des BfArM sind [hier](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Kontextmaterialien/Nutzungsbedingungen_bfarm_tou_icdo3.pdf) hinterlegt.
+#### Fehlende Werte und fehlende Schätzer
 
-Für paarige Organe (Ausprägung *istPaarig* = `1`, lt. Plattform § 65c-Umsetzungsleitfaden) wird bei der Variable *Seitenlokalisation* die Angabe der betroffenen Körperseite(n) erwartet.
+Bei fehlenden Werten in den Indikatoren psychischer Gesundheit werden Beobachtungen fallweise ausgeschlossen. Bei fehlenden Angaben zur Bildung wird das mittlere Bildungsniveau (CASMIN-Klassifikation) zugewiesen. Fehlende Angaben zu Geschlecht oder Alter kommen nicht vor.
 
-> [Klassifikationen/topographie.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/topographie.csv)
+Zu Lücken in den Zeitreihen kommt es hauptsächlich wegen Unterbrechungen in der Datenerhebung. Es kann jedoch vor allem in der Schätzung von Bevölkerungsanteilen auch zu fehlenden Drei-Monats-Schätzern kommen, wenn sich wegen zu geringer Fallzahlen in den Interaktionen in den unter „Standardisierung“ beschriebenen Regressionsmodellen leere Zellen ergeben. Wenn zum Beispiel in einem Drei-Monats-Fenster keine 18-29-Jährigen der niedrigen Bildungsgruppe mit Angstsymptomen im auffälligen Wertebereich des GAD-2 vorkommen, dann fehlt der Schätzer für die Anteile mit Angstsymptomen im auffälligen Wertebereich in diesem Zeitraum vollständig und wird im Datensatz mit NA („not available“) ausgewiesen. Da Schätzungen vor und nach Datenlücken häufig auf Daten aus nur zwei Monaten beruhen, kann es wegen geringerer Fallzahlen vor allem in diesen Fällen zu fehlenden Schätzern kommen.
 
-Variablen und Ausprägungen der Referenztabelle:
+**Eine ausführliche Beschreibung dieser Methodik ist hier zu finden:**
+ 
+Junker S, Damerow S, Walther L, Mauz E. Development of a prototype for high-frequency mental health surveillance in Germany: data infrastructure and statistical methods. Front Public Health. 2023; 11:1208515. doi: [10.3389/fpubh.2023.1208515](https://doi.org/10.3389/fpubh.2023.1208515).
 
-| Variable  | Typ | Ausprägungen | Beschreibung |
-| --------- | --- | ------------ | ------------ |
-| id        | String | z. B. `C021`  | ICD-10 Diagnoseschlüssel, 4-Steller werden ohne Trennzeichen dargestellt |
-| code      | String | z. B. `C02.1`  | ICD-10 Diagnoseschlüssel, 4-Steller werden mit Trennzeichen dargestellt |
-| name      | String | z. B. `Bösartige Neubildung...`  | Beschreibung der Diagnose  |
-| id3       | String | z. B. `C02`  |  3-stelliger Diagnoseschlüssel |
-| istPaarig   | Integer | z. B. `1`  |  1 = es handelt sich um ein paariges Organ und es wird bei der Variable *Seitenlokalisation* die Angabe der betroffenen Körperseite(n) erwartet. |
+## Aufbau und Inhalt des Datensatzes
 
+Der Datensatz enthält aggregierte Daten aus den Studien GEDA/EHIS 2019-2020, COVIMO, GEDA 2021, GEDA 2022 und GEDA 2023, wie sie in der hochfrequenten Mental Health Surveillance aufbereitet wurden. Im Datensatz enthalten sind:
 
-##### Operationen- und Prozedurenschlüssel (OPS)
+- Daten der hochfrequenten Mental Health Surveillance
+- Datensatzdokumentation in deutscher Sprache
+- Lizenz-Datei mit der Nutzungslizenz des Datensatzes in Deutsch und Englisch
+- Metadaten zur automatisierten Weiterverarbeitung
 
-Die Erstellung der Referenztabelle erfolgte unter Verwendung der maschinenlesbaren Fassung des [Operationen- und Prozedurenschlüssels (OPS) (Version 2022) des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM)](https://www.bfarm.de/DE/Kodiersysteme/Services/Downloads/_node.html). Die Nutzungsbedingungen der Operationen- und Prozedurenschlüssels (OPS) des BfArM [hier](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Kontextmaterialien/Nutzungsbedingungen_bfarm_tou_icd10_ops.pdf) hinterlegt.
 
-> [Klassifikationen/ops.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/ops.csv)
+### Daten der hochfrequenten Mental Health Surveillance
 
-Variablen und Ausprägungen der Referenztabelle:
+Die Daten der hochfrequenten Mental Health Surveillance zu drei Indikatoren der psychischen Gesundheit Erwachsener in Deutschland sind bereitgestellt als:
 
-| Variable  | Typ | Ausprägungen | Beschreibung |
-| --------- | --- | ------------ | ------------ |
-| id | String | z. B. `1-202`  | ID, maximal 6-stellig |
-| chapter | Integer | z. B. `1`  | OPS-Kapitel |
-| group | String | z. B. `1-20 - 1-33`  | OPS-Gruppe, -Bereich |
-| code3 | String | z. B. `1-20`  | OPS-Kategorie/-Kode, 3-stellig |
-| code | String | z. B. `1-202`  | OPS-Kategorie/-Kode, 4-stellig |
-| code5 | String | z. B. `1-202.-`  | OPS-Kategorie/-Kode, 5-stellig |
-| code6 | String | z. B. `1-202.--`  | OPS-Kategorie/-Kode, 6-stellig |
-| name | String | z. B. `Diagnostik zur Feststellung ...`  | Klassentitel der Maßnahme |
-
-##### Therapieprotokoll
-
-Bei der verwendeten Referenztabelle handelt es sich um eine *Vorschlagsliste* der [Plattform § 65c](https://confluence.basisdatensatz.de/display/UMK/Protokolle). Diese Vorschlagsliste stellt keine verbindliche Festlegung dar. Ein anerkannter Standard für die Kodierung von Systemtherapie-Protokollen ist uns nicht bekannt. Vorschläge für eine standardisierte Nomenklatur ([Rubinstein et al, 2020](https://doi.org/10.1200/CCI.19.00122)), Referenzsysteme ([HemOnc.org](https://hemonc.org/), [National Cancer Institute Thesaurus (NCIT)](https://bioportal.bioontology.org/ontologies/NCIT/?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C62634)) und kommerzielle Produkte für die medizinische Dokumentation ([Onkopti®](https://onkopti.de/protokollsuche/)) wurden von anderen entwickelt. Wir verweisen hier auf eine Auswahl dieser Arbeiten und Systeme.
-
-> Rubinstein, S. M., Yang, P. C., Cowan, A. J., & Warner, J. L. (2020). Standardizing Chemotherapy Regimen Nomenclature: A Proposal and Evaluation of the HemOnc and National Cancer Institute Thesaurus Regimen Content. JCO clinical cancer informatics, 4, 60–70. [https://doi.org/10.1200/CCI.19.00122](https://doi.org/10.1200/CCI.19.00122)  
-> [Onkopti® – die Datenbank digitalisierter onkologischer Therapieprotokolle](https://onkopti.de/protokollsuche/)
-
-##### Verwendete Substanzen
-
-Die Erstellung der Referenztabelle erfolgte unter Verwendung des [Umsetzungsleitfadens Substanzen](https://confluence.basisdatensatz.de/display/UMK/Substanzen) in der Version 2021. Dieser Leitfaden wurde geringfügig, überarbeitet, in folgenden Schritten:
-
-- der Eintrag `Larotrectinib` liegt als Duplikat vor, dies wurde korrigiert
-- die Spalte `Code` wurde ergänzt, hier sind gültige ATC-Codes verknüpft, sofern anwendbar
-- für die Zuordnung wurde auf das Kapitel `L` beschränkt (_Antineoplastic and immunomodulating agents_)
-
-> [Klassifikationen/substanz.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/substanz.csv)
-
-Variablen und Ausprägungen der Referenztabelle:
-
-| Variable  | Typ | Ausprägungen | Beschreibung |
-| --------- | --- | ------------ | ------------ |
-| Therapieart | String | z. B. `HO`  | Art der Therapie |
-| Substanz| Sting | z. B. `Abacavir`  | Bezeichnung des Arzneimittels |
-| Code | String | z. B. `J05AF06`  | ATC-Kode, Ebene 5 |
-
-##### TNM: Regionäre Lymphknotenmetastasierung
-
-Die Variable beschreibt den Status der regionären Lympknotenmetastasierung (N-Kategorie der TNM).
-
-> [Klassifikationen/tnm_n.csv](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Klassifikationen/tnm_n.csv)
-
-###### Zusatz (1mi), Mammakarzinom
-
-Anwendung bei: Mikrometastase(n), > 0,2 mm und/oder mehr als 200 Tumorzellen, aber nicht größer als 0,2 cm
-Stadium IB nach TNM8: T0, T1 N1mi M0
-
-> Quellen:
-[Kapitel  11.3, Interdisziplinäre S3-Leitlinie für die Früherkennung, Diagnostik, Therapie und Nachsorge des Mammakarzinoms (2021)](https://www.leitlinienprogramm-onkologie.de/leitlinien/mammakarzinom/); 
-[TNM Classification of Malignant Tumours, 8th edition](https://www.wiley.com/en-gb/TNM+Classification+of+Malignant+Tumours%2C+8th+Edition-p-9781119263579)
-
-###### Zusatz (sn)
-
-| Ausprägung | Beschreibung |
-| ---------- | ------------ |
-| `(p)NX(sn)` | Schildwächterlymphknoten kann histologisch nicht beurteilt werden |
-| `(p)N0(sn)` | Histologisch keine Lymphknotenmetastasen in Schildwächterlymphknoten |
-| `(p)N1(sn)` | Befall des (der) Schildwächterlymphknoten |
-
-> Quelle: [TNM Classification of Malignant Tumours, 8th edition](https://www.wiley.com/en-gb/TNM+Classification+of+Malignant+Tumours%2C+8th+Edition-p-9781119263579)
-
-###### Zusatz (i+), (mol+)
-
-| Ausprägung | Beschreibung | 
-| ---------- | ------------ | 
-| `(p)N0` | Histologisch keine Lymphknotenmetastasen, keine Untersuchung zum Nachweis isolierter Tumorzellen | 
-| `(p)N0(i–)` | Histologisch keine Lymphknotenmetastasen, kein morphologischer Nachweis von isolierten Tumorzellen |
-| `(p)N0(i+)` | Histologisch keine Lymphknotenmetastasen, morphologischer Nachweis von isolierten Tumorzellen |
-| `(p)N0(mol–)` | Histologisch keine Lymphknotenmetastasen, kein nichtmorphologischer Nachweis von isolierten Tumorzellen |
-| `(p)N0(mol+)`| Histologisch keine Lymphknotenmetastasen, nicht-morphologischer Nachweis von isolierten Tumorzellen |
-
-> Quelle: [TNM Classification of Malignant Tumours, 8th edition](https://www.wiley.com/en-gb/TNM+Classification+of+Malignant+Tumours%2C+8th+Edition-p-9781119263579)
-
-### Beispieldaten
-
-In diesem Repository soll der Bereitstellungsprozess für klinische Daten veranschaulicht werden.
-
-Zum einen ist ein XML-Rohdatensatz hinterlegt für die Lieferung der Daten aus den klinischen Krebsregistern der Länder. Dieser entspricht den gemeinsam erarbeiteten Vorgaben des `oBDS-RKI` und wird im ZfKD zu einem deutschlandweiten Gesamtdatensatz verarbeitet. Der "rohe" Datensatz bestehend aus XML-Daten und bildet den Ausgangspunkt der weiteren Verarbeitung, wird aber vom ZfKD _nicht_ ausgegeben.
-
-Zum anderen wird hier simuliert, wie eine definierte Teilmenge des verarbeiteten Gesamtdatensatzes auf Antrag übermittelt wird. Zur Veranschaulichung dieser Datenbereitstellung dient der Ordner `Beispieldaten/csv`. Werden im Rahmen einer Antragsverfahren im ZfKD Daten übermittelt, entsprechen diese in Form und Aufbau exakt den hier abgelegten Beispieldateien. Die csv-Dateien in diesem Ordner sind aus dem XML-Rohdatensatz generiert.
-
-Dabei ist zu beachten, dass aufgrund der vielfältigen Beziehungen der Bestandteile im [Datenschema](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen#datenschema) die Integration in eine einzelne Tabelle / Datei meist nicht zielführend ist. Es werden daher die angefragten Entitäten als einzelne Tabellen / Dateien exportiert. Die hier verwendeten Identifikatoren können in einem relationalen Modell wieder korrekt zusammengeführt werden (so sind etwa Einträge der Tumortabelle den jeweiligen Patienten zuordenbar). Hilfestellung bei den relationalen Beziehungen bietet das angehangene [ER-Modell](/.github/images/2023-09-28_Entity-Relationship-Modell.jpg), als strukturiertes Konzept zur Darstellung und Analyse von Daten in einer Datenbank.
-
-> 💡 Die in den Beispieldateien hinterlegten Daten sind künstlich erzeugt, folgen einfachen Verteilungen und berücksichtigen keine medizinischen Zusammenhänge. Die Identifikatoren sind zufällig erzeugt. Es besteht daher keinerlei Verbindung zu realen Daten.
-
-| Datei | Beschreibung | Download |
-| ----- | ------------ | -------- |
-| Rohdatensatz | Ein einfacher Testdatensatz als `.xml`-Datei, bestehend aus Angaben zu 30 fiktiven Patienten. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/xml/oBDS_v3.0.0.8a_RKI_Sample.xml) |
-| Applikationsart | Angaben zu Applikationsarten als `.csv` Testdatensatz mit Referenz auf `Bestrahlung`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/applikationsart.csv) |
-| Bestrahlung | Angaben zu Bestrahlungen als `.csv` Testdatensatz mit Referenz auf `ST`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/bestrahlung.csv) |
-| FM | Angaben zu Fernmetastasen (Tumor) als `.csv` Testdatensatz mit Referenz auf `Tumor`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/fm.csv) |
-| Folgeereignis FM | Angaben zu Fernmetastasen als `.csv` Testdatensatz mit Referenz auf `Folgeereignis`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/folgeereignis_fm.csv) |
-| Folgeereignis Weitere Klassifikationen | Angaben zu Weitere Klassifikationen als `.csv` Testdatensatz mit Referenz auf `Folgeereignis`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/folgeereignis_weitere_klassifikation.csv) |
-| Folgeereignis | Angaben zu Folgeereignissen als `.csv` Testdatensatz mit Referenz auf `Tumor`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/folgeereignis.csv) |
-| OP | Angaben zu Operationen als `.csv` Testdatensatz mit Referenz auf `Tumor`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/op.csv) |
-| OPS | Angaben zu OP-Kodes als `.csv` Testdatensatz mit Referenz auf `OP`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/ops.csv) |
-| Patient | Angaben zu Patienten als `.csv` Testdatensatz. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/patient.csv) |
-| Protokoll | Angaben zu Therapieprotokollen als `.csv` Testdatensatz mit Referenz auf `SYST`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/protokoll.csv) |
-| ST | Angaben zu Strahlentherapien als `.csv` Testdatensatz mit Referenz auf `Tumor`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/st.csv) |
-| Substanz | Angaben zu Substanzen als `.csv` Testdatensatz mit Referenz auf `SYST`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/substanz.csv) |
-| SYST | Angaben zu systemischen Therapien als `.csv` Testdatensatz mit Referenz auf `Tumor`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/syst.csv) |
-| Todesursache | Angaben zu Todesursachen als `.csv` Testdatensatz mit Referenz auf `Patient`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/todesursache.csv) |
-| Tumor | Angaben zu Tumoren als `.csv` Testdatensatz mit Referenz auf `Patient`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/tumor.csv) |
-| Weitere Klassifikationen | Angaben zu Weitere Klassifikationen als `.csv` Testdatensatz mit Referenz auf `Tumor`. | [💾](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Beispieldaten/csv/weitere_klassifikation.csv) |
+> [high_frequency_mental_health_surveillance.tsv](/high_frequency_mental_health_surveillance.tsv])
+
+#### Variablen und Variablenausprägungen  
+
+Die Daten enthalten folgende Variablen und Variablenausprägungen:
+
+| Variablenname | Typ | Ausprägung | Erläuterung | 
+|---|---|---|---|
+| model | string | `3M_Mittelwerte`, `3M_Anteile`, `Mittelwerte_smooth`, `Anteile_smooth` | Gibt an, welches Modell zur Schätzung genutzt wurde, eine lineare (3_Monate_Mittelwerte) bzw. logistische Regression (3_Monate_Anteile) für Drei-Monats-Fenster oder ein generalized additive model mit einem smoothing spline unter der Annahme einer Gaussverteilung (Mittelwerte_smooth) oder Binomialverteilung (Anteile_smooth) basierend auf wöchentlichen Datenpunkten | 
+| instrument | string | `SRMH`, `PHQ-2`, `GAD-2` | Gibt das Instrument an, das genutzt wurde und für das der fit (Schätzer) berechnet wurde <br><br>`SRMH`: Self-rated mental health bzw. selbsteingeschätzte psychische Gesundheit<br><br> `PHQ-2`: (Kurzscreener “Patient Health Questionaire-2”): depressive Symptome,<br><br> `GAD-2` (Kurzscreener “Generalized Anxiety Disorder-2”): Angstsymptome | 
+| type | string | `Summenscore`, `kategorial` | Gibt an, ob das Instrument als `Summenscore` oder aber `kategorial` mit einem Cut-Off-Wert genutzt wurde, um darüber und darunter liegende Anteile zu schätzen | 
+| category | string | `gesamt`, `Altersgruppe`, `Bildungsgruppe`, `Geschlecht`| Gibt an, nach welcher Kategorie stratifiziert wurde <br><br> `Bildungsgruppe`: Bildungsgruppe nach CASMIN <br><br> `Geschlecht`: wie bei Geburt zugewiesen| 
+| cat_value | string | `gesamt`, `18-29 Jahre`, `30-44 Jahre`, `45-64 Jahre`, `65+ Jahre`, `niedrige Bildungsgruppe`, `mittlere Bildungsgruppe`, `hohe Bildungsgruppe`, `männlich`, `weiblich` | Gibt an, für welche Subgruppe der fit (Schätzer) berechnet wurde | 
+| standardized | boolean | `TRUE`, `FALSE` | Gibt an, ob die Werte bei Stratifizierung für die anderen Kategorien standardisiert wurden | 
+| date | date | `yyyy-mm-dd` | Gibt die Mitte des Drei-Monats-Fensters bzw. der Woche an, für den der fit (Schätzer) berechnet wurde | 
+| fit | float | `≥0`, `NA` | Gibt den geschätzten Bevölkerungsmittelwert des Summenscores bzw. den geschätzten Anteil der Bevölkerung an, der über bzw. unter dem Cut-Off-Wert liegt, wenn verfügbar bzw. berechenbar, alternativ NA | 
+| se | float | `>0`, `NA` | Gibt den Standardfehler an, wenn verfügbar, alternativ NA | 
+| lwr | float | `≥0`, `NA`| Gibt die untere Grenze des 95%-Konfidenzintervalls an, wenn verfügbar, alternativ NA | 
+| upr | float |`≥0`, `NA` | Gibt die obere Grenze des 95%-Konfidenzintervall an, wenn verfügbar, alternativ NA | 
+| period_duration | string | `3_Monate`, `2_Monate`,`1_Woche` | Gibt an, auf welche Periode sich der fit bezieht, auf eine Woche (für Anteil_smooth und Mittelwerte_smooth) oder ob innerhalb des jeweiligen Drei-Monats-Fensters für zwei oder drei Monate Beobachtungen vorhanden waren | 
+| period_text | string | `Mitte <Monat> bis Mitte <Monat>` | Beschreibt explizit das Drei-Monats-Fenster, für das die fits berechnet wurden | | 
 
 ### Metadaten
 
-Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:  
+Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:
 
-> [Metadaten/](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Metadaten/)  
+> [Metadaten/](/Metadaten/)  
 
-Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/representation nachlesbar.
+Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/representation nachlesbar.   
 
-> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/Metadaten/zenodo.json)  
+> [Metadaten/zenodo.json](/Metadaten/zenodo.json)  
 
 ## Hinweise zur Nachnutzung der Daten
 
-Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:
+Offene Forschungsdaten des RKI werden auf [GitHub.com](http://GitHub.com/), [Zenodo.org](http://Zenodo.org/) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:
 
-- https://zenodo.org/communities/robertkochinstitut
 - https://github.com/robert-koch-institut
-- https://gitlab.opencode.de/robert-koch-institut
+- https://zenodo.org/communities/robertkochinstitut
 - https://edoc.rki.de/
 
 ### Lizenz  
 
-Der Datensatz "Bundesweiter klinischer Krebsregisterdatensatz - Datenschema und Klassifikationen" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY ](https://creativecommons.org/licenses/by/4.0/deed.de).  
+Der Datensatz “Hochfrequente Mental Health Surveillance” ist lizenziert unter der  [Creative Commons Namensnennung 4.0 International Public License | CC-BY ](https://creativecommons.org/licenses/by/4.0/deed.de).
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Bundesweiter_klinischer_Krebsregisterdatensatz-Datenschema_und_Klassifikationen/blob/main/LIZENZ) Datei des Datensatzes.
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](/LICENSE) bzw. [LIZENZ](/LIZENZ) Datei des Datensatzes.
+
+## Literatur
+
+[Ahmad F, Jhajj AK, Stewart DE, Burghardt M, Bierman AS. Single item measures of self-rated mental health: a scoping review. BMC Health Serv Res. 2014; 14:398. ](https://doi.org/10.1186/1472-6963-14-398)
+
+[Allen J, Born S, Damerow S, Kuhnert R, Lemcke J, Müller A et al. German Health Update (GEDA 2019/2020-EHIS) – Background and Methodology. J Health Monitor. 2021; 6:66–79.](https://doi.org/10.25646/8559)
+
+[Brauns H, Scherer S, Steinmann S. The CASMIN Educational Classification in International Comparative Research. In: Hoffmeyer-Zlotnik, J.H.P., Wolf, C. (eds) Advances in Cross-National Comparison. 2003. Springer, Boston, MA. 
+Kroenke K, Spitzer RL, Williams JBW, Monahan PO, Löwe B. Anxiety disorders in primary care: prevalence, impairment, comorbidity, and detection. Ann Intern Med. 2007; 146:317–25.](https://doi.org/10.1007/978-1-4419-9186-7_11)
+
+[Löwe B, Kroenke K, Gräfe K. Detecting and monitoring depression with a two-item questionnaire (PHQ-2). J Psychosom Res. 2005; 58:163–71.](https://doi.org/10.1016/j.jpsychores.2004.09.006)
+
+[Schwarz N. The German Microzensus. Schmollers Jahrbuch/J Appl Soc Sci. 2001. 121:649-654](https://www.ratswd.de/download/schmollers/Schwarz.pdf)
+
+[Wood SN. Thin Plate Regression Splines. JR Stat Soc, B Stat Methodol. 65(1):95–114.](https://doi.org/10.1111/1467-9868.00374)
+
+
