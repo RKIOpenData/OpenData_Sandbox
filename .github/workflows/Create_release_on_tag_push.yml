@@ -3,9 +3,10 @@ name: Create release on tag push
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
- push:
-  tags:
-    - '[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]'
+ #push:
+ # tags:
+ #   - '[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]'
+ workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
