@@ -10,7 +10,7 @@ jobs:
   manage-zenodo-record:
     runs-on: ubuntu-latest
     outputs:
-      record_id: ${{ steps.manage_record.outputs.record_id }}
+      RECORD_ID: ${{ steps.manage_record.outputs.RECORD_ID }}
 
     steps:
     - name: Checkout
@@ -30,4 +30,4 @@ jobs:
         fi
 
     - name: Save Record ID
-      run: sed -i "s/FIXED_RECORD_ID: ''/FIXED_RECORD_ID: '${{ env.RECORD_ID }}'/" .github/workflows/Zenodo.yml
+      run: sed -i "s/FIXED_RECORD_ID:\''/FIXED_RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
