@@ -11,4 +11,4 @@ jobs:
         uses: robert-koch-institut/OpenData-Workflows/Send_metadata_to_Govdata@main
         with:
           govdata_github_token: ${{secrets.GOVDATA_GITHUB_TOKEN}}
-          destination_repo: ${{inputs.GOVDATA_DESTINATION_REPO}}
+          destination_repo: RKIOpenData/Metadaten_fuer_GovData
