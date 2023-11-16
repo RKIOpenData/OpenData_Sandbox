@@ -28,7 +28,7 @@ jobs:
                            -d '{}' \
                            "https://sandbox.zenodo.org/api/records")
             echo "$response"
-            echo "RECORD_ID="$response | jq -r '.id'"" >> $GITHUB_ENV 
+            echo "RECORD_ID="$(echo $response | jq -r '.id')"" >> $GITHUB_ENV 
         fi
 
     - name: Save Record ID
