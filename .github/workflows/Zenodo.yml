@@ -32,6 +32,6 @@ jobs:
         fi
 
     - name: Save Record ID
-      run: sed -i "s/FIXED_RECORD_ID:\ ''/FIXED_RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
+      run: sed -i "s/RECORD_ID:\ ''/RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
 
     - uses: EndBug/add-and-commit@v9
