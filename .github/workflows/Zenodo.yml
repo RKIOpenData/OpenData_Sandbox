@@ -22,7 +22,7 @@ jobs:
       run: |
         if [[ -z "$RECORD_ID" ]]; then
           # Keine vorhandene Record ID, erstelle neuen Datensatz und speichert die Record ID
-                           -H "Authorization: Bearer ${{ secrets.ZENODO_ACCESS_TOKEN }}" \
+                           -H "Authorization: Bearer ${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
                            -X POST \
                            -d '{}' \
                            "https://zenodo.org/api/records")
