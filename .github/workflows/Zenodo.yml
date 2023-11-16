@@ -27,6 +27,7 @@ jobs:
                            -X POST \
                            -d '{}' \
                            "https://sandbox.zenodo.org/api/records")
+            echo "$response"
             echo "RECORD_ID="$response | jq -r '.id'"" >> $GITHUB_ENV 
         fi
 
