@@ -1,0 +1,35 @@
+name: Zenodo Dataset Draft with DOI Reservation
+
+on:
+  workflow_dispatch:
+
+env:
+    RECORD_ID: ''
+
+jobs:
+  manage-zenodo-record:
+    runs-on: ubuntu-latest
+    outputs:
+      RECORD_ID: ${{ steps.manage_record.outputs.RECORD_ID }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Manage Zenodo Record
+      id: manage_record
+
+      run: |
+        if [[ -z "$RECORD_ID" ]]; then
+          # Keine vorhandene Record ID, erstelle neuen Datensatz und speichert die Record ID
+            response=$(curl -H "Content-Type: application/json" \
+                           -H "Authorization: Bearer ${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
+                           -X POST \
+                           -d '{}' \
+                           "https://sandbox.zenodo.org/api/records")
+            echo "$response"
+            echo "RECORD_ID="$response | jq -r '.id'"" >> $GITHUB_ENV 
+        fi
+
+    - name: Save Record ID
+      run: sed -i "s/FIXED_RECORD_ID:\''/FIXED_RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
