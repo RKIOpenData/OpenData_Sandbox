@@ -25,7 +25,7 @@ jobs:
                            -H "Authorization: Bearer ${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
                            -X POST \
                            -d '{}' \
-                           "https://zenodo.org/api/records")
+                           "https://sandbox.zenodo.org/api/records")
             echo "RECORD_ID="$response | jq -r '.id'"" >> $GITHUB_ENV 
         fi
 
