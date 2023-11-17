@@ -65,7 +65,7 @@ jobs:
                 sed -i 's|dct:modified \"...-..-.*\"|dct:modified \"$DatenstandTime\"|g' "$datei"               # Datenstand govdata.ttl
                 sed -i 's|\"resource_version\": \"...-..-.*\"|\"resource_version\": \"$DatenstandTime\"|g' "$datei" # Datenstand nfid4health.json
                 # Mapping DOIs
-                sed -i 's|10.5281/zenodo\.${{ LAST_RECORD_ID }}|10.5281/zenodo\.$NEW_RECORD_ID|g' "$datei"          # DOI Aktuallisierung allgemein
+                sed -i 's|10.5281/zenodo\.$LAST_RECORD_ID|10.5281/zenodo\.$NEW_RECORD_ID|g' "$datei"          # DOI Aktuallisierung allgemein
                 sed -i 's|Currently/no/DOI/available|10.5281/zenodo\.$NEW_RECORD_ID|g' "$datei"              # DOI Aktuallisierung wenn: Currently/no/DOI/available
            fi
         done
