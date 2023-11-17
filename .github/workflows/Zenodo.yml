@@ -36,5 +36,7 @@ jobs:
 
     - name: Add and Commit Changes 
       uses: EndBug/add-and-commit@v9.0.1
+      env: 
+        github_token: ${{ secrets.WORKFLOW_TOKEN }}
       with:
         message: 'Update Metadata'
