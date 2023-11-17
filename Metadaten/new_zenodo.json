@@ -24,7 +24,7 @@
         ],
         "publication_date": "2023-11-10",
         "resource_type": {
-            "id": "Dataset"
+            "id": "dataset"
         },
         "title": "Testdatensatz",
         "publisher": "Zenodo"
