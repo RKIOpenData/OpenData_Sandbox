@@ -13,7 +13,7 @@ jobs:
 
     - name: Neue Version des Datensatzes anlegen
       run: |
-        LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)
+        echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
         if [ "$LAST_RECORD_ID" == "null" ] ; then
             response=$(curl -H "Content-Type: application/json" \
@@ -29,12 +29,9 @@ jobs:
                            "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
         fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
-        NEW_RECORD_ID=$(echo " $response" |jq -r '.id' )
-        echo $NEW_RECORD_ID 
-        echo $LAST_RECORD_ID
-        echo "$response" | jq '.' > Metadaten/new_zenodo_2.json
-        
-        
+        echo "NEW_RECORD_ID=$(echo " $response" |jq -r '.id' )" >> $GITHUB_ENV
+        echo "$response" | jq '.' > Metadaten/new_zenodo_output.json
+                
     - name: Update der Metadaten
       run: | 
         # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
