@@ -17,6 +17,7 @@ jobs:
       run: |
         EXISTING_RECORD_ID=$(jq -r '.ID' Metadaten/new_zenodo.json)
         echo $EXISTING_RECORD_ID
+        echo $(jq '.metadata' Metadaten/new_zenodo.json) 
         if [ "$EXISTING_RECORD_ID" == "null" ] ; then
           # Keine vorhandene Record ID, erstelle neuen Datensatz und speichert die Record ID
             response=$(curl -H "Content-Type: application/json" \
