@@ -20,7 +20,7 @@ jobs:
       id: manage_record
 
       run: |
-        cat .giuthub/workflows/ZenodoID
+        cat .github/workflows/ZenodoID
         if [[ -z "$RECORD_ID" ]]; then
           # Keine vorhandene Record ID, erstelle neuen Datensatz und speichert die Record ID
             response=$(curl -H "Content-Type: application/json" \
