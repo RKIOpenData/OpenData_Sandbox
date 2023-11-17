@@ -26,7 +26,7 @@ jobs:
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
                            -X POST \
-                           -d '{}' \
+                           -d @Metadaten/zenodo.json \
                            "https://sandbox.zenodo.org/api/records")
             echo "$response"
             echo "RECORD_ID="$(echo $response | jq -r '.id')"" >> $GITHUB_ENV 
