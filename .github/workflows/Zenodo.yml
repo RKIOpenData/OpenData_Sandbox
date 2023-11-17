@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
 
 env:
-    RECORD_ID: ''
     github_token: ${{ secrets.WORKFLOW_TOKEN }}
 
 jobs:
@@ -21,19 +20,20 @@ jobs:
       id: manage_record
 
       run: |
+        cat .giuthub/workflows/ZenodoID
         if [[ -z "$RECORD_ID" ]]; then
           # Keine vorhandene Record ID, erstelle neuen Datensatz und speichert die Record ID
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
-                           -d @Metadaten/zenodo.json \
+                           -d @Metadaten/new_zenodo.json \
                            "https://zenodo.org/api/records")
             echo "$response"
             echo "RECORD_ID="$(echo $response | jq -r '.id')"" >> $GITHUB_ENV 
         fi
 
     - name: Save Record ID
-      run: sed -i "s/RECORD_ID:\ ''/RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
+      run: echo $RECORD_ID >> .github/workflows/ZenodoID
 
     - name: Add and Commit Changes 
       uses: EndBug/add-and-commit@v9
