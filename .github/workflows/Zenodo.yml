@@ -29,7 +29,7 @@ jobs:
         #                    "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
         fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
-        NEW_RECORD_ID=$(jq -r '.id' $response)
+        NEW_RECORD_ID=$(echo " $response" |jq -r '.id' )
         echo $NEW_RECORD_ID 
         echo $LAST_RECORD_ID
         echo "$response" | jq '.' > Metadaten/new_zenodo_2.json
