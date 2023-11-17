@@ -13,20 +13,20 @@ jobs:
 
     - name: Neue Version des Datensatzes anlegen
       run: |
-        OLD_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)
+        LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)
         # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
-        if [ "$OLD_RECORD_ID" == "null" ] ; then
+        if [ "$LAST_RECORD_ID" == "null" ] ; then
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
                            -d @Metadaten/new_zenodo.json \
                            "https://zenodo.org/api/records")
         # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
-        # else
-        #     response=$(curl -H "Content-Type: application/json" \
-        #                    -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
-        #                    -X POST \
-        #                    "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
+        else
+            response=$(curl -H "Content-Type: application/json" \
+                           -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
+                           -X POST \
+                           "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
         fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         NEW_RECORD_ID=$(echo " $response" |jq -r '.id' )
@@ -35,42 +35,43 @@ jobs:
         echo "$response" | jq '.' > Metadaten/new_zenodo_2.json
         
         
-#    - name: Update der Metadaten
-#      run: | 
-#        # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
-#        dateien=(
-#            "Metadaten/govdata.ttl" \
-#            "Metadaten/nfdi4health.json" \
-#            "Metadaten/new_Zenodo.json" \
-#            "citation.cff" \
-#            "Readme.md")
-#        # Variablen für die aktualisierung der Metadaten
-#        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d")
-#        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")
-#        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json)
-#        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json)
-#        echo ${{ Now }}
-#        echo ${{ NowTime }}
-#        echo ${{ Datenstand }}
-#        echo ${{ DatenstandTime }}
-#        
-#        # Suchen und Ersetzen Metadaten in den Datein
-#        for datei in "${dateien[@]}"; do
-#            if [ -f "$datei" ]; then
-#               # Mapping Publikationsdatum
-#                sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"${{ Now }}\"|g' "$datei"            # Publikationsdatum zenodo.json
-#                sed -i 's|date-released: \'...-..-.*\'|date-released: \'${{ Now }}\'|g' "$datei"                      # Publikationsdatum citation.cff
-#                sed -i 's|dct:issued \"...-..-.*\"|dct:issued \"${{ NowTime }}\"|g' "$datei"                          # Publikationsdatum govdata.ttl
-#                # Mapping Datenstand
-#                sed -i 's|\"version\": \"...-..-.*\"|\"version\": \"${{ Datenstand }}\"|g' "$datei"                       # Datenstandzenodo.json
-#                sed -i 's|version: \'...-..-.*\'|version: \'${{ DatenstandTime }}\'|g' "$datei"                       # Datenstand citation.cff
-#                sed -i 's|dct:modified \"...-..-.*\"|dct:modified \"${{ DatenstandTime }}\"|g' "$datei"               # Datenstand govdata.ttl
-#                sed -i 's|\"resource_version\": \"...-..-.*\"|\"resource_version\": \"${{ DatenstandTime }}\"|g' "$datei" # Datenstand nfid4health.json
-#                # Mapping DOIs
-#                sed -i 's|10.5281/zenodo\.${{ LAST_RECORD_ID }}|10.5281/zenodo\.${{ NEW_RECORD_ID }}|g' "$datei"          # DOI Aktuallisierung allgemein
-#                sed -i 's|Currently/no/DOI/available|10.5281/zenodo\.${{ NEW_RECORD_ID }}|g' "$datei"              # DOI Aktuallisierung wenn: Currently/no/DOI/available
-#           fi
-#        done
+    - name: Update der Metadaten
+      run: | 
+        # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
+        dateien=(
+            "Metadaten/govdata.ttl" \
+            "Metadaten/nfdi4health.json" \
+            "Metadaten/new_Zenodo.json" \
+            "citation.cff" \
+            "Readme.md")
+        
+        # Variablen für die aktualisierung der Metadaten
+        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d")
+        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")
+        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json)
+        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json)
+        echo $Now
+        echo $NowTime
+        echo $Datenstand
+        echo $DatenstandTime
+        
+        # Suchen und Ersetzen Metadaten in den Datein
+        for datei in "${dateien[@]}"; do
+            if [ -f "$datei" ]; then
+               # Mapping Publikationsdatum
+                sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"$Now\"|g' "$datei"            # Publikationsdatum zenodo.json
+                sed -i 's|date-released: \'...-..-.*\'|date-released: \'$Now\'|g' "$datei"                      # Publikationsdatum citation.cff
+                sed -i 's|dct:issued \"...-..-.*\"|dct:issued \"$NowTime\"|g' "$datei"                          # Publikationsdatum govdata.ttl
+                # Mapping Datenstand
+                sed -i 's|\"version\": \"...-..-.*\"|\"version\": \"$Datenstand\"|g' "$datei"                       # Datenstandzenodo.json
+                sed -i 's|version: \'...-..-.*\'|version: \'$DatenstandTime\'|g' "$datei"                       # Datenstand citation.cff
+                sed -i 's|dct:modified \"...-..-.*\"|dct:modified \"$DatenstandTime\"|g' "$datei"               # Datenstand govdata.ttl
+                sed -i 's|\"resource_version\": \"...-..-.*\"|\"resource_version\": \"$DatenstandTime\"|g' "$datei" # Datenstand nfid4health.json
+                # Mapping DOIs
+                sed -i 's|10.5281/zenodo\.${{ LAST_RECORD_ID }}|10.5281/zenodo\.$NEW_RECORD_ID|g' "$datei"          # DOI Aktuallisierung allgemein
+                sed -i 's|Currently/no/DOI/available|10.5281/zenodo\.$NEW_RECORD_ID|g' "$datei"              # DOI Aktuallisierung wenn: Currently/no/DOI/available
+           fi
+        done
 
     - name: Add and Commit Changes 
       uses: EndBug/add-and-commit@v9
