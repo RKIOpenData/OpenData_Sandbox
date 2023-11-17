@@ -29,8 +29,9 @@ jobs:
                            "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
         fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
-        echo "NEW_RECORD_ID=$(echo " $response" |jq -r '.id' )" >> $GITHUB_ENV
         echo "$response" | jq '.' > Metadaten/new_zenodo_output.json
+        cat Metadaten/new_zenodo_output.json
+        echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
                 
     - name: Update der Metadaten
       run: | 
@@ -43,14 +44,10 @@ jobs:
             "Readme.md")
         
         # Variablen für die aktualisierung der Metadaten
-        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d")
-        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")
-        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json)
-        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json)
-        echo $Now
-        echo $NowTime
-        echo $Datenstand
-        echo $DatenstandTime
+        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") & echo $Now
+        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") & echo $NowTime
+        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json) & echo $DatenstandTime
+        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) & echo $Datenstand
         
         # Suchen und Ersetzen Metadaten in den Datein
         for datei in "${dateien[@]}"; do
