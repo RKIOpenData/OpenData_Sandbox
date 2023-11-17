@@ -13,23 +13,19 @@ jobs:
 
     - name: Neue Version des Datensatzes anlegen
       run: |
-      
         LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)
-        if [ "$LAST_RECORD_ID" == "null" ] ; then
-            # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
+        if [ "$LAST_RECORD_ID" == "null" ] ; then # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
                            -d @Metadaten/new_zenodo.json \
                            "https://zenodo.org/api/records")
-        else 
-            # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
+        else  # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
                            "https://zenodo.org/api/records/${{ LAST_RECORD_ID }}/versions")
         fi
-        
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         NEW_RECORD_ID=$(jq -r '.id' $response)
         echo $NEW_RECORD_ID
@@ -39,7 +35,6 @@ jobs:
         
     - name: Update der Metadaten
       run: | 
-      
         # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
         dateien=(
             "Metadaten/govdata.ttl" \
@@ -47,7 +42,6 @@ jobs:
             "Metadaten/new_Zenodo.json" \
             "citation.cff" \
             "Readme.md")
-            
         # Variablen für die aktualisierung der Metadaten
         Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d")
         NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")
