@@ -14,6 +14,7 @@ jobs:
     - name: Neue Version des Datensatzes anlegen
       run: |
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
+        echo $LAST_RECORD_ID
         # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
         if [ "$LAST_RECORD_ID" == "null" ] ; then
             response=$(curl -H "Content-Type: application/json" \
@@ -22,11 +23,11 @@ jobs:
                            -d @Metadaten/new_zenodo.json \
                            "https://zenodo.org/api/records")
         # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
-        else
-            response=$(curl -H "Content-Type: application/json" \
-                           -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
-                           -X POST \
-                           "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
+        #else
+        #    response=$(curl -H "Content-Type: application/json" \
+        #                   -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
+        #                   -X POST \
+        #                   "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
         fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         echo "$response" | jq '.' > Metadaten/new_zenodo_output.json
@@ -35,6 +36,12 @@ jobs:
                 
     - name: Update der Metadaten
       run: | 
+        # Variablen für die aktualisierung der Metadaten
+        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") & echo $Now
+        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") & echo $NowTime
+        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json) & echo $DatenstandTime
+        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) & echo $Datenstand
+        
         # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
         dateien=(
             "Metadaten/govdata.ttl" \
@@ -42,12 +49,6 @@ jobs:
             "Metadaten/new_Zenodo.json" \
             "citation.cff" \
             "Readme.md")
-        
-        # Variablen für die aktualisierung der Metadaten
-        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") & echo $Now
-        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") & echo $NowTime
-        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json) & echo $DatenstandTime
-        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) & echo $Datenstand
         
         # Suchen und Ersetzen Metadaten in den Datein
         for datei in "${dateien[@]}"; do
