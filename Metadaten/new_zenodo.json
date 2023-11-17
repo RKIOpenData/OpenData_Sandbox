@@ -1,27 +1,32 @@
 {
-  "access": {
-    "record": "public",
-    "files": "public"
-  },
-  "files": {
-    "enabled": true
-  },
-  "metadata": {
-    "creators": [
-      {
-        "person_or_org": {
-          "family_name": "Wünsche",
-          "given_name": "Hannes",
-          "identifiers": [
-            {"scheme": "orcid", "identifier": "0000-0002-1825-0097"}
-          ],
-          "type": "personal"
-        }
-      }
-    ],
-    "publication_date": "2023-11-10",
-    "resource_type": { "id": "Dataset" },
-    "title": "Testdatensatz",
-	"publisher": "Zenodo"
-  }
+    "access": {
+        "record": "public",
+        "files": "public"
+    },
+    "files": {
+        "enabled": true
+    },
+    "metadata": {
+        "creators": [
+            {
+                "person_or_org": {
+                    "family_name": "Wünsche",
+                    "given_name": "Hannes",
+                    "identifiers": [
+                        {
+                            "scheme": "orcid",
+                            "identifier": "0000-0002-1825-0097"
+                        }
+                    ],
+                    "type": "personal"
+                }
+            }
+        ],
+        "publication_date": "2023-11-10",
+        "resource_type": {
+            "id": "Dataset"
+        },
+        "title": "Testdatensatz",
+        "publisher": "Zenodo"
+    }
 }
