@@ -13,18 +13,20 @@ jobs:
 
     - name: Neue Version des Datensatzes anlegen
       run: |
-        LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)
-        if [ "$LAST_RECORD_ID" == "null" ] ; then # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
+        OLD_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)
+        # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
+        if [ "$OLD_RECORD_ID" == "null" ] ; then
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
                            -d @Metadaten/new_zenodo.json \
                            "https://zenodo.org/api/records")
-        else  # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
+        # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
+        else
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
-                           "https://zenodo.org/api/records/${{ LAST_RECORD_ID }}/versions")
+                           "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
         fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         NEW_RECORD_ID=$(jq -r '.id' $response)
