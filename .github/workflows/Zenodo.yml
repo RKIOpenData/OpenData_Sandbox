@@ -23,7 +23,7 @@ jobs:
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
-                           -d $(jq '.metadata' Metadaten/new_zenodo.json) \
+                           -d @Metadaten/new_zenodo.json) \
                            "https://zenodo.org/api/records")
           # Speichere die Response in zenodo.json und überschreibe den alten Inhalt
           echo "$response" > Metadaten/new_zenodo.json
