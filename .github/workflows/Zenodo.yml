@@ -24,10 +24,10 @@ jobs:
         if [[ -z "$RECORD_ID" ]]; then
           # Keine vorhandene Record ID, erstelle neuen Datensatz und speichert die Record ID
             response=$(curl -H "Content-Type: application/json" \
-                           -H "Authorization: Bearer ${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
+                           -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
                            -d @Metadaten/zenodo.json \
-                           "https://sandbox.zenodo.org/api/records")
+                           "https://zenodo.org/api/records")
             echo "$response"
             echo "RECORD_ID="$(echo $response | jq -r '.id')"" >> $GITHUB_ENV 
         fi
@@ -36,7 +36,7 @@ jobs:
       run: sed -i "s/RECORD_ID:\ ''/RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
 
     - name: Add and Commit Changes 
-      uses: EndBug/add-and-commit@v9.1.3
+      uses: EndBug/add-and-commit@v9
       with:
         message: 'Update Metadata'
-        author: 'RKIOpenData'
+        author_name: 'RKIOpenData'
