@@ -5,6 +5,7 @@ on:
 
 env:
     RECORD_ID: ''
+    github_token: ${{ secrets.WORKFLOW_TOKEN }}
 
 jobs:
   manage-zenodo-record:
@@ -14,7 +15,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Manage Zenodo Record
       id: manage_record
@@ -35,8 +36,7 @@ jobs:
       run: sed -i "s/RECORD_ID:\ ''/RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
 
     - name: Add and Commit Changes 
-      uses: EndBug/add-and-commit@v9.0.1
-      env: 
-        github_token: ${{ secrets.WORKFLOW_TOKEN }}
+      uses: EndBug/add-and-commit@v9.1.4
       with:
         message: 'Update Metadata'
+        author: 'RKIOpenData'
