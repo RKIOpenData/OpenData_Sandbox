@@ -22,12 +22,12 @@ jobs:
                            -d @Metadaten/new_zenodo.json \
                            "https://zenodo.org/api/records")
         # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
-        else
-            response=$(curl -H "Content-Type: application/json" \
-                           -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
-                           -X POST \
-                           "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
-        fi
+        # else
+        #     response=$(curl -H "Content-Type: application/json" \
+        #                    -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
+        #                    -X POST \
+        #                    "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
+        # fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         NEW_RECORD_ID=$(jq -r '.id' $response)
         echo ${{ NEW_RECORD_ID }}
