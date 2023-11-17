@@ -27,11 +27,11 @@ jobs:
         #                    -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
         #                    -X POST \
         #                    "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
-        # fi
+        fi
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         NEW_RECORD_ID=$(jq -r '.id' $response)
-        echo ${{ NEW_RECORD_ID }}
-        echo ${{ LAST_RECORD_ID }}
+        echo $NEW_RECORD_ID 
+        echo $LAST_RECORD_ID
         echo "$response" | jq '.' > Metadaten/new_zenodo_2.json
         
         
