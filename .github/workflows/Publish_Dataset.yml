@@ -12,7 +12,7 @@ jobs:
       OPENCODE_GROUPID: 4116
       OPENCODE_ACCESS_USER: knutperseke
       OPENCODE_ZENODOJSON_PATH: Metadaten/zenodo.json
-      GOVDATA_DESTINATION_REPO: knutator2/Metadaten_Test
+      GOVDATA_DESTINATION_REPO: RKIOpenData/Metadaten_fuer_GovData
     secrets:
       GOVDATA_GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       OPENCODE_TOKEN: ${{secrets.OPENCODE_TOKEN}}
