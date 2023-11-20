@@ -53,7 +53,7 @@ jobs:
         # Suchen und Ersetzen Metadaten in den Datein
         for datei in "${dateien[@]}"; do
             if [ -f "$datei" ]; then
-                print "$datei
+                print "$datei"
                 # Mapping Publikationsdatum
                 sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"$Now\"|g' "$datei" && print "1"           # Publikationsdatum zenodo.json
                 sed -i 's|date-released: \'...-..-.*\'|date-released: \'$Now\'|g' "$datei" && print "2"              # Publikationsdatum citation.cff
