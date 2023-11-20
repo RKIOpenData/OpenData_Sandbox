@@ -58,8 +58,8 @@ jobs:
         for datei in "${dateien[@]}"; do
             if [ -f "$datei" ]; then
                 # Mapping Publikationsdatum
-                sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"$Now\"|g' "$datei"               # Publikationsdatum zenodo.json
-                sed -i "s|date-released: \'...-..-.*\'|date-released: \'$Now\'|g" "$datei"                           # Publikationsdatum citation.cff
+                sed -i 's|"publication_date": "...-..-.*"|"publication_date": "${{ Now }}"|g' "$datei"               # Publikationsdatum zenodo.json
+                sed -i "s|date-released: \'...-..-.*\'|date-released: '${{ Now }}'|g" "$datei"                           # Publikationsdatum citation.cff
                 sed -i 's|dct:issued \"...-..-.*\"|dct:issued \"$NowTime\"|g' "$datei"                               # Publikationsdatum govdata.ttl
                 # Mapping Datenstand
                 sed -i 's|\"version\": \"...-..-.*\"|\"version\": \"$Datenstand\"|g' "$datei"                        # Datenstandzenodo.json
