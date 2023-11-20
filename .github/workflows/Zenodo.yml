@@ -35,7 +35,7 @@ jobs:
         # Weitergabe der Variablen in die Umgebung
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
-        echo "RESPONSE=$(echo "$response" |jq -r '.' )" >> $GITHUB_ENV
+        echo "RESPONSE=$(echo "$response")" >> $GITHUB_ENV
                  
     - name: Update der Metadaten
       run: | 
