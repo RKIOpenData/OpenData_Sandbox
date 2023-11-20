@@ -13,6 +13,7 @@ jobs:
 
     - name: Neue Version des Datensatzes anlegen
       run: |
+      
         LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json) 
         echo $LAST_RECORD_ID
         if [ "$LAST_RECORD_ID" == "null" ] || [ -z "$LAST_RECORD_ID" ]; then
@@ -33,18 +34,19 @@ jobs:
                            "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
                            echo "$response
         fi
-        # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
+        # Weitergabe der Variablen in die Umgebung
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
-        echo "RESPONSE=$("$response" | jq '.')" >> $GITHUB_ENV
-                
+        echo "RESPONSE=$(echo "$response" |jq '.' )" >> $GITHUB_ENV
+                 
     - name: Update der Metadaten
       run: | 
+      
         # Variablen für die aktualisierung der Metadaten
-        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") && echo $Now
-        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") && echo $NowTime
-        DatenstandTime=$(jq -r '.metadata.dates[0].date' Metadaten/new_zenodo.json) && echo $DatenstandTime
-        Datenstand=$(jq -r '.metadata.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) && echo $Datenstand
+        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d")
+        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")
+        Datenstand=$(jq -r '.metadata.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json)
+        DatenstandTime=$(jq -r '.metadata.dates[0].date' Metadaten/new_zenodo.json)
         
         # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
         dateien=(
@@ -58,20 +60,20 @@ jobs:
         for datei in "${dateien[@]}"; do
             if [ -f "$datei" ]; then
                 # Mapping Publikationsdatum
-                sed -i 's|"publication_date": "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|"publication_date": "'"$Now"'"|' "$datei"                 # Publikationsdatum zenodo.json
-                sed -i "s|date-released: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?'|date-released: '$Now'|" "$datei"                               # Publikationsdatum citation.cff
-                sed -i 's|dct:issued "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|dct:issued "'"$NowTime"'"|' "$datei"                               # Publikationsdatum govdata.ttl
-                # Mapping Datenstand
-                sed -i 's|"version": "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|"version": "'"$Datenstand"'"|' "$datei"                            # Datenstandzenodo.json
-                sed -i "s|version: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?'|version: '$DatenstandTime'|" "$datei"                                # Datenstand citation.cff
-                sed -i 's|dct:modified "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|dct:modified "'"$DatenstandTime"'"|' "$datei"                    # Datenstand govdata.ttl
-                sed -i 's|"resource_version": "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|"resource_version": "'"$DatenstandTime"'"|' "$datei"      # Datenstand nfid4health.json
+                sed -i 's|\"publication_date\": \"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?\"|\"publication_date\": \"$Now\"|' "$datei"                 # Publikationsdatum zenodo.json
+                sed -i "s|date-released: \'[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?\'|date-released: \'$Now\'|" "$datei"                               # Publikationsdatum citation.cff
+                sed -i 's|dct:issued \"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?\"|dct:issued \"$NowTime\"|' "$datei"                                   # Publikationsdatum govdata.ttl
+                # Mapping Datenstand  
+                #sed -i 's|"version": "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|"version": "'"$Datenstand"'"|' "$datei"                            # Datenstandzenodo.json
+                #sed -i "s|version: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?'|version: '$DatenstandTime'|" "$datei"                                # Datenstand citation.cff
+                #sed -i 's|dct:modified "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|dct:modified "'"$DatenstandTime"'"|' "$datei"                    # Datenstand govdata.ttl
+                #sed -i 's|"resource_version": "[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}+[0-9]{2}:[0-9]{2})?"|"resource_version": "'"$DatenstandTime"'"|' "$datei"      # Datenstand nfid4health.json
                 # Mapping DOIs
                 sed -i 's|10.5281/zenodo.$LAST_RECORD_ID|10.5281/zenodo.'"$NEW_RECORD_ID"'|' "$datei"                                                                                   # DOI Aktuallisierung allgemein
                 sed -i 's|Currently/no/DOI/available|10.5281/zenodo.'"$NEW_RECORD_ID"'|' "$datei"                                                                                        # DOI Aktuallisierung wenn: Currently/no/DOI/available
            fi
         done
-        echo $("$RESPONSE" | jq '.') > Metadaten/new_zenodo_output.json   
+        echo "$RESPONSE" > Metadaten/new_zenodo_output.json   
 
     - name: Add and Commit Changes 
       uses: EndBug/add-and-commit@v9
