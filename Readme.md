@@ -3,4 +3,4 @@ Datensatzdokumentation
 
 TESTDOKUMENTATION
 
-DOI: Currently/no/DOI/available
+DOI: 10.5281/zenodo.10160439
