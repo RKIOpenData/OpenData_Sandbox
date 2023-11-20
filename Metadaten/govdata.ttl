@@ -11,7 +11,7 @@
                   dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@rki.de" ; foaf:name "Robert Koch-Institut | Open Data Team"] ;
                   dcatde:contributor [ a foaf:Organization; foaf:name "Open Data Team" ];
                   dct:description "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum <a href=\"http://rki.de\">lorem ipsum</a>.<br>- lorem ipsum<br>- lorem ipsumlorem ipsum" ;
-                  dct:issued "2023-11-14T17:42:50+01:00"^^xsd:dateTime ;
+                  dct:issued "$NowTime"^^xsd:dateTime ;
                   dct:modified "2023-10-19T12:16:30+02:00"^^xsd:dateTime ;
                   dct:publisher [ a foaf:Organization ;
                       foaf:mbox "opendata@rki.de" ;
