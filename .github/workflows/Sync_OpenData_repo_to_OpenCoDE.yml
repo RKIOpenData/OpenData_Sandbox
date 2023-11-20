@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  name: Sync Github Open Data repository and its metadata to OpenCoDE.de
   runs-on: ubuntu-latest
   steps:
     - name: Sync Github Open Data repository
