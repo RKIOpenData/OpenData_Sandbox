@@ -14,7 +14,7 @@ jobs:
       OPENCODE_ZENODOJSON_PATH: Metadaten/zenodo.json
       GOVDATA_DESTINATION_REPO: RKIOpenData/Metadaten_fuer_GovData
     secrets:
-      GOVDATA_GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       OPENCODE_TOKEN: ${{secrets.OPENCODE_TOKEN}}
       NFDI4HEALTH_CLIENT_ID: CSH_RKI_CLIENT
       NFDI4HEALTH_CLIENT_SECRET: ${{secrets.NFDI4HEALTH_CLIENT_SECRET}}
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
