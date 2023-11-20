@@ -55,9 +55,9 @@ jobs:
         for datei in "${dateien[@]}"; do
             if [ -f "$datei" ]; then
                 # Mapping Publikationsdatum
-                sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"$Now\"|g' "$datei" && print "1"           # Publikationsdatum zenodo.json
-                #sed -i 's|date-released: \'...-..-.*\'|date-released: \'$Now\'|g' "$datei" && print "2"              # Publikationsdatum citation.cff
-                #sed -i 's|dct:issued \"...-..-.*\"|dct:issued \"$NowTime\"|g' "$datei" && print "3"            # Publikationsdatum govdata.ttl
+                sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"$Now\"|g' "$datei" && echo "1"           # Publikationsdatum zenodo.json
+                sed -i 's|date-released: \'...-..-.*\'|date-released: \'$Now\'|g' "$datei" && echo "2"              # Publikationsdatum citation.cff
+                #sed -i 's|dct:issued \"...-..-.*\"|dct:issued \"$NowTime\"|g' "$datei" && echo "3"            # Publikationsdatum govdata.ttl
                 # Mapping Datenstand
                 #sed -i 's|\"version\": \"...-..-.*\"|\"version\": \"$Datenstand\"|g' "$datei" && print "4"                        # Datenstandzenodo.json
                 #sed -i 's|version: \'...-..-.*\'|version: \'$DatenstandTime\'|g' "$datei" && print "5"                        # Datenstand citation.cff
