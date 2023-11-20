@@ -39,8 +39,8 @@ jobs:
         # Variablen für die aktualisierung der Metadaten
         Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") && echo $Now
         NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") && echo $NowTime
-        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json) && echo $DatenstandTime
-        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) && echo $Datenstand
+        DatenstandTime=$(jq -r 'metadata.dates[0].date' Metadaten/new_zenodo.json) && echo $DatenstandTime
+        Datenstand=$(jq -r 'metadata.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) && echo $Datenstand
         
         # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
         dateien=(
