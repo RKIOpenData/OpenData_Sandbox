@@ -24,20 +24,18 @@ jobs:
                            -X POST \
                            -d @Metadaten/new_zenodo.json \
                            "https://zenodo.org/api/records")
-                           echo "$response
         else
             # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
-            echo "ecord ID: $LAST_RECORD_ID"
+            echo "Record ID: $LAST_RECORD_ID"
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
                            "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
-                           echo "$response
         fi
         # Weitergabe der Variablen in die Umgebung
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
-        echo "RESPONSE=$(echo "$response" |jq '.' )" >> $GITHUB_ENV
+        echo "RESPONSE=$(echo "$response" |jq -r '.' )" >> $GITHUB_ENV
                  
     - name: Update der Metadaten
       run: | 
