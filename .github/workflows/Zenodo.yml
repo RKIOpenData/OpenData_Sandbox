@@ -23,7 +23,7 @@ jobs:
                            "https://zenodo.org/api/records")
                            echo "$response
         # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
-        else
+        elseif [ "$LAST_RECORD_ID" != "null" ] ; then
             response=$(curl -H "Content-Type: application/json" \
                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
@@ -33,18 +33,14 @@ jobs:
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
-        echo "$response" | jq '.' > Metadaten/new_zenodo_output.json
-        cat Metadaten/new_zenodo_output.json
                 
     - name: Update der Metadaten
       run: | 
         # Variablen für die aktualisierung der Metadaten
-        cat Metadaten/new_zenodo_output.json
-        echo $resonse
         Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") && echo $Now
         NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") && echo $NowTime
-        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo_output.json) && echo $DatenstandTime
-        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo_output.json) && echo $Datenstand
+        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json) && echo $DatenstandTime
+        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) && echo $Datenstand
         
         # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
         dateien=(
