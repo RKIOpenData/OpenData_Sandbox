@@ -14,6 +14,7 @@ jobs:
     - name: Neue Version des Datensatzes anlegen
       run: |
         LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json) 
+        echo $LAST_RECORD_ID
         # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
         if [ "$LAST_RECORD_ID" == "null" ] ; then
             response=$(curl -H "Content-Type: application/json" \
@@ -51,9 +52,16 @@ jobs:
             "Readme.md")
         
         # Suchen und Ersetzen Metadaten in den Datein
+
+
         for datei in "${dateien[@]}"; do
             if [ -f "$datei" ]; then
-                echo "$datei"
+              echo "$datei"
+            fi
+        done
+        
+        for datei in "${dateien[@]}"; do
+            if [ -f "$datei" ]; then
                 # Mapping Publikationsdatum
                 sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"$Now\"|g' "$datei" && print "1"           # Publikationsdatum zenodo.json
                 sed -i 's|date-released: \'...-..-.*\'|date-released: \'$Now\'|g' "$datei" && print "2"              # Publikationsdatum citation.cff
