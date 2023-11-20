@@ -3,6 +3,4 @@ Datensatzdokumentation
 
 TESTDOKUMENTATION
 
----  
-
-Lorem Ipsum
+DOI: Currently/no/DOI/available
