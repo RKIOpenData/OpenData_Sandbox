@@ -36,7 +36,7 @@ jobs:
         # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
-        echo "RESPONSE=$("$response" | jq '.') >> $GITHUB_ENV
+        echo "RESPONSE=$("$response" | jq '.')" >> $GITHUB_ENV
                 
     - name: Update der Metadaten
       run: | 
