@@ -3,33 +3,74 @@ name: Zenodo Dataset Draft with DOI Reservation
 on:
   workflow_dispatch:
 
-env:
-    RECORD_ID: ''
-
 jobs:
   manage-zenodo-record:
     runs-on: ubuntu-latest
-    outputs:
-      RECORD_ID: ${{ steps.manage_record.outputs.RECORD_ID }}
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Manage Zenodo Record
-      id: manage_record
-
+    - name: Neue Version des Datensatzes anlegen
       run: |
-        if [[ -z "$RECORD_ID" ]]; then
-          # Keine vorhandene Record ID, erstelle neuen Datensatz und speichert die Record ID
+        LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json) 
+        # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
+        if [ "$LAST_RECORD_ID" == "null" ] ; then
             response=$(curl -H "Content-Type: application/json" \
-                           -H "Authorization: Bearer ${{ secrets.ZENODO_SANDBOX_TOKEN }}" \
+                           -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                            -X POST \
-                           -d '{}' \
-                           "https://sandbox.zenodo.org/api/records")
-            echo "$response"
-            echo "RECORD_ID="$response | jq -r '.id'"" >> $GITHUB_ENV 
+                           -d @Metadaten/new_zenodo.json \
+                           "https://zenodo.org/api/records")
+                           echo "$response
+        # Wenn eine Record ID vorhanden ist, wird eine neue Version des Datensatzes angelegt und die Metadaten gespeichert
+        else
+            response=$(curl -H "Content-Type: application/json" \
+                           -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
+                           -X POST \
+                           "https://zenodo.org/api/records/$LAST_RECORD_ID/versions")
+                           echo "$response
         fi
+        # Speichert die Response in zenodo.json und überschreibt den alten Inhalt
+        echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
+        echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
+        echo "$response" | jq '.' > Metadaten/new_zenodo_output.json
+                
+    - name: Update der Metadaten
+      run: | 
+        # Variablen für die aktualisierung der Metadaten
+        Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") && echo $Now
+        NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") && echo $NowTime
+        DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo.json) && echo $DatenstandTime
+        Datenstand=$(jq -r '.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json) && echo $Datenstand
+        
+        # Metadaten Dateien in den Publikationsdatum, Datenstand und DOI ersetzt werden müssen
+        dateien=(
+            "Metadaten/govdata.ttl" \
+            "Metadaten/nfdi4health.json" \
+            "Metadaten/new_Zenodo.json" \
+            "citation.cff" \
+            "Readme.md")
+        
+        # Suchen und Ersetzen Metadaten in den Datein
+        for datei in "${dateien[@]}"; do
+            if [ -f "$datei" ]; then
+               # Mapping Publikationsdatum
+                sed -i 's|\"publication_date\": \"...-..-.*\"|"publication_date": \"$Now\"|g' "$datei"            # Publikationsdatum zenodo.json
+                sed -i 's|date-released: \'...-..-.*\'|date-released: \'$Now\'|g' "$datei"                      # Publikationsdatum citation.cff
+                sed -i 's|dct:issued \"...-..-.*\"|dct:issued \"$NowTime\"|g' "$datei"                          # Publikationsdatum govdata.ttl
+                # Mapping Datenstand
+                sed -i 's|\"version\": \"...-..-.*\"|\"version\": \"$Datenstand\"|g' "$datei"                       # Datenstandzenodo.json
+                sed -i 's|version: \'...-..-.*\'|version: \'$DatenstandTime\'|g' "$datei"                       # Datenstand citation.cff
+                sed -i 's|dct:modified \"...-..-.*\"|dct:modified \"$DatenstandTime\"|g' "$datei"               # Datenstand govdata.ttl
+                sed -i 's|\"resource_version\": \"...-..-.*\"|\"resource_version\": \"$DatenstandTime\"|g' "$datei" # Datenstand nfid4health.json
+                # Mapping DOIs
+                sed -i 's|10.5281/zenodo\.$LAST_RECORD_ID|10.5281/zenodo\.$NEW_RECORD_ID|g' "$datei"          # DOI Aktuallisierung allgemein
+                sed -i 's|Currently/no/DOI/available|10.5281/zenodo\.$NEW_RECORD_ID|g' "$datei"              # DOI Aktuallisierung wenn: Currently/no/DOI/available
+           fi
+        done
 
-    - name: Save Record ID
-      run: sed -i "s/FIXED_RECORD_ID:\''/FIXED_RECORD_ID:\ '${{ env.RECORD_ID }}'/" ./.github/workflows/Zenodo.yml
+    - name: Add and Commit Changes 
+      uses: EndBug/add-and-commit@v9
+      with:
+        message: 'Update Metadata'
+        author_name: 'RKIOpenData'
