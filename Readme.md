@@ -3,6 +3,4 @@ Datensatzdokumentation
 
 TESTDOKUMENTATION
 
----  
-
-Lorem Ipsum
+DOI: 10.5281/zenodo.10160439
