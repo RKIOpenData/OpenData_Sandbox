@@ -34,10 +34,13 @@ jobs:
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
         echo "$response" | jq '.' > Metadaten/new_zenodo_output.json
+        cat Metadaten/new_zenodo_output.json
                 
     - name: Update der Metadaten
       run: | 
         # Variablen für die aktualisierung der Metadaten
+        cat Metadaten/new_zenodo_output.json
+        echo $resonse
         Now=$(TZ="Europe/Berlin" date "+%Y-%m-%d") && echo $Now
         NowTime=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z") && echo $NowTime
         DatenstandTime=$(jq -r '.dates[0].date' Metadaten/new_zenodo_output.json) && echo $DatenstandTime
