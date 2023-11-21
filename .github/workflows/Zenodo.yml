@@ -13,7 +13,8 @@ jobs:
 
     - name: Neue Version des Datensatzes anlegen
       run: |
-      
+        
+        # Setzung der Publikations-Metadaten 
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "PUBLICATION_DATE=$(TZ="Europe/Berlin" date "+%Y-%m-%d")" >> $GITHUB_ENV
         echo "PUBLICATION_TIME=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")" >> $GITHUB_ENV
@@ -72,7 +73,8 @@ jobs:
         done
 
     - name: Fixing Zenodo API Bug, hinzufügen des Datenstandes
-      run: jq --arg dateValue "$DATENSTAND_TIME" '.metadata.dates[0] += {"date": $dateValue}' Metadaten/new_zenodo.json > Metadaten/new_zenodo.json
+      run: | 
+        jq --arg dateValue "$DATENSTAND_TIME" '.metadata.dates[0] += {"date": "$dateValue"}' Metadaten/new_zenodo.json > Metadaten/new_zenodo.json
       
     - name: Erzeugung der Dokumentations HTML
       uses: jaywcjlove/markdown-to-html-cli@main
