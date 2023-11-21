@@ -74,7 +74,7 @@ jobs:
 
     - name: Fixing Zenodo API Bug, hinzufügen des Datenstandes
       run: | 
-        jq --arg dateValue "$DATENSTAND_TIME" '.metadata.dates[0] += {"date": "$dateValue"}' Metadaten/zenodo_new.json > temp.json && mv temp.json Metadaten/zenodo_new.json
+        jq --arg dateValue "$DATENSTAND_TIME" '.metadata.dates[0].date |= . + {"date": "'"$dateValue"'"}' Metadaten/zenodo_new.json > temp.json && mv temp.json Metadaten/zenodo_new.json
       
     - name: Erzeugung der Dokumentations HTML und Umbennung
       uses: jaywcjlove/markdown-to-html-cli@main
