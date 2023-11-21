@@ -95,8 +95,8 @@ jobs:
         
         # Definieren der Upload Dateien
         UPLOAD_FILES=(
-            "Sandbox_Data.tsv", 
-            "[Dokumentation]_Sandbox_Data.html",
+            "Sandbox_Data.tsv" 
+            "[Dokumentation]_Sandbox_Data.html"
             "Metadaten.zip"
             )
 
