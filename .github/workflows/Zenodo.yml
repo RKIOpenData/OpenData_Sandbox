@@ -76,12 +76,13 @@ jobs:
       run: | 
         jq --arg dateValue "$DATENSTAND_TIME" '.metadata.dates[0] += {"date": "$dateValue"}' Metadaten/new_zenodo.json > Metadaten/new_zenodo.json
       
-    - name: Erzeugung der Dokumentations HTML
+    - name: Erzeugung der Dokumentations HTML und Umbennung
       uses: jaywcjlove/markdown-to-html-cli@main
       with:
         source: Readme.md
-        output: Dokumentation]_$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | tr "_" " ").html
+        output: Readme.html
         corners: false 
+    - run: mv Readme.html "[Dokumentation]_$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | tr "_" " ").html"
     
     - name: Add and Commit Changes 
       uses: EndBug/add-and-commit@v9
