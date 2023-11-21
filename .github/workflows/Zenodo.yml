@@ -85,7 +85,43 @@ jobs:
         output: Readme.html
         corners: false 
         favicon: data:image/svg+xml,<svg xmlns=.github/pictures/robert_koch_insitute_helix.svg viewBox=%220 0 100 100%22><text>Datensatzdokumentation $(jq -r '.metadata.title' Metadaten/zenodo_new.json)</text>"</svg>
-    - run: mv Readme.html "[Dokumentation]_$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}').html"
+ 
+    - name: Upload Files to Zenodo
+      run: |
+      
+        # Umbennung der Readme.html  
+        mv Readme.html "[Dokumentation]_$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}').html"
+        DOKUMENTATION=$(find . -type f -name '[Dokumentation]*' -print -quit)
+        zip -r Metadaten.zip Metadaten
+        
+        # Definieren der Upload Dateien
+        UPLOAD_FILES=(
+            "Sandbox_Data.tsv", 
+            "[Dokumentation]_Sandbox_Data.html",
+            "Metadaten.zip"
+            )
+            
+        for FILE in "${UPLOAD_FILES[@]}"; do
+            # File anlegen
+            response=$(curl -H "Content-Type: application/json" \
+                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
+                            -X POST \
+                            -d '[{"key": "'"$FILE"'"}]' \
+                            "https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files")
+            echo "$response" | jq -r '.' 
+            # File hochladen 
+            response=$(curl -H "Content-Type: application/octet-stream" \
+                            -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
+                            -X PUT \
+                            --upload-file $FILE \
+                            "https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/$FILE/content)
+            echo "$response" | jq -r '.'                   
+            # File commiten
+            response=$(curl -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
+                            -X POST \
+                            "https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/$FILE/commit)
+            echo "$response" | jq -r '.'
+        done
     
     - name: Add and Commit Changes 
       uses: EndBug/add-and-commit@v9
