@@ -13,8 +13,7 @@ jobs:
 
     - name: Neue Version des Datensatzes anlegen
       run: |
-        
-        # Setzung der Umgebungsvariablen
+      
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
         echo "PUBLICATION_DATE=$(TZ="Europe/Berlin" date "+%Y-%m-%d")" >> $GITHUB_ENV
         echo "PUBLICATION_TIME=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")" >> $GITHUB_ENV
