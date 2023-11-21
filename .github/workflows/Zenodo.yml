@@ -103,7 +103,7 @@ jobs:
         for FILE in "${UPLOAD_FILES[@]}"; do
             # File anlegen
             echo "Upload von $FILE"
-            FILE_ENCODED=${FILE/'['/'%5B'} && FILE_ENCODED=${FILE/']'/'%5D'}
+            FILE_ENCODED=$(echo "$FILE" | sed 's/\[/%5B/g; s/\]/%5D/g')
             response=$(curl -H "Content-Type: application/json" \
                             -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                             -X POST \
