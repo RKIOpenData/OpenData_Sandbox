@@ -103,6 +103,7 @@ jobs:
         for FILE in "${UPLOAD_FILES[@]}"; do
             # File anlegen
             echo "Upload von $FILE"
+            FILE_ENCODED=${FILE/'['/'%5B'} && FILE_ENCODED=${FILE/']'/'%5D'}
             response=$(curl -H "Content-Type: application/json" \
                             -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                             -X POST \
@@ -114,12 +115,12 @@ jobs:
                             -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                             -X PUT \
                             --upload-file $FILE \
-                            "https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/$FILE/content")
+                            "https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/FILE_ENCODED/content")
             echo "$response" | jq -r '.'                   
             # File commiten
             response=$(curl -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                             -X POST \
-                            "https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/$FILE/commit")
+                            "https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/FILE_ENCODED/commit")
             echo "$response" | jq -r '.'
         done
     
