@@ -5,7 +5,7 @@
     ],
     "ids": [
       {
-        "identifier": "Currently/no/DOI/available",
+        "identifier": "10.5281/zenodo.10166828",
         "type": "DOI",
         "resource_type_general": "Dataset",
         "relation_type": "A references B"
@@ -55,7 +55,7 @@
         },
         "resource_use_rights_label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "resource_version": "2023-10-11"
+      "resource_version": "2023-11-10T10:00:00+01:00"
     },
     "resource_titles": [
       {
@@ -108,7 +108,7 @@
         "identifier": "1149",
         "ids": [
           {
-            "identifier": "Currently/no/DOI/available",
+            "identifier": "10.5281/zenodo.10166828",
             "relationType": "A references B",
             "scheme": "DOI",
             "typeGeneral": "Dataset"
@@ -141,7 +141,7 @@
             },
             "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
           },
-          "version": "2023-10-11"
+          "version": "2023-11-10"
         },
         "provenance": {
           "dataSource": "Automatically uploaded: Other"
@@ -158,7 +158,7 @@
         {
           "create_timestamp": "2023-01-01T00:00:00Z",
           "id": 1908,
-          "last_update_timestamp": "2023-10-11T10:00:00+02:00",
+          "last_update_timestamp": "2023-11-21T09:43:33+01:00",
           "name": "DRAFT",
           "release_timestamp": null
         }
