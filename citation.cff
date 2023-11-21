@@ -11,14 +11,14 @@ abstract: >-
   - lorem ipsum
 
   - lorem ipsumlorem ipsum
-date-released: '2023-11-21'
+date-released: '2023-11-11'
 keywords:
   - Open Data
   - RKI
 message: Cite me!
 url: https://www.github.io/robert-koch-institut/Open_Data_-_Sandbox
 license: CC-BY-4.0
-doi: 10.5281/zenodo.10169760
-version: '2023-11-10'
+doi: Currently/no/DOI/available
+version: '2023-10-11T10:00:0+02:00'
 authors:
   - name: Open Data Team

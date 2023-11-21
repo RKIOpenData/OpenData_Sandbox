@@ -2,7 +2,7 @@ Datensatzdokumentation
 # TESTDOKUMENTATION  
 
 **Zititeren** 
-Open Data et al (*2023*): TESTDOKUMENTATION DOI: 10.5281/zenodo.10160439
+Open Data et al (*2023*): TESTDOKUMENTATION DOI: Currently/no/DOI/available
 
 ## Einleitung
 
