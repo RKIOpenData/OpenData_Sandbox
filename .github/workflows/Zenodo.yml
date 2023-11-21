@@ -93,16 +93,17 @@ jobs:
         mv Readme.html "[Dokumentation]_$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}').html"
         DOKUMENTATION=$(find . -type f -name '[Dokumentation]*' -print -quit)
         zip -r Metadaten.zip Metadaten
-        
+        echo "$DOKUMENTATION"
         # Definieren der Upload Dateien
         UPLOAD_FILES=(
             "Sandbox_Data.tsv", 
             "[Dokumentation]_Sandbox_Data.html",
             "Metadaten.zip"
             )
-            
+        echo "Files definiert"
         for FILE in "${UPLOAD_FILES[@]}"; do
             # File anlegen
+            echo "Upload von $FILE"
             response=$(curl -H "Content-Type: application/json" \
                             -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                             -X POST \
