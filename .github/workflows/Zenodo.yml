@@ -40,7 +40,7 @@ jobs:
         
         # Weitergabe der Variablen in die Umgebung
         echo "NEW_RECORD_ID=$(echo "$response" |jq -r '.id' )" >> $GITHUB_ENV
-        echo "$response" | jq -r '.' > Metadaten/zenodo_new.json.json
+        echo "$response" | jq -r '.' > Metadaten/zenodo_new.json
                  
     - name: Update der Metadaten
       run: | 
@@ -82,7 +82,7 @@ jobs:
         source: Readme.md
         output: Readme.html
         corners: false 
-        favicon: data:image/svg,<svg .github/pictures/robert_koch_insitute_helix.svg viewBox=%220 0 100 100%22></svg>
+        favicon: data:image/svg+xml,<svg xmlns=.github/pictures/robert_koch_insitute_helix.svg viewBox=%220 0 100 100%22><text>Datensatzdokumentation $(jq -r '.metadata.title' Metadaten/zenodo_new.json)</text>"</svg>
     - run: mv Readme.html "[Dokumentation]_$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}').html"
     
     - name: Add and Commit Changes 
