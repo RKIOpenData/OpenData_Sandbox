@@ -16,15 +16,10 @@ jobs:
         
         # Setzung der Publikations-Metadaten 
         echo "LAST_RECORD_ID=$(jq -r '.id' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
-        echo $LAST_RECORD_ID
         echo "PUBLICATION_DATE=$(TZ="Europe/Berlin" date "+%Y-%m-%d")" >> $GITHUB_ENV
-        echo $PUBLICATION_DAT
         echo "PUBLICATION_TIME=$(TZ="Europe/Berlin" date "+%Y-%m-%dT%H:%M:%S%:z")" >> $GITHUB_ENV
-        echo $PUBLICATION_TIME
-        #echo "DATENSTAND=$(jq -r '.metadata.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
-        #echo $DATENSTAND
-        #echo "DATENSTAND_TIME=$(jq -r '.metadata.dates[0].date' Metadaten/new_zenodo.jso" >> $GITHUB_ENV
-        #echo $DATENSTAND_TIME
+        echo "DATENSTAND=$(jq -r '.metadata.dates[0].date | split("T")[0]' Metadaten/new_zenodo.json)" >> $GITHUB_ENV
+        echo "DATENSTAND_TIME=$(jq -r '.metadata.dates[0].date' Metadaten/new_zenodo.json" >> $GITHUB_ENV
 
         if [ "$LAST_RECORD_ID" == "null" ] || [ -z "$LAST_RECORD_ID" ]; then
             # Wenn keine Record ID vorhanden ist, wird ein neuen Datensatz angelegt und die Metadaten gespeichert
