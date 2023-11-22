@@ -103,7 +103,7 @@ jobs:
         for FILE in "${UPLOAD_FILES[@]}"; do
             # File anlegen
             echo "Upload von $FILE"
-            URL="https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/$FILE"
+            URL="https://zenodo.org/api/records/$NEW_RECORD_ID/draft/files/$FILE/"
             URL_ENC=$(perl -MURI::Escape -e '$ARGV[0]; print uri_escape($ARGV[0]);' $URL)
             response=$(curl -H "Content-Type: application/json" \
                             -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
@@ -116,12 +116,12 @@ jobs:
                             -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                             -X PUT \
                             --upload-file $FILE \
-                            "$URL_ENC/content")
+                            $URL_ENC"content")
             echo "$response" | jq -r '.'                   
             # File commiten
             response=$(curl -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}" \
                             -X POST \
-                            "$URL_ENC/commit")
+                            $URL_ENC"commit")
             echo "$response" | jq -r '.'
         done
     
