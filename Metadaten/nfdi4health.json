@@ -20,15 +20,13 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.1731",
-        "type": "DOI",
+        "identifier": "10.5072/zenodo.1736",
         "typeGeneral": "Dataset",
         "relationType": "A references B"
       },
       {
         "identifier": "https://github.com/robert-koch-institut/GrippeWeb_Daten_des_Wochenberichts",
         "relationType": "A references B",
-        "type": "URL",
         "typeGeneral": "Dataset"
       }
     ],
