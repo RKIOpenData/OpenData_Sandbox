@@ -5,13 +5,13 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.829",
+        "identifier": "10.5072/zenodo.1704",
         "type": "DOI",
         "resource_type_general": "Dataset",
         "relation_type": "A references B"
       },
       {
-        "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
+        "identifier": "https://github.com/robert-koch-institut/GrippeWeb_Daten_des_Wochenberichts",
         "relation_type": "A references B",
         "type": "URL",
         "resource_type_general": "Dataset"
@@ -31,15 +31,80 @@
     "resource_descriptions_non_english": [
       {
         "language": "DE (German)",
-        "text": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsum (http://rki.de).\n\n- lorem ipsum\n- lorem ipsumlorem ipsum"
+        "text": "GrippeWeb ist ein Online-Portal des Robert Koch-Instituts (RKI). Es wurde im Jahr 2011 gegründet und ist das erste Webportal, das die Aktivität akuter Atemwegserkrankungen (ARE) in Deutschland beobachtet, und dabei Informationen direkt aus der Bevölkerung verwendet. Es ist ein robustes und zeitnahes System der partizipativen syndromischen Surveillance, welches aus den ganzjährigen wöchentlichen Selbstauskünften von Bürgerinnen und Bürgern gespeist wird und somit unabhängig von einer ärztlichen Konsultation ist. GrippeWeb wurde vom RKI u. a. als Überwachungsinstrument in der Vorbereitung und Bewältigung zukünftiger Pandemien entwickelt und als dieses auch zur Lagebewertung und Risikoeinschätzung der Coronavirus Disease 2019 (COVID-19) Pandemie genutzt.\n\nBei GrippeWeb registrierte Teilnehmer und Teilnehmerinnen, werden wöchentlich gefragt, ob sie eine neu aufgetretene Atemwegserkrankung hatten mit Symptomen wie z.B. Husten, Schnupfen, Halsschmerzen oder Fieber, oder ob dies nicht der Fall war. Darüber hinaus werden u.a. potentielle Erregernachweise abgefragt. Über diese Angaben lassen sich wöchentliche gewichtete Inzidenzen (pro 100.000 Einw.) von akuten Atemwegserkrankungen (ARE), und grippeähnlichen Erkrankungen (Influenza-like Illness = ILI) in der Bevölkerung schätzen. Die wöchentlich aktualisierten Ergebnisse werden jeden Freitag im GrippeWeb-Wochenbericht unter www.rki.de/grippeweb (http://www.rki.de/grippeweb) veröffentlicht sowie der Datensatz auf GitHub zur Verfügung gestellt."
       }
     ],
     "resource_keywords": [
       {
-        "resource_keywords_label": "Open Data"
+        "resource_keywords_label": "ARE"
+      },
+      {
+        "resource_keywords_label": "ILI"
+      },
+      {
+        "resource_keywords_label": "Atemwegsinfektionen",
+        "resource_keywords_label_code": "D012141"
+      },
+      {
+        "resource_keywords_label": "Respiratory Tract Infections",
+        "resource_keywords_label_code": "D012141"
+      },
+      {
+        "resource_keywords_label": "Syndromische Surveillance"
+      },
+      {
+        "resource_keywords_label": "Syndromic Surveillance"
+      },
+      {
+        "resource_keywords_label": "Influenza",
+        "resource_keywords_label_code": "D007251"
+      },
+      {
+        "resource_keywords_label": "Grippe"
+      },
+      {
+        "resource_keywords_label": "Respiratorische Erkrankung"
+      },
+      {
+        "resource_keywords_label": "Erhebungen und Fragebögen",
+        "resource_keywords_label_code": "D011795"
+      },
+      {
+        "resource_keywords_label": "Survey"
+      },
+      {
+        "resource_keywords_label": "GrippeWeb"
+      },
+      {
+        "resource_keywords_label": "Deutschland"
+      },
+      {
+        "resource_keywords_label": "Germany"
       },
       {
         "resource_keywords_label": "RKI"
+      },
+      {
+        "resource_keywords_label": "Open Data"
+      },
+      {
+        "resource_keywords_label": "Offen Daten"
+      },
+      {
+        "resource_keywords_label": "Gesundheitsberichterstattung",
+        "resource_keywords_label_code": "info:ddc/22/de//614.42"
+      },
+      {
+        "resource_keywords_label": "Epidemiologie",
+        "resource_keywords_label_code": "info:ddc/22/de//614.4"
+      },
+      {
+        "resource_keywords_label": "Public health surveillance",
+        "resource_keywords_label_code": "info:ddc/22/eng//614.42"
+      },
+      {
+        "resource_keywords_label": "Epidemiology",
+        "resource_keywords_label_code": "info:ddc/22/eng//614.4"
       }
     ],
     "resource_languages": [
@@ -59,22 +124,138 @@
     },
     "resource_titles": [
       {
-        "text": "Open Data - Sandbox",
+        "text": "GrippeWeb - Daten des Wochenberichts",
         "language": "DE (German)"
       }
     ],
-    "resource_web_page": "https://www.github.io/robert-koch-institut/Open_Data_-_Sandbox",
+    "resource_web_page": "https://www.github.io/robert-koch-institut/GrippeWeb_-_Daten_des_Wochenberichts",
     "roles": [
       {
         "role_affiliations": [
           {
-            "role_affiliation_name": "Open Data Team"
+            "role_affiliation_name": "Robert Koch-Institut"
           }
         ],
-        "role_name_organisational_group_type": "Creator/Author",
-        "role_name_type": "Organisational",
-        "role_name_organisational_group_name": "Open Data Team",
-        "role_phone": ""
+        "role_name_type": "Personal",
+        "role_name_personal": {
+          "role_name_personal_type": "Creator/Author",
+          "role_name_personal_given_name": "Udo",
+          "role_name_personal_family_name": "Buchholz",
+          "role_name_identifiers": [
+            {
+              "identifier": "0000-0001-6597-3995",
+              "scheme": "ORCID"
+            }
+          ]
+        }
+      },
+      {
+        "role_affiliations": [
+          {
+            "role_affiliation_name": "Robert Koch-Institut"
+          }
+        ],
+        "role_name_type": "Personal",
+        "role_name_personal": {
+          "role_name_personal_type": "Creator/Author",
+          "role_name_personal_given_name": "Silke",
+          "role_name_personal_family_name": "Buda",
+          "role_name_identifiers": [
+            {
+              "identifier": "0000-0003-3448-3357",
+              "scheme": "ORCID"
+            }
+          ]
+        }
+      },
+      {
+        "role_affiliations": [
+          {
+            "role_affiliation_name": "Robert Koch-Institut"
+          }
+        ],
+        "role_name_type": "Personal",
+        "role_name_personal": {
+          "role_name_personal_type": "Creator/Author",
+          "role_name_personal_given_name": "Ann-Sophie",
+          "role_name_personal_family_name": "Lehfeld",
+          "role_name_identifiers": [
+            {
+              "identifier": "0000-0002-1686-0289",
+              "scheme": "ORCID"
+            }
+          ]
+        }
+      },
+      {
+        "role_affiliations": [
+          {
+            "role_affiliation_name": "Robert Koch-Institut"
+          }
+        ],
+        "role_name_type": "Personal",
+        "role_name_personal": {
+          "role_name_personal_type": "Creator/Author",
+          "role_name_personal_given_name": "Anna",
+          "role_name_personal_family_name": "Loenenbach",
+          "role_name_identifiers": [
+            {
+              "identifier": "0000-0002-6455-8527",
+              "scheme": "ORCID"
+            }
+          ]
+        }
+      },
+      {
+        "role_affiliations": [
+          {
+            "role_affiliation_name": "Robert Koch-Institut"
+          }
+        ],
+        "role_name_type": "Personal",
+        "role_name_personal": {
+          "role_name_personal_type": "Creator/Author",
+          "role_name_personal_given_name": "Kerstin",
+          "role_name_personal_family_name": "Prahm",
+          "role_name_identifiers": [
+            {
+              "identifier": "0009-0005-7038-4315",
+              "scheme": "ORCID"
+            }
+          ]
+        }
+      },
+      {
+        "role_affiliations": [
+          {
+            "role_affiliation_name": "Robert Koch-Institut"
+          }
+        ],
+        "role_name_type": "Personal",
+        "role_name_personal": {
+          "role_name_personal_type": "Creator/Author",
+          "role_name_personal_given_name": "Ute",
+          "role_name_personal_family_name": "Preuß"
+        }
+      },
+      {
+        "role_affiliations": [
+          {
+            "role_affiliation_name": "Robert Koch-Institut"
+          }
+        ],
+        "role_name_type": "Personal",
+        "role_name_personal": {
+          "role_name_personal_type": "Creator/Author",
+          "role_name_personal_given_name": "Walter",
+          "role_name_personal_family_name": "Haas",
+          "role_name_identifiers": [
+            {
+              "identifier": "0000-0003-3413-1431",
+              "scheme": "ORCID"
+            }
+          ]
+        }
       }
     ]
   }
