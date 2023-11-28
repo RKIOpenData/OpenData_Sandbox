@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    uses: robert-koch-institut/OpenData-Workflows/.github/workflows/OpenData_Workflows.yml@main
+    uses: robert-koch-institut/OpenData-Workflows/.github/workflows/OpenData_Workflows.yml@dev
     with:
       OPENCODE_GROUPID: 4116
       OPENCODE_ACCESS_USER: knutperseke
