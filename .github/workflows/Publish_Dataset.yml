@@ -15,6 +15,7 @@ jobs:
       GOVDATA_DESTINATION_REPO: RKIOpenData/Metadaten_fuer_GovData
       GOVDATA_ACTIVE: true
       OPENCODE_ACTIVE: true
+      NFDI4Health_ACTIVE: true
     secrets:
       GOVDATA_GITHUB_TOKEN: ${{secrets.GOVDATA_TOKEN}}
       OPENCODE_TOKEN: ${{secrets.OPENCODE_TOKEN}}
