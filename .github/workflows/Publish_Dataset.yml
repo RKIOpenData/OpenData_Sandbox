@@ -16,6 +16,7 @@ jobs:
       GOVDATA_ACTIVE: true
       OPENCODE_ACTIVE: true
       NFDI4HEALTH_ACTIVE: true
+      WEBSITE_ACTIVE: true
     secrets:
       GOVDATA_GITHUB_TOKEN: ${{secrets.GOVDATA_TOKEN}}
       OPENCODE_TOKEN: ${{secrets.OPENCODE_TOKEN}}
