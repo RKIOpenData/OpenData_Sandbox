@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.6036",
+        "identifier": "10.5072/zenodo.6041",
         "typeGeneral": "Dataset",
         "relationType": "A references B"
       },
@@ -102,7 +102,6 @@
           ]
         }
       }
-    ],
-    "identifier": "1217"
+    ]
   }
 }
