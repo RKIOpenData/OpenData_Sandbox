@@ -8,7 +8,7 @@ Nordufer 20
 ---
 
 **Zititeren**   
-Robert Koch-Institut (**2023**): Open Data Sandbox. Zenodo. DOI: [10.5072/zenodo.6782](https://doi.org/10.5072/zenodo.6782)  
+Robert Koch-Institut (**2023**): Open Data Sandbox. Zenodo. DOI: [10.5072/zenodo.6783](https://doi.org/10.5072/zenodo.6783)  
 
 ## Einleitung
 
