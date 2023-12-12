@@ -18,4 +18,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: robert-koch-institut/OpenData-Workflows/Create_release_on_tag_push@main
         with:
-          REF_NAME: ${{ env.LATEST_TAG }}
+          REF_NAME: $LATEST_TAG
