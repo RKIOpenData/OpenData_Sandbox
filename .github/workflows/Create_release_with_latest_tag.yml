@@ -10,11 +10,14 @@ jobs:
     name: Create reslese 
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-tags: true
+          
       - name: Get latest tag and set env
         run: |
           echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_ENV
-          echo $LATEST_TAG
-          echo ${{ env.LATEST_TAG }}
 
       - name: Create Release
         env:
