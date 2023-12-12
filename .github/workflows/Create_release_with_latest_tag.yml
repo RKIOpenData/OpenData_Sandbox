@@ -1,4 +1,4 @@
-name: Manually create reslese
+name: Manually create relese with latest tag
 on:
   workflow_dispatch:
   
@@ -15,4 +15,4 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         uses: robert-koch-institut/OpenData-Workflows/Create_release_on_tag_push@main
         with:
-          REF_NAME: ${{github.ref_name}}
+          REF_NAME: $(git describe --tags `git rev-list --tags --max-count=1`)
