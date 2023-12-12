@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get latest tag and set env
-        run: echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_ENV
+        run: |
+          echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_ENV
+          echo $LATEST_TAG
+          echo ${{ env.LATEST_TAG }}
 
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: robert-koch-institut/OpenData-Workflows/Create_release_on_tag_push@main
         with:
-          REF_NAME: $LATEST_TAG
+          REF_NAME: ${{ env.LATEST_TAG }}
