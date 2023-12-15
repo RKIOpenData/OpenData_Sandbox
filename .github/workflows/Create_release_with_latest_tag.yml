@@ -22,6 +22,6 @@ jobs:
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: robert-koch-institut/OpenData-Workflows/Create_release_on_tag_push@main
+        uses: robert-koch-institut/OpenData-Workflows/Create_release_on_tag_push@dev
         with:
           REF_NAME: ${{ env.LATEST_TAG }}

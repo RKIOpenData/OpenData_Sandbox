@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync Github Open Data repository
-        uses: robert-koch-institut/OpenData-Workflows/Send_metadata_to_NFDI4Health@main
+        uses: robert-koch-institut/OpenData-Workflows/Send_metadata_to_NFDI4Health@dev
         with:
           nfdi4health_client_id: CSH_RKI_CLIENT
           nfdi4health_client_secret: ${{secrets.NFDI4HEALTH_SECRET}}

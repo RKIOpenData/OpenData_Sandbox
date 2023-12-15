@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    uses: robert-koch-institut/OpenData-Workflows/.github/workflows/OpenData_Workflows.yml@main
+    uses: robert-koch-institut/OpenData-Workflows/.github/workflows/OpenData_Workflows.yml@dev
     with:
       # Push to OpenCoDE
       OPENCODE_ACTIVE: true

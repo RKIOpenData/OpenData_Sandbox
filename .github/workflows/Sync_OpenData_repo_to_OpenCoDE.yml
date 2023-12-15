@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync Github Open Data repository
-        uses: robert-koch-institut/OpenData-Workflows/Sync_OpenData_repo_to_OpenCoDE@main
+        uses: robert-koch-institut/OpenData-Workflows/Sync_OpenData_repo_to_OpenCoDE@dev
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENCODE_TOKEN: ${{ secrets.OPENCODE_TOKEN }}
