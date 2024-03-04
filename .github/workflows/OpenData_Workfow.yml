@@ -20,7 +20,7 @@ jobs:
       GOVDATA_DESTINATION_REPO: RKIOpenData/Metadaten_fuer_GovData
       
       # Push to NFDI4Health
-      NFDI4HEALTH_ACTIVE: true
+      NFDI4HEALTH_ACTIVE: false
       
       #Build Open Data Website
       WEBSITE_ACTIVE: true
