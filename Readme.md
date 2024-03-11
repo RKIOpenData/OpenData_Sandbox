@@ -35,11 +35,7 @@ Im Rahmen des Projekts wurden detaillierte Handreichungen zur Probennahme und La
 An jeder der 20 EU-geförderten Kläranlagen wurden in aller Regel zwei Mal pro Woche Rohabwasserproben entnommen und zusammen mit den entsprechenden Begleitparametern (z.B. Wetterdaten, Volumenstrom, pH-Wert, Temperatur), die notwendig für die Charakterisierung der Abwassersituation während der Probenahme waren, erhoben. Rohabwasserproben sollten nach dem Sandfang der Kläranlage entnommen werden. Das Probenahmevolumen sollte einen Liter betragen und in luftdichte, verschließbare Polyethylenflaschen abgefüllt werden. Eine 24-Stunden-Mischprobe wurde bevorzugt, die mit einem automatisierten Probennehmer durchgeführt wurde. Die Beprobung sollte möglichst von Montag auf Dienstag und von Mittwoch auf Donnerstag durchgeführt werden. 
 Die Rohabwasserproben wurden an entsprechende Labore versandt, wo die Aufkonzentrierung, Extraktion der viralen Nukleinsäure und Quantifizierung der viralen Gensequenzen durch dPCR oder qRT-PCR erfolgte. Mindestens zwei repräsentative SARS-CoV-2-Genfragmente (N1, N2, N3, E, ORF oder RdRp) sollten bestimmt werden. 
 
-<figure>
-  <img
-  src="https://github.com/robert-koch-institut/ESI-CorA_SARS-CoV-2-Abwassersurveillance/blob/main/.github/pictures/pipeline.png?raw=true"
-  alt="Datenfluss ESI-CorA">
-</figure>
+![Datenfluss ESI-CorA](https://github.com/robert-koch-institut/ESI-CorA_SARS-CoV-2-Abwassersurveillance/blob/main/.github/pictures/pipeline.png?raw=true "Datenfluss ESI-CorA")
  
 Für das Datenmanagement wurde eine digitale Dateninfrastruktur genutzt, die auf ArcGIS Online von ESRI basiert. Die Daten wurden zunächst mit der ArcGIS Survey123 App, welche als mobile App oder am Computer im Browser zu bedienen ist, in die Dateninfrastruktur eingepflegt. Die Kläranlage, die die Probe entnommen hat, hat den Datensatz angelegt und die Angaben zur Probennahme entsprechend eingetragen. Die Labornachweise konnten im nächsten Schritt erfasst werden dem Probendatensatz über eine eindeutige Proben-ID zugeordnet werden. 
 
