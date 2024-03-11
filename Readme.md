@@ -9,7 +9,6 @@ Nordufer 20
 **Fachgebiet 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD-Kontaktstelle** 
 <br>
 
-
 **Zitieren**   
 Robert Koch-Institut, Fachgebiet 32 (2024): "ESI-CorA: SARS-CoV-2-Abwassersurveillance". [Dataset] Zenodo. DOI:[10.5281/zenodo.10781653](https://doi.org/10.5281/zenodo.10781653).
 
@@ -20,13 +19,9 @@ Robert Koch-Institut, Fachgebiet 32 (2024): "ESI-CorA: SARS-CoV-2-Abwassersurvei
 Das Vorhaben „Emergency Support Instrument - Nachweis von SARS-CoV-2 im Abwasser“ (ESI-CorA) lief von November 2021 bis März 2023. Zwanzig Kläranlagenstandorte wurden in Deutschland ausgewählt, die im Februar 2022 gestaffelt mit der Überwachung von SARS-CoV-2 im Abwasser begonnen haben. Das zentrale Ziel in ESI-CorA war die Vorbereitung und Durchführung der bundesweiten Pilotphase zur Überwachung von SARS-CoV-2 und seiner Varianten im Abwasser. Unter anderem wurde das Verfahren zur Normalisierung der Rohdaten, der angewandten PCR-Analytik und der Berechnung der Trenddynamiken untersucht. 
 Abwassersurveillance ist die systematische Überwachung von Erregern im Abwasser mit dem Ziel Gesundheitsschutzmaßnahmen zu steuern. Abwasserdaten erlauben keine genaue Einschätzung von Krankheitsschwere oder Belastung des Gesundheitssystems. Bei der epidemiologischen Bewertung sollten die Daten stets mit anderen Indikatoren, z.B. aus der syndromischen Surveillance, gemeinsam bewertet werden. Weitere Informationen sind im [ESI-CorA Projektblatt](https://www.ptka.kit.edu/img/Projektblatt_ESI-CorA.pdf) des Karlsruher Instituts für Technologie (KIT) zu finden.
 
-<figure>
-  <img
-  src="https://github.com/robert-koch-institut/ESI-CorA_SARS-CoV-2-Abwassersurveillance/blob/main/.github/pictures/standorte.png"
-  alt="Standorte ESI-CorA">
-</figure>
- 
-Im hier veröffentlichten Datensatz "ESI-CorA: SARS-CoV-2-Abwassersurveillance " wird die normalisierte SARS-CoV-2-Viruslast von den 20 EU-geförderten Pilotstandorten im ESI-CorA-Projekt für den oben beschriebenen Zeitraum bereitgestellt.
+![Standorte ESI-CorA](https://github.com/robert-koch-institut/ESI-CorA_SARS-CoV-2-Abwassersurveillance/blob/main/.github/pictures/standorte.png?raw=true "Standorte ESI-CorA")
+
+Im hier veröffentlichten Datensatz "ESI-CorA: SARS-CoV-2-Abwassersurveillance" wird die normalisierte SARS-CoV-2-Viruslast von den 20 EU-geförderten Pilotstandorten im ESI-CorA-Projekt für den oben beschriebenen Zeitraum bereitgestellt.
 
 ### Administrative und organisatorische Angaben
 Die Europäische Kommission hat das Pilotprojekt gefördert und gemeinsam mit dem Bundesministerium für Gesundheit (BMG), dem Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV) sowie vom Bundesministerium für Bildung und Forschung (BMBF) verfolgt. Koordiniert wurde das Projekt vom Karlsruher Institut für Technologie (KIT), Projektträger Karlsruhe (PTKA). Konsortialpartner waren das Umweltbundesamt (UBA), das RKI und die Technische Universität Darmstadt (TUDa). 
@@ -42,7 +37,7 @@ Die Rohabwasserproben wurden an entsprechende Labore versandt, wo die Aufkonzent
 
 <figure>
   <img
-  src="https://github.com/robert-koch-institut/ESI-CorA_SARS-CoV-2-Abwassersurveillance/blob/main/.github/pictures/pipeline.png"
+  src="https://github.com/robert-koch-institut/ESI-CorA_SARS-CoV-2-Abwassersurveillance/blob/main/.github/pictures/pipeline.png?raw=true"
   alt="Datenfluss ESI-CorA">
 </figure>
  
@@ -57,7 +52,7 @@ Zunächst wurde in ArcGIS für jede Probe ein Mittelwert der Viruslast (Genkopie
 Eine Verdünnung des Abwassers, zum Beispiel aufgrund von Regenereignissen oder unregelmäßigen industriellen Einflüssen, kann zu geringeren oder höheren Konzentrationen von SARS-CoV-2 führen. Um diese externen Einflüsse zu berücksichtigen, kann die gemessene Viruslast durch den Durchfluss oder andere Humanmarker wie z. B. CrAssphage oder PMMoV normalisiert werden.
 
 Im ESI-CorA-Projekt wurde nach dem Abwasserdurchfluss normalisiert. Folgende Formel wurde hierbei verwendet: 
-$$Gene\_Mittelwert\_normalisiert [gc/d] = Gene\_Mittelwert [gc/ml] * Volumenstrom [l/s] * 86.400.000$$
+$$ Gene_{Mittelwert\_normalisiert} = Gene_{Mittelwert} \cdot Volumenstrom \cdot 86400000 $$
 
 ### Datenauswertung
 
