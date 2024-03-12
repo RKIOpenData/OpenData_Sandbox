@@ -11,7 +11,7 @@
                   dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@rki.de" ; foaf:name "Robert Koch-Institut | Open Data Team"] ;
                   dcatde:contributor [ a foaf:Person; foaf:name "test test" ];
                   dct:description "<p>test</p>" ;
-                  dct:issued "2024-03-12T15:04:57+01:00"^^xsd:dateTime ;
+                  dct:issued "2024-03-12T15:14:18+01:00"^^xsd:dateTime ;
                   dct:modified "2023-10-19T12:16:30+02:00"^^xsd:dateTime ;
                   dct:publisher [ a foaf:Organization ;
                       foaf:mbox "opendata@rki.de" ;
@@ -34,35 +34,35 @@
                   dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0>;
                   dcat:distribution [
                     a dcat:Distribution ;
-                    dcatde:licenseAttributionByText "test, test (2024): test, Berlin: Zenodo. DOI:10.5072/zenodo.34673" ;
+                    dcatde:licenseAttributionByText "test, test (2024): test, Berlin: Zenodo. DOI:10.5072/zenodo.34674" ;
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
                     dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
                     dct:title "Github - test" ;
                     dcat:accessURL <https://github.com/robert-koch-institut/test>;
-                    dct:modified "2024-03-12T15:04:57+01:00"^^xsd:dateTime;
+                    dct:modified "2024-03-12T15:14:18+01:00"^^xsd:dateTime;
                   ],
                   [
                     a dcat:Distribution ;
-                    dcatde:licenseAttributionByText "test, test (2024): test, Berlin: Zenodo. DOI:10.5072/zenodo.34673" ;
+                    dcatde:licenseAttributionByText "test, test (2024): test, Berlin: Zenodo. DOI:10.5072/zenodo.34674" ;
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
                     dct:description "Zenodo ist eine europäische Plattform, die es Forschern, Wissenschaftlern und anderen Personen ermöglicht, Forschungsdaten, Publikationen, Präsentationen und andere wissenschaftliche Inhalte kostenlos zu teilen und zu veröffentlichen. Eine der Hauptstärken von Zenodo ist die Bereitstellung der Daten nach den FAIR Prinzipien, Daten sind langzeitarchiviert und wissenschaftlich zitierbar, um den Datenaustausch und die Zusammenarbeit zwischen Forschern zu erleichtern.";
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
                     dct:title "Zenodo - test" ;
                     dcat:accessURL <https://zenodo.org/record/22124>;
-                    dct:modified "2024-03-12T15:04:57+01:00"^^xsd:dateTime;
+                    dct:modified "2024-03-12T15:14:18+01:00"^^xsd:dateTime;
                   ],
                   [
                     a dcat:Distribution ;
                     dct:title "[Dokumentation] test.pdf" ;
-                    dcatde:licenseAttributionByText "test, test (2024): test, Berlin: Zenodo. DOI:10.5072/zenodo.34673" ;
+                    dcatde:licenseAttributionByText "test, test (2024): test, Berlin: Zenodo. DOI:10.5072/zenodo.34674" ;
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
                     dct:description "Die Datensatzdokumentation enthält Informationen und Hinweise zum Entstehungskontext, dem Aufbau und der Nachnutzung der im Datensatz 'test' bereitgestellten Daten" ;
                     dct:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
                     dcat:accessURL <https://zenodo.org/record/22124/files/%5BDokumentation%5D_test.pdf>;
-                    dct:modified "2024-03-12T15:04:57+01:00"^^xsd:dateTime;
+                    dct:modified "2024-03-12T15:14:18+01:00"^^xsd:dateTime;
                   ].
