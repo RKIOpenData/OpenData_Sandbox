@@ -118,14 +118,14 @@ Die Datei [`amelag_einzelstandorte.tsv`](https://github.com/robert-koch-institut
 | -------- | -------- | -------- | ---- |
 | standort     | Text    | | Standort, an dem sich die Kläranlage befindet. |
 | bundesland | Text | ``BB``, ``BE``, ``BW``, ``BY``, ``HB``, ``HE``, ``HH``, ``MV``, ``NI``, ``NW``, ``RP``, ``SH``, ``SL``, ``SN``, ``ST``, ``TH`` | Bundesland (abgekürzt), in dem sich die Kläranlage befindet.
-| datum | Datum | ``jjjj-mm-tt`` oder ``NA`` | Datum, an dem die 24-Stunden-Mischprobe in der Kläranlage begonnen hat.|
-| viruslast | Gleitkommazahl | `≥0`  oder `NA` | Gemessene SARS-CoV-2-Viruslast in Genkopien pro Liter.
-| loess_vorhersage | Gleitkommazahl | `≥0` oder ``NA``| Die mittels einer LOESS-Regression (optimiert mittels GCV-Kriterium für die 10er-logarithmierten Viruslasten) vorhergesagten Viruslasten. |
-| loess_obere_schranke | Gleitkommazahl | `≥0` oder ``NA`` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_untere_schranke | Gleitkommazahl | `≥0` oder ``NA`` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_aenderung | Gleitkommazahl | `≥0` oder ``NA`` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
-| einwohner | Natürliche Zahl | `≥0` oder `NA` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
-| trend | Text | `Ansteigend`, `Fallend`, `Unverändert`, `keine Daten vorhanden`, `NA` | Kategorisierte Veränderung des geglätteten LOESS-Wertes zur Vorwoche: “fallend” bedeutet, dass die geglättete Viruslast um mehr als 15% zur Vorwoche gesunken ist. “ansteigend” bedeutet, dass die geglättete Viruslast um mehr als 15% zur Vorwoche gestiegen ist. “gleichbleibend” bedeutet, dass die geglättete Viruslast sich nicht mehr als 15% zur Vorwoche verändert hat.
+| datum | Datum | ``jjjj-mm-tt`` | Datum, an dem die 24-Stunden-Mischprobe in der Kläranlage begonnen hat.|
+| viruslast | Gleitkommazahl | `≥0` | Gemessene SARS-CoV-2-Viruslast in Genkopien pro Liter.
+| loess_vorhersage | Gleitkommazahl | `≥0`| Die mittels einer LOESS-Regression (optimiert mittels GCV-Kriterium für die 10er-logarithmierten Viruslasten) vorhergesagten Viruslasten. |
+| loess_obere_schranke | Gleitkommazahl | `≥0` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+| loess_untere_schranke | Gleitkommazahl | `≥0` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+| loess_aenderung | Gleitkommazahl | `≥0` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
+| einwohner | Natürliche Zahl | `≥0` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
+| trend | Text | `Ansteigend`, `Fallend`, `Unverändert`, `keine Daten vorhanden` | Kategorisierte Veränderung des geglätteten LOESS-Wertes zur Vorwoche: “fallend” bedeutet, dass die geglättete Viruslast um mehr als 15% zur Vorwoche gesunken ist. “ansteigend” bedeutet, dass die geglättete Viruslast um mehr als 15% zur Vorwoche gestiegen ist. “gleichbleibend” bedeutet, dass die geglättete Viruslast sich nicht mehr als 15% zur Vorwoche verändert hat.
 
 ### Zeitreihe der SARS-CoV-2-Viruslast
 
@@ -141,9 +141,9 @@ Die Datei [`amelag_einzelstandorte.tsv`](https://github.com/robert-koch-institut
 | -------- | -------- | -------- |-------- |
 | datum     | Datu,     | ``jjjj-mm-tt`` | Datum des Mittwochs einer Woche.|
 | n | Natürliche Zahl | `≥0` | Anzahl der Standorte, die mindestens einen Messwert im durch “datum” definierten Zeitraum übermittelt haben. |
-| anteil_bev | Gleitkommazahl | `≥0` oder `NA` | Anteil der Gesamtbevölkerung in Deutschland, der an die übermittelnden Klärwerke angeschlossen ist. |
-| viruslast | Gleitkommazahl | `≥0` oder `NA` | SARS-CoV-2-Viruslast in Genkopien pro Liter gemittelt über alle Standorte und gewichtet nach angeschlossenen Einwohnern der Kläranlagen. Vor der Mittelung über die Standorte wurden alle Messwerte der Standorte in den letzten 7 Tagen jeweils mittels 10er-Logarithmus transformiert und über die einzelnen Standorte gemittelt. Die angegebene Viruslast ist der auf die Originalskala zurücktransformierte Mittelwert. |
-| loess_vorhersage | Gleitkommazahl | `≥0` oder `NA` | Die mittels einer LOESS-Regression vorhergesagten Viruslasten, zurücktransformiert auf die Originalskala.|
+| anteil_bev | Gleitkommazahl | `≥0` | Anteil der Gesamtbevölkerung in Deutschland, der an die übermittelnden Klärwerke angeschlossen ist. |
+| viruslast | Gleitkommazahl | `≥0` | SARS-CoV-2-Viruslast in Genkopien pro Liter gemittelt über alle Standorte und gewichtet nach angeschlossenen Einwohnern der Kläranlagen. Vor der Mittelung über die Standorte wurden alle Messwerte der Standorte in den letzten 7 Tagen jeweils mittels 10er-Logarithmus transformiert und über die einzelnen Standorte gemittelt. Die angegebene Viruslast ist der auf die Originalskala zurücktransformierte Mittelwert. |
+| loess_vorhersage | Gleitkommazahl | `≥0` | Die mittels einer LOESS-Regression vorhergesagten Viruslasten, zurücktransformiert auf die Originalskala.|
 | loess_obere_schranke | Gleitkommazahl | `≥0` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts.|
 | loess_untere_schranke | Gleitkommazahl | `≥0` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
 
