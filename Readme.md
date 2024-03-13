@@ -61,7 +61,7 @@ Mit dem Datenimport werden die Daten auf Plausibilität geprüft. Dabei werden d
 Eine variierende Abwasserzusammensetzung, z. B. aufgrund von unregelmäßigen industriellen Einflüssen oder Starkregenereignissen, kann zu veränderten Konzentrationen von SARS-CoV-2 führen. Um diese externen Einflüsse zu berücksichtigen, kann die gemessene Viruslast normalisiert werden. 
 In AMELAG wird nach Durchfluss normalisiert. Dabei ist der Trockenwetterzufluss der Kläranlage die Referenz. Folgende Formel wurde hierbei verwendet: 
 
-$$ Gene_{normalisiert} = Q_{\text{KA_aktuell}}/Q_{\text{KA_median}} \cdot Gene_{gemittelt} $$
+$$ Gene_{normalisiert} = Q_{KA\\\_aktuell}/Q_{KA\\\_median}} \cdot Gene_{gemittelt} $$
 
 wo:  
 
