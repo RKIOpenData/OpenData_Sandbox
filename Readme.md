@@ -61,7 +61,7 @@ Mit dem Datenimport werden die Daten auf Plausibilität geprüft. Dabei werden d
 Eine variierende Abwasserzusammensetzung, z. B. aufgrund von unregelmäßigen industriellen Einflüssen oder Starkregenereignissen, kann zu veränderten Konzentrationen von SARS-CoV-2 führen. Um diese externen Einflüsse zu berücksichtigen, kann die gemessene Viruslast normalisiert werden. 
 In AMELAG wird nach Durchfluss normalisiert. Dabei ist der Trockenwetterzufluss der Kläranlage die Referenz. Folgende Formel wurde hierbei verwendet: 
 
-$$ Gene_{normalisiert} = {Q_{KA\_aktuell}}/{Q_{KA\_median}} \cdot Gene_{gemittelt} $$
+$$ Gene_{normalisiert} = Q_{\text{KA_aktuell}}/Q_{\text{KA_median}} \cdot Gene_{gemittelt} $$
 
 wo:  
 
@@ -78,7 +78,7 @@ Für jeden Standort werden die Messwerte in Genkopien pro Liter (Genkopien/L) an
 - `ansteigend`: die geglättete Viruslast ist um mehr als 15% zur Vorwoche gestiegen
 - `gleichbleibend`: die geglättete Viruslast hat sich nicht mehr als 15% zur Vorwoche verändert 
 - `keine Daten vorhanden`:  für den Mittwoch dieser oder der vergangenen Woche leigt kein geglätteter LOESS-Wert vor
-- `NA`: ist für alle Tage außer Mittwoch eingetragen. 
+- `NA`: ist für alle Tage außer Mittwoch eingetragen 
 
 #### Aggregation der Standortwerte
 
@@ -125,10 +125,10 @@ Die Datei [`amelag_einzelstandorte.tsv`](https://github.com/robert-koch-institut
 | bundesland | Text | ``BB``, ``BE``, ``BW``, ``BY``, ``HB``, ``HE``, ``HH``, ``MV``, ``NI``, ``NW``, ``RP``, ``SH``, ``SL``, ``SN``, ``ST``, ``TH`` | Bundesland (abgekürzt), in dem sich die Kläranlage befindet.
 | datum | Datum | ``jjjj-mm-tt`` oder ``NA`` | Datum, an dem die 24-Stunden-Mischprobe in der Kläranlage begonnen hat.|
 | viruslast | Gleitkommazahl | `≥0`  oder `NA` | Gemessene SARS-CoV-2-Viruslast in Genkopien pro Liter.
-| loess_vorhersage | Gleitkommazahl | `≥0` oder ``NA``| Die mittels einer LOESS-Regression (optimiert mittels GCV-Kriterium für die 10er-logarithmierten Viruslasten) vorhergesagten Viruslasten. |
-| loess_obere_schranke | Gleitkommazahl | `≥0` oder ``NA`` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_untere_schranke | Gleitkommazahl | `≥0` oder ``NA`` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_aenderung | Gleitkommazahl | `ℤ` oder ``NA`` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
+| loess_vorhersage | Gleitkommazahl | `≥0.00` oder ``NA``| Die mittels einer LOESS-Regression (optimiert mittels GCV-Kriterium für die 10er-logarithmierten Viruslasten) vorhergesagten Viruslasten. |
+| loess_obere_schranke | Gleitkommazahl | `≥0.00` oder ``NA`` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+| loess_untere_schranke | Gleitkommazahl | `≥0.00` oder ``NA`` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+| loess_aenderung | Gleitkommazahl | `0.00` oder ``NA`` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
 | einwohner | Natürliche Zahl | `≥0` oder `NA` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
 | trend | Text | `Ansteigend`, `Fallend`, `Unverändert`, `keine Daten vorhanden`, `NA` | Kategorisierte Veränderung des geglätteten LOESS-Wertes von einem Mittwoch zum Mittwoch der Vorwoche (siehe [Datenauswertung](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main?tab=readme-ov-file#Datenauswertung))
 
@@ -144,13 +144,13 @@ Die Datei [`amelag_aggregierte_kurve.tsv`](https://github.com/robert-koch-instit
 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | -------- | -------- |-------- |
-| datum     | Datu,     | ``jjjj-mm-tt`` | Datum des Mittwochs einer Woche.|
-| n | Natürliche Zahl | `≥0` | Anzahl der Standorte, die mindestens einen Messwert im durch “datum” definierten Zeitraum übermittelt haben. |
-| anteil_bev | Gleitkommazahl | `≥0` oder `NA` | Anteil der Gesamtbevölkerung in Deutschland, der an die übermittelnden Klärwerke angeschlossen ist. |
+| datum     | Datum     | ``jjjj-mm-tt`` | Datum des Mittwochs einer Woche.|
+| n | Natürliche Zahl | `≥0` oder `NA` | Anzahl der Standorte, die mindestens einen Messwert im durch “datum” definierten Zeitraum übermittelt haben. |
+| anteil_bev | Gleitkommazahl | `≥0.00` oder `NA` | Anteil der Gesamtbevölkerung in Deutschland, der an die übermittelnden Klärwerke angeschlossen ist. |
 | viruslast | Gleitkommazahl | `≥0` oder `NA` | SARS-CoV-2-Viruslast in Genkopien pro Liter gemittelt über alle Standorte und gewichtet nach angeschlossenen Einwohnern der Kläranlagen. Vor der Mittelung über die Standorte wurden alle Messwerte der Standorte in den letzten 7 Tagen jeweils mittels 10er-Logarithmus transformiert und über die einzelnen Standorte gemittelt. Die angegebene Viruslast ist der auf die Originalskala zurücktransformierte Mittelwert. |
-| loess_vorhersage | Gleitkommazahl | `≥0` oder `NA` | Die mittels einer LOESS-Regression vorhergesagten Viruslasten, zurücktransformiert auf die Originalskala.|
-| loess_obere_schranke | Gleitkommazahl | `≥0` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts.|
-| loess_untere_schranke | Gleitkommazahl | `≥0` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+| loess_vorhersage | Gleitkommazahl | `≥0.00` oder `NA` | Die mittels einer LOESS-Regression vorhergesagten Viruslasten, zurücktransformiert auf die Originalskala.|
+| loess_obere_schranke | Gleitkommazahl | `≥0.00` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts.|
+| loess_untere_schranke | Gleitkommazahl | `≥0.00` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
 
 ### Kontextmaterialien
 
