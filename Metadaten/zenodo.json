@@ -1,17 +1,22 @@
 {
-  "title": "test",
-  "description": "<p>test</p>\n",
+  "title": "Open Data Sandbox",
+  "description": "<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p>\n",
   "creators": [
     {
-      "name": "test, test",
-      "affiliation": "Robert Koch-Institut"
+      "name": "Name, Vorname",
+      "affiliation": "Robert Koch-Institut",
+      "orcid": "0000-0002-2818-3641"
     }
   ],
   "contributors": [],
   "keywords": [
-    "test"
+    "Deutschland",
+    "Germany",
+    "RKI",
+    "Open Data",
+    "Offen Daten"
   ],
-  "publication_date": "2024-03-12",
+  "publication_date": "2024-03-13",
   "version": "2023-10-19",
   "upload_type": "dataset",
   "access_right": "open",
@@ -22,7 +27,24 @@
       "identifier": "robertkochinstitut"
     }
   ],
-  "subjects": [],
+  "subjects": [
+    {
+      "term": "Gesundheitsberichterstattung",
+      "identifier": "info:ddc/22/de//614.42"
+    },
+    {
+      "term": "Epidemiologie",
+      "identifier": "info:ddc/22/de//614.4"
+    },
+    {
+      "term": "Public health surveillance",
+      "identifier": "info:ddc/22/eng//614.42"
+    },
+    {
+      "term": "Epidemiology",
+      "identifier": "info:ddc/22/eng//614.4"
+    }
+  ],
   "dates": [
     {
       "start": "2023-10-19T12:16:30+02:00",
@@ -34,22 +56,22 @@
   "related_identifiers": [
     {
       "relation": "isSupplementTo",
-      "identifier": "https://github.com/robert-koch-institut/test",
+      "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
       "resource_type": "dataset"
     },
     {
       "relation": "isDocumentedBy",
-      "identifier": "https://github.com/robert-koch-institut/test/blob/main/Readme.md",
+      "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Readme.md",
       "resource_type": "publication-report"
     },
     {
       "relation": "isDocumentedBy",
-      "identifier": "https://github.com/robert-koch-institut/test/blob/main/[Dokumentation]_test.pdf",
+      "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/[Dokumentation]_OpenData_Sandbox.pdf",
       "resource_type": "publication-report"
     },
     {
       "relation": "isDescribedBy",
-      "identifier": "https://robert-koch-institut.github.io/test",
+      "identifier": "https://www.github.io/RKIOpenData/OpenData_Sandbox",
       "resource_type": "other"
     }
   ]

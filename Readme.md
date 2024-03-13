@@ -61,7 +61,7 @@ Mit dem Datenimport werden die Daten auf Plausibilität geprüft. Dabei werden d
 Eine variierende Abwasserzusammensetzung, z. B. aufgrund von unregelmäßigen industriellen Einflüssen oder Starkregenereignissen, kann zu veränderten Konzentrationen von SARS-CoV-2 führen. Um diese externen Einflüsse zu berücksichtigen, kann die gemessene Viruslast normalisiert werden. 
 In AMELAG wird nach Durchfluss normalisiert. Dabei ist der Trockenwetterzufluss der Kläranlage die Referenz. Folgende Formel wurde hierbei verwendet: 
 
-$$ Gene_{normalisiert} = \frac{Q_{KA\_aktuell}}{Q_{KA\_median}} \cdot Gene_{gemittelt} $$
+$$ Gene_{normalisiert} = {Q_{KA\_aktuell}}/{Q_{KA\_median}} \cdot Gene_{gemittelt} $$
 
 wo:  
 
@@ -73,7 +73,12 @@ Die Normalisierung erfolgt automatisiert mit dem Datenimport.
 ### Datenauswertung
 
 Die Auswertung der Daten erfolgt am RKI über R-Skripte. Die Skripte sind in den [Kontextmaterialien](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main?tab=readme-ov-file#Kontextmaterialien) enthalten. Eine genaue Beschreibung der Methodikist in den [technische Leitfäden](http://www.rki.de/abwassersurveillance) hinterlget. Die Ergebnisse werden in einem wöchentlichen Bericht des RKI [Wochenbericht](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG32/Abwassersurveillance/Bericht_Abwassersurveillance.html) veröffentlicht. 
-Für jeden Standort werden die Messwerte in Genkopien pro Liter (Genkopien/L) angegeben. Zusätzlich werden die Messwerte der logarithmierten normalisierten Genkopien mittels einer lokal gewichteten Regression (LOESS) geglättet und zugehörige Konfidenzintervalle berechnet. Der Trend für einen Standort ergibt sich aus der Veränderung des von der LOESS-Methode geschätzten Werts an einem Mittwoch einer Woche gegenüber dem für den vorherigen Mittwoch vorhergesagten Wert, wobei die Werte vorher zurück auf die Originalskala transformiert wurden. Diese Trends des jeweiligen Standorts werden kategorisiert in „ansteigend” (definiert als Anstieg um mehr als 15 % zur Vorwoche), „unverändert” (Veränderung zwischen -15 % und 15 % zur Vorwoche) und „fallend” (Rückgang um mehr als 15 % zur Vorwoche). 
+Für jeden Standort werden die Messwerte in Genkopien pro Liter (Genkopien/L) angegeben. Zusätzlich werden die Messwerte der logarithmierten normalisierten Genkopien mittels einer lokal gewichteten Regression (LOESS) geglättet und zugehörige Konfidenzintervalle berechnet. Der Trend für einen Standort ergibt sich aus der Veränderung des von der LOESS-Methode geschätzten Werts an einem Mittwoch einer Woche gegenüber dem für den vorherigen Mittwoch vorhergesagten Wert, wobei die Werte vorher zurück auf die Originalskala transformiert wurden. 
+- `fallend`: die geglättete Viruslast ist um mehr als 15% zur Vorwoche gesunken 
+- `ansteigend`: die geglättete Viruslast ist um mehr als 15% zur Vorwoche gestiegen
+- `gleichbleibend`: die geglättete Viruslast hat sich nicht mehr als 15% zur Vorwoche verändert 
+- `keine Daten vorhanden`:  für den Mittwoch dieser oder der vergangenen Woche leigt kein geglätteter LOESS-Wert vor
+- `NA`: ist für alle Tage außer Mittwoch eingetragen. 
 
 #### Aggregation der Standortwerte
 
@@ -118,14 +123,14 @@ Die Datei [`amelag_einzelstandorte.tsv`](https://github.com/robert-koch-institut
 | -------- | -------- | -------- | ---- |
 | standort     | Text    | | Standort, an dem sich die Kläranlage befindet. |
 | bundesland | Text | ``BB``, ``BE``, ``BW``, ``BY``, ``HB``, ``HE``, ``HH``, ``MV``, ``NI``, ``NW``, ``RP``, ``SH``, ``SL``, ``SN``, ``ST``, ``TH`` | Bundesland (abgekürzt), in dem sich die Kläranlage befindet.
-| datum | Datum | ``jjjj-mm-tt`` | Datum, an dem die 24-Stunden-Mischprobe in der Kläranlage begonnen hat.|
-| viruslast | Gleitkommazahl | `≥0` | Gemessene SARS-CoV-2-Viruslast in Genkopien pro Liter.
-| loess_vorhersage | Gleitkommazahl | `≥0`| Die mittels einer LOESS-Regression (optimiert mittels GCV-Kriterium für die 10er-logarithmierten Viruslasten) vorhergesagten Viruslasten. |
-| loess_obere_schranke | Gleitkommazahl | `≥0` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_untere_schranke | Gleitkommazahl | `≥0` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_aenderung | Gleitkommazahl | `≥0` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
-| einwohner | Natürliche Zahl | `≥0` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
-| trend | Text | `Ansteigend`, `Fallend`, `Unverändert`, `keine Daten vorhanden` | Kategorisierte Veränderung des geglätteten LOESS-Wertes zur Vorwoche: “fallend” bedeutet, dass die geglättete Viruslast um mehr als 15% zur Vorwoche gesunken ist. “ansteigend” bedeutet, dass die geglättete Viruslast um mehr als 15% zur Vorwoche gestiegen ist. “gleichbleibend” bedeutet, dass die geglättete Viruslast sich nicht mehr als 15% zur Vorwoche verändert hat.
+| datum | Datum | ``jjjj-mm-tt`` oder ``NA`` | Datum, an dem die 24-Stunden-Mischprobe in der Kläranlage begonnen hat.|
+| viruslast | Gleitkommazahl | `≥0`  oder `NA` | Gemessene SARS-CoV-2-Viruslast in Genkopien pro Liter.
+| loess_vorhersage | Gleitkommazahl | `≥0` oder ``NA``| Die mittels einer LOESS-Regression (optimiert mittels GCV-Kriterium für die 10er-logarithmierten Viruslasten) vorhergesagten Viruslasten. |
+| loess_obere_schranke | Gleitkommazahl | `≥0` oder ``NA`` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+| loess_untere_schranke | Gleitkommazahl | `≥0` oder ``NA`` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+| loess_aenderung | Gleitkommazahl | `ℤ` oder ``NA`` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
+| einwohner | Natürliche Zahl | `≥0` oder `NA` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
+| trend | Text | `Ansteigend`, `Fallend`, `Unverändert`, `keine Daten vorhanden`, `NA` | Kategorisierte Veränderung des geglätteten LOESS-Wertes von einem Mittwoch zum Mittwoch der Vorwoche (siehe [Datenauswertung](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main?tab=readme-ov-file#Datenauswertung))
 
 ### Zeitreihe der SARS-CoV-2-Viruslast
 
@@ -135,15 +140,15 @@ In  der Datei [`amelag_aggregierte_kurve.tsv`](https://github.com/robert-koch-in
 
 #### Variablen und Variablenausprägungen  
 
-Die Datei [`amelag_einzelstandorte.tsv`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_aggregierte_kurve.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:
+Die Datei [`amelag_aggregierte_kurve.tsv`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_aggregierte_kurve.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:
 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | -------- | -------- |-------- |
 | datum     | Datu,     | ``jjjj-mm-tt`` | Datum des Mittwochs einer Woche.|
 | n | Natürliche Zahl | `≥0` | Anzahl der Standorte, die mindestens einen Messwert im durch “datum” definierten Zeitraum übermittelt haben. |
-| anteil_bev | Gleitkommazahl | `≥0` | Anteil der Gesamtbevölkerung in Deutschland, der an die übermittelnden Klärwerke angeschlossen ist. |
-| viruslast | Gleitkommazahl | `≥0` | SARS-CoV-2-Viruslast in Genkopien pro Liter gemittelt über alle Standorte und gewichtet nach angeschlossenen Einwohnern der Kläranlagen. Vor der Mittelung über die Standorte wurden alle Messwerte der Standorte in den letzten 7 Tagen jeweils mittels 10er-Logarithmus transformiert und über die einzelnen Standorte gemittelt. Die angegebene Viruslast ist der auf die Originalskala zurücktransformierte Mittelwert. |
-| loess_vorhersage | Gleitkommazahl | `≥0` | Die mittels einer LOESS-Regression vorhergesagten Viruslasten, zurücktransformiert auf die Originalskala.|
+| anteil_bev | Gleitkommazahl | `≥0` oder `NA` | Anteil der Gesamtbevölkerung in Deutschland, der an die übermittelnden Klärwerke angeschlossen ist. |
+| viruslast | Gleitkommazahl | `≥0` oder `NA` | SARS-CoV-2-Viruslast in Genkopien pro Liter gemittelt über alle Standorte und gewichtet nach angeschlossenen Einwohnern der Kläranlagen. Vor der Mittelung über die Standorte wurden alle Messwerte der Standorte in den letzten 7 Tagen jeweils mittels 10er-Logarithmus transformiert und über die einzelnen Standorte gemittelt. Die angegebene Viruslast ist der auf die Originalskala zurücktransformierte Mittelwert. |
+| loess_vorhersage | Gleitkommazahl | `≥0` oder `NA` | Die mittels einer LOESS-Regression vorhergesagten Viruslasten, zurücktransformiert auf die Originalskala.|
 | loess_obere_schranke | Gleitkommazahl | `≥0` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts.|
 | loess_untere_schranke | Gleitkommazahl | `≥0` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
 
@@ -191,7 +196,8 @@ Offene Forschungsdaten des RKI werden auf [GitHub.com](http://GitHub.com/), [Zen
 - https://zenodo.org/communities/robertkochinstitut
 - https://edoc.rki.de/
 
-### Lizenz
-Der Datensatz " Abwassersurveillance AMELAG" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).
+### Lizenz  
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts und des Umweltbundesamtes als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](/LICENSE) bzw. [LIZENZ](/LIZENZ) Datei des Datensatzes.
+Der Datensatz "Abwassersurveillance AMELAG" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).
+
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts und des Umweltbundesamtes als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/LIZENZ) Datei des Datensatzes.
