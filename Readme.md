@@ -113,7 +113,7 @@ In den Fallzahlen differenzieren die Spalten nach verschiedenen Merkmalen einer 
 | Variable | Typ | Ausprägungen | Beschreibung |
 | -------- | --- | ------------ | ------------ |
 | Meldewoche| Text | `JJJJ-Www` |  Kalenderwoche, in der der Fall dem Gesundheitsamt bekannt geworden ist. `JJJJ` entspricht der Jahresangabe, `Www` entspricht der Wochenangabe nach [ISO 8601](https://de.wikipedia.org/wiki/ISO_8601) (beispielsweise `2021-W34` für die 34. Kalenderwoche des Jahres 2021) |  
-| Region   | Text | `Schleswig-Holstein`, ... `Thüringen`; <br/> `Deutschland`, `Unbekannt`  | Name der Bezugsregion, Bundesland bzw. Deutschland gesamt|
+| Region   | Text | `Schleswig-Holstein`, ... `Thüringen`; <br> `Deutschland`, `Unbekannt`  | Name der Bezugsregion, Bundesland bzw. Deutschland gesamt|
 | Region_ID  | Text | `00`, `01`, ... `16`, `NA`  | ID nach dem Amtlichen Gemeindeschlüssel. Zusätzlich `00` für Deutschland gesamt und `NA` für unbekannt| 
 | Altersgruppe | Text |  `00-04`, `05-14`, `15-34`, `35-59`, `60-79`, `80+`, `00+`, `Unbekannt`  | Altersspanne der in der Gruppe enthaltenen Fälle   |  
 | Fallzahl       | ganze Zahl |  `≥0` | Anzahl der Fälle in der Fallgruppe |  
