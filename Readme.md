@@ -1,203 +1,166 @@
 Datensatzdokumentation  
-# Abwassersurveillance AMELAG  
+# Respiratorische Synzytialvirusfälle in Deutschland
 
-[Robert Koch-Institut](https.//rki.de) | RKI  
+
+[Robert Koch-Institut](https://rki.de) | RKI  
 Nordufer 20  
 13353 Berlin  
 
-<br>
+Fachgebiet 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD-Kontaktstelle    
+Fachgebiet 36 | Respiratorisch übertragbare Erkrankungen  
+Informationstechnologie 4 | Softwarearchitektur und -entwicklung  
 
-**Fachgebiet 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD-Kontaktstelle**
-
-<br>
-
-**Zitieren**  
-Fachgebiet 32, Robert Koch-Institut (2023): Abwassersurveillance AMELAG, Berlin: Zenodo. [DOI: 10.5281/zenodo.10782702](https://doi.org/10.5281/zenodo.10782702)
 
 ---
+**Zitieren** 
+Robert Koch-Institut (2024): Respiratorische Synzytialvirusfälle in Deutschland. [Dataset] Zenodo. DOI:[10.5281/zenodo.10816726](https://doi.org/10.5281/zenodo.10816726).
 
 ## Informationen zum Datensatz und Entstehungskontext
 
-Das Vorhaben „Abwassermonitoring für die epidemiologische Lagebewertung“ (AMELAG) läuft vom 22.11.2022 bis zum 31.12.2024. Behörden, Kläranlagen und Labore arbeiten zusammen, um Proben zu nehmen, zu analysieren und zu bewerten. Das Ziel dieses Vorhabens ist es, SARS-CoV-2-Nachweise aus dem Abwasser als zusätzlichen Indikator zur epidemiologischen Lagebewertung auf Länder- und Bundesebene zu etablieren. Ebenso ist es das Ziel, Strukturen und Prozesse für ein bundesweites Netzwerk für die Abwassersurveillance weiter auszubauen, Konzepte für eine Verstetigung zu erstellen und die Möglichkeiten für ein Monitoring von weiteren Krankheitserregern im Abwasser zu erforschen. 
-Abwassersurveillance ist eine Technik, um Erreger im Abwasser nachzuweisen, um Gesundheitsschutzmaßnahmen besser steuern zu können. Abwasserdaten erlauben keine genaue Einschätzung von Krankheitsschwere oder der Belastung des Gesundheitssystems. Bei der epidemiologischen Bewertung sollten die Daten mit anderen Indikatoren, z.B. aus der syndromischen Surveillance, kombiniert werden. 
+Im Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" werden die Fallzahlen und Inzidenzen (Fälle pro 100.000 Personen) der nach den Vorgaben des [Infektionsschutzgesetzes (IfSG)](https://www.gesetze-im-internet.de/ifsg/index.html) von den Gesundheitsämtern in Deutschland an die zuständigen Landesbehörden und das Robert Koch-Institut (RKI) übermittelten Infektionen mit dem Respiratorischen Synzytial-Virus (RSV) nach Meldewoche bereitgestellt. 
 
 ### Administrative und organisatorische Angaben
 
-AMELAG ist ein vom [Bundesministerium für Gesundheit (BMG)](https://www.bundesgesundheitsministerium.de/index.html) gefördertes Vorhaben und wird in Kooperation mit dem Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und [Verbraucherschutz (BMUV)](https://www.bmuv.de/) durchgeführt.
-Das Vorhaben wird vom Robert Koch-Institut (RKI) und [Umweltbundesamt (UBA)](https://www.umweltbundesamt.de/) gemeinsam durchgeführt. Weitere Informationen zu AMELAG finden Sie auf der [Projektwebseite](https://rki.de/abwassersurveillance).  
-Die Durchführung der Probenahme erfolgt durch die teilnehmenden Kläranlagen. Die Analyse der Proben erfolgt durch die teilnehmenden Labore. Neben kommerziellen Laboren, Landeslaboren und dem Umweltbundesamt führt der zentrale Sanitätsdienst der Bundeswehr einen Teil der Analytik durch.
+Die zugrundeliegenden Daten werden im Rahmen des Meldesystems gemäß [IfSG](https://www.gesetze-im-internet.de/ifsg/index.html) erhoben und verarbeitet. Zuständig für die fachliche Umsetzung des Meldesystems ist das [Fachgebiet 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD Kontaktstelle](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG32/FG32_node.html) des RKI.  
+Das Qualitätsmanagement einschließlich Trend- und Todesfallkontrollen sowie die epidemiologische Bewertung der Daten erfolgt duch das [Fachgebiet 36 | Respiratorisch übertragbare Erkrankungen](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG36/FG36_node.html) des RKI.  
+Die Verarbeitung und Aufbereitung der im Meldesystem vorliegenden Rohdaten erfolgt durch das Fachgebiet [IT4 | Softwarearchitektur und -entwicklung](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/IT4/it4_node.html).  
+Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/MF4/mf4_node.html). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open-Data-Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.  
 
-Ein Teil der Kläranlagen und Labore sind gleichzeitig in Projekten der Bundesländer zur Abwassersurveillance beteiligt (Baden-Württemberg, Bayern, Berlin, Brandenburg, Hamburg, Hessen, Rheinland-Pfalz, Sachsen-Anhalt). 
-Weitere Kläranlagen und Labore sind Teil der folgenden Forschungsprojekte:
--	[WBEready](https://www.fiw.rwth-aachen.de/aktuelles-veranstaltungen/aktuelles/wbeready) - Einen Forschungskonsortium bestehend aus Emschergenossenschaft und LippeverbandEGLV, Forschungsinstitut für Wasserwirtschaft und Klimazukunft an der RWTH Aachen FiW, Universitätsklinikum Frankfurt, Goethe-Universität Frankfurt am Main, Universitätsmedizin Essen (Institut für künstliche Intelligenz, Institut für Urban Public Health), RWTH Aachen, Institut für Siedlungswasserwirtschaft.
--	Etablierung von Verfahren für den Nachweis von Viren im Abwasser zur Bewertung der Infektionslage in der Bevölkerung (Universität Dresden)
--	Entwicklung einer landesweiten Abwassersurveillance in Thüringen mittels Mobilitätsdaten und künstlicher Intelligenz (Forschungskonsortium der Universität Weimar, Universität Jena, Universität Hamburg, Hochschule Hamm-Lippstadt, SMA Development GmbH, KOWUG Kommunale Wasser- und Umwelttechnik GmbH, Analytik Jena GmbH) 
--	Etablierung einer Multiplex-PCR aus Abwasser und für Detektion und Charakterisierung von RSV im Rahmen des SARS-CoV-2-Abwasser-Monitoring (AMELAG) (Universität Bonn und Düsseldorf).  
+### Entstehungskontext
 
-Die Firma [ENDA](https://enda.eu/) wurde mit der Datenhaltung beauftragt. Die erhobenen Daten werden dort in einer Datenbank (PiA-Monitor ) gespeichert und weiterverarbeitet. 
+Das RKI ist ein Bundesinstitut im Geschäftsbereich des [Bundesministeriums für Gesundheit](https://www.bundesgesundheitsministerium.de/) (BMG) und ist die zentrale Einrichtung des Bundes auf den Gebieten der  Krankheitsüberwachung und -prävention sowie der anwendungsorientierten biomedizinischen Forschung. Es berät die zuständigen Bundesministerien, insbesondere das Bundesministerium für Gesundheit, und wirkt bei der Entwicklung von Normen und Standards mit. Wesentliche Aufgaben des RKI leiten sich aus dem [Infektionsschutzgesetz (IfSG)](https://www.gesetze-im-internet.de/ifsg/index.html) ab. Dazu gehört neben der in [§ 4 Abs. 1 IfSG](https://www.gesetze-im-internet.de/ifsg/__4.html) beschriebenen Aufgabe der „Vorbeugung übertragbarer Krankheiten sowie zur frühzeitigen Erkennung und Verhinderung der Weiterverbreitung von Infektionen“ auch die Erstellung von „Falldefinitionen für die Bewertung von Verdachts-, Erkrankungs- oder Todesfällen und Nachweisen von Krankheitserregern“ (vgl. [§ 11 Abs. 2 IfSG](https://www.gesetze-im-internet.de/ifsg/__11.html)).
 
-Die Verarbeitung, Aufbereitung und Veröffentlichung der Daten erfolgen durch das Fachgebiet MF 4 | Fach- und Forschungsdatenmanagement. Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data-Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.
+#### Infektionsschutzgesetz
 
-#### Datenerhebung
+Das [Infektionsschutzgesetz ](https://www.gesetze-im-internet.de/ifsg/index.html) hat den Zweck, der Übertragung von Krankheiten beim Menschen vorzubeugen und Infektionen frühzeitig zu erkennen sowie die Verbreitung dieser zu verhindern. Es regelt, welche Krankheiten bei Verdacht, Erkrankung oder Tod und welche Nachweise von Krankheitserregern meldepflichtig sind. Zusätzlich wird neben der Art der zu meldenden Krankheit auch festgelegt, welche Personen zur Meldung verpflichtet sind, welche Angaben solch eine Meldung enthalten muss, an wen diese Meldung erfolgen muss und welche Fristen eingehalten werden müssen.
 
-In AMELAG wurden aufbauend auf die im Rahmen des [ESI-CorA-Projekts](https://doi.org/10.5281/zenodo.10781652) erstellten Handreichungen zur Probennahme und Laboranalytik [technische Leitfäden](http://www.rki.de/abwassersurveillance) entwickelt. Die Rohdaten der im ESI-CorA-Projekt analysierten Proben sind in AMELAG nachgenutzt und in den ausgewerteten Daten enthalten.
-An jeder beteiligten Kläranlage werden in aller Regel zwei Mal pro Woche Rohabwasserproben entnommen und zusammen mit den Begleitparametern (z.B. Volumenstrom, pH-Wert, Temperatur), die für die Normalisierung und Qualitätssicherung nötig sind, erhoben. Die Rohabwasserproben sollen, sofern möglich, nach dem Sandfang der Kläranlage entnommen werden. Es wird eine 24-Stunden-Mischprobe entnommen, welche mit einem automatischen Probennehmer durchgeführt wird. Die 24-Stunden-Probennahmen erfolgen in der Regel jeweils montags auf dienstags und mittwochs auf donnerstags. Im Regelfall wird ein Liter der Probe in Probenflaschen abgefüllt und an das Analyselabor versendet.
-Im Labor erfolgt die Aufkonzentrierung, Extraktion der viralen Nukleinsäure und Quantifizierung der viralen Gensequenzen durch digitale PCR (dPCR) oder quantitative real time PCR (qRT-PCR). Mindestens zwei repräsentative SARS-CoV-2 Genfragmente (Vorzugsweise N1, N2, E, ORF oder RdRp) werden bestimmt. 
+Dem Gesundheitsamt wird gemäß § 7 Abs. 1 Nr. 38a IfSG der direkte oder indirekte Nachweis von Respiratorischen Synzytial-Viren, soweit er auf eine akute Infektion hinweist, namentlich gemeldet. Die bundesweite Meldepflicht besteht seit 21.07.2023.
 
-> Robert Koch-Institut, Fachgebiet 32 (2024): "ESI-CorA: SARS-CoV-2-Abwassersurveillance" [Data set]. Zenodo. DOI: [10.5281/zenodo.10781653](https://doi.org/10.5281/zenodo.10781652)
+#### Falldefinition  
 
-#### Datenfluss
+Gemäß § 11 Abs. 2 IfSG hat das RKI die Aufgabe, Falldefinitionen zu erstellen, die die Kriterien für die Übermittlung von Meldedaten vom Gesundheitsamt an die zuständige Landesbehörde und von dort an das RKI festlegen. Die Falldefinitionen haben zum Ziel, bundesweit einheitliche Kriterien im Rahmen der epidemiologischen Überwachung von Infektionskrankheiten sicherzustellen. Damit sollen sie zu standardisierten Bewertungen, aussagekräftigeren Statistiken und letztlich objektiveren Entscheidungen beitragen.  
+Die Falldefinitionen ändern sich in unregelmäßigen Abständen, z.B. aufgrund neuer wissenschaftlicher Erkenntnisse, und werden auf der [Website des RKI](https://www.rki.de/DE/Content/Infekt/IfSG/Falldefinition/Downloads/Falldefinitionen_des_RKI_2023.pdf) veröffentlicht. Die Falldefinition orientiert sich dabei an den drei Evidenztypen:  
 
-![Datenfluss AMELAG](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/.github/pictures/AMELAG_Datenfluss.png?raw=true "Datenfluss AMELAG")
-    
-Beim UBA laufen die Metadaten zu den Kläranlagenstandorten und den Laboren sowie die regelmäßig erhobenen Monitoringdaten zentral in einer Webanwendung, dem PiA-Monitor (Pathogene im Abwasser), zusammen, werden dort gespeichert und weiterverarbeitet. Die regelmäßig zu erfassenden Monitoringdaten der Kläranlagen und die Analysedaten der Labore werden zusammengeführt und von den datenliefernden Stellen über die Web-Anwendung der Datenbank importiert. Das Umweltbundesamt, das RKI und die Bundesländer können auf die Daten im Rahmen ihrer jeweiligen Rechte zugreifen.
+Klinisches Bild  
+- Aufführung von klinischen Symptomen, Zeichen, Befunden und anamnestischen Angaben, die je nach Übermittlungskategorie einzeln oder in Kombination zutreffen müssen 
 
-### Plausibilitätsprüfung und Weiterverarbeitung der Daten
+Labordiagnostischer Nachweis  
+- Aufführung von direkten, indirekten und anderen Nachweisen, die je nach Übermittlungskategorie einzeln oder in Kombination zutreffen müssen 
 
-Mit dem Datenimport werden die Daten auf Plausibilität geprüft. Dabei werden die Formate, Vollständigkeit der Angaben (Pflichtfeldangaben), Wertebereiche der Monitoringdaten, Plausibilität der Datumsangaben und die Übereinstimmung mit hinterlegten Metadaten geprüft. Nur Datensätze, welche die Qualitätsprüfung erfolgreich durchlaufen, werden auch in die Datenbank importiert. Es wird der geometrische Mittelwert der Viruslast (Genkopien/Liter) aus den zwei oder mehr gemessenen Zielgenen ermittelt.
+Epidemiologische Bestätigung  
+- Explizite Nennung von epidemiologischen Zusammenhängen und epidemiologisch bestätigten Expositionen 
 
-#### Normalisierungsverfahren
+Diese Evidenztypen werden zu einer von fünf Falldefinitionskategorien zusammengefasst. Aus den Falldefinitionskategorien leitet sich für jede Krankheit die jeweilige Referenzdefinition ab. Diese legt fest, welche übermittelten Fälle in den Veröffentlichungen des RKI erscheinen. In den Kontextmaterialien des Datensatzes ist die Falldefinition und die darin enthaltene Referenzdefinition für RSV-Infektionen zu finden.
 
-Eine variierende Abwasserzusammensetzung, z. B. aufgrund von unregelmäßigen industriellen Einflüssen oder Starkregenereignissen, kann zu veränderten Konzentrationen von SARS-CoV-2 führen. Um diese externen Einflüsse zu berücksichtigen, kann die gemessene Viruslast normalisiert werden. 
-In AMELAG wird nach Durchfluss normalisiert. Dabei ist der Trockenwetterzufluss der Kläranlage die Referenz. Folgende Formel wurde hierbei verwendet: 
 
-$$ Gene_{normalisiert} = Q_{KA\\\_aktuell}/Q_{KA\\\_median} \cdot Gene_{gemittelt} $$
 
-wo:  
+> [Kontextmaterialien/2023-09-01_RKI-Falldefinition.pdf](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Kontextmaterialien/2023-09-01_RKI-Falldefinition.pdf)  
 
-- $Q_{KA\_aktuell}$ : Volumenstrom der Kläranlage im Probenahmezeitraum und  
-- $Q_{KA\_median}$ : Median des Volumenstrom der Kläranlage  
 
-Die Normalisierung erfolgt automatisiert mit dem Datenimport. 
+#### Melde- und Übermittlungsweg
 
-### Datenauswertung
+Die Meldung an das Gesundheitsamt hat gemäß § 14 IfSG elektronisch zu erfolgen. Die Spezifikationen für die elektronische Meldung sind im Implementierungsleitfaden beschrieben: https://simplifier.net/guide/implementierungsleitfadenfrdemis?version=current.
 
-Die Auswertung der Daten erfolgt am RKI über R-Skripte. Die Skripte sind in den [Kontextmaterialien](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main?tab=readme-ov-file#Kontextmaterialien) enthalten. Eine genaue Beschreibung der Methodikist in den [technische Leitfäden](http://www.rki.de/abwassersurveillance) hinterlget. Die Ergebnisse werden in einem wöchentlichen Bericht des RKI [Wochenbericht](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG32/Abwassersurveillance/Bericht_Abwassersurveillance.html) veröffentlicht. 
-Für jeden Standort werden die Messwerte in Genkopien pro Liter (Genkopien/L) angegeben. Zusätzlich werden die Messwerte der logarithmierten normalisierten Genkopien mittels einer lokal gewichteten Regression (LOESS) geglättet und zugehörige Konfidenzintervalle berechnet. Der Trend für einen Standort ergibt sich aus der Veränderung des von der LOESS-Methode geschätzten Werts an einem Mittwoch einer Woche gegenüber dem für den vorherigen Mittwoch vorhergesagten Wert, wobei die Werte vorher zurück auf die Originalskala transformiert wurden. 
-- `fallend`: die geglättete Viruslast ist um mehr als 15% zur Vorwoche gesunken 
-- `ansteigend`: die geglättete Viruslast ist um mehr als 15% zur Vorwoche gestiegen
-- `gleichbleibend`: die geglättete Viruslast hat sich nicht mehr als 15% zur Vorwoche verändert 
-- `keine Daten vorhanden`:  für den Mittwoch dieser oder der vergangenen Woche leigt kein geglätteter LOESS-Wert vor
-- `NA`: ist für alle Tage außer Mittwoch eingetragen 
+Die im Gesundheitsamt eingehenden Meldungen werden weitgehend automatisiert in der Gesundheitsamtssoftware weiterverarbeitet, durch weitere Ermittlungen ggf. vervollständigt und gemäß Falldefinition bewertet. Ggf. werden mehrere Meldungen zum selben Fall zusammengeführt.
 
-#### Aggregation der Standortwerte
+Erfüllt ein Fall die Falldefinition des RKI, müssen die Daten vom zuständigen Gesundheitsamt spätestens am nächsten Arbeitstag elektronisch an die zuständige Landesbehörde und von dort spätestens am nächsten Arbeitstag an das RKI übermittelt werden. Der Umfang der an das RKI übermittelten Daten ist in § 11 IfSG festgelegt. Dies beinhaltet demografische und epidemiologische Angaben. Im Verlauf einer meldepflichtigen Infektion kann zwischen verschiedenen Kennzeitpunkten unterschieden werden:  
 
-Es werden die einzelnen Zeitreihen der Standorte aggregiert, um einen bundesweiten Verlauf der SARS-CoV-2-Viruslast im Abwasser abzubilden. Dafür werden in jeder Woche, in der für mindestens 10 Standorte Messwerte vorliegen, der Mittelwert über die über eine Woche gemittelten logarithmierten Messwerte der einzelnen Standorte berechnet. Dabei wird nach den angeschlossenen Einwohnern der Kläranlage gewichtet.
+* Erkrankungsdatum des Falls  
+* Datum der Meldung, z.B. von Laboren, Krankenhäusern oder Ärzt:innen  
+* Meldedatum, Eingang/Eingabe im Gesundheitsamt  
+* Übermittlungsdatum nach IfSG  
+* Erfassungsdatum des Falls am RKI  
 
-### Hinweise zur Datenauswertung
+![Abbildung: Melde- und Übermittlungsweg gemäß IfSG](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/.github/pictures/IfSG_Meldeweg-Schema.png?raw=true "Abbildung: Melde- und Übermittlungsweg gemäß IfSG")
 
-Bei der Datenbewertung sind einige Besonderheiten zu beachten:
+In den Statistiken des RKI wird in der Regel das Meldedatum verwendet. Das Meldedatum ist das Datum, an dem das Gesundheitsamt Kenntnis von dem Fall erlangt und ihn als solchen anlegt. Mit Einführung der elektronischen Meldung liegen das Datum der Meldung (z.B. durch das Labor) und das Meldedatum (Erfassung des Falls im Gesundheitsamt) eng beeinander. Entgegen den gesetzlichen Vorgaben kann es dazu kommen, dass die Meldung an das Gesundheitsamt oder die Übermittlung des Falls an die zuständige Landesbehörde oder von dort an das RKI verzögert erfolgt. Dies wird allgemein als Melde- bzw. Übermittlungsverzug bezeichnet.
 
-* Es wurden an den unterschiedlichen Standorten verschiedene Zielgene gemessen (eine Kombination aus vorzugsweise N1, N2, E, ORF oder RdRp).
-* Der Standort Hamburg ist mit zwei Zuläufen vertreten: “Hamburg Nord” und “Hamburg Süd”.
-* Im Sommer 2023 lag die Viruslast an einzelnen Tagen / Standorten teilweise unter der Bestimmungsgrenze (BG). In diesen Fällen wurde $0.5 \cdot BG$ als Wert eingetragen. Lag in einigen, seltenen Fällen keine Bestimmungsgrenze vor, wurde 4000 Genkopien/L als BG genommen.
+## Daten und Datenaufbereitung  
 
-#### Limitationen 
+Der Datensatz enthält epidemiologische Daten über die Anzahl der Respiratorische Synzytialvirusfälle in Deutschland im zeitlichen Verlauf. Genauere Informationen finden sich im Abschnitt [Falldefinition](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland?tab=readme-ov-file#Falldefinition).
 
-Abwasserdaten erlauben keinen Rückschluss auf die Krankheitsschwere oder die Belastung des Gesundheitssystems. Aus Abwasserdaten kann nach aktuellem Stand nicht präzise auf Inzidenz/Prävalenz oder die Untererfassung (die sog. „Dunkelziffer”) geschlossen werden. Für die epidemiologische Lagebewertung sollten die Daten immer in Zusammenschau mit anderen Indikatoren, z.B. aus der syndromischen Surveillance, betrachtet werden.
-Absolute Viruslasten können insbesondere über längere Zeiträume nicht direkt im Hinblick auf die Anzahl an Infizierten verglichen werden, da sich die ausgeschiedene Virusmenge pro infizierter Person beispielsweise zwischen verschiedenen Virusvarianten unterscheiden kann.
-Die ermittelten Werte werden durch eine Vielzahl von Faktoren (z.B. Veränderungen der Abwasserzuleitung, Starkregenereignisse oder touristische Ereignisse) beeinflusst, was durch die Normalisierung nur teilweise ausgeglichen werden kann.
-Der Zeitverzug von der Probenahme bis zur Übermittlung und weitere Veröffentlichung vom RKI kann bis zu zwei Wochen dauern. 
+Im Datensatz enthalten sind:  
 
-## Inhalt und Aufbau des Datensatzes  
+- wöchentliche Fallzahlen- und Inzidenzdaten von RSV-Infektionen  
+- Datensatzdokumentation in deutscher Sprache  
+- Kontextmaterialien zur Datenpublikation  
+- Metadaten zur Datenpublikation  
+- Lizenz-Datei mit der Nutzungslizenz des Datensatzes  
 
-Im AMELAG-Datensatz werden Daten und Kontextmaterialien zu SARS-CoV-2-Nachweisen im Abwasser bereitgestellt. Die im Projekt erhobenen Daten, liegen für [einzelne Standorte](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main?tab=readme-ov-file#Normalisierten-Daten-zur-SARS-CoV-2-Viruslast) und als [aggregierte Zeitreihe](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main?tab=readme-ov-file#Zeitreihe-der-SARS-CoV-2-Viruslast) vor.
+Zentrales Datum des Datensatzes sind die aktuellen Fallzahlen der RSV-Infektionen. Diese sind im Hauptverzeichnis unter "IfSG_RSVfaelle.tsv" abrufbar und werden wöchentlich überschrieben.
 
-Im Datensatz zusätzlich enthalten sind:
-- Lizenz-Datei mit der Nutzungslizenz des Datensatzes in Deutsch und Englisch
-- Datensatzdokumentation in deutscher Sprache
-- Metadaten zur automatisierten Weiterverarbeitung
-- Kontexmaterialien zur Datenanalyse
 
-### Normalisierten Daten zur SARS-CoV-2-Viruslast  
+> [IfSG_RSVfaelle.tsv](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/IfSG_RSVfaelle.tsv)  
 
-In der Datei [`amelag_einzelstandorte.tsv`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_einzelstandorte.tsv) sind die normalisierten Daten zur SARS-CoV-2-Viruslast für die einzelnen Standorte angegeben. 
+Die Fallzahlendaten bilden den wochenaktuellen Datenstand, mittwochs 00:00 Uhr, aller bisher übermittelten Respiratorische Synzytialvirusfälle in Deutschland ab. Das bedeutet, dass alle bis 24:00 Uhr des Vortags von den Gesundheitsämtern über die zuständigen Landesbehörden an das RKI übermittelten RSV-Infektionen im Datenstand enthalten sind.
 
-> [amelag_einzelstandorte.tsv](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_einzelstandorte.tsv)
+Die Daten werden wöchentlich vollständig neu erzeugt und dieser Datenstand ersetzt den vorherigen Datenstand.
 
-#### Variablen und Variablenausprägungen  
+Die Publikation der Daten erfolgt planmäßig donnerstags zusammen mit der aktuellen Ausgabe des [Epidemiologischen Bulletins](https://www.rki.de/DE/Content/Infekt/EpidBull/epid_bull_form.html) des RKI. 
 
-Die Datei [`amelag_einzelstandorte.tsv`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_einzelstandorte.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:
+### Variablen und Variablenausprägungen
 
-| Variable | Typ | Ausprägung | Beschreibung |
-| -------- | -------- | -------- | ---- |
-| standort     | Text    | | Standort, an dem sich die Kläranlage befindet. |
-| bundesland | Text | ``BB``, ``BE``, ``BW``, ``BY``, ``HB``, ``HE``, ``HH``, ``MV``, ``NI``, ``NW``, ``RP``, ``SH``, ``SL``, ``SN``, ``ST``, ``TH`` | Bundesland (abgekürzt), in dem sich die Kläranlage befindet.
-| datum | Datum | ``jjjj-mm-tt`` oder ``NA`` | Datum, an dem die 24-Stunden-Mischprobe in der Kläranlage begonnen hat.|
-| viruslast | Gleitkommazahl | `≥0`  oder `NA` | Gemessene SARS-CoV-2-Viruslast in Genkopien pro Liter.
-| loess_vorhersage | Gleitkommazahl | `≥0.00` oder ``NA``| Die mittels einer LOESS-Regression (optimiert mittels GCV-Kriterium für die 10er-logarithmierten Viruslasten) vorhergesagten Viruslasten. |
-| loess_obere_schranke | Gleitkommazahl | `≥0.00` oder ``NA`` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_untere_schranke | Gleitkommazahl | `≥0.00` oder ``NA`` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
-| loess_aenderung | Gleitkommazahl | `0.00` oder ``NA`` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
-| einwohner | Natürliche Zahl | `≥0` oder `NA` | Einwohner, die an das Klärwerk des Standortes angeschlossen sind.|
-| trend | Text | `Ansteigend`, `Fallend`, `Unverändert`, `keine Daten vorhanden`, `NA` | Kategorisierte Veränderung des geglätteten LOESS-Wertes von einem Mittwoch zum Mittwoch der Vorwoche (siehe [Datenauswertung](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main?tab=readme-ov-file#Datenauswertung))
+In den Fallzahlen differenzieren die Spalten nach verschiedenen Merkmalen einer Fallgruppe. Pro Zeile ist eine ein-eindeutige Fallgruppe abgebildet. Fallgruppen werden durch folgende Eigenschaften charakterisiert (in den Klammern finden sich die Merkmale dieser Eigenschaften):  
 
-### Zeitreihe der SARS-CoV-2-Viruslast
+- Zeitlicher Verlauf (Meldewoche)  
+- Geografische Zuordnung (Region, Region_ID)  
+- Personengruppe (Altersgruppe)  
+- Größe der Gruppe (Anzahl, Inzidenz pro 100.000)  
 
-In  der Datei [`amelag_aggregierte_kurve.tsv`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_aggregierte_kurve.tsv)  ist die Zeitreihe der SARS-CoV-2-Viruslast auf aggregierter bzw. bundesweiter Ebene enthalten.
 
-> [amelag_aggregierte_kurve.tsv](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_aggregierte_kurve.tsv)
+#### Variablenausprägungen
 
-#### Variablen und Variablenausprägungen  
+| Variable | Typ | Ausprägungen | Beschreibung |
+| -------- | --- | ------------ | ------------ |
+| Meldewoche| Text | `JJJJ-Www` |  Kalenderwoche, in der der Fall dem Gesundheitsamt bekannt geworden ist. `JJJJ` entspricht der Jahresangabe, `Www` entspricht der Wochenangabe nach [ISO 8601](https://de.wikipedia.org/wiki/ISO_8601) (beispielsweise `2021-W34` für die 34. Kalenderwoche des Jahres 2021) |  
+| Region   | Text | `Schleswig-Holstein`, ... `Thüringen`; <br/> `Deutschland`, `Unbekannt`  | Name der Bezugsregion, Bundesland bzw. Deutschland gesamt|
+| Region_ID  | Text | `00`, `01`, ... `16`, `NA`  | ID nach dem Amtlichen Gemeindeschlüssel. Zusätzlich `00` für Deutschland gesamt und `NA` für unbekannt| 
+| Altersgruppe | Text |  `00-04`, `05-14`, `15-34`, `35-59`, `60-79`, `80+`, `00+`, `Unbekannt`  | Altersspanne der in der Gruppe enthaltenen Fälle   |  
+| Fallzahl       | ganze Zahl |  `≥0` | Anzahl der Fälle in der Fallgruppe |  
+| Inzidenz  | Rationale Zahl |  `n.nn`, `NA` | Anzahl der Fälle pro 100.000 Personen bezogen auf die Gesamtbevölkerung der Fallgruppe (`NA`, falls Altersgruppe oder Region unbekannt sind) |
 
-Die Datei [`amelag_aggregierte_kurve.tsv`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/amelag_aggregierte_kurve.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:
+#### Formatierung der Daten 
 
-| Variable | Typ | Ausprägung | Beschreibung |
-| -------- | -------- | -------- |-------- |
-| datum     | Datum     | ``jjjj-mm-tt`` | Datum des Mittwochs einer Woche.|
-| n | Natürliche Zahl | `≥0` oder `NA` | Anzahl der Standorte, die mindestens einen Messwert im durch “datum” definierten Zeitraum übermittelt haben. |
-| anteil_bev | Gleitkommazahl | `≥0.00` oder `NA` | Anteil der Gesamtbevölkerung in Deutschland, der an die übermittelnden Klärwerke angeschlossen ist. |
-| viruslast | Gleitkommazahl | `≥0` oder `NA` | SARS-CoV-2-Viruslast in Genkopien pro Liter gemittelt über alle Standorte und gewichtet nach angeschlossenen Einwohnern der Kläranlagen. Vor der Mittelung über die Standorte wurden alle Messwerte der Standorte in den letzten 7 Tagen jeweils mittels 10er-Logarithmus transformiert und über die einzelnen Standorte gemittelt. Die angegebene Viruslast ist der auf die Originalskala zurücktransformierte Mittelwert. |
-| loess_vorhersage | Gleitkommazahl | `≥0.00` oder `NA` | Die mittels einer LOESS-Regression vorhergesagten Viruslasten, zurücktransformiert auf die Originalskala.|
-| loess_obere_schranke | Gleitkommazahl | `≥0.00` | Obere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts.|
-| loess_untere_schranke | Gleitkommazahl | `≥0.00` | Untere Grenze des punktweisen 95%-Konfidenzintervalls des LOESS-Vorhersagewerts. |
+Die Daten sind im Datensatz als tabulatorseparierte .tsv-Datei enthalten. Der verwendete Zeichensatz der .tsv-Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Tabulator [tab]. Datumsangaben sind im ISO-8601-Standard formatiert.
 
-### Kontextmaterialien
-
-Zur Reproduktion der Ergebnisse des [AMELAG Wochenberichts](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG32/Abwassersurveillance/Bericht_Abwassersurveillance.html?__blob=publicationFile) werden die zur Erstellung der Analyse verwendetent die R-Skripte zur bereitgestellt. Die Skripte befinden sich im Ordner "[Kontextmatrialien](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main/Kontextmaterialien)" des Datensatzes.
-
-> [Kontextmatrialien](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main/Kontextmaterialien)
-
-#### Struktur der Skripte
-
-Das R-Skript [`main.R`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/Kontextmaterialien/main.R) erzeugt alle Grafiken, die im Wochenbericht angezeigt werden. Setzen Sie `show_log_data = FALSE` am Anfang von `main.R`, um Plots auf der Originalskala (statt auf der Logskala) zu erzeugen. Die Datei `main.R` ruft alle R-Skripte auf, die im Unterordner [`Scripts`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/tree/main/Kontextmaterialien/Scipts) gespeichert sind und speichert alle Ergebnisse im Ordner `Results` und seinen Unterordnern. Die folgenden R-Skripte sind im Ordner `Scripts` verfügbar: 
-
-* [`functions_packages.R`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/Kontextmaterialien/Scripts/functions_packages.R): Installiert (falls erforderlich) und lädt notwendige Pakete, definiert selbst geschriebene Funktionen und setzt Parameter und Variablen, die in anderen Skripten verwendet werden.
-
-* [`loess_calculation.R`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/Kontextmaterialien/Scripts/loess_calculation.R): Löscht LOESS-Berechnungen, entsprechende Konfidenzintervalle und berechnete Trends aus `amelag_einzelstandorte.tsv` im Ordner `Data` und zeigt, wie man diese Größen berechnet. 
-
-* [`aggregation_calculation.R`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/Kontextmaterialien/Scripts/aggregation_calculation.R): Ausgehend von den Daten `amelag_einzelstandorte.tsv` im Ordner `Data` zeigt dieses Skript, wie man die Daten aggregiert und die LOESS-Kurve und ihre jeweiligen Konfidenzintervalle für die aggregierten Daten berechnet. Im Wesentlichen zeigt dieses Skript, wie man aus `amelag_einzelstandorte.tsv` den Datensatz `amelag_aggregierte_kurve.tsv` erhält.
-
-* [`plot_single_places.R`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/Kontextmaterialien/Scripts/plot_single_places.R): Erzeugt eine Zeitreihengrafik mit einer LOESS-Kurve für jeden Standort, der genügend Daten geliefert hat. Speichert auch beobachtete und mittels LOESS geschätzte Abwasserdaten für jeden Standort, der genügend Daten geliefert hat. Für Standorte ohne ausreichende Daten werden keine LOESS-Schätzungen berechnet und gespeichert.
-
-* [`plot_aggregated_curve.R`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/Kontextmaterialien/Scripts/plot_aggregated_curve.R): Erzeugt eine Zeitreihendarstellung mit einer LOESS-Kurve für die über alle Standorte aggregierten Daten.  
-
-* [`plot_heatmap.R`](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/Kontextmaterialien/Scripts/plot_heatmap.R): Erzeugt eine Heatmap, die Trends für alle Standorte zeigt, die genügend Daten geliefert haben.  
-
-#### Ergebnisse
-Nach dem Ausführen von `main.R` enthält der Ordner `Results` die Heatmap und die aggregierte Kurve in seinem Hauptverzeichnis und die Kurven und Daten für die einzelnen Standorte in seinem Unterordner `Single_Sites`.
+* Zeichensatz: UTF-8  
+* Datumsformat: ISO 8601  
+* .tsv-Trennzeichen: Tabulator [tab]  
 
 
 ### Metadaten
 
-Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:
+Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei; diese sind im Metadatenordner hinterlegt:  
 
-> [Metadaten/](/Metadaten/)  
+> [Metadaten/](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/tree/main/Metadaten/)  
 
-Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/representation nachlesbar.   
+Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/representation nachlesbar.  
 
-> [Metadaten/zenodo.json](/Metadaten/zenodo.json)  
+> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/zenodo.json)  
 
-## Hinweise zur Nachnutzung der Daten
+In der zenodo.json ist neben der Publikationsdatum (`"publication_date"`) auch der Datenstand enthalten:  
+```
+  "dates": [
+    {
+      "start": "2023-09-11T15:00:21+02:00",
+      "end": "2023-09-11T15:00:21+02:00",
+      "type": "Collected",
+      "description": "Date when the Dataset was created"
+    }
+  ],
+```    
 
-Offene Forschungsdaten des RKI werden auf [GitHub.com](http://GitHub.com/), [Zenodo.org](http://Zenodo.org/) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:
+## Hinweise zur Nachnutzung der Daten  
 
-- https://github.com/robert-koch-institut
+Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:
+
 - https://zenodo.org/communities/robertkochinstitut
+- https://github.com/robert-koch-institut
+- https://gitlab.opencode.de/robert-koch-institut
 - https://edoc.rki.de/
 
 ### Lizenz  
 
-Der Datensatz "Abwassersurveillance AMELAG" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).
+Der Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY ](https://creativecommons.org/licenses/by/4.0/deed.de).  
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts und des Umweltbundesamtes als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Abwassersurveillance_AMELAG/blob/main/LIZENZ) Datei des Datensatzes.
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht, die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/LIZENZ) Datei des Datensatzes.
