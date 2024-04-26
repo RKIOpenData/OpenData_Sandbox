@@ -15,7 +15,7 @@ abstract: >-
   Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
   Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
   Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-date-released: '2024-04-25'
+date-released: '2024-04-26'
 keywords:
   - Deutschland
   - Germany
@@ -29,8 +29,8 @@ keywords:
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.48769
-version: '2024-04-25T14:02:52+02:00'
+doi: 10.5072/zenodo.49051
+version: '2024-04-26T06:35:41+02:00'
 authors:
   - family-names: Name
     given-names: Vorname
