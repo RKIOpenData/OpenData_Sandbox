@@ -1,0 +1,14 @@
+name: Copy tags to the About section of the Github repo
+on:
+  workflow_dispatch:
+
+jobs:
+  copy_tags_to_github_repo:
+    name:  Copy tags to the About section of the Github repo
+    runs-on: ubuntu-latest
+    steps:
+      - name:  Copy tags to the About section of the Github repo
+        uses: robert-koch-institut/OpenData-Workflows/Copy_tags_to_Github_topics@dev
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ZENODOJSON_PATH: Metadaten/zenodo.json
