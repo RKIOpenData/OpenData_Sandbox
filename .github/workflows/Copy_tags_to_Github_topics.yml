@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name:  Copy tags to the About section of the Github repo
-        uses: robert-koch-institut/OpenData-Workflows/Copy_tags_to_Github_topics@dev
+        uses: hanneswuensche/OpenData-Workflows/Copy_tags_to_Github_topics@dev
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_METADATA_TOKEN: ${{ secrets.METADATA_TOKEN }}
-          ZENODOJSON_PATH: Metadaten/zenodo.json
