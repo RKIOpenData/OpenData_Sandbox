@@ -22,7 +22,7 @@ Im Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" werden die Fa
 ### Administrative und organisatorische Angaben
 
 Die zugrundeliegenden Daten werden im Rahmen des Meldesystems gemäß [IfSG](https://www.gesetze-im-internet.de/ifsg/index.html) erhoben und verarbeitet. Zuständig für die fachliche Umsetzung des Meldesystems ist das [Fachgebiet 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD Kontaktstelle](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG32/FG32_node.html) des RKI.  
-Das Qualitätsmanagement einschließlich Trend- und Todesfallkontrollen sowie die epidemiologische Bewertung der Daten erfolgt duch das [Fachgebiet 36 | Respiratorisch übertragbare Erkrankungen](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG36/FG36_node.html) des RKI.  
+Das Qualitätsmanagement einschließlich Trend- und Todesfallkontrollen sowie die epidemiologische Bewertung der Daten erfolgt durch das [Fachgebiet 36 | Respiratorisch übertragbare Erkrankungen](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG36/FG36_node.html) des RKI.  
 Die Verarbeitung und Aufbereitung der im Meldesystem vorliegenden Rohdaten erfolgt durch das Fachgebiet [IT4 | Softwarearchitektur und -entwicklung](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/IT4/it4_node.html).  
 Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/MF4/mf4_node.html). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open-Data-Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.  
 
