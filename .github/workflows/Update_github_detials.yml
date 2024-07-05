@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update Github repository details weith zenodo.json metadata
-        uses: robert-koch-institut/OpenData-Workflows/Copy_tags_to_Github_topics@dev
+        uses: robert-koch-institut/OpenData-Workflows/Update_details_on_Github@dev
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_METADATA_TOKEN: ${{ secrets.METADATA_TOKEN }}
