@@ -10,4 +10,4 @@ jobs:
         uses: robert-koch-institut/OpenData-Workflows/Update_details_on_Github@dev
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_METADATA_TOKEN: ${{ secrets.METADATA_TOKEN }}
+          GITHUB_METADATA_TOKEN: ${{ secrets.ADMINISTRATION_TOKEN }}
