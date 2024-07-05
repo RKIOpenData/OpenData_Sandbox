@@ -44,4 +44,4 @@ jobs:
       
       # Github Token
       GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      GITHUB_METADATA_TOKEN: ${{secrets.GITHUB_METADATA_TOKEN}}
+      GITHUB_METADATA_TOKEN: ${{secrets.METADATA_TOKEN}}
