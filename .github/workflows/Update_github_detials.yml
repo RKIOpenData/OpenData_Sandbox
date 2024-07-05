@@ -1,4 +1,4 @@
-name: Update Github repository details weith zenodo.json metadata
+name: Manually update Github repository details
 on:
   workflow_dispatch:
 
