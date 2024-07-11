@@ -7,7 +7,7 @@ Nordufer 20
 
 <br>
 
-[**Thorsten Rieck**](https://orcid.org/0000-0002-8799-8744)&sup1;, **Marcel Feig**&sup2;, [**Lisa Branke**]()&sup1;, [**Annika Steffen**](https://orcid.org/0000-0003-4072-9245)&sup1;  
+[**Thorsten Rieck**](https://orcid.org/0000-0002-8799-8744)&#0185;, **Marcel Feig**&sup2;, [**Lisa Branke**]()&sup1;, [**Annika Steffen**](https://orcid.org/0000-0003-4072-9245)&sup1;  
 
 &emsp;&sup1; [Robert Koch Institute](https://www.rki.de) | [Fachgebiet 33 | Impfprävention](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG33/FG33_node.html)   
 &emsp;&sup2; [Robert Koch Institute](https://www.rki.de) | [Fachgebiet IT 4 | Softwarearchitektur und -entwicklung](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/IT4/it4_node.html)  
@@ -66,8 +66,8 @@ Gemäß diesen Kriterien umfasst die Studienpopulation Personen, die sowohl im Z
 
 | Impfung | Erster Kontakt im vertragsärztlichen Bereich (K1) | Zweiter Kontakt im vertragsärztlichen Bereich (K2) | Zeitfenster für Einschluss in die Studienpopulation (Beispiele)\* |
 | ------- | ---------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------- |
-| `Diphtherie`, `Tetanus`, `Pertussis`, `Poliomyelitis`, `Haemophilus influenzae Typ b (Hib)`, `Hepatitis B`, `Masern`, `Mumps`, `Röteln`, `Varizellen`, `Meningokokken C`, `Pneumokokken` | im Alter von 0 – 2 Monaten | 4 Monate angrenzend an Beobachtungs-zeitraum                                 | *Berichtsalter 24 Monate:* <br> K1: Alter 0–2 Monate <br>K2: Alter 24–27 Monate<br><br>*Berichtsalter 36 Monate:*<br>K1: Alter 0–2 Monate<br>K2: Alter 36–39 Monate| 
-| `Rotavirus` | im Alter von 0 – 2 Monaten | rund 3 Monate angrenzend an Beobachtungs-zeitraum | *Berichtsalter 32 Wochen:* <br> K1: Alter 0–2 Monate <br>K2: Alter 7–9 Monate|   
+| `Diphtherie`, `Tetanus`, `Pertussis`, `Poliomyelitis`, `Haemophilus influenzae Typ b (Hib)`, `Hepatitis B`, `Masern`, `Mumps`, `Röteln`, `Varizellen`, `Meningokokken C`, `Pneumokokken` | im Alter 0 bis 2 Monate | 4 Monate angrenzend an Beobachtungs-zeitraum                                 | *Berichtsalter 24 Monate:* <br> K1: Alter 0 bis 2 Monate <br>K2: Alter 24 bis27 Monate<br><br>*Berichtsalter 36 Monate:*<br>K1: Alter 0 bis 2 Monate<br>K2: Alter 36 bis 39 Monate| 
+| `Rotavirus` | im Alter 0 bis 2 Monate | rund 3 Monate angrenzend an Beobachtungs-zeitraum | *Berichtsalter 32 Wochen:* <br> K1: Alter 0 bis 2 Monate <br>K2: Alter 7 bis 9 Monate|   
 | `Humane Papillomviren` | im Alter von 8 Jahren | 6 Monate angrenzend an Beobachtungs-zeitraum | *Berichtszeitpunkt Dezember 2021* <br>K1: im Alter von 8 Jahren<br> K2: Januar bis Juni 2022|
    
 \* Zeitfenster der dokumentierten Kontakte im vertragsärztlichen Bereich, die vor bzw. zum Beginn des Beobachtungszeitraums liegen und sich an den Beobachtungszeitraum anschließen.  
@@ -83,9 +83,9 @@ Neben der Inanspruchnahme der Routineimpfungen zu unterschiedlichen Alterszeitpu
 
 | Impfung  | Impfstatus | Definition des Impfstatus |
 | -------- | -------- | -------- |
-| `Diphtherie`, `Tetanus`, `Pertussis`, `Haemophilus influenzae Typ b (Hib)`, `Hepatitis B`, `Poliomyelitis`, `Pneumokokken`   | vollständig  | <ul><li>4 Impfstoffdosen gelten als vollständig</li><li>3 Impfstoffdosen gelten als vollständig, sofern der Abstand zwischen Dosis 1 und 2 mind. 8 Wochen beträgt und der Abstand zwischen Dosis 2 und 3 mind. 6 Monate (2+1-Schema)</li></ul> |
-| `Rotavirus` | vollständig  | <ul><li>3 Impfstoffdosen gelten als vollständig</li><li>2 Impfstoffdosen gelten als vollständig, sofern</li><ul><li>i) 2. Dosis eine beendete Impfserie kodiert oder</li><li>ii) genau 2 Dosen geimpft wurden und die Abrechnungsziffer der 2. Dosis nicht kodiert, ob die Impfserie beendet oder nicht beendet wurde.(siehe [Rieck et al. (2020)](https://doi.org/10.25646/7027.4))</li></ul>|   
-| `Humane Papillomviren` | vollständig  | <ul><li>3 Impfstoffdosen gelten als vollständig </li><li>2 Impfstoffdosen gelten als vollständig, sofern die Impfung im Alter von 9-14 Jahren erfolgt ist und der Abstand zwischen Dosis 1 und 2 mind. 5 Monate beträgt |
+| `Diphtherie`, `Tetanus`, `Pertussis`, `Haemophilus influenzae Typ b (Hib)`, `Hepatitis B`, `Poliomyelitis`, `Pneumokokken`   | vollständig  |  	&bullet; 4 Impfstoffdosen gelten als vollständig<br>&bullet; 3 Impfstoffdosen gelten als vollständig, sofern der Abstand zwischen Dosis 1 und 2 mind. 8 Wochen beträgt und der Abstand zwischen Dosis 2 und 3 mind. 6 Monate (2+1-Schema)|
+| `Rotavirus` | vollständig  | &bullet; 3 Impfstoffdosen gelten als vollständig<br>&bullet; 2 Impfstoffdosen gelten als vollständig, sofern:<br>&emsp; &bullet; i) 2. Dosis eine beendete Impfserie kodiert oder<br>&emsp; &bullet; ii) genau 2 Dosen geimpft wurden und die Abrechnungsziffer der 2. Dosis nicht kodiert, ob die Impfserie beendet oder nicht beendet wurde.(siehe [Rieck et al. (2020)](https://doi.org/10.25646/7027.4))|   
+| `Humane Papillomviren` | vollständig  | &bullet; 3 Impfstoffdosen gelten als vollständig <br>&bullet; 2 Impfstoffdosen gelten als vollständig, sofern die Impfung im Alter von 9-14 Jahren erfolgt ist und der Abstand zwischen Dosis 1 und 2 mind. 5 Monate beträgt |
 | `Diphtherie`, `Tetanus`, `Pertussis`, `Poliomyelitis`  | 3. Dosis  | 3 oder mehr Impfstoffdosen gelten als 3. Dosis |
 | `Masern`, `Mumps`, `Röteln`, `Varizellen` | 2. Dosis  | 2 oder mehr Impfstoffdosen gelten als 2. Dosis 
 | `Diphtherie`, `Tetanus`, `Pertussis`, `Masern`, `Mumps`, `Röteln`, `Varizellen`, `Humane Papillomviren` | 1. Dosis  | 1 oder mehr Impfstoffdosen gelten als 1. Dosis |  
