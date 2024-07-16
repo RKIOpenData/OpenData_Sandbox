@@ -1,12 +1,12 @@
 Datensatzdokumentation
 # Daten der Notaufnahmesurveillance 
 
-**[Robert Koch-Institut | RKI](http://www.rki.de)**
+**[Robert Koch-Institut | RKI](http://www.rki.de)**  
 Nordufer 20  
 13353 Berlin  
 
-**[AKTIN-Notaufnahmeregister](http://aktin.org)**  
-c/o Otto-von-Guericke Universität Magdeburg
+**[AKTIN-Notaufnahmeregister](http://aktin.org)**   
+c/o Otto-von-Guericke Universität Magdeburg  
 Leipziger Straße 44  
 39120 Magdeburg  
 
