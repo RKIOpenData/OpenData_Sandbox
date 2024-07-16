@@ -1,166 +1,156 @@
-Datensatzdokumentation  
-# Inanspruchnahme von Routineimpfungen in Deutschland – Ergebnisse aus der KV-Impfsurveillance  
+Datensatzdokumentation
+# Daten der Notaufnahmesurveillance 
 
-[Robert Koch-Institut](https://www.rki.de) | [RKI](https://www.wikidata.org/wiki/Q679041)  
+**[Robert Koch-Institut | RKI](http://www.rki.de)**
 Nordufer 20  
 13353 Berlin  
 
-<br>
+**[AKTIN-Notaufnahmeregister](http://aktin.org)**  
+c/o Otto-von-Guericke Universität Magdeburg
+Leipziger Straße 44  
+39120 Magdeburg  
 
-[**Thorsten Rieck**](https://orcid.org/0000-0002-8799-8744)&#0185;, **Marcel Feig**&sup2;, [**Lisa Branke**]()&sup1;, [**Annika Steffen**](https://orcid.org/0000-0003-4072-9245)&sup1;  
+<br>  
 
-&emsp;&sup1; [Robert Koch Institute](https://www.rki.de) | [Fachgebiet 33 | Impfprävention](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG33/FG33_node.html)   
-&emsp;&sup2; [Robert Koch Institute](https://www.rki.de) | [Fachgebiet IT 4 | Softwarearchitektur und -entwicklung](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/IT4/it4_node.html)  
-<br>
+**Beitragende Personen**  
 
----
+[Michaela Diercke](https://orcid.org/0000-0002-4678-1813)&sup1;, [Madlen Schranz](https://orcid.org/0000-0002-2426-5770)&sup1;, [Birte Wagner](https://orcid.org/0000-0002-5725-3020)&sup1;, [Alexander Ullrich](https://orcid.org/0000-0002-4894-6124)&sup1;, [Linus Grabenhenrich](https://orcid.org/0000-0002-9300-6625)&sup2;, [Theresa Kocher](https://orcid.org/0000-0002-9300-6625)&sup2;, Felix Walcher&sup3;, Wiebke Schirrmeister&sup3;, Susanne Drynda&sup3;, Ronny Otto&sup3;, Saskia Ehrentreich&sup3;, Rainer Röhrig&#8308;, Raphael Majeed&#8308;, Jonas Bienzeisler&#8308;, Alexander Kombeiz&#8308; und Lukas Triefenbach&#8308;    
 
+&emsp;&sup1; Robert Koch-Institut | Fachgebiet 32  
+&emsp;&sup2; Robert Koch-Institut | Fachgebiet MF4   
+&emsp;&sup3; Otto-von-Guericke Universität Magdeburg | Medizinische Fakultät   
+&emsp;&#8308; Universitätsklinik RWTH Aachen | Institut für medizinische Informatik   
+
+
+---  
 **Zitieren**  
-Rieck T, Feig M, Branke L und Steffen A (2024): Inanspruchnahme von Routineimpfungen in Deutschland – Ergebnisse aus der KV-Impfsurveillance, Berlin: Zenodo. DOI: [10.5281/zenodo.10792738](http://doi.org/10.5281/zenodo.10792738).  
 
-   
-## Einleitung  
+Robert Koch-Institut, AKTIN-Notaufnahmeregister: Daten der Notaufnahmesurveillance. DOI:[10.5281/zenodo.813758](https://doi.org/10.5281/zenodo.12750037).  
 
-Dem Robert Koch-Institut (RKI) obliegt die Aufgabe, Daten zur Inanspruchnahme von Schutzimpfungen in der Bevölkerung in Deutschland zu erheben, aufzubereiten und national wie international zu berichten.  
-Die wichtigste Datenquelle zur Berechnung von Impfquoten stellen die vertragsärztlichen Abrechnungsdaten dar, die von den Kassenärztlichen Vereinigungen (KVen) im Rahmen der „KV-Impfsurveillance“ (KVIS) an das RKI übermittelt werden. Begonnen als Gemeinschaftsprojekt mit den KVen im Jahr 2004, ist die KVIS seit dem Jahr 2020 im Infektionsschutzgesetz (IfSG) gesetzlich verankert ([§13 (5) IfSG](https://www.gesetze-im-internet.de/ifsg/__13.html)).  
-Neben der jährlichen Berichterstattung zu aktuellen Impfquoten im [Epidemiologischen Bulletin](https://www.rki.de/DE/Content/Infekt/EpidBull/epid_bull_node.html), ergänzt [VacMap](https://www.rki.de/vacmap) als interaktives Dashboard die Kommunikation der Impfquoten in Deutschland und ermöglicht die Nachnutzung der Daten durch Akteure der Impfprävention. Anhand der Darstellung der Impfquoten nach Altersgruppen, im Zeitverlauf und auf regionaler Ebene können Defizite in der Umsetzung der Impfempfehlungen identifiziert und in der Folge zielgruppenspezifisch adressiert werden.  
+
 
 ## Informationen zum Datensatz und Entstehungskontext  
 
-Das RKI ist ein Bundesinstitut im Geschäftsbereich des [Bundesministeriums für Gesundheit](https://www.bundesgesundheitsministerium.de/) (BMG) und die zentrale Einrichtung des Bundes auf den Gebieten der Krankheitsüberwachung und -prävention sowie der anwendungsorientierten biomedizinischen Forschung. Es berät die zuständigen Bundesministerien, insbesondere das Bundesministerium für Gesundheit, und wirkt bei der Entwicklung von Normen und Standards mit. Wesentliche Aufgaben des RKI leiten sich aus dem [Infektionsschutzgesetz (IfSG)](https://www.gesetze-im-internet.de/ifsg/index.html) ab.   
+Der Datensatz „Notaufnahmesurveillance“ enthält aggregierte Daten der Routinedokumentation aus einer Auswahl deutscher Notaufnahmen aus dem [AKTIN-Notaufnahmeregister](https://www.aktin.org/de-de/) und bildet die Grundlage für die [Notaufnahmesurveillance](https://www.rki.de/sumo) am RKI.   
 
-### Entstehungskontext  
+### Datenerhebung und Datenverarbeitung  
 
-Das [Infektionsschutzgesetz](https://www.gesetze-im-internet.de/ifsg/index.html) hat den Zweck, der Übertragung von Krankheiten beim Menschen vorzubeugen und Infektionen frühzeitig zu erkennen sowie die Verbreitung dieser zu verhindern. Es regelt, welche Krankheiten bei Verdacht, Erkrankung oder Tod meldepflichtig sind. Zusätzlich wird neben der Art der zu meldenden Krankheit auch festgelegt, welche Personen zur Meldung verpflichtet sind, welche Merkmale solch eine Meldung enthalten muss, an wen diese Meldung erfolgen muss und welche Fristen eingehalten werden müssen.  
-Die KV-Impfsurveillance wurde im Jahr 2020 im Infektionsschutzgesetz (IfSG) gesetzlich verankert ([§13 (5) IfSG](https://www.gesetze-im-internet.de/ifsg/__13.html)). Das RKI erhält quartalsweise von allen 17 kassenärztlichen Vereinigungen (KVen) pseudonymisierte Abrechnungsdaten der niedergelassenen Vertragsärztinnen und -ärzte insbesondere zu abgerechneten Impfleistungen und ausgewählten Diagnosen impfvermeidbarer Erkrankungen. Mit Hilfe dieser Daten ist die Berechnung von Impfquoten auf kleinräumiger Ebene, in Altersgruppen sowie in Indikationsgruppen möglich. Nur die aktuelle und belastbare Erfassung des Impfstatus in der Bevölkerung ermöglicht, den Grad der Umsetzung von Impfempfehlungen abzuschätzen und lokale oder altersabhängige Probleme bei der Nutzung einzelner Impfungen zu identifizieren. 
+Die zugrundeliegenden Daten aus der Routinedokumentation von Notaufnahmen werden im Rahmen des AKTIN-Notaufnahmeregisters erhoben, wie in [Brammen et al. 2020](https://doi.org/10.1007/s00063-020-00764-2) beschrieben, und anschließend dem RKI als tägliche Datenlieferungen über eine SFTP-Server-API täglich bereitgestellt.   
 
+> Brammen, D., Greiner, F., Kulla, M. et al. Das AKTIN-Notaufnahmeregister – kontinuierlich aktuelle Daten aus der Akutmedizin. Med Klin Intensivmed Notfmed 117, 24–33 (2022). DOI: [10.1007/s00063-020-00764-2](https://doi.org/10.1007/s00063-020-00764-2)   
 
-### Administrative und organisatorische Angaben  
+Die Verarbeitung, Aufbereitung und automatisierte Qualitätsprüfung sowie die Veröffentlichung der Daten erfolgen durch das [Fachgebiet MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/MF4/mf4_node.html). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:opendata@rki.de) gerichtet werden. Die epidemiologisch-fachliche Expertise für die Notaufnahmesurveillance liegt bei dem [Fachgebiet FG 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD Kontaktstelle](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG32/FG32_node.html) des RKI, Fragen an das Team der Notaufnahmesurveillance können unter [sumo@rki.de](mailto:sumo@rki.de) gestellt werden. Das Monitoring der Notaufnahme-spezifischen Datenqualität und etwaige Abstimmungen mit den Notaufnahmen erfolgt im AKTIN TDAC. Für den Kontakt und Koordination der teilnehmenden Notaufnahmen ist das AKTIN-Office verantwortlich. Bei Fragen bitte an [office@aktin.org](mailto:office@aktin.org) wenden.  
   
-Die KV-Impfsurveillance und das auf deren Ergebnissen basierende Dashboard VacMap werden vom [Fachgebiet 33 | Impfprävention](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG33/FG33_node.html) des RKIs betrieben. Inhaltliche Fragen bezüglich der Datenerhebung oder Datenauswertung können direkt an kv-impfsurveillance@rki.de, Fragen bezüglich der Visualisierung auf VacMap an [vacmap@rki.de](mailto:vacmap@rki.de) gestellt werden.  
-Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/MF4/mf4_node.html). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open-Data-Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.
+### Datengrundlage und Einschlusskriterien  
+
+Für die Berichterstattung der Notaufnahmesurveillance werden Routinedaten aus dem AKTIN-Notaufnahmeregister in täglichen Datenlieferungen bereitgestellt. Die Daten enthalten Informationen zu den liefernden Notaufnahme (inkl. Stufe der Notfallversorgung), den Altersgruppen, dem Vorstellungsgrund klassifiziert nach *Canadian Emergency Department Information System – Presenting Complaint List (CEDIS-PCL3.0, [Grafenstein et al. 2008](https://doi.org/10.1017/s1481803500009878 ))* , Diagnosen codiert nach der *Internationalen Klassifikation der Krankheiten, 10. Revision (International Classification of Diseases, ICD-10, [DIMDI 2019](https://www.dimdi.de/static/de/klassifikationen/icd/icd-10-gm/kode-suche/htmlgm2019/))* sowie Informationen über eine stationäre Aufnahme im Anschluss an den Notaufnahmeaufenthalt.  
+Die Auswahl der Notaufnahmen basiert auf der individuellen Bereitschaft zur Teilnahme an der Berichterstattung der Notaufnahmesurveillance. Die Anzahl der einbezogenen Notaufnahmen kann dabei je Syndromdefinition variieren: Voraussetzung für die Berücksichtigung der Notaufnahmen in der Darstellung der jeweiligen Syndrome ist eine Vollständigkeit von mindestens 80 % für Angaben zu jenen Variablen, die Teil der Syndromdefinition sind (bspw. wird für die Aufnahme in die Darstellung des ARE-Syndroms eine Vollständigkeit von mind. 80 % bei Angaben zu ICD-10-Diagnosen oder bei Angaben zu CEDIS-PCL Vorstellungsgründen vorausgesetzt). Durch Veränderung der Verfügbarkeit der Daten kann es insgesamt zu einer unterschiedlichen Anzahl von Notaufnahmen je Berichtsdatum kommen. Da die Notaufnahmen jeweils unterschiedlich groß sind, kann es bei gleicher Anzahl von Notaufnahmen zu Unterschieden in der Höhe der Fallzahlen zwischen Berichtszeiträumen kommen. In die aktuelle Berichterstattung fließen Daten aus zentralen Notaufnahmen sowie pädiatrischen Notaufnahmen ein. Die unterschiedlichen Versorgungsschwerpunkte der eingeschlossenen Notaufnahmen können ebenfalls zu Variationen in den Fallzahlen führen.   
 
 
-## Datenerhebung und Datenauswertung  
+### Syndromdefinitionen  
 
-### Datenerhebung  
+Die Syndromdefinitionen für grippeähnliche Erkrankungen (Influenza-like illness, ILI) und Coronavirus Erkrankungen (COVID-19) basieren auf ICD-10-Diagnosen. Die Syndromdefinitionen für akute respiratorische Erkrankungen (ARE) und gastrointestinale Infektionen (GI) basieren auf einer Auswahl von CEDIS-PCL Vorstellungsgründen und ICD-10-Diagnosen. Zur Definition schwerer akuter respiratorischer Infektionen (SARI) werden ICD-10-Diagnosen in Verbindung mit einer stationären Aufnahme berücksichtigt. Details dazu werden in [Boender et al. 2022](https://doi.org/10.2807/1560-7917.ES.2022.27.27.2100865) und [Baum et al. 2023](https://doi.org/10.1101/2023.11.28.23298985) näher beschrieben.  
 
-Gemäß [§13 (5) IfSG](https://www.gesetze-im-internet.de/ifsg/__13.html) erhält das RKI von allen KVen pseudonymisierte Abrechnungsdaten unter anderem zu den abgerechneten Impfleistungen und zu ausgewählten Diagnosen impfvermeidbarer Erkrankungen in der gesetzlich krankenversicherten Bevölkerung. Zirka 85-90% der Bevölkerung in Deutschland sind gesetzlich krankenversichert. Die an das RKI zu übermittelnden Daten sind in [§13 (5) IfSG](https://www.gesetze-im-internet.de/ifsg/__13.html) festgehalten.  
+>  Boender T. Sonia, Cai Wei, Schranz Madlen, Kocher Theresa, Wagner Birte, Ullrich Alexander, Buda Silke, Zöllner Rebecca, Greiner Felix, Diercke Michaela, Grabenhenrich Linus. Using routine emergency department data for syndromic surveillance of acute respiratory illness, Germany, week 10 2017 until week 10 2021. Euro Surveill. 2022;27(27):pii=2100865. DOI: [10.2807/1560-7917.ES.2022.27.27.2100865](https://doi.org/10.2807/1560-7917.ES.2022.27.27.2100865)  
 
-#### Datenstand  
+>  Jonathan Hans Josef Baum, Achim Dörre, Tamara Sonia Boender, Katharina Heldt, Hendrik Wilking, Susanne Drynda, Bernadett Erdmann, Rupert Grashey, Caroline Grupp, Kirsten Habbinga, Eckard Hamelmann, Amrei Heining, Heike Höger-Schmidt, Clemens Kill, Friedrich Reichert, Joachim Riße, Tobias Schilling, AKTIN Research Group, Madlen Schranz. Establishing syndromic surveillance of gastrointestinal infections in emergency departments using routine emergency department data and validating it against laboratory-based surveillance, Germany, January 2019 – June 2023. medRxiv 2023.11.28.23298985. DOI: [10.1101/2023.11.28.23298985](https://doi.org/10.1101/2023.11.28.23298985)  
 
-Von den KVen werden die quartalsweisen Abrechnungsdaten mit einem Zeitverzug von 2 – 3 Quartalen nach Ende des jeweiligen Abrechnungsquartals zur Auswertung an das RKI übermittelt. Abhängig von der Impfung ist zur Impfquotenberechnung darüber hinaus eine Datenfortschreibung von mindestens einem weiteren Quartal über den Beobachtungszeitraum der Datenanalysen notwendig. Die Notwendigkeit ergibt sich aus den Einschlusskriterien für die Studienpopulation (s. Tabelle 1). Der hier bereitgestellte Datensatz zur Inanspruchnahme von Routineimpfungen wurde aus KV-Abrechnungsdaten berechnet, die bis zum Abrechnungsquartal 2022/1 vorlagen.
+### Berechnung des relativen Anteils  
 
+Alle identifizierten Fälle der jeweiligen Syndrome werden als relativer Anteil dargestellt, der Nenner berechnet sich dabei individuell je Syndrom: die Fallzahlen werden anteilig an den Notaufnahmevorstellungen berechnet, die vollständige Angaben zu jenen Variablen haben, die Teil der Syndromdefinition sind (bspw. werden für die Berechnung des relativen Anteils der ARE-Fälle alle Vorstellungen berücksichtigt, die entweder Angaben zur ICD-10-Diagnose oder zum CEDIS-PCL Vorstellungsgrund haben). Innerhalb der Filterkategorien für Altersgruppe und Notaufnahmetyp ergibt sich der Nenner jeweils aus der gewählten Filterkombination (bspw. werden bei Auswahl der Gruppe „80+“ nur Vorstellungen dieser Altersgruppe im Nenner berücksichtigt).   
 
-#### Studienpopulation  
-
-Die Studienpopulation zur Berechnung der Impfquoten für die Säuglings- und Kinderimpfungen umfasst alle gesetzlich krankenversicherten Kinder, die die Einschlusskriterien erfüllen. Die Definition der Einschlusskriterien für die jeweiligen Impfungen ist in [Tabelle 1](#Tabelle-1-Einschlusskriterien-für-die-Bildung-der-Studienpopulationen-zur-Impfquotenberechnung-der-Säuglings--und-Kinderimpfungen-in-der-KV-Impfsurveillance) dargestellt.  
-
-Da sich das Verfahren zur Pseudonymisierung der Personen von KV zu KV unterscheidet, stellt die Erfüllung dieser Einschlusskriterien bei der Generierung der Studienpopulation sicher, dass sich alle dokumentierten Leistungen, die eine Person über den gesamten Beobachtungszeitraum in Anspruch genommen hat, auch genau dieser Person über ihr Patienten-Pseudonym zuordnen lassen.  
-
-Gemäß diesen Kriterien umfasst die Studienpopulation Personen, die sowohl im Zeitraum vor bzw. zu Beginn des Beobachtungszeitraums als auch am Ende eines Beobachtungszeitraums oder daran anschließend jeweils mindestens einen Kontakt im vertragsärztlichen Bereich innerhalb derselben KV-Region hatten. Zusätzlich musste der Wohnsitz zu den Zeitpunkten dieser Kontakte im Gebiet dieser KV-Region liegen. Eine weiterführende Beschreibung der Einschlusskriterien ist in Rieck et al. (2020) erläutert:  
-
-> Rieck T, Feig M, Wichmann O, Siedler A: Impfquoten von Kinderschutzimpfungen in Deutschland – aktuelle Ergebnisse aus der RKI-Impfsurveillance Epid Bull 2020;32/33:9–27 | DOI [10.25646/7027.4](https://doi.org/10.25646/7027.4)  
- 
-###### Tabelle 1: Einschlusskriterien für die Bildung der Studienpopulationen zur Impfquotenberechnung der Säuglings- und Kinderimpfungen in der KV-Impfsurveillance 
-
-| Impfung | Erster Kontakt im vertragsärztlichen Bereich (K1) | Zweiter Kontakt im vertragsärztlichen Bereich (K2) | Zeitfenster für Einschluss in die Studienpopulation (Beispiele)\* |
-| ------- | ---------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------- |
-| `Diphtherie`, `Tetanus`, `Pertussis`, `Poliomyelitis`, `Haemophilus influenzae Typ b (Hib)`, `Hepatitis B`, `Masern`, `Mumps`, `Röteln`, `Varizellen`, `Meningokokken C`, `Pneumokokken` | im Alter 0 bis 2 Monate | 4 Monate angrenzend an Beobachtungs-zeitraum                                 | *Berichtsalter 24 Monate:* <br> K1: Alter 0 bis 2 Monate <br>K2: Alter 24 bis27 Monate<br><br>*Berichtsalter 36 Monate:*<br>K1: Alter 0 bis 2 Monate<br>K2: Alter 36 bis 39 Monate| 
-| `Rotavirus` | im Alter 0 bis 2 Monate | rund 3 Monate angrenzend an Beobachtungs-zeitraum | *Berichtsalter 32 Wochen:* <br> K1: Alter 0 bis 2 Monate <br>K2: Alter 7 bis 9 Monate|   
-| `Humane Papillomviren` | im Alter von 8 Jahren | 6 Monate angrenzend an Beobachtungs-zeitraum | *Berichtszeitpunkt Dezember 2021* <br>K1: im Alter von 8 Jahren<br> K2: Januar bis Juni 2022|
-   
-\* Zeitfenster der dokumentierten Kontakte im vertragsärztlichen Bereich, die vor bzw. zum Beginn des Beobachtungszeitraums liegen und sich an den Beobachtungszeitraum anschließen.  
-
-### Datenauswertung  
-
-#### Impfstatus  
-
-Abhängig von der Impfung wird der Impfstatus zu bestimmten Alterszeitpunkten (Berichtsalter) ermittelt. Die Definition des Impfstatus im Rahmen der KV-Impfsurveillance ist für die einzelnen Impfungen in Tabelle 2 dargestellt.
-Neben der Inanspruchnahme der Routineimpfungen zu unterschiedlichen Alterszeitpunkten werden auch wichtige internationale Indikatoren zur Bewertung der Qualität des Routine-Impfsystems, wie die dreimalige Impfung gegen Diphtherie, Tetanus und Pertussis (DTP3) zum Alterszeitpunkt 15 Monate, dargestellt (Impfstatus: „3. Dosis“). Ein weiterer internationaler Indikator zur Bewertung der Qualität eines Impfsystems stellt die Höhe der DTP-„Abbruchquote“ dar, d. h. der Anteil der Kinder, der zwar die DTP-Impfung begonnen hatte, jedoch bis zum Alter von 15 Monaten keine 3. Impfstoffdosis bekam. Daher wird zusätzlich zur Impfquote DTP3 auch die Impfquote für mindestens 1 Impfung (DTP1) bei Kindern im Alter von 15 Monaten dargestellt (Impfstatus: 1. Dosis). Auch die Polioimpfquote von mindestens 95% für 3 Impfstoffdosen (POL3) im Alter von 15 Monaten wird berechnet, da sie einen wichtigen internationalen Indikator im Rahmen der Überwachung der erreichten Poliofreiheit darstellt (Impfstatus: „3. Dosis“).   
-
-###### Tabelle 2: Definition des Impfstatus   
-
-| Impfung  | Impfstatus | Definition des Impfstatus |
-| -------- | -------- | -------- |
-| `Diphtherie`, `Tetanus`, `Pertussis`, `Haemophilus influenzae Typ b (Hib)`, `Hepatitis B`, `Poliomyelitis`, `Pneumokokken`   | vollständig  |  	&bullet; 4 Impfstoffdosen gelten als vollständig<br>&bullet; 3 Impfstoffdosen gelten als vollständig, sofern der Abstand zwischen Dosis 1 und 2 mind. 8 Wochen beträgt und der Abstand zwischen Dosis 2 und 3 mind. 6 Monate (2+1-Schema)|
-| `Rotavirus` | vollständig  | &bullet; 3 Impfstoffdosen gelten als vollständig<br>&bullet; 2 Impfstoffdosen gelten als vollständig, sofern:<br>&emsp; &bullet; i) 2. Dosis eine beendete Impfserie kodiert oder<br>&emsp; &bullet; ii) genau 2 Dosen geimpft wurden und die Abrechnungsziffer der 2. Dosis nicht kodiert, ob die Impfserie beendet oder nicht beendet wurde.(siehe [Rieck et al. (2020)](https://doi.org/10.25646/7027.4))|   
-| `Humane Papillomviren` | vollständig  | &bullet; 3 Impfstoffdosen gelten als vollständig <br>&bullet; 2 Impfstoffdosen gelten als vollständig, sofern die Impfung im Alter von 9-14 Jahren erfolgt ist und der Abstand zwischen Dosis 1 und 2 mind. 5 Monate beträgt |
-| `Diphtherie`, `Tetanus`, `Pertussis`, `Poliomyelitis`  | 3. Dosis  | 3 oder mehr Impfstoffdosen gelten als 3. Dosis |
-| `Masern`, `Mumps`, `Röteln`, `Varizellen` | 2. Dosis  | 2 oder mehr Impfstoffdosen gelten als 2. Dosis 
-| `Diphtherie`, `Tetanus`, `Pertussis`, `Masern`, `Mumps`, `Röteln`, `Varizellen`, `Humane Papillomviren` | 1. Dosis  | 1 oder mehr Impfstoffdosen gelten als 1. Dosis |  
-| `Meningokokken C` | 1 Dosis  | 1 oder mehr Impfstoffdosen gelten als 1 Dosis |
-
-> Rieck T, Feig M, Wichmann O, Siedler A: Impfquoten von Kinderschutzimpfungen in Deutschland – aktuelle Ergebnisse aus der RKI-Impfsurveillance Epid Bull 2020;32/33:9–27 | DOI [10.25646/7027.4](https://doi.org/10.25646/7027.4)  
-
-#### Berechnung der Impfquoten  
-
-Die zugrundeliegenden Datensätze enthalten auf 5 Nachkommastellen gerundete Impfquoten in Prozent für die jeweils kleinste mögliche Einheit: pro Geburtsjahr/Kalenderjahr/Saison, Altersgruppe, Impfstatus und Landkreis (`Impfquote`). Berechnet wurden diese auf Grundlage der in [Tabelle 1](#Tabelle-1-Einschlusskriterien-für-die-Bildung-der-Studienpopulationen-zur-Impfquotenberechnung-der-Säuglings--und-Kinderimpfungen-in-der-KV-Impfsurveillance) dargestellten Kohorten. Zur Berechnung der Impfquoten für höhere Regionalebenen ist eine Bevölkerungsgewichtung (`Bevoelkerung_Gewicht`) zu nutzen. Die Bevölkerungszahl zur Gewichtung ist die Größe der Bevölkerung des jeweiligen Stratums (Statisches Bundesamt). Die Formel zur Berechnung der bevölkerungsgewichteten Impfquote lautet:  
-    
-    
-$Impfquote_{gewichtet} = \sum(Bevoelkerung_{Gewicht} * Impfquote) / \sum(Bevoelkerung_{Gewicht})$
+### Berechnung des Erwartungswertes  
+Für jede Syndromdefinition sowie Filtermöglichkeit (Altersgruppe und Notaufnahmetyp) wird ein Erwartungswert des relativen Anteils und ein zugehöriges 80% Prädiktionsintervall berechnet. Der Erwartungswert wird mit Hilfe eines Negativ-Binomial Regressionsmodells auf der Zeitreihe der relativen Anteile berechnet und berücksichtigt die jährliche Saisonalität mittels Sinus-/Cosinus-Funktionen. Das Prädiktionsintervall wird wie von [Noufaily 2012](https://doi.org/10.1002/sim.5595) beschrieben berechnet. Als Referenzzeitraum für die Berechnung werden die jeweiligen Daten ab 01.01.2019 und bis 365 Tage vor dem aktuellen Berichtsdatum verwendet (bspw. entspricht der Referenzzeitraum am 23.08.2023 dem Zeitraum von 01.01.2019 bis 23.08.2022). Für die Darstellung der Notaufnahmevorstellungen mit COVID-19 wird aktuell auf die Berechnung eines Erwartungswertes verzichtet, da hierfür gegenwärtig noch nicht genug retrospektive Daten zur Verfügung stehen.  
 
 
-## Aufbau und Inhalt des Datensatzes  
+### Interpretation der Daten  
 
-Der Datensatz enthält die berechneten Impfquoten für Säuglinge und Kinder aus den gemäß [§13 (5) IfSG](https://www.gesetze-im-internet.de/ifsg/__13.html) im Rahmen der KV-Impfsurveillance an das RKI übermittelten Daten.
+Die Daten lassen sich nur mit Kenntnis der Prozesse und Strukturen in den jeweiligen Notaufnahmen bzw. in Rücksprache mit den Notaufnahmen sinnvoll interpretieren. Weiterhin ist es bei der Interpretation von Surveillance-Daten wichtig, einige Limitationen zu beachten:
+* Die Stichprobe an Notaufnahmen ist nicht repräsentativ für Deutschland.
+* Die Anzahl an Notaufnahmen in der Berichterstattung kann sich aufgrund unterschiedlicher Datenverfügbarkeiten und technischer Gegebenheiten ändern.
+* Bei den hier dargestellten Daten handelt es sich um Routinedaten, die im Rahmen der Notfallversorgung erhoben werden. Daraus ergeben sich einige Limitationen, die Einfluss auf die Qualität der Berichterstattung haben können:
+    * Fehlende Angaben bspw. in Vorstellungsgründen und Diagnosen können zu einer Untererfassung der Fallzahlen führen.
+    * In einigen Notaufnahmen werden ICD-10-Diagnosen nicht unmittelbar während der Notaufnahmebehandlung, sondern mit einer Verzögerung von mehreren Tagen codiert. Dies kann sich auf die Fallzahlen in der tagesaktuellen Berichterstattung auswirken.
+    * Vorstellungsgründe sind nicht mit klinisch bestätigten Diagnosen gleichzusetzen. Auch bei den vergebenen ICD-10-Diagnosen handelt es sich zunächst oft um Verdachtsdiagnosen, die bspw. noch nicht mit einer Labordiagnostik bestätigt wurden. 
+* Veränderungen im Zeitverlauf können neben realen Änderungen der Inanspruchnahme auch verschiedene andere Ursachen haben (bspw. veränderte Dokumentationspraxis oder Versorgungsprozesse). Die vorliegenden Daten können daher nicht ohne vorherige direkte Kommunikation mit den Notaufnahmen interpretiert werden.  
 
-Im Datensatz enthalten sind:  
+## Inhalt und Aufbau des Datensatzes  
 
-- aktuelle Impfquoten für Säuglinge und Kinder   
-- Datensatzdokumentation in deutscher Sprache   
-- Metadaten zur Datenpublikation   
-- Lizenz Datei mit der Nutzungslizenz des Datensatzes   
+Der Datensatz enthält aggregierte Daten aus der Routinedokumentation aus einer Auswahl deutscher Notaufnahmen. Im Datensatz enthalten sind:  
 
-Zentrales Datum des Datensatzes sind die aktuellen Impfquoten auf Basis der Daten der KV-Impfsurveillance. Diese sind im Hauptverzeichnis unter `KVIS_Impfquoten_Kinder.tsv` und `KVIS_Impfquoten_HPV.tsv` abrufbar.
+* Aggregierte Surveillancedaten, stratifiziert nach den Kategorien 'Syndrom', 'Notaufnahmetyp', 'Altersgruppe'  
+* Standortdaten aller angeschlossener Notaufnahmen  
+* Übersetzungstabelle der Variablenausprägungen  
+* Datenstand Datei zum Import in Zenodo  
+* Lizenzdatei  
+* Datensatzdokumentation in deutscher Sprache  
 
-> [KVIS_Impfquoten_Kinder.tsv](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/KVIS_Impfquoten_Kinder.tsv)    
-> [KVIS_Impfquoten_Kinder.xlsx](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/KVIS_Impfquoten_Kinder.xlsx)    
-    
-> [KVIS_Impfquoten_HPV.tsv](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/KVIS_Impfquoten_HPV.tsv)    
-> [KVIS_Impfquoten_HPV.xlsx](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/KVIS_Impfquoten_HPV.xlsx)    
-  
-Die Fortschreibung der Daten erfolgt in der Regel jährlich.  
+Die Daten werden täglich mit Daten bis einschließlich dem Vorvortag aktualisiert. Die Erwartungswerte werden basierdend auf verfügbaren Daten bis vor 365 Tagen berechnet.  
 
-### Variablen und Variablenausprägungen  
+### Standortdaten eingeschlossener Notaufnahmen   
 
-Die Impfquoten werden nach verschiedenen Eigenschaften differenziert und ermöglichen einen breiten Überblick über den Impfstatus der Bevölkerung und dessen zeitliche Veränderungen. Folgende Eigenschaften werden charakterisiert:
+Die Datei [`Notaufnahmesurveillance_Standorte.tsv`](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Standorte.csv) enthält die Standort- und Metainformationen aller  angeschlossenen Notaufnahmen, wie die IK-Nummer, den Namen, die Koordinaten und das Bundesland sowie die Versorgungsstufe und den Notaufnahmetyp jeder Notaufnahme.  
 
-- Zeitlicher Verlauf  
-- Geografische Zuordnung  
-- Personengruppe  
+> [Notaufnahmesurveillance_Standorte.tsv](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Standorte.csv)  
 
-#### Variablen und Variablenausprägungen  
+#### Variablen und Variablenausprägung  
 
-Der Datensatz enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
+Variable | Typ | Ausprägung | Erläuterung
+-------- | -------- | -------- | --------
+ik_number   | Text   | `260102081`, ... | ID der Notaufnahme
+ed_name   | Text   | `Paracelsus Kinik Henstedt-Ulzburg`, .. | Name der Notaufnahme
+ed_type   | Text   | `central`, `pediatric`   | Notaufnahmetyp (`central`: Zentrale Notaufnahme, `pediatric`: Kindernotaufnahme)
+level_of_care  | Text   | `Basisnotfallversorgung`, `Erweiterte Versorgung`, `Umfassende Versorgung` | [Versorgungsstufe](https://www.g-ba.de/downloads/62-492-2340/Not-Kra-R_2020-11-20_iK-2020-11-01.pdf) der Notaufnahme (deutsch)
+state  | Text   | `Schleswig-Holstein`, ... `Thüringen` | Bundesland (deutsch) 
+state_id  | Text   | `01`, ..., `16` | [Länderschlüssel](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel) des Bundeslandes 
+latitude   | Dezimalzahl   | `≥0.0` | Breitengrad des Standorts der Notaufnahme
+longitude   | Dezimalzahl   | `≥0.0` | Längengrad des Standorts der Notaufnahme
 
-| Variable            | Typ       | Ausprägung | Beschreibung| 
-| --------------------| --------- | ---------- | ----------- |
-| Geburtsjahr         | Date      | `yyyy` | Geburtsjahr der Kohorte im ISO 8601 Format |
-| Impfung             | String    |  `Diphtherie`, `Tetanus`, `Pertussis`, `Poliomyelitis`, `Haemophilus influenzae Typ b (Hib)`, `Hepatitis B`, `Masern`, `Mumps`, `Röteln`, `Varizellen`, `Meningokokken C`, `Pneumokokken`, `Rotavirus` | Zielkrankheiten der eingesetzten Impfstoffe  |
-| STIKO_Empfehlung    | String    | `Standard`, `Indikation Grunderkrankungen`,`Indikation Schwangerschaft`  | Art der Impfempfehlung |
-| Impfstatus          | String    | `1 Dosis`,`1. Dosis`,`2. Dosis`,`3. Dosis`,`vollständig` | Ausprägung des Impfstatus |
-| Altersgruppe        | String    | `32 Wochen`, `15 Monate`, `24 Monate`, `36 Monate`, `48 Monate`, `60 Monate`, `72 Monate` | Alter, bis zu dem die Impfung in Anspruch genommen wurde  |
-| Bundesland_Name     | String    | `Schleswig-Holstein`, ..., `Thüringen`| Name des Bundeslandes des zugeordneten Landkreises |
-| Bundsland_ID        | String    | `SH`, ..., `TH` |  Codes des Bundeslandes des zugeordneten Landkreises |
-| KV_Region_Name      | String    | `Schleswig-Holstein`, ..., `Thüringen` | Name der KV-Region des zugeordneten Landkreises  |
-| KV_Region_ID        | String    |  `SH`, ..., `TH`| Kürzel der KV-Region des zugeordneten Landkreises |
-| Landkreis_Name      | String    |  `SK Flensburg`, ..., `LK Altenburger Land` | Name des Landkreises  |
-| Landkreis_ID        | String    | `01001`, ..., `16077` | ID des Landkreises nach dem amtlichen Gemeindeschlüssel (AGS) |
-| Bevoelkerung_Gewicht| integer   | `>0` | Größe der Bevölkerung im jeweiligen Stratum (siehe [Berechnung der Impfquoten](#Berechnung-der-Impfquoten)) |
-| Impfquote           | float     |  [`0.00000`, `100.00000`] | Anteil der geimpften Personen (siehe [Berechnung der Impfquoten](#Berechnung-der-Impfquoten)) |
+
+
+### Notaufnahmevorstellungen für ausgewählte Syndromdefinitionen  
+
+Wie im Abschnitt [Syndromdefinitionen](#Syndromdefinitionen) beschrieben, werden die Notaufnahmevorstellungen derzeit nach akuten respiratorischen Erkrankungen (ARE), schweren akuten respiratorischen Infektionen (SARI),  grippeähnlichen Erkrankungen (ILI), Coronavirus Erkrankungen (COVID-19) und gastrointestinalen Infektionen (GI) unterschieden.   
+
+
+Die Datei [`Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv`](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv)" enthält die Anzahl der Notaufnahmevorstellungen und den berechneten Erwartungswert der Anteile der Fälle an den Gesamtvorstellungen für die oben aufgelisteten Syndromdefinitionen.  
+
+> [Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv)  
+
+#### Variablen und Variablenausprägung
+
+Variable | Typ | Ausprägung | Erläuterung
+-------- | -------- | -------- | --------
+date   | Text   | `JJJJ-MM-TT` | Datum; JJJJ entspricht dem Jahr, MM dem Monat und TT dem Tag
+ed_type   | Text   | `all`,`central`, `pediatric`   | Notaufnahmetyp (`all`: alle Notaufnahmen, `central`: Zentrale Notaufnahme, _pediatric_: Kindernotaufnahme)
+age_group   | Text   |  `00+`, `0-4`, `5-9`, `10-14`, `15-19`, `20-39`, `40-59`, `60-79`, `80+`  | Altersgruppe (`00+`: alle Altersgruppen, `0-4`: 0-4 Jahre, ...)
+syndrome   | Text   | `ARI`, `SARI`, `ILI`, `COVID`, `GI` | Syndromdefinitionen für akute respiratorische Erkrankungen (ARE/ARI), schwere akute respiratorische Infektionen (SARI) und grippeähnliche Erkrankungen (Influenza-like-illness, ILI), siehe [Boender et al. 2022](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2022.27.27.2100865?TRACK=RSS). Für gastrointestinale Infektionen (GI) siehe [Baum et al. 2023](https://doi.org/10.1101/2023.11.28.23298985).
+relative_cases   | Dezimalzahl   | `≥0` | Relativer Anteil Notaufnahmevorstellungen an diesem Tag mit gegebenem Syndrom an allen Notaufnahmevorstellungen in gegebenen Notaufnahmen von gegebenem Typ 
+relative_cases_7day_ma   | Dezimalzahl   | `≥0.0` | Gleitender 7-Tage Durchschnitt des relativen Anteil von Fällen des Syndroms an den Gesamtvorstellungen
+expected_value   | Dezimalzahl   | `≥0.0` oder `NA` | Erwartungswert des relativen Anteils von Fällen des Syndroms an den Gesamtvorstellungen
+expected_lowerbound   | Dezimalzahl   | `≥0.0` oder `NA` | Untere Grenze des 80%-Prädiktionsintervalls des Erwartungswerts
+expected_upperbound  | Dezimalzahl   | `≥0.0` oder `NA` | Obere Grenze des 80%-Prädiktionsintervalls des Erwartungswerts 
+ed_count  | Ganze Zahl   | `≥0` | Anzahl von eingeschlossenen Notaufnahmen an diesem Tag in den Notaufnahmen vom gegebenen Notaufnahmetyp
+
+### Formatierung der Daten  
+
+Die Notaufnahmesurveillance Daten sind im Datensatz als tabseparierte .tsv-Datei enthalten. Der verwendete Zeichensatz der .tsv-Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Tab "\t". Datumsangaben sind im ISO-8601-Standard formatiert.  
+
+* Zeichensatz: UTF-8  
+* Datumsformat: ISO 8601  
+* .tsv-Trennzeichen: Tab "\t"  
 
 ### Metadaten  
 
 Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:  
 
-> [Metadaten/](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/Metadaten/)    
+> [Metadaten/](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Metadaten/)    
 
-Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.   
+Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.   
  
-> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/Metadaten/zenodo.json)  
+> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Metadaten/zenodo.json)  
 
-In der zenodo.json ist neben der Publikationsdatum (`"publication_date"`) auch der Datenstand in folgendem Format enthalten (Beispiel):  
+In der zenodo.json ist neben der Publikationsdatum (`"publication_date"`) auch der Datenstand enthalten:  
 
 ```
   "dates": [
@@ -184,6 +174,7 @@ Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [Git
  
 ### Lizenz  
 
-Der Datensatz "Inanspruchnahme von Routineimpfungen in Deutschland – Ergebnisse aus der KV-Impfsurveillance" ist lizenziert unter  der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
+Der Datensatz "Daten der Notaufnahmesurveillance" ist lizenziert unter  der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Inanspruchnahme_von_Routineimpfungen_in_Deutschland-Ergebnisse_aus_der_KV-Impfsurveillance/blob/main/LIZENZ) Datei des Datensatzes.  
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/LIZENZ) Datei des Datensatzes.  
+
