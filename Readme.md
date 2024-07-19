@@ -1,180 +1,186 @@
-Datensatzdokumentation
-# Daten der Notaufnahmesurveillance 
+<p align="right">
+  <img src="https://robert-koch-institut.github.io/SARS-CoV-2-Infektionen_in_Deutschland/assets/RKI_Logo.png" style="width: auto; height: 60px;">
+</p>
 
-**[Robert Koch-Institut | RKI](http://www.rki.de)**  
-Nordufer 20  
-13353 Berlin  
+# Epylabel: Ensemble-labeling of infectious diseases time series
 
-**[AKTIN-Notaufnahmeregister](http://aktin.org)**   
-c/o Otto-von-Guericke Universität Magdeburg  
-Leipziger Straße 44  
-39120 Magdeburg  
+<br>
+<br>
 
-<br>  
+[**Andreas Hicketier**](https://orcid.org/0009-0000-5882-852X)<sup>1</sup>, [**Moritz Bach**](https://orcid.org/0009-0003-3062-0585)<sup>1</sup>, [**Philip Oedi**](https://orcid.org/0009-0001-7112-505X)<sup>1</sup>, [**Alexander Ullrich**](https://orcid.org/0000-0002-4894-6124)<sup>1</sup>, and [**Auss Abbood**](https://orcid.org/0000-0002-4428-168X)<sup>2</sup>  
 
-**Beitragende Personen**  
+&emsp;<sup>1</sup> [Robert Koch Institute | Unit 32](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/InfDiseaseEpidem/Div32/div32_node.html)  
+&emsp;<sup>2</sup> [Robert Koch Institute | Unit ZIG 1](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/ZIG/INIG/INIG_node.html)  
 
-[Michaela Diercke](https://orcid.org/0000-0002-4678-1813)&sup1;, [Madlen Schranz](https://orcid.org/0000-0002-2426-5770)&sup1;, [Birte Wagner](https://orcid.org/0000-0002-5725-3020)&sup1;, [Alexander Ullrich](https://orcid.org/0000-0002-4894-6124)&sup1;, [Linus Grabenhenrich](https://orcid.org/0000-0002-9300-6625)&sup2;, [Theresa Kocher](https://orcid.org/0000-0002-9300-6625)&sup2;, Felix Walcher&sup3;, Wiebke Schirrmeister&sup3;, Susanne Drynda&sup3;, Ronny Otto&sup3;, Saskia Ehrentreich&sup3;, Rainer Röhrig&#8308;, Raphael Majeed&#8308;, Jonas Bienzeisler&#8308;, Alexander Kombeiz&#8308; und Lukas Triefenbach&#8308;    
+<br>
 
-&emsp;&sup1; Robert Koch-Institut | Fachgebiet 32  
-&emsp;&sup2; Robert Koch-Institut | Fachgebiet MF4   
-&emsp;&sup3; Otto-von-Guericke Universität Magdeburg | Medizinische Fakultät   
-&emsp;&#8308; Universitätsklinik RWTH Aachen | Institut für medizinische Informatik   
-
+**Cite**  
+  
+Hicketier A, Bach M, Oedi P, Ullrich A, and Abbood A (**2024**): *Epylabel: Ensemble-labeling of infectious diseases time series*, Zenodo. DOI: [10.5281/zenodo.12665040](https://doi.org/10.5281/zenodo.12665040)  
 
 ---  
-**Zitieren**  
 
-Robert Koch-Institut, AKTIN-Notaufnahmeregister (**2024**): Daten der Notaufnahmesurveillance. DOI:[10.5281/zenodo.813758](https://doi.org/10.5281/zenodo.12750037).  
+This repository contains the code for the manuscript *Ensemble-labeling of infectious diseases time series to evaluate early warning systems* with which you can reproduce the manuscript's results and figures.  
 
+## Project Information
 
+This code was developed at the Robert Koch Institute as part of the project *Daten- und KI-gestütztes Frühwarnsystem zur Stabilisierung der deutschen Wirtschaft* funded by the Federal Ministry for Economic Affairs and Climate Action. The project launched 1st December 2021 and ends on 30th November 2024. Together with over a dozen research and industry partners, we work on preventing economic loss as seen during the COVID-19 pandemic with the help of early warning systems. These are not limited to infectious diseases but within a work package on early warning for infectious diseases, this code was developed. For more information on the project, visit the [DAKI-FWS Website](https://daki-fws.de/) and the Webiste [Digitale-Technologien of the German Federal Ministry for Economic Affairs and Climate Action](https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/KuenstlicheIntelligenzProjekte/KuenstlicheIntelligenzProjekte_DritterFoerderaufruf/ki-projekt_DAKI-FWS.html).
 
-## Informationen zum Datensatz und Entstehungskontext  
+### Administrative and organizational information
 
-Der Datensatz „Notaufnahmesurveillance“ enthält aggregierte Daten der Routinedokumentation aus einer Auswahl deutscher Notaufnahmen aus dem [AKTIN-Notaufnahmeregister](https://www.aktin.org/de-de/) und bildet die Grundlage für die [Notaufnahmesurveillance](https://www.rki.de/sumo) am RKI.   
+This work was conducted by staff from [Unit 32 | Surveillance](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/InfDiseaseEpidem/Div32/div32_node.html) with technical supervision by Alexander Ullrich and Auss Abbood from [ZIG 1 | Information Centre for International Health Protection (INIG)](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/ZIG/INIG/INIG_node.html).
+The publication of the code as well as the quality management of the metadata is done by department [MF 4 | Domain Specific Data and Research Data Management](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/MF/MF4/mf4_node.html). Questions regarding data management and the publication infrastructure can be directed to the Open Data Team of the Department MF4 at <OpenData@rki.de>.
 
-### Datenerhebung und Datenverarbeitung  
+### Motivation
 
-Die zugrundeliegenden Daten aus der Routinedokumentation von Notaufnahmen werden im Rahmen des AKTIN-Notaufnahmeregisters erhoben, wie in [Brammen et al. 2020](https://doi.org/10.1007/s00063-020-00764-2) beschrieben, und anschließend dem RKI als tägliche Datenlieferungen über eine SFTP-Server-API täglich bereitgestellt.   
+Early warnings systems (EWS) can help make informed public health decisions. Depending on the EWS, various evaluation strategies exist such as simulating data with outbreaks or using expert-labeled data. In the absence of ground truth knowledge about outbreaks, we can use post-hoc labeling methods. While these perform well for a selection of well-behaved disease time series, they do not perform as well on heterogeneous COVID-19 time series. To address this gap for evaluation, we propose an adaptive labeling method that produces useful labels on highly heterogeneous, non-stationary COVID-19 time series.
 
-> Brammen, D., Greiner, F., Kulla, M. et al. Das AKTIN-Notaufnahmeregister – kontinuierlich aktuelle Daten aus der Akutmedizin. Med Klin Intensivmed Notfmed 117, 24–33 (2022). DOI: [10.1007/s00063-020-00764-2](https://doi.org/10.1007/s00063-020-00764-2)   
+This repository allows you to use our self-developed ensemble labeling method. It helps detect various outbreak types like waves or short peaks as occurring on different spatial resolutions and uses a majority vote to assign outbreak labels post-hoc for evaluation of EWSs. This repository also contains evaluation experiments where our self-produced labels were used to train machine learning models, which we compared with traditional outbreak detection methods.
 
-Die Verarbeitung, Aufbereitung und automatisierte Qualitätsprüfung sowie die Veröffentlichung der Daten erfolgen durch das [Fachgebiet MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MFI/MF4/mf4_node.html). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:opendata@rki.de) gerichtet werden. Die epidemiologisch-fachliche Expertise für die Notaufnahmesurveillance liegt bei dem [Fachgebiet FG 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD Kontaktstelle](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG32/FG32_node.html) des RKI, Fragen an das Team der Notaufnahmesurveillance können unter [sumo@rki.de](mailto:sumo@rki.de) gestellt werden. Das Monitoring der Notaufnahme-spezifischen Datenqualität und etwaige Abstimmungen mit den Notaufnahmen erfolgt im AKTIN TDAC. Für den Kontakt und Koordination der teilnehmenden Notaufnahmen ist das AKTIN-Office verantwortlich. Bei Fragen bitte an [office@aktin.org](mailto:office@aktin.org) wenden.  
-  
-### Datengrundlage und Einschlusskriterien  
+## Installation
 
-Für die Berichterstattung der Notaufnahmesurveillance werden Routinedaten aus dem AKTIN-Notaufnahmeregister in täglichen Datenlieferungen bereitgestellt. Die Daten enthalten Informationen zu den liefernden Notaufnahme (inkl. Stufe der Notfallversorgung), den Altersgruppen, dem Vorstellungsgrund klassifiziert nach *Canadian Emergency Department Information System – Presenting Complaint List (CEDIS-PCL3.0, [Grafenstein et al. 2008](https://doi.org/10.1017/s1481803500009878 ))* , Diagnosen codiert nach der *Internationalen Klassifikation der Krankheiten, 10. Revision (International Classification of Diseases, ICD-10, [DIMDI 2019](https://www.dimdi.de/static/de/klassifikationen/icd/icd-10-gm/kode-suche/htmlgm2019/))* sowie Informationen über eine stationäre Aufnahme im Anschluss an den Notaufnahmeaufenthalt.  
-Die Auswahl der Notaufnahmen basiert auf der individuellen Bereitschaft zur Teilnahme an der Berichterstattung der Notaufnahmesurveillance. Die Anzahl der einbezogenen Notaufnahmen kann dabei je Syndromdefinition variieren: Voraussetzung für die Berücksichtigung der Notaufnahmen in der Darstellung der jeweiligen Syndrome ist eine Vollständigkeit von mindestens 80 % für Angaben zu jenen Variablen, die Teil der Syndromdefinition sind (bspw. wird für die Aufnahme in die Darstellung des ARE-Syndroms eine Vollständigkeit von mind. 80 % bei Angaben zu ICD-10-Diagnosen oder bei Angaben zu CEDIS-PCL Vorstellungsgründen vorausgesetzt). Durch Veränderung der Verfügbarkeit der Daten kann es insgesamt zu einer unterschiedlichen Anzahl von Notaufnahmen je Berichtsdatum kommen. Da die Notaufnahmen jeweils unterschiedlich groß sind, kann es bei gleicher Anzahl von Notaufnahmen zu Unterschieden in der Höhe der Fallzahlen zwischen Berichtszeiträumen kommen. In die aktuelle Berichterstattung fließen Daten aus zentralen Notaufnahmen sowie pädiatrischen Notaufnahmen ein. Die unterschiedlichen Versorgungsschwerpunkte der eingeschlossenen Notaufnahmen können ebenfalls zu Variationen in den Fallzahlen führen.   
+Our scripts make use of Python and R. Please make sure you have both programming languages installed. We also encourage users to use conda as an environment management tool for this repo. After installing Anaconda or Miniconda, run the following commands in a properly configured shell:
 
+````commandline
+conda env create -f environment.yml
+conda activate epylabel
+````
 
-### Syndromdefinitionen  
+## Running the Code
 
-Die Syndromdefinitionen für grippeähnliche Erkrankungen (Influenza-like illness, ILI) und Coronavirus Erkrankungen (COVID-19) basieren auf ICD-10-Diagnosen. Die Syndromdefinitionen für akute respiratorische Erkrankungen (ARE) und gastrointestinale Infektionen (GI) basieren auf einer Auswahl von CEDIS-PCL Vorstellungsgründen und ICD-10-Diagnosen. Zur Definition schwerer akuter respiratorischer Infektionen (SARI) werden ICD-10-Diagnosen in Verbindung mit einer stationären Aufnahme berücksichtigt. Details dazu werden in [Boender et al. 2022](https://doi.org/10.2807/1560-7917.ES.2022.27.27.2100865) und [Baum et al. 2023](https://doi.org/10.1101/2023.11.28.23298985) näher beschrieben.  
+**Warning**: This repo uses rpy2, a Python library that enables running R code and libraries in Python. As of now, this library is not supported for Windows and this repo may not work for you if you use Windows.
 
->  Boender T. Sonia, Cai Wei, Schranz Madlen, Kocher Theresa, Wagner Birte, Ullrich Alexander, Buda Silke, Zöllner Rebecca, Greiner Felix, Diercke Michaela, Grabenhenrich Linus. Using routine emergency department data for syndromic surveillance of acute respiratory illness, Germany, week 10 2017 until week 10 2021. Euro Surveill. 2022;27(27):pii=2100865. DOI: [10.2807/1560-7917.ES.2022.27.27.2100865](https://doi.org/10.2807/1560-7917.ES.2022.27.27.2100865)  
+### Reproduce Labels
 
->  Jonathan Hans Josef Baum, Achim Dörre, Tamara Sonia Boender, Katharina Heldt, Hendrik Wilking, Susanne Drynda, Bernadett Erdmann, Rupert Grashey, Caroline Grupp, Kirsten Habbinga, Eckard Hamelmann, Amrei Heining, Heike Höger-Schmidt, Clemens Kill, Friedrich Reichert, Joachim Riße, Tobias Schilling, AKTIN Research Group, Madlen Schranz. Establishing syndromic surveillance of gastrointestinal infections in emergency departments using routine emergency department data and validating it against laboratory-based surveillance, Germany, January 2019 – June 2023. medRxiv 2023.11.28.23298985. DOI: [10.1101/2023.11.28.23298985](https://doi.org/10.1101/2023.11.28.23298985)  
+To reproduce the labels presented in the manuscript run ``python paper_labels.py`` after the appropriate conda environment has been activated. Note, you need to navigate to the folder containing this script for it to work.
 
-### Berechnung des relativen Anteils  
+### Generate Figures
 
-Alle identifizierten Fälle der jeweiligen Syndrome werden als relativer Anteil dargestellt, der Nenner berechnet sich dabei individuell je Syndrom: die Fallzahlen werden anteilig an den Notaufnahmevorstellungen berechnet, die vollständige Angaben zu jenen Variablen haben, die Teil der Syndromdefinition sind (bspw. werden für die Berechnung des relativen Anteils der ARE-Fälle alle Vorstellungen berücksichtigt, die entweder Angaben zur ICD-10-Diagnose oder zum CEDIS-PCL Vorstellungsgrund haben). Innerhalb der Filterkategorien für Altersgruppe und Notaufnahmetyp ergibt sich der Nenner jeweils aus der gewählten Filterkombination (bspw. werden bei Auswahl der Gruppe „80+“ nur Vorstellungen dieser Altersgruppe im Nenner berücksichtigt).   
+You can also reproduce the figures from the manuscript using ``python paper_plots.py``
 
-### Berechnung des Erwartungswertes  
-Für jede Syndromdefinition sowie Filtermöglichkeit (Altersgruppe und Notaufnahmetyp) wird ein Erwartungswert des relativen Anteils und ein zugehöriges 80% Prädiktionsintervall berechnet. Der Erwartungswert wird mit Hilfe eines Negativ-Binomial Regressionsmodells auf der Zeitreihe der relativen Anteile berechnet und berücksichtigt die jährliche Saisonalität mittels Sinus-/Cosinus-Funktionen. Das Prädiktionsintervall wird wie von [Noufaily 2012](https://doi.org/10.1002/sim.5595) beschrieben berechnet. Als Referenzzeitraum für die Berechnung werden die jeweiligen Daten ab 01.01.2019 und bis 365 Tage vor dem aktuellen Berichtsdatum verwendet (bspw. entspricht der Referenzzeitraum am 23.08.2023 dem Zeitraum von 01.01.2019 bis 23.08.2022). Für die Darstellung der Notaufnahmevorstellungen mit COVID-19 wird aktuell auf die Berechnung eines Erwartungswertes verzichtet, da hierfür gegenwärtig noch nicht genug retrospektive Daten zur Verfügung stehen.  
+### Generating Docs
 
+You can build the docs with Sphinx:
 
-### Interpretation der Daten  
+````commandline
+sphinx-build -b html docs/source/ docs/build/
+````
 
-Die Daten lassen sich nur mit Kenntnis der Prozesse und Strukturen in den jeweiligen Notaufnahmen bzw. in Rücksprache mit den Notaufnahmen sinnvoll interpretieren. Weiterhin ist es bei der Interpretation von Surveillance-Daten wichtig, einige Limitationen zu beachten:
-* Die Stichprobe an Notaufnahmen ist nicht repräsentativ für Deutschland.
-* Die Anzahl an Notaufnahmen in der Berichterstattung kann sich aufgrund unterschiedlicher Datenverfügbarkeiten und technischer Gegebenheiten ändern.
-* Bei den hier dargestellten Daten handelt es sich um Routinedaten, die im Rahmen der Notfallversorgung erhoben werden. Daraus ergeben sich einige Limitationen, die Einfluss auf die Qualität der Berichterstattung haben können:
-    * Fehlende Angaben bspw. in Vorstellungsgründen und Diagnosen können zu einer Untererfassung der Fallzahlen führen.
-    * In einigen Notaufnahmen werden ICD-10-Diagnosen nicht unmittelbar während der Notaufnahmebehandlung, sondern mit einer Verzögerung von mehreren Tagen codiert. Dies kann sich auf die Fallzahlen in der tagesaktuellen Berichterstattung auswirken.
-    * Vorstellungsgründe sind nicht mit klinisch bestätigten Diagnosen gleichzusetzen. Auch bei den vergebenen ICD-10-Diagnosen handelt es sich zunächst oft um Verdachtsdiagnosen, die bspw. noch nicht mit einer Labordiagnostik bestätigt wurden. 
-* Veränderungen im Zeitverlauf können neben realen Änderungen der Inanspruchnahme auch verschiedene andere Ursachen haben (bspw. veränderte Dokumentationspraxis oder Versorgungsprozesse). Die vorliegenden Daten können daher nicht ohne vorherige direkte Kommunikation mit den Notaufnahmen interpretiert werden.  
+## Code
 
-## Inhalt und Aufbau des Datensatzes  
+This repo is using a pipeline approach to compose the ensemble of labeling methods. Each labeling method inherits from the abstract class `Transformation` (see [labeler.py](/epylabel/labeler.py)). Theses Classes need to implement the `transform()` method that either return labels or transformed data.
 
-Der Datensatz enthält aggregierte Daten aus der Routinedokumentation aus einer Auswahl deutscher Notaufnahmen. Im Datensatz enthalten sind:  
+The `Pipeline` class allows you to execute transform operations of various labeling methods successively.
 
-* Aggregierte Surveillancedaten, stratifiziert nach den Kategorien 'Syndrom', 'Notaufnahmetyp', 'Altersgruppe'  
-* Standortdaten aller angeschlossener Notaufnahmen  
-* Übersetzungstabelle der Variablenausprägungen  
-* Datenstand Datei zum Import in Zenodo  
-* Lizenzdatei  
-* Datensatzdokumentation in deutscher Sprache  
+Lastly, the `Ensemble` class implements the routine for the majority vote of each single labeling method in the ensemble. The code can be extended to use more labeling methods. Each method would only need to inherit from `Transformation`.
 
-Die Daten werden täglich mit Daten bis einschließlich dem Vorvortag aktualisiert. Die Erwartungswerte werden basierdend auf verfügbaren Daten bis vor 365 Tagen berechnet.  
+If another ensemble voting mechanism is desired, a new `Ensemble` class can be implemented where you specify your voting approach in the `transform()` method. This way, our code is open to new implementations and variations.
 
-### Standortdaten eingeschlossener Notaufnahmen   
+Below, you can find a shortened and commented version of `paper_labels.py` to illustrate how generating labels with our ensemble approach works.
 
-Die Datei [`Notaufnahmesurveillance_Standorte.tsv`](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Standorte.csv) enthält die Standort- und Metainformationen aller  angeschlossenen Notaufnahmen, wie die IK-Nummer, den Namen, die Koordinaten und das Bundesland sowie die Versorgungsstufe und den Notaufnahmetyp jeder Notaufnahme.  
+```python
+import pandas as pd
 
-> [Notaufnahmesurveillance_Standorte.tsv](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Standorte.csv)  
+from epylabel.labeler import (Bcp,Changerate,Ensemble,Shapelet,WaveFinder)
+from epylabel.pipeline import Pipeline
+from paper_labels import StandardForm
 
-#### Variablen und Variablenausprägung  
+# Instatiate single labeling methods with adequate parameters
+cr = Changerate()
+bcp = Bcp()
+wv = WaveFinder()
+sp = Shapelet()
 
-Variable | Typ | Ausprägung | Erläuterung
--------- | -------- | -------- | --------
-ik_number   | Text   | `260102081`, ... | ID der Notaufnahme
-ed_name   | Text   | `Paracelsus Kinik Henstedt-Ulzburg`, .. | Name der Notaufnahme
-ed_type   | Text   | `central`, `pediatric`   | Notaufnahmetyp (`central`: Zentrale Notaufnahme, `pediatric`: Kindernotaufnahme)
-level_of_care  | Text   | `Basisnotfallversorgung`, `Erweiterte Versorgung`, `Umfassende Versorgung` | [Versorgungsstufe](https://www.g-ba.de/downloads/62-492-2340/Not-Kra-R_2020-11-20_iK-2020-11-01.pdf) der Notaufnahme (deutsch)
-state  | Text   | `Schleswig-Holstein`, ... `Thüringen` | Bundesland (deutsch) 
-state_id  | Text   | `01`, ..., `16` | [Länderschlüssel](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel) des Bundeslandes 
-latitude   | Dezimalzahl   | `≥0.0` | Breitengrad des Standorts der Notaufnahme
-longitude   | Dezimalzahl   | `≥0.0` | Längengrad des Standorts der Notaufnahme
+# Instatiate ensemble
+ens = Ensemble(n_min=2)
 
+# Download RKI COVID-19 data
+data_rki_url = (
+    "https://raw.githubusercontent.com/robert-koch-institut/"
+    "COVID-19_7-Tage-Inzidenz_in_Deutschland/main/"
+    "COVID-19-Faelle_7-Tage-Inzidenz_Deutschland.csv"
+)
+data_rki = pd.read_csv(data_rki_url)
 
+# Rearrange data
+data_wide = Pipeline([StandardForm()]).transform(data_rki)
+data_wide_faelle = Pipeline(
+    [
+        StandardForm("Faelle_neu"),
+    ]
+).transform(data_rki)
 
-### Notaufnahmevorstellungen für ausgewählte Syndromdefinitionen  
+# Label data with single labeling methods
+bcp_labels = Pipeline(
+    [
+        cr,
+        bcp,
+    ]
+).transform(data_wide_faelle)
+sp_labels = Pipeline([sp]).transform(data_wide)
+wv_labels = Pipeline([wv]).transform(data_wide)
 
-Wie im Abschnitt [Syndromdefinitionen](#Syndromdefinitionen) beschrieben, werden die Notaufnahmevorstellungen derzeit nach akuten respiratorischen Erkrankungen (ARE), schweren akuten respiratorischen Infektionen (SARI),  grippeähnlichen Erkrankungen (ILI), Coronavirus Erkrankungen (COVID-19) und gastrointestinalen Infektionen (GI) unterschieden.   
-
-
-Die Datei [`Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv`](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv)" enthält die Anzahl der Notaufnahmevorstellungen und den berechneten Erwartungswert der Anteile der Fälle an den Gesamtvorstellungen für die oben aufgelisteten Syndromdefinitionen.  
-
-> [Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Notaufnahmesurveillance_Zeitreihen_Syndrome.tsv)  
-
-#### Variablen und Variablenausprägung
-
-Variable | Typ | Ausprägung | Erläuterung
--------- | -------- | -------- | --------
-date   | Text   | `JJJJ-MM-TT` | Datum; JJJJ entspricht dem Jahr, MM dem Monat und TT dem Tag
-ed_type   | Text   | `all`,`central`, `pediatric`   | Notaufnahmetyp (`all`: alle Notaufnahmen, `central`: Zentrale Notaufnahme, _pediatric_: Kindernotaufnahme)
-age_group   | Text   |  `00+`, `0-4`, `5-9`, `10-14`, `15-19`, `20-39`, `40-59`, `60-79`, `80+`  | Altersgruppe (`00+`: alle Altersgruppen, `0-4`: 0-4 Jahre, ...)
-syndrome   | Text   | `ARI`, `SARI`, `ILI`, `COVID`, `GI` | Syndromdefinitionen für akute respiratorische Erkrankungen (ARE/ARI), schwere akute respiratorische Infektionen (SARI) und grippeähnliche Erkrankungen (Influenza-like-illness, ILI), siehe [Boender et al. 2022](https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2022.27.27.2100865?TRACK=RSS). Für gastrointestinale Infektionen (GI) siehe [Baum et al. 2023](https://doi.org/10.1101/2023.11.28.23298985).
-relative_cases   | Dezimalzahl   | `≥0` | Relativer Anteil Notaufnahmevorstellungen an diesem Tag mit gegebenem Syndrom an allen Notaufnahmevorstellungen in gegebenen Notaufnahmen von gegebenem Typ 
-relative_cases_7day_ma   | Dezimalzahl   | `≥0.0` | Gleitender 7-Tage Durchschnitt des relativen Anteil von Fällen des Syndroms an den Gesamtvorstellungen
-expected_value   | Dezimalzahl   | `≥0.0` oder `NA` | Erwartungswert des relativen Anteils von Fällen des Syndroms an den Gesamtvorstellungen
-expected_lowerbound   | Dezimalzahl   | `≥0.0` oder `NA` | Untere Grenze des 80%-Prädiktionsintervalls des Erwartungswerts
-expected_upperbound  | Dezimalzahl   | `≥0.0` oder `NA` | Obere Grenze des 80%-Prädiktionsintervalls des Erwartungswerts 
-ed_count  | Ganze Zahl   | `≥0` | Anzahl von eingeschlossenen Notaufnahmen an diesem Tag in den Notaufnahmen vom gegebenen Notaufnahmetyp
-
-### Formatierung der Daten  
-
-Die Notaufnahmesurveillance Daten sind im Datensatz als tabseparierte .tsv-Datei enthalten. Der verwendete Zeichensatz der .tsv-Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Tab "\t". Datumsangaben sind im ISO-8601-Standard formatiert.  
-
-* Zeichensatz: UTF-8  
-* Datumsformat: ISO 8601  
-* .tsv-Trennzeichen: Tab "\t"  
-
-### Metadaten  
-
-Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:  
-
-> [Metadaten/](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Metadaten/)    
-
-Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.   
- 
-> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/Metadaten/zenodo.json)  
-
-In der zenodo.json ist neben der Publikationsdatum (`"publication_date"`) auch der Datenstand enthalten:  
+# Combine labeling methods in ensemble
+bcp_sp_wv_labels = Pipeline([ens]).transform(bcp_labels, sp_labels, wv_labels)
 
 ```
-  "dates": [
-    {
-      "start": "2023-09-11T15:00:21+02:00",
-      "end": "2023-09-11T15:00:21+02:00",
-      "type": "Collected",
-      "description": "Date when the Dataset was created"
-    }
-  ],
-```    
 
-## Hinweise zur Nachnutzung der Daten  
+## Data
 
-Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:  
+The code in this repository depends on reported COVID-19 cases in Germany. The main function `paper_labels.py`, which is more closely explained in the next section, downloads data from the [Robert Koch Institute's Open Data Repository on GitHub](https://github.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland) for which it then produces the labels as described in the manuscript.
 
-- https://zenodo.org/communities/robertkochinstitut  
-- https://github.com/robert-koch-institut  
-- https://gitlab.opencode.de/robert-koch-institut  
-- https://edoc.rki.de/  
- 
-### Lizenz  
+There are three datasets that will be downloaded to build timeseries of newly reported cases. New cases are in the CSV's column `Faelle_neu`. Region identifiers which are named `Bundesland_id` for federal countries and `Landkreis_id` for counties, are renamed to `location` by the script. The reporting date `Meldedatum` is renamed to `target` and the case numbers to `value`. Without a regional stratification, i.e., timeseries for Germany only, the column `location` gets the value 0. Age stratification of the data is ignored.
 
-Der Datensatz "Daten der Notaufnahmesurveillance" ist lizenziert unter  der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
+The repository is using the latest data form the RKI "7-Tage-Inzidenz der COVID-19-Fälle in Deutschland" dataset provided on Github:
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Daten_der_Notaufnahmesurveillance/blob/main/LIZENZ) Datei des Datensatzes.  
+> <https://github.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland>
 
+All versions of the currently daily updated data, are also published on Zenodo.org:
+
+> Robert Koch-Institut (**2024**): 7-Tage-Inzidenz der COVID-19-Fälle in Deutschland, Berlin: Zenodo. DOI: [10.5281/zenodo.7129007](https://zenodo.org/doi/10.5281/zenodo.7129007)
+
+| Description                                              | URL                                                                                                                                                     |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| COVID-19 cases in Germany per county        | <https://raw.githubusercontent.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland/main/COVID-19-Faelle_7-Tage-Inzidenz_Landkreise.csv>    |
+| COVID-19 cases in Germany per federal state | <https://raw.githubusercontent.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland/main/COVID-19-Faelle_7-Tage-Inzidenz_Bundeslaender.csv> |
+| COVID-19 cases in Germany without startification                  | <https://raw.githubusercontent.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland/main/COVID-19-Faelle_7-Tage-Inzidenz_Deutschland.csv>   |
+
+After the transformation, the data has the following structure:
+
+| Column   | Datatype | Description                                                                                                                       |
+| - | --------------------- |--------------------------------------------------- |
+| value    | integer | Number of reported COVID-19 cases                                                                                       |
+| target   | string | Reporting date (yyyy-mm-dd)                                                                                                        |
+| location | string |The five-digit community identification code for counties, two-digit code for federal countries, and a 0 for the whole of Germany |
+
+### Formatting
+
+Data is downloaded as a comma-separated .csv file. The character encoding is UTF-8. Values are separated by ",".
+
+## Metadata
+
+To increase findability, the provided repository is described with metadata. The metadata is distributed to the relevant platforms via GitHub Actions.
+Versioning and DOI assignment are performed via [Zenodo.org](https://zenodo.org). The metadata prepared for import into Zenodo are stored in the [zenodo.json](https://github.com/robert-koch-institut/epylabel/blob/main/metadata/zenodo.json). Documentation of the individual metadata variables can be found at <https://developers.zenodo.org/representation>.
+
+> [metadata/zenodo.json](https://github.com/robert-koch-institut/epylabel/blob/main/metadata/zenodo.json)
+
+## Collaborate
+
+If you want to participate in our project, feel free to fork this repo and send us pull requests. To make sure everything is working please use pre-commit. It will run a few tests and lints before a commit can be made. To install pre-commit, run
+
+``pre-commit install``
+
+## Guidelines for Reuse of the Code
+
+Open source code from the RKI is available on [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/) and [OpenCoDE](https://gitlab.opencode.de):
+
+- <https://zenodo.org/communities/robertkochinstitut>
+- <https://github.com/robert-koch-institut>
+- <https://gitlab.opencode.de/robert-koch-institut>
+
+### License
+
+The "Epylabel: Ensemble-labeling of infectious diseases time series" code is licensed under the [MIT License](https://mit-license.org/).  
+
+The code provided in the repository is freely available, with the condition of attributing the Robert Koch Institute as the source, for anyone to process and modify, create derivatives of the dataset and use them for commercial and non-commercial purposes.  
+Further information about the license can be found in the [LICENSE](https://github.com/robert-koch-institut/epylabel/blob/main/LICENSE) file of the dataset.

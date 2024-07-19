@@ -11,7 +11,7 @@
                   dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@rki.de" ; foaf:name "Robert Koch-Institut | Open Data Team"] ;
                   dcatde:contributor [ a foaf:Person; foaf:name "Andreas Hicketier"; foaf:account <http://orcid.org/0009-0000-5882-852X>; ],[ a foaf:Person; foaf:name "Moritz Bach"; foaf:account <http://orcid.org/0009-0003-3062-0585>; ],[ a foaf:Person; foaf:name "Philip Oedi"; foaf:account <http://orcid.org/0009-0001-7112-505X>; ],[ a foaf:Person; foaf:name "Alexander Ullrich"; foaf:account <http://orcid.org/0000-0002-4894-6124>; ],[ a foaf:Person; foaf:name "Auss Abbood"; foaf:account <http://orcid.org/0000-0002-4428-168X>; ];
                   dct:description "<p>This repository contains the code for the manuscript <em>Ensemble-labeling of infectious diseases time series to evaluate early warning systems</em> with which you can reproduce the manuscript's results and figures.</p>" ;
-                  dct:issued "2024-07-19T11:11:21+02:00"^^xsd:dateTime ;
+                  dct:issued "2024-07-19T11:14:21+02:00"^^xsd:dateTime ;
                   dct:modified "2024-03-19T10:00:00+01:00"^^xsd:dateTime ;
                   dct:publisher [ a foaf:Organization ;
                       foaf:mbox "opendata@rki.de" ;
@@ -34,35 +34,35 @@
                   dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0>;
                   dcat:distribution [
                     a dcat:Distribution ;
-                    dcatde:licenseAttributionByText "Hicketier, Andreas et. al. (2024): Epylabel: Ensemble-labeling of infectious diseases time series, Berlin: Zenodo. DOI:10.5072/zenodo.90146" ;
+                    dcatde:licenseAttributionByText "Hicketier, Andreas et. al. (2024): Epylabel: Ensemble-labeling of infectious diseases time series, Berlin: Zenodo. DOI:10.5072/zenodo.90153" ;
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
                     dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
                     dct:title "Github - Epylabel: Ensemble-labeling of infectious diseases time series" ;
                     dcat:accessURL <https://github.com/robert-koch-institut/epylabel>;
-                    dct:modified "2024-07-19T11:11:21+02:00"^^xsd:dateTime;
+                    dct:modified "2024-07-19T11:14:21+02:00"^^xsd:dateTime;
                   ],
                   [
                     a dcat:Distribution ;
-                    dcatde:licenseAttributionByText "Hicketier, Andreas et. al. (2024): Epylabel: Ensemble-labeling of infectious diseases time series, Berlin: Zenodo. DOI:10.5072/zenodo.90146" ;
+                    dcatde:licenseAttributionByText "Hicketier, Andreas et. al. (2024): Epylabel: Ensemble-labeling of infectious diseases time series, Berlin: Zenodo. DOI:10.5072/zenodo.90153" ;
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
                     dct:description "Zenodo ist eine europäische Plattform, die es Forschern, Wissenschaftlern und anderen Personen ermöglicht, Forschungsdaten, Publikationen, Präsentationen und andere wissenschaftliche Inhalte kostenlos zu teilen und zu veröffentlichen. Eine der Hauptstärken von Zenodo ist die Bereitstellung der Daten nach den FAIR Prinzipien, Daten sind langzeitarchiviert und wissenschaftlich zitierbar, um den Datenaustausch und die Zusammenarbeit zwischen Forschern zu erleichtern.";
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
                     dct:title "Zenodo - Epylabel: Ensemble-labeling of infectious diseases time series" ;
                     dcat:accessURL <https://zenodo.org/record/1703>;
-                    dct:modified "2024-07-19T11:11:21+02:00"^^xsd:dateTime;
+                    dct:modified "2024-07-19T11:14:21+02:00"^^xsd:dateTime;
                   ],
                   [
                     a dcat:Distribution ;
                     dct:title "[Dokumentation] Epylabel:_Ensemble-labeling_of_infectious_diseases_time_series.pdf" ;
-                    dcatde:licenseAttributionByText "Hicketier, Andreas et. al. (2024): Epylabel: Ensemble-labeling of infectious diseases time series, Berlin: Zenodo. DOI:10.5072/zenodo.90146" ;
+                    dcatde:licenseAttributionByText "Hicketier, Andreas et. al. (2024): Epylabel: Ensemble-labeling of infectious diseases time series, Berlin: Zenodo. DOI:10.5072/zenodo.90153" ;
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
                     dct:description "Die Datensatzdokumentation enthält Informationen und Hinweise zum Entstehungskontext, dem Aufbau und der Nachnutzung der im Datensatz 'Epylabel: Ensemble-labeling of infectious diseases time series' bereitgestellten Daten" ;
                     dct:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
                     dcat:accessURL <https://zenodo.org/record/1703/files/%5BDokumentation%5D_epylabel.pdf>;
-                    dct:modified "2024-07-19T11:11:21+02:00"^^xsd:dateTime;
+                    dct:modified "2024-07-19T11:14:21+02:00"^^xsd:dateTime;
                   ].
