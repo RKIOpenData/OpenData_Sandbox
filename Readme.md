@@ -1,186 +1,171 @@
-<p align="right">
-  <img src="https://robert-koch-institut.github.io/SARS-CoV-2-Infektionen_in_Deutschland/assets/RKI_Logo.png" style="width: auto; height: 60px;">
-</p>
+Datensatzdokumentation  
+# SARS-CoV-2-Sequenzdaten aus Deutschland  
 
-# Epylabel: Ensemble-labeling of infectious diseases time series
+[Robert Koch-Institut | RKI](https://rki.de)  
+Nordufer 20  
+13353 Berlin  
 
-<br>
-<br>
+---
+**Zitieren**
 
-[**Andreas Hicketier**](https://orcid.org/0009-0000-5882-852X)<sup>1</sup>, [**Moritz Bach**](https://orcid.org/0009-0003-3062-0585)<sup>1</sup>, [**Philip Oedi**](https://orcid.org/0009-0001-7112-505X)<sup>1</sup>, [**Alexander Ullrich**](https://orcid.org/0000-0002-4894-6124)<sup>1</sup>, and [**Auss Abbood**](https://orcid.org/0000-0002-4428-168X)<sup>2</sup>  
+Robert Koch-Institut (**2024**): *SARS-CoV-2-Sequenzdaten aus Deutschland*, Berlin: Zenodo. [DOI: 10.5281/zenodo.12166861](https://doi.org/10.5281/zenodo.12166861)  
+ 
+## Informationen zum Datensatz und Entstehungskontext  
 
-&emsp;<sup>1</sup> [Robert Koch Institute | Unit 32](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/InfDiseaseEpidem/Div32/div32_node.html)  
-&emsp;<sup>2</sup> [Robert Koch Institute | Unit ZIG 1](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/ZIG/INIG/INIG_node.html)  
+Ein zentraler Bestandteil einer erfolgreichen Erregersurveillance ist das Verständnis der Verbreitung eines Erregers sowie seiner pathogenen Eigenschaften. Hierbei stellt das Wissen über das Erregergenom eine wichtige Informationsquelle dar. So erlaubt der Nachweis von Mutationen im Genom eines Erregers, Verwandtschaftsbeziehungen zu rekonstruieren, Übertragungswege aufzudecken und Resistenzen vorherzusagen. Die Integrierte Genomische Surveillance (IGS) von SARS-CoV-2 zielt darauf ab, die Verbreitung des Virus und insbesondere von besorgniserregenden Virusvarianten in der Bevölkerung zu überwachen sowie auftretende Veränderungen des Virus genau zu beobachten. Besondere Bedeutung kommt dabei der öffentlichen Bereitstellung der genomischen Daten zu, um Wissenschaftlern in Deutschland und weltweit die Möglichkeit zu eigenständigen Analysen zu eröffnen.  
 
-<br>
+Im Rahmen der [Coronavirus-Surveillanceverordnung](https://www.gesetze-im-internet.de/corsurv/BJNR601910021.html) wurden bis zum 31.05.2023 [SARS-CoV-2 Sequenzdaten aus ganz Deutschland über den Deutschen Elektronischen Sequenzdaten-Hub (DESH) an das RKI übermittelt](https://doi.org/10.5281/zenodo.12166861). Mit Ablauf der Verordnung werden künftig Proben durch das IMSSC2 Labornetzwerk bereitgestellt und am RKI sequenziert, analysiert und hier bereitgestellt. Trotz reduzierter  Probenanzahl, wird durch die sorgfältige Auswahl der beteiligten Labore ein repräsentativer Einblick in die Viruspopluation gesichert ([Djin Ye Oh  *et al.* **2022**)](https://doi.org/10.1093/cid/ciac399). Zusätzlich werden Sequenzen vom NRZ Coronaviren an der Charité beigetragen um das IMSSC2 Netzwerk zu ergänzen. 
+ 
+### Administrative und organisatorische Angaben
 
-**Cite**  
-  
-Hicketier A, Bach M, Oedi P, Ullrich A, and Abbood A (**2024**): *Epylabel: Ensemble-labeling of infectious diseases time series*, Zenodo. DOI: [10.5281/zenodo.12665040](https://doi.org/10.5281/zenodo.12665040)  
+Der Datensatz "SARS-CoV-2-Sequenzdaten aus Deutschland" wird vom [Robert Koch-Institut](https://rki.de) für Forschungsarbeiten im Zusammenhang mit der SARS-CoV-2-Surveillance im IGS Projekt bereitgestellt.  
 
----  
+Die Datenerhebung am RKI erfolgt mit Ablauf der Coronavirus-Surveillanceverordnung über das IMSSC2 Labornetzwerk unter der Leitung von [FG 17 | Influenzaviren und weitere Viren des Respirationstraktes](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt1/FG17/fg17_node.html) und durch das [Nationale Referenzzentrum für Coronaviren](https://virologie-ccm.charite.de/diagnostik/konsiliarlaboratorium_fuer_coronaviren/).  
 
-This repository contains the code for the manuscript *Ensemble-labeling of infectious diseases time series to evaluate early warning systems* with which you can reproduce the manuscript's results and figures.  
+Im Rahmen des IGS Projektes werden die produzierten Daten von [MF1 | Genome Competence Centre](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/MF/MF1/mf1_node.html) bioinformatisch analysiert. Fragen bezüglich des Projektes können am besten an [IGS@rki.de](mailto:IGS@rki.de) gerichtet werden.  
 
-## Project Information
+Die Koordinierung und Meldedatenerfassung wird von [FG 36 | Respiratorisch übertragbare Erkrankungen](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG36/FG36_node.html) durchgeführt.  
 
-This code was developed at the Robert Koch Institute as part of the project *Daten- und KI-gestütztes Frühwarnsystem zur Stabilisierung der deutschen Wirtschaft* funded by the Federal Ministry for Economic Affairs and Climate Action. The project launched 1st December 2021 and ends on 30th November 2024. Together with over a dozen research and industry partners, we work on preventing economic loss as seen during the COVID-19 pandemic with the help of early warning systems. These are not limited to infectious diseases but within a work package on early warning for infectious diseases, this code was developed. For more information on the project, visit the [DAKI-FWS Website](https://daki-fws.de/) and the Webiste [Digitale-Technologien of the German Federal Ministry for Economic Affairs and Climate Action](https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/KuenstlicheIntelligenzProjekte/KuenstlicheIntelligenzProjekte_DritterFoerderaufruf/ki-projekt_DAKI-FWS.html).
+Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MF/MF4/mf4_node.html) des RKI. Fragen zum Datenmanagement können an das Open Data Team des Fachgebiets MF4 gerichtet werden ([OpenData@rki.de](mailto:opendata@rki.de)).   
 
-### Administrative and organizational information
 
-This work was conducted by staff from [Unit 32 | Surveillance](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/InfDiseaseEpidem/Div32/div32_node.html) with technical supervision by Alexander Ullrich and Auss Abbood from [ZIG 1 | Information Centre for International Health Protection (INIG)](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/ZIG/INIG/INIG_node.html).
-The publication of the code as well as the quality management of the metadata is done by department [MF 4 | Domain Specific Data and Research Data Management](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/MF/MF4/mf4_node.html). Questions regarding data management and the publication infrastructure can be directed to the Open Data Team of the Department MF4 at <OpenData@rki.de>.
+### Datenerhebung  
 
-### Motivation
+Das IMSSC2 Labornetzwerk besteht aus ~20 labormedizinischen Einrichtungen in 13 Bundesländern, die wöchentlich zufällig ausgewähltes SARS-CoV-2-positives Probenmaterial ans RKI senden. Hier erfolgt eine Ganzgenomsequenzierung sowie weiterführende phylogenetische und genombiologische Analysen, die eine Identifizierung der häufigsten in Deutschland zirkulierenden SARS-CoV-2 Linien ermöglicht. Die Ergebnisse werden auf der Webseite des RKI und in Fachzeitschriften zeitnah publiziert und tragen zur Bewertung der aktuellen epidemiologischen Lage von COVID-19 bei. Erweitert werden die IMSSC2 Daten durch Sequenzen, die durch das Nationales Konsiliarlaboratorium für Coronaviren erhoben werden. Die Daten aus beiden Quellen werden über GitHub und andere öffentliche Datenbanken der Öffentlichkeit zur Verfügung gestellt. Ebenfalls im Datensatz enthalten sind SARS-CoV-2 Sequenzdaten aus ganz Deutschland die bis zum 31.05.2023 über den [Deutschen Elektronischen Sequenzdaten-Hub (DESH)](https://doi.org/10.5281/zenodo.12166861) an das RKI übermittelt wurden.   
 
-Early warnings systems (EWS) can help make informed public health decisions. Depending on the EWS, various evaluation strategies exist such as simulating data with outbreaks or using expert-labeled data. In the absence of ground truth knowledge about outbreaks, we can use post-hoc labeling methods. While these perform well for a selection of well-behaved disease time series, they do not perform as well on heterogeneous COVID-19 time series. To address this gap for evaluation, we propose an adaptive labeling method that produces useful labels on highly heterogeneous, non-stationary COVID-19 time series.
+### Zuordnung von Viruslinien basierend auf Pangolin
 
-This repository allows you to use our self-developed ensemble labeling method. It helps detect various outbreak types like waves or short peaks as occurring on different spatial resolutions and uses a majority vote to assign outbreak labels post-hoc for evaluation of EWSs. This repository also contains evaluation experiments where our self-produced labels were used to train machine learning models, which we compared with traditional outbreak detection methods.
+Die Zuordnung bekannter Viruslinien zu den erhobenen Sequenzen erfolgt mittels [Pangolin](https://github.com/cov-lineages/pangolin). Mit Erscheinen einer neuen Version oder aktualisierter Liniendefinitionen von [Pangolin](https://github.com/cov-lineages/pangolin) erfolgt eine Neuzuordnung der Linieninformation für die gesamte Sequenzkollektion den gesamten Sequenzdatensatz. Die Informationen über die Lineage und die genutzte Pangolin Version befindet sich für jede Sequenz in den Metadaten.   
 
-## Installation
+Die bereitgestellten Informationen zu den Viruslinien entsprechen dem aktuellen [PANGOLIN Lineage Format](https://cov-lineages.org/resources/pangolin/output.html). Nur die Spalte "Taxon" wurde zur einfacherer Nachnutzung in SEQUENCE.ID umbenannt. Zentral für die Verknüpfung der Entwicklungslinien mit den weiteren Daten ist die SEQUENCE.ID, die in allen drei Daten enthalten ist. [PANGOLIN Lineage Format](https://cov-lineages.org/resources/pangolin/output.html) ist bei Widersprüchen authoritativ.  
 
-Our scripts make use of Python and R. Please make sure you have both programming languages installed. We also encourage users to use conda as an environment management tool for this repo. After installing Anaconda or Miniconda, run the following commands in a properly configured shell:
+### Qualitätsmanagement  
 
-````commandline
-conda env create -f environment.yml
-conda activate epylabel
-````
+Die Daten, die durch DESH erhoben wurden, durchliefen die Qualitätskontrolle (QC) der IGS am RKI nach veröffentlichten Kriterien (siehe: https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/DESH/Qualitaetskriterien.pdf?__blob=publicationFile). Zusätzlich wird für alle Sequenzen, inklusive IMSSC2 Proben, eine bioinformatische QC der Sequenz mit [PRESIDENT: PaiRwisE Sequence IDENtiTy](https://github.com/hoelzer-lab/president) durchgeführt mit einen Identitäts-Grenzwert von 70% und einen N-Grenzwert von 20%. Die Metadaten-QC überprüft die Metadaten auf fehlerhafte Daten und Eingaben, die die weitere Verarbeitung beeinflussen würden.
+Bei nicht bestehen der QC für Metadaten oder Sequenzdaten werden diese Daten nicht öffentlich  bereitgestellt, um die hohe Qualität des öffentlichen Datensatzes zu gewährleisten.  
 
-## Running the Code
+## Aufbau und Inhalt des Datensatzes
 
-**Warning**: This repo uses rpy2, a Python library that enables running R code and libraries in Python. As of now, this library is not supported for Windows and this repo may not work for you if you use Windows.
+Der Datensatz umfasst genomische Sequenzen von SARS-CoV-2-Isolaten aus ganz Deutschland und zugehörige Metadaten. Im Datensatz enthalten sind:  
 
-### Reproduce Labels
+* [übermittelte SARS-CoV-2-Genomsequenzen](#struktur-der-sequenzdaten)  
+* [Metadaten zu den SARS-CoV-2-Genomsequenzen](#variablen-und-variablenausprägungen-metadaten)  
+* Lizenz mit der Nutzungslizenz des Datensatzes  
+* Metadaten Datei zum Import in Zenodo  
+* Informationen über VOCs und VOIs   
+* Liste von relevanten Lineages   
 
-To reproduce the labels presented in the manuscript run ``python paper_labels.py`` after the appropriate conda environment has been activated. Note, you need to navigate to the folder containing this script for it to work.
 
-### Generate Figures
+### SARS-CoV-2-Sequenzdaten 
 
-You can also reproduce the figures from the manuscript using ``python paper_plots.py``
+Die SARS-CoV-2-Sequenzdaten werden tagesaktuell im Hauptverzeichnis unter "SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz" bereitgestellt.   
 
-### Generating Docs
+>[SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz)  
+ 
+#### Struktur der Sequenzdaten  
 
-You can build the docs with Sphinx:
+Die bereitgestellte Datei enthält Sequenzeinträge, die nach dem FASTA-Format strukturiert sind. In diesem Format beginnt jeder Eintrag mit einer kurzen Beschreibung, auch Kopfzeile oder "description line" genannt. Diese Zeile wird durch ein ">"-Zeichen am Zeilenanfang gekennzeichnet. Nach der Kopfzeile folgt die Sequenz selbst, die eine Abfolge von Nukleinsäuren im IUB/IUPAC Format darstellt  
 
-````commandline
-sphinx-build -b html docs/source/ docs/build/
-````
+Jede Sequenz endet mit dem Beginn eines neuen Sequenzeintrages, gekennzeichnet durch eine neue Kopfzeile, oder, im Falle des letzten Sequenzeintrages, mit dem Ende der Datei.  
 
-## Code
+In den bereitgestellten Sequenzdaten entspricht die Kopfzeile der SEQUENCE.ID, was eine einfache Verknüpfung mit den bereitgestellten Metadaten erlaubt.  
 
-This repo is using a pipeline approach to compose the ensemble of labeling methods. Each labeling method inherits from the abstract class `Transformation` (see [labeler.py](/epylabel/labeler.py)). Theses Classes need to implement the `transform()` method that either return labels or transformed data.
+* Kopfzeile: "><IGS_ID> version=<version>"
+* Nukleinsäuresequenz: IUB/IUPAC Standard  
 
-The `Pipeline` class allows you to execute transform operations of various labeling methods successively.
+Daraus ergibt sich beispielhaft folgende Struktur einer .fasta-Datei:  
 
-Lastly, the `Ensemble` class implements the routine for the majority vote of each single labeling method in the ensemble. The code can be extended to use more labeling methods. Each method would only need to inherit from `Transformation`.
-
-If another ensemble voting mechanism is desired, a new `Ensemble` class can be implemented where you specify your voting approach in the `transform()` method. This way, our code is open to new implementations and variations.
-
-Below, you can find a shortened and commented version of `paper_labels.py` to illustrate how generating labels with our ensemble approach works.
-
-```python
-import pandas as pd
-
-from epylabel.labeler import (Bcp,Changerate,Ensemble,Shapelet,WaveFinder)
-from epylabel.pipeline import Pipeline
-from paper_labels import StandardForm
-
-# Instatiate single labeling methods with adequate parameters
-cr = Changerate()
-bcp = Bcp()
-wv = WaveFinder()
-sp = Shapelet()
-
-# Instatiate ensemble
-ens = Ensemble(n_min=2)
-
-# Download RKI COVID-19 data
-data_rki_url = (
-    "https://raw.githubusercontent.com/robert-koch-institut/"
-    "COVID-19_7-Tage-Inzidenz_in_Deutschland/main/"
-    "COVID-19-Faelle_7-Tage-Inzidenz_Deutschland.csv"
-)
-data_rki = pd.read_csv(data_rki_url)
-
-# Rearrange data
-data_wide = Pipeline([StandardForm()]).transform(data_rki)
-data_wide_faelle = Pipeline(
-    [
-        StandardForm("Faelle_neu"),
-    ]
-).transform(data_rki)
-
-# Label data with single labeling methods
-bcp_labels = Pipeline(
-    [
-        cr,
-        bcp,
-    ]
-).transform(data_wide_faelle)
-sp_labels = Pipeline([sp]).transform(data_wide)
-wv_labels = Pipeline([wv]).transform(data_wide)
-
-# Combine labeling methods in ensemble
-bcp_sp_wv_labels = Pipeline([ens]).transform(bcp_labels, sp_labels, wv_labels)
-
+```fasta
+>IGS-101XX-CVDP-XX version=1
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNACCAACCAACTTTCGATCTCTT...  
+>IGS-101YY-CVDP-YY version=0
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNACCAACTCTCGGCTGCATGCT...  
 ```
+#### Komprimierung der Sequenzdaten   
 
-## Data
+Die SARS-CoV-2-Sequenzdaten werden als [xz-komprimierte](https://en.wikipedia.org/wiki/XZ_Utils) [.fasta](https://en.wikipedia.org/wiki/FASTA_format) Datei bereitgestellt. Daraus ergibt sich die Dateiendung .fasta.xz. Es werden Linux Zeilenumbrüche verwendet.  
 
-The code in this repository depends on reported COVID-19 cases in Germany. The main function `paper_labels.py`, which is more closely explained in the next section, downloads data from the [Robert Koch Institute's Open Data Repository on GitHub](https://github.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland) for which it then produces the labels as described in the manuscript.
+* Zeichensatz: UTF-8  
+* Komprimierung: [.xz](https://en.wikipedia.org/wiki/XZ_Utils)  
+* Enthaltenes Dateiformat: [.fasta](https://de.wikipedia.org/wiki/FASTA-Format)  
+* Zeilenumbrüche: Linux Zeilenumbrüche  
 
-There are three datasets that will be downloaded to build timeseries of newly reported cases. New cases are in the CSV's column `Faelle_neu`. Region identifiers which are named `Bundesland_id` for federal countries and `Landkreis_id` for counties, are renamed to `location` by the script. The reporting date `Meldedatum` is renamed to `target` and the case numbers to `value`. Without a regional stratification, i.e., timeseries for Germany only, the column `location` gets the value 0. Age stratification of the data is ignored.
+Die Dateien können auf gängigen Betriebssystemen, beispielsweise mit den Programmen [7zip](https://www.7-zip.org/) oder [XZ Utils](https://tukaani.org/xz/), entpackt werden. Die Komprimierung wird vorgenommen, da insbesondere die .fasta-Dateien mehrere Gigabyte (GB) groß sind.   
 
-The repository is using the latest data form the RKI "7-Tage-Inzidenz der COVID-19-Fälle in Deutschland" dataset provided on Github:
+### Sequenzmetadaten
 
-> <https://github.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland>
+Die Sequenzmetadaten werden in der "SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz" bereitgestellt. Diese Daten enthalten ebenfalls die zugeordneten Viruslinien.  
 
-All versions of the currently daily updated data, are also published on Zenodo.org:
+>[SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz)  
 
-> Robert Koch-Institut (**2024**): 7-Tage-Inzidenz der COVID-19-Fälle in Deutschland, Berlin: Zenodo. DOI: [10.5281/zenodo.7129007](https://zenodo.org/doi/10.5281/zenodo.7129007)
+#### Variablen und Werte  
 
-| Description                                              | URL                                                                                                                                                     |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| COVID-19 cases in Germany per county        | <https://raw.githubusercontent.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland/main/COVID-19-Faelle_7-Tage-Inzidenz_Landkreise.csv>    |
-| COVID-19 cases in Germany per federal state | <https://raw.githubusercontent.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland/main/COVID-19-Faelle_7-Tage-Inzidenz_Bundeslaender.csv> |
-| COVID-19 cases in Germany without startification                  | <https://raw.githubusercontent.com/robert-koch-institut/COVID-19_7-Tage-Inzidenz_in_Deutschland/main/COVID-19-Faelle_7-Tage-Inzidenz_Deutschland.csv>   |
+In den als .tsv bereitgestellten Metadaten sind die in folgender Tabelle aufgeführte Variablen als Spalten enthalten. Zentral für die Verknüpfung der Metadaten mit den Genomsequenzen ist die SEQUENCE.ID, die in allen drei Daten enthalten ist.  
 
-After the transformation, the data has the following structure:
 
-| Column   | Datatype | Description                                                                                                                       |
-| - | --------------------- |--------------------------------------------------- |
-| value    | integer | Number of reported COVID-19 cases                                                                                       |
-| target   | string | Reporting date (yyyy-mm-dd)                                                                                                        |
-| location | string |The five-digit community identification code for counties, two-digit code for federal countries, and a 0 for the whole of Germany |
+| Variable | Typ | Ausprägungen/Beispiel | Beschreibung |
+| -------- | --- | ------------- | ------------ | 
+| igs_id | String | `IGS-10099-CVDP-01A2C74B-54A8-47B1-B7E4-6562C6231234`| Ein eindeutiger Identifikator der Sequenzdaten und Metadaten zusammenführt. Dieser Identifikator wird als Teil der FASTA ID in den Sequenzdaten genutzt| Text |  
+| date_of_sampling |  Datetime  |  `YYYY-MM-DDThh:mm:ss` | Datum der Probeentnahme im ISO 8601 Format without timezones|  
+| sequencing_platform |  String  | siehe [ena](https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html#permitted-values-for-platform) | Die verwendete Sequenzierungs-Plattform auf Basis der von ENA zugelassenen Ontologie |)|  
+| sequencing_reason |  String | `random`,`requested`,`clinical`,`other` | Grund für die Durchführung der Sequenzierung `random`: Die Probe  wurde randomisiert genommen. `requested`: Die Probe wurde aufgrund von Bedenken/Verdacht auf eine neue Variante oder Vergleichbares genommen. `clinical`: Die Probe kommt aus einem klinischem Umfeld. `other`: Der Grund it keiner der oben genannten.|
+| isolation_source|  String |   | [DEMIS Vokabular](https://simplifier.net/rki.demis.laboratory/materialcvdp) |  
+| lab_sequence_id | String | |Vom Labor genutzte FASTA ID in verschlüsselter Form|  
+| date_of_submission |Datetime| `YYYY-MM-DDThh:mm:ss` | Datum des Eingangs des Genoms am RKI im ISO 8601 Format without timezones |
+| version|Integer|  `1`  |  Version der Sequenz startend mit 0  |
+| prime_diagnostic_lab.demis_lab_id |String|  `DEMIS-10099`  | Identifikationsnummer  des primärdiagnostischen Labors|
+| prime_diagnostic_lab.postal_code|String|`50858`|Postleitzahl des primärdiagnostischen Labors|
+| sequencing_lab.demis_lab_id |String|  `DEMIS-10099`  | Identifikationsnummer  des sequenzierenden Labors|
+| sequencing_lab.postal_code |String|`50858`|Postleitzahl des sequenzierenden Labors|
+| lineages	|JSON Blob|   `[{'method': 'PANGOLIN_LATEST', 'classification_version': 'PUSHER-v1.28.1', 'tool_version': '4.3', 'lineage': 'BA.2', '@qc_notes': 'Ambiguous_content:0.02', '@is_designated': False, '@qc_status': 'pass', '@conflict': 0.0, '@note': 'Usher placements: BA.2(1/1)'}]`  |  Pangolin Zuordnung |
 
-### Formatting
+#### Formatierung der Sequenzmetadaten  
 
-Data is downloaded as a comma-separated .csv file. The character encoding is UTF-8. Values are separated by ",".
+Die Sequenzmetadaten werden als [xz-komprimierte](https://en.wikipedia.org/wiki/XZ_Utils), kommaseparierte .csv-Datei bereitgestellt. Daraus ergibt sich die Dateiendung .csv.xz. Der verwendete Zeichensatz der .csv-Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Komma ",". Datumsangaben sind im ISO-8601-Standard formatiert.  
 
-## Metadata
+* Zeichensatz: UTF-8  
+* Datumsformat: ISO 8601  
+* Komprimierung: [.xz](https://en.wikipedia.org/wiki/XZ_Utils)  
+* Enthaltenes Dateiformat: .tsv  
+* .csv-Trennzeichen: Tab "\t"  
 
-To increase findability, the provided repository is described with metadata. The metadata is distributed to the relevant platforms via GitHub Actions.
-Versioning and DOI assignment are performed via [Zenodo.org](https://zenodo.org). The metadata prepared for import into Zenodo are stored in the [zenodo.json](https://github.com/robert-koch-institut/epylabel/blob/main/metadata/zenodo.json). Documentation of the individual metadata variables can be found at <https://developers.zenodo.org/representation>.
+Die Dateien können auf gängigen Betriebssystemen, beispielsweise mit den Programmen [7zip](https://www.7-zip.org/) oder [XZ Utils](https://tukaani.org/xz/), entpackt werden. Die Komprimierung wird vorgenommen, da insbesondere die .fasta-Dateien mehrere Gigabyte (GB) groß sind.   
 
-> [metadata/zenodo.json](https://github.com/robert-koch-institut/epylabel/blob/main/metadata/zenodo.json)
 
-## Collaborate
+### Metadaten
 
-If you want to participate in our project, feel free to fork this repo and send us pull requests. To make sure everything is working please use pre-commit. It will run a few tests and lints before a commit can be made. To install pre-commit, run
+Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadaten-Ordner hinterlegt:
 
-``pre-commit install``
+> [Metadaten/](/Metadaten/) 
 
-## Guidelines for Reuse of the Code
+Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](http://Zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.   
 
-Open source code from the RKI is available on [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/) and [OpenCoDE](https://gitlab.opencode.de):
+> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/zenodo.json)  
 
-- <https://zenodo.org/communities/robertkochinstitut>
-- <https://github.com/robert-koch-institut>
-- <https://gitlab.opencode.de/robert-koch-institut>
+In der zenodo.json ist neben der Publikationsdatum (`"publication_date"`) auch der Datenstand enthalten:
+```
+  "dates": [
+    {
+      "start": "2023-09-11T15:00:21+02:00",
+      "end": "2023-09-11T15:00:21+02:00",
+      "type": "Collected",
+      "description": "Date when the Dataset was created"
+    }
+  ],
+```    
 
-### License
+## Hinweise zur Nachnutzung der Daten  
 
-The "Epylabel: Ensemble-labeling of infectious diseases time series" code is licensed under the [MIT License](https://mit-license.org/).  
+Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:
 
-The code provided in the repository is freely available, with the condition of attributing the Robert Koch Institute as the source, for anyone to process and modify, create derivatives of the dataset and use them for commercial and non-commercial purposes.  
-Further information about the license can be found in the [LICENSE](https://github.com/robert-koch-institut/epylabel/blob/main/LICENSE) file of the dataset.
+- https://zenodo.org/communities/robertkochinstitut
+- https://github.com/robert-koch-institut
+- https://gitlab.opencode.de/robert-koch-institut
+- https://edoc.rki.de/  
+    
+    
+### Lizenz  
+
+Der Datensatz "SARS-CoV-2-Sequenzdaten aus Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY ](https://creativecommons.org/licenses/by/4.0/deed.de).    
+
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/LIZENZ) Datei des Datensatzes.
