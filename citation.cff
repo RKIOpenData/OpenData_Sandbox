@@ -5,7 +5,7 @@ abstract: >-
   This repository contains the code for the manuscript Ensemble-labeling of
   infectious diseases time series to evaluate early warning systems with which
   you can reproduce the manuscript's results and figures.
-date-released: '2024-07-19'
+date-released: '2024-09-09'
 keywords:
   - COVID-19
   - SARS-CoV-2
@@ -23,7 +23,7 @@ keywords:
 message: Cite me!
 url: https://robert-koch-institut.github.io/epylabel
 license: CC-BY-4.0
-doi: 10.5072/zenodo.90153
+doi: 10.5072/zenodo.107688
 version: '2024-03-19T10:00:00+01:00'
 authors:
   - family-names: Hicketier
