@@ -58,7 +58,7 @@
     {
       "relation": "isSupplementTo",
       "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
-      "resource_type": "dataset"
+      "resource_type": "publication-report"
     },
     {
       "relation": "isDocumentedBy",
