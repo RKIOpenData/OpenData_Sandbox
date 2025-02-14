@@ -16,9 +16,9 @@
     "Open Data",
     "Offen Daten"
   ],
-  "publication_date": "2025-01-23",
+  "publication_date": "2025-02-10",
   "version": "2024-03-19",
-  "upload_type": "dataset",
+  "upload_type": "software",
   "access_right": "open",
   "license": "CC-BY-4.0",
   "language": "deu",
@@ -57,7 +57,7 @@
     {
       "relation": "isSupplementTo",
       "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
-      "resource_type": "dataset"
+      "resource_type": "software"
     },
     {
       "relation": "isDocumentedBy",
