@@ -12,7 +12,7 @@ Nordufer 20
 
 **Zitieren**  
 <!-- CITATION_START: {"citation_style": "apa"} -->
-Name, V. (2024). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/Currently/no/DOI/available](https://doi.org/Currently/no/DOI/available)
+Name, V. (2025). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.166598](https://doi.org/10.5072/zenodo.166598)
 <!-- CITATION_END -->
 
  
@@ -109,61 +109,32 @@ Die Sequenzmetadaten werden in der "SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz" 
 
 #### Variablen und Werte  
 
-<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "SARS-CoV-2-Sequenzdaten_Deutschland", "lang": "de"} -->
 
-Die Datei [SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_SARS-CoV-2-Sequenzdaten_Deutschland.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/schemas/tableschema_SARS-CoV-2-Sequenzdaten_Deutschland.json) hinterlegt:
-> [tableschema_SARS-CoV-2-Sequenzdaten_Deutschland.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/schemas/tableschema_SARS-CoV-2-Sequenzdaten_Deutschland.json)
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Sandbox_Data", "lang": "de"} -->
+
+Die Datei [Sandbox_Data.tsv](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Sandbox_Data.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_Sandbox_Data.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.json) hinterlegt:
+> [tableschema_Sandbox_Data.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.json)
 
 <!-- DATA_SCHEMA_TABLE_START -->
-| Variable                              | Typ     | Ausprägungen                                                                                                                                                                                                                                                                      | Beschreibung                                                                                                                                                                                                                                                                                                              |
-|:--------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| igs_id                                | string  | Beispiel: `IGS-10099-CVDP-01A2C74B-54A8-4`<br>`7B1-B7E4-6562C6231234`                                                                                                                                                                                                             | Ein eindeutiger Identifikator der Sequenzdaten und Metadaten zusammenführt. Dieser Identifikator wird als Teil der FASTA ID in den Sequenzdaten genutzt.                                                                                                                                                                  |
-| date_of_sampling                      | date    | Format: `YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                     | Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone                                                                                                                                                                                                                                                                  |
-| sequencing_platform                   | string  | Beispiel: `ILLUMINA`                                                                                                                                                                                                                                                              | Die verwendete Sequenzierungs-Plattform auf Basis der von ENA zugelassenen Ontologie (siehe [ena](https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html#permitted-values-for-platform)).                                                                                                                  |
-| sequencing_reason                     | string  | Werte: `random`, `requested`, `clinical`, `other`                                                                                                                                                                                                                                 | Grund für die Durchführung der Sequenzierung `random`: Die Probe  wurde randomisiert genommen. `requested`: Die Probe wurde aufgrund von Bedenken/Verdacht auf eine neue Variante oder Vergleichbares genommen. `clinical`: Die Probe kommt aus einem klinischem Umfeld. `other`: Der Grund it keiner der oben genannten. |
-| isolation_source                      | string  | Beispiel: `Nasopharyngeal swab (specimen)`                                                                                                                                                                                                                                        | [DEMIS Vokabular](https://simplifier.net/rki.demis.laboratory/materialcvdp)                                                                                                                                                                                                                                               |
-| lab_sequence_id                       | string  | Beispiel: `873a7cc28d29e3f17b0544ea6e9e84`<br>`36defe32f6d60649159ee8ac78d414`<br>`7ac9`                                                                                                                                                                                          | Vom Labor genutzte FASTA ID in verschlüsselter Form                                                                                                                                                                                                                                                                       |
-| date_of_submission                    | date    | Format: `YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                     | Datum des Eingangs des Genoms am RKI im ISO 8601 Format ohne Zeitzone                                                                                                                                                                                                                                                     |
-| version                               | integer | Werte: `≥0`                                                                                                                                                                                                                                                                       | Version der Sequenz startend mit 0                                                                                                                                                                                                                                                                                        |
-| prime_diagnostic_lab.demis_lab_<br>id | string  | Beispiel: `DEMIS-10099`                                                                                                                                                                                                                                                           | Identifikationsnummer  des primärdiagnostischen Labors                                                                                                                                                                                                                                                                    |
-| prime_diagnostic_lab.postal_<br>code  | string  | Beispiel: `50858`                                                                                                                                                                                                                                                                 | Postleitzahl des primärdiagnostischen Labors                                                                                                                                                                                                                                                                              |
-| sequencing_lab.demis_lab_id           | string  | Beispiel: `DEMIS-10099`                                                                                                                                                                                                                                                           | Identifikationsnummer  des sequenzierenden Labors                                                                                                                                                                                                                                                                         |
-| sequencing_lab.postal_code            | string  | Beispiel: `50858`                                                                                                                                                                                                                                                                 | Postleitzahl des sequenzierenden Labors                                                                                                                                                                                                                                                                                   |
-| lineages                              | string  | Beispiel: `[{'method': 'PANGOLIN_LATEST', 'classification_version': 'PUSHER-v1.28.1', 'tool_version': '4.3', 'lineage': 'BA.2', '@qc_notes': 'Ambiguous_content:0.02', '@is_designated': False, '@qc_status': 'pass', '@conflict': 0.0, '@note': 'Usher placements: BA.2(1/1)'}]` | Pangolin Zuordnung im JSON-Format                                                                                                                                                                                                                                                                                         |
+| Variable   | Typ     | Ausprägungen   | Beschreibung       |
+|:-----------|:--------|:---------------|:-------------------|
+| A          | integer | Werte: `1`     | Dataset Variable A |
+| B          | number  | Werte: `1`     | Dataset Variable B |
 
 <!-- DATA_SCHEMA_TABLE_END -->
 
 <!-- DATA_SCHEMA_SPECIFICATION_END -->
 
-<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "SARS-CoV-2-Entwicklungslinien_berichtet", "lang": "de"} -->
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Sandbox_Data_lfs", "lang": "de"} -->
 
-Die Datei [SARS-CoV-2-Entwicklungslinien_berichtet.tsv](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/SARS-CoV-2-Entwicklungslinien_berichtet.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_SARS-CoV-2-Entwicklungslinien_berichtet.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/schemas/tableschema_SARS-CoV-2-Entwicklungslinien_berichtet.json) hinterlegt:
-> [tableschema_SARS-CoV-2-Entwicklungslinien_berichtet.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/schemas/tableschema_SARS-CoV-2-Entwicklungslinien_berichtet.json)
-
-<!-- DATA_SCHEMA_TABLE_START -->
-| Variable              | Typ    | Ausprägungen          | Beschreibung                                                                  |
-|:----------------------|:-------|:----------------------|:------------------------------------------------------------------------------|
-| LINEAGE               | string | Beispiel: `JN.1`      | Zugewiesene Pangolin Lineage                                                  |
-| WHO_LABEL             | string | Beispiel: `Omikron`   | Name der Virusvariante, der  von der World Health Organisation vergeben wurde |
-| CONTRIBUTING_LINEAGES | string | Beispiel: `JN.1.1.10` | Pangolin Lineages, die von der Lineage abstammen                              |
-
-<!-- DATA_SCHEMA_TABLE_END -->
-
-<!-- DATA_SCHEMA_SPECIFICATION_END -->
-
-<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "SARS-CoV-2-Entwicklungslinien_zu_Varianten", "lang": "de"} -->
-
-Die Datei [SARS-CoV-2-Entwicklungslinien_zu_Varianten.tsv](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/SARS-CoV-2-Entwicklungslinien_zu_Varianten.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_SARS-CoV-2-Entwicklungslinien_zu_Varianten.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/schemas/tableschema_SARS-CoV-2-Entwicklungslinien_zu_Varianten.json) hinterlegt:
-> [tableschema_SARS-CoV-2-Entwicklungslinien_zu_Varianten.json](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/Metadaten/schemas/tableschema_SARS-CoV-2-Entwicklungslinien_zu_Varianten.json)
+Die Datei [Sandbox_Data_lfs.tsv](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Sandbox_Data_lfs.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_Sandbox_Data_lfs.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.json) hinterlegt:
+> [tableschema_Sandbox_Data_lfs.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.json)
 
 <!-- DATA_SCHEMA_TABLE_START -->
-| Variable              | Typ    | Ausprägungen        | Beschreibung                                                                            |
-|:----------------------|:-------|:--------------------|:----------------------------------------------------------------------------------------|
-| LINEAGE               | string | Beispiel: `BA.2`    | Zugewiesene Pangolin Lineage                                                            |
-| WHO_LABEL             | string | Beispiel: `Omikron` | Name der Virusvariante, der  von der World Health Organisation vergeben wurde           |
-| CONTRIBUTING_LINEAGES | string | Beispiel: `JN.13.1` | Pangolin Lineages, die von der Lineage abstammen                                        |
-| COLOR                 | any    |                     | Veraltete Variable. Ist nicht mehr relevant und wird persepektivisch entfernt.          |
-| variant_category      | string | Werte: `VOC`, `VOI` | WHO Einstufung der Variante als VOC (variant of concern) oder VOI (variant of interest) |
+| Variable   | Typ     | Ausprägungen   | Beschreibung       |
+|:-----------|:--------|:---------------|:-------------------|
+| A          | integer | Werte: `1`     | Dataset Variable A |
+| B          | number  | Werte: `1`     | Dataset Variable B |
 
 <!-- DATA_SCHEMA_TABLE_END -->
 
