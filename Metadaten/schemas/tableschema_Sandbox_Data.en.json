@@ -1,0 +1,22 @@
+{
+    "fields": [
+      {
+        "name": "A",
+        "type": "integer",
+        "description": "Dataset Variable A",
+        "constraints": {
+            "minimum": 1,
+            "maximum": 1
+        }
+      },
+      {
+        "name": "B",
+        "type": "number",
+        "description": "Dataset Variable B",
+        "constraints": {
+            "minimum": 1,
+            "maximum": 1
+        }
+      }
+    ]
+}

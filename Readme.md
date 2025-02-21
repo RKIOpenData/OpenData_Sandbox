@@ -1,5 +1,6 @@
 Datensatzdokumentation  
-# SARS-CoV-2-Sequenzdaten aus Deutschland  
+# OpenData_Sandbox: Testdokumentation 
+
 <br>
 
 [**Robert Koch-Institut | RKI**](https://rki.de)  
@@ -15,97 +16,54 @@ Nordufer 20
 Name, V. (2025). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.166598](https://doi.org/10.5072/zenodo.166598)
 <!-- CITATION_END -->
 
- 
-<!-- TOC_START: {"heading_depth": "2"} -->
+
+**Inhaltsverzeichnis**   
+
+<!-- TOC_START: {"heading_depth": 2} -->
+- [OpenData_Sandbox: Testdokumentation](#opendata_sandbox:-testdokumentation)
+  - [Beispieltext](#beispieltext)
+  - [Hinweise zur Nachnutzung der Daten](#hinweise-zur-nachnutzung-der-daten)
+  - [Appendix](#appendix)
+- [OpenData_Sandbox: Test documentation](#opendata_sandbox:-test-documentation)
+  - [Example text](#example-text)
+  - [Guidelines for Reuse of the Data](#guidelines-for-reuse-of-the-data)
+  - [Appendix](#appendix)
 <!-- TOC_END -->
 
-## Informationen zum Datensatz und Entstehungskontext  
+## Beispieltext 
 
-Ein zentraler Bestandteil einer erfolgreichen Erregersurveillance ist das Verständnis der Verbreitung eines Erregers sowie seiner pathogenen Eigenschaften. Hierbei stellt das Wissen über das Erregergenom eine wichtige Informationsquelle dar. So erlaubt der Nachweis von Mutationen im Genom eines Erregers, Verwandtschaftsbeziehungen zu rekonstruieren, Übertragungswege aufzudecken und Resistenzen vorherzusagen. Die Integrierte Genomische Surveillance (IGS) von SARS-CoV-2 zielt darauf ab, die Verbreitung des Virus und insbesondere von besorgniserregenden Virusvarianten in der Bevölkerung zu überwachen sowie auftretende Veränderungen des Virus genau zu beobachten. Besondere Bedeutung kommt dabei der öffentlichen Bereitstellung der genomischen Daten zu, um Wissenschaftlern in Deutschland und weltweit die Möglichkeit zu eigenständigen Analysen zu eröffnen.  
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
 
-Im Rahmen der [Coronavirus-Surveillanceverordnung](https://www.gesetze-im-internet.de/corsurv/BJNR601910021.html) wurden bis zum 31.05.2023 [SARS-CoV-2 Sequenzdaten aus ganz Deutschland über den Deutschen Elektronischen Sequenzdaten-Hub (DESH) an das RKI übermittelt](https://doi.org/10.5281/zenodo.7992536). Mit Ablauf der Verordnung werden künftig Proben durch das IMSSC2 Labornetzwerk bereitgestellt und am RKI sequenziert, analysiert und hier bereitgestellt. Trotz reduzierter  Probenanzahl, wird durch die sorgfältige Auswahl der beteiligten Labore ein repräsentativer Einblick in die Viruspopluation gesichert ([Djin Ye Oh  *et al.* **2022**)](https://doi.org/10.1093/cid/ciac399). Zusätzlich werden Sequenzen vom NRZ Coronaviren an der Charité beigetragen um das IMSSC2 Netzwerk zu ergänzen. 
+Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
  
-### Administrative und organisatorische Angaben
+### Formatierungstests
 
-Der Datensatz "SARS-CoV-2-Sequenzdaten aus Deutschland" wird vom [Robert Koch-Institut](https://rki.de) für Forschungsarbeiten im Zusammenhang mit der SARS-CoV-2-Surveillance im IGS Projekt bereitgestellt.  
+#### Links
+Link: [Robert Koch-Institut](https://rki.de) 
 
-Die Datenerhebung am RKI erfolgt mit Ablauf der Coronavirus-Surveillanceverordnung über das IMSSC2 Labornetzwerk unter der Leitung von [FG 17 | Influenzaviren und weitere Viren des Respirationstraktes](https://www.rki.de/DE/Institut/Organisation/Abteilungen/Abteilung-1/FG17/fg17-influenzaviren-und-weitere-viren-des-respirationstraktes-node.html) und durch das [Nationale Referenzzentrum für Coronaviren](https://virologie-ccm.charite.de/diagnostik/konsiliarlaboratorium_fuer_coronaviren/).  
+#### Email
+Email: [OpenData@rki.de](mailto:opendata@rki.de)
 
-Im Rahmen des IGS Projektes werden die produzierten Daten von [MF1 | Genome Competence Centre](https://www.rki.de/EN/Content/Institute/DepartmentsUnits/MF/MF1/mf1_node.html) bioinformatisch analysiert. Fragen bezüglich des Projektes können am besten an [IGS@rki.de](mailto:IGS@rki.de) gerichtet werden.  
+#### Aufzählungen
 
-Die Koordinierung und Meldedatenerfassung wird von [FG 36 | Respiratorisch übertragbare Erkrankungen](https://www.rki.de/DE/Institut/Organisation/Abteilungen/Abteilung-3/FG36/fg36-respiratorisch-uebertragbare-erkrankungen-node.html) durchgeführt.  
+* Punkt 1  
+* Punkt 2
 
-Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Institut/Organisation/Abteilungen/MFI/MF4/mf4-fach-und-forschungsdatenmanagement-node.html) des RKI. Fragen zum Datenmanagement können an das Open Data Team des Fachgebiets MF4 gerichtet werden ([OpenData@rki.de](mailto:opendata@rki.de)).   
-
-
-### Datenerhebung  
-
-Das IMSSC2 Labornetzwerk besteht aus ~20 labormedizinischen Einrichtungen in 13 Bundesländern, die wöchentlich zufällig ausgewähltes SARS-CoV-2-positives Probenmaterial ans RKI senden. Hier erfolgt eine Ganzgenomsequenzierung sowie weiterführende phylogenetische und genombiologische Analysen, die eine Identifizierung der häufigsten in Deutschland zirkulierenden SARS-CoV-2 Linien ermöglicht. Die Ergebnisse werden auf der Webseite des RKI und in Fachzeitschriften zeitnah publiziert und tragen zur Bewertung der aktuellen epidemiologischen Lage von COVID-19 bei. Erweitert werden die IMSSC2 Daten durch Sequenzen, die durch das Nationales Konsiliarlaboratorium für Coronaviren erhoben werden. Die Daten aus beiden Quellen werden über GitHub und andere öffentliche Datenbanken der Öffentlichkeit zur Verfügung gestellt. Ebenfalls im Datensatz enthalten sind SARS-CoV-2 Sequenzdaten aus ganz Deutschland die bis zum 31.05.2023 über den [Deutschen Elektronischen Sequenzdaten-Hub (DESH)](https://doi.org/10.5281/zenodo.7992536) an das RKI übermittelt wurden.   
-
-### Zuordnung von Viruslinien basierend auf Pangolin
-
-Die Zuordnung bekannter Viruslinien zu den erhobenen Sequenzen erfolgt mittels [Pangolin](https://github.com/cov-lineages/pangolin). Mit Erscheinen einer neuen Version oder aktualisierter Liniendefinitionen von [Pangolin](https://github.com/cov-lineages/pangolin) erfolgt eine Neuzuordnung der Linieninformation für die gesamte Sequenzkollektion den gesamten Sequenzdatensatz. Die Informationen über die Lineage und die genutzte Pangolin Version befindet sich für jede Sequenz in den Metadaten.   
-
-Die bereitgestellten Informationen zu den Viruslinien entsprechen dem aktuellen [PANGOLIN Lineage Format](https://cov-lineages.org/resources/pangolin/output.html). Nur die Spalte "Taxon" wurde zur einfacherer Nachnutzung in SEQUENCE.ID umbenannt. Zentral für die Verknüpfung der Entwicklungslinien mit den weiteren Daten ist die SEQUENCE.ID, die in allen drei Daten enthalten ist. [PANGOLIN Lineage Format](https://cov-lineages.org/resources/pangolin/output.html) ist bei Widersprüchen authoritativ.  
-
-### Qualitätsmanagement  
-
-Die Daten, die durch DESH erhoben wurden, durchliefen die Qualitätskontrolle (QC) der IGS am RKI nach veröffentlichten Kriterien (siehe: [rki.de - DESH Qualitaetskriterien.pdf](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/DESH/Qualitaetskriterien.pdf?__blob=publicationFile)). Zusätzlich wird für alle Sequenzen, inklusive IMSSC2 Proben, eine bioinformatische QC der Sequenz mit [PRESIDENT: PaiRwisE Sequence IDENtiTy](https://github.com/hoelzer-lab/president) durchgeführt mit einen Identitäts-Grenzwert von 70% und einen N-Grenzwert von 20%. Die Metadaten-QC überprüft die Metadaten auf fehlerhafte Daten und Eingaben, die die weitere Verarbeitung beeinflussen würden.
-Bei nicht bestehen der QC für Metadaten oder Sequenzdaten werden diese Daten nicht öffentlich  bereitgestellt, um die hohe Qualität des öffentlichen Datensatzes zu gewährleisten.  
-
-## Aufbau und Inhalt des Datensatzes
-
-Der Datensatz umfasst genomische Sequenzen von SARS-CoV-2-Isolaten aus ganz Deutschland und zugehörige Metadaten. Im Datensatz enthalten sind:  
-
-* [übermittelte SARS-CoV-2-Genomsequenzen](#struktur-der-sequenzdaten)  
-* [Metadaten zu den SARS-CoV-2-Genomsequenzen](#variablen-und-variablenausprägungen-metadaten)  
-* Lizenz mit der Nutzungslizenz des Datensatzes  
-* Metadaten Datei zum Import in Zenodo  
-* Informationen über VOCs und VOIs   
-* Liste von relevanten Lineages   
+1. Punkt 1
+2. Punkt 2
 
 
-### SARS-CoV-2-Sequenzdaten 
+#### Mathematische Formeln
 
-Die SARS-CoV-2-Sequenzdaten werden im Hauptverzeichnis unter "SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz" bereitgestellt.   
+##### Block
 
->[SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/SARS-CoV-2-Sequenzdaten_Deutschland.fasta.xz)  
- 
-#### Struktur der Sequenzdaten  
+$$ Gene_{normalisiert} = {Q_{KA\_aktuell}}/{Q_{KA\_median}} \cdot Gene_{gemittelt} $$
 
-Die bereitgestellte Datei enthält Sequenzeinträge, die nach dem FASTA-Format strukturiert sind. In diesem Format beginnt jeder Eintrag mit einer kurzen Beschreibung, auch Kopfzeile oder "description line" genannt. Diese Zeile wird durch ein ">"-Zeichen am Zeilenanfang gekennzeichnet. Nach der Kopfzeile folgt die Sequenz selbst, die eine Abfolge von Nukleinsäuren im IUB/IUPAC Format darstellt  
+##### Inline
 
-Jede Sequenz endet mit dem Beginn eines neuen Sequenzeintrages, gekennzeichnet durch eine neue Kopfzeile, oder, im Falle des letzten Sequenzeintrages, mit dem Ende der Datei.  
+- $Q_{KA\_median}$ : Median des Volumenstrom der Kläranlage  
 
-In den bereitgestellten Sequenzdaten entspricht die Kopfzeile der SEQUENCE.ID, was eine einfache Verknüpfung mit den bereitgestellten Metadaten erlaubt.  
 
-* Kopfzeile: ">\<IGS_ID\> version=\<version\> id=\<genome_id\> \<contig_index\>"
-* Nukleinsäuresequenz: IUB/IUPAC Standard  
-
-Daraus ergibt sich beispielhaft folgende Struktur einer .fasta-Datei:  
-
-```fasta=
->IGS-101XX-CVDP-XX version=1 id=939421ee-feab-4b79-9f19-6dc248e0ee89 0
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNACCAACCAACTTTCGATCTCTT...  
->IGS-101YY-CVDP-YY version=0 id=08f5d734-d135-4d2a-9680-bc5a795b2d34 0
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNACCAACTCTCGGCTGCATGCT...  
-```
-#### Komprimierung der Sequenzdaten   
-
-Die SARS-CoV-2-Sequenzdaten werden als [xz-komprimierte](https://en.wikipedia.org/wiki/XZ_Utils) [.fasta](https://en.wikipedia.org/wiki/FASTA_format) Datei bereitgestellt. Daraus ergibt sich die Dateiendung .fasta.xz. Es werden Linux Zeilenumbrüche verwendet.  
-
-* Zeichensatz: UTF-8  
-* Komprimierung: [.xz](https://en.wikipedia.org/wiki/XZ_Utils)  
-* Enthaltenes Dateiformat: [.fasta](https://de.wikipedia.org/wiki/FASTA-Format)  
-* Zeilenumbrüche: Linux Zeilenumbrüche  
-
-Die Dateien können auf gängigen Betriebssystemen, beispielsweise mit den Programmen [7zip](https://www.7-zip.org/) oder [XZ Utils](https://tukaani.org/xz/), entpackt werden. Die Komprimierung wird vorgenommen, da insbesondere die .fasta-Dateien mehrere Gigabyte (GB) groß sind.   
-
-### Sequenzmetadaten
-
-Die Sequenzmetadaten werden in der "SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz" bereitgestellt. Diese Daten enthalten ebenfalls die zugeordneten Viruslinien.  
-
->[SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz](https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland/blob/main/SARS-CoV-2-Sequenzdaten_Deutschland.tsv.xz)  
 
 #### Variablen und Werte  
 
@@ -140,18 +98,6 @@ Die Datei [Sandbox_Data_lfs.tsv](https://github.com/robert-koch-institut/OpenDat
 
 <!-- DATA_SCHEMA_SPECIFICATION_END -->
 
-
-#### Formatierung der Sequenzmetadaten  
-
-Die Sequenzmetadaten werden als [xz-komprimierte](https://en.wikipedia.org/wiki/XZ_Utils), kommaseparierte .csv-Datei bereitgestellt. Daraus ergibt sich die Dateiendung .csv.xz. Der verwendete Zeichensatz der .csv-Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Komma ",". Datumsangaben sind im ISO-8601-Standard formatiert.  
-
-* Zeichensatz: UTF-8  
-* Datumsformat: ISO 8601  
-* Komprimierung: [.xz](https://en.wikipedia.org/wiki/XZ_Utils)  
-* Enthaltenes Dateiformat: .tsv  
-* .csv-Trennzeichen: Tab "\t"  
-
-Die Dateien können auf gängigen Betriebssystemen, beispielsweise mit den Programmen [7zip](https://www.7-zip.org/) oder [XZ Utils](https://tukaani.org/xz/), entpackt werden. Die Komprimierung wird vorgenommen, da insbesondere die .fasta-Dateien mehrere Gigabyte (GB) groß sind.   
 
 <!-- FOOTER_START: {"lang": "de"} -->
 
@@ -195,3 +141,169 @@ Der Datensatz "Open Data Sandbox" ist lizenziert unter  der [Creative Commons Na
 
 Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/LIZENZ) Datei des Datensatzes.  
 <!-- FOOTER_END -->
+
+
+<!-- CUSTOM_MARKDOWN_START: {"id": "appendix"} -->
+
+## Appendix
+
+Dies ist ein Beispiel-Appendix 📂.
+<!-- CUSTOM_MARKDOWN_END -->
+
+
+
+
+
+
+Data set documentation  
+# OpenData_Sandbox: Test documentation 
+
+<br>
+
+[**Robert Koch-Institut | RKI**](https://rki.de)  
+Nordufer 20  
+13353 Berlin  
+
+<br>
+
+---
+
+**Citation**  
+<!-- CITATION_START: {"citation_style": "apa"} -->
+Name, V. (2025). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.166598](https://doi.org/10.5072/zenodo.166598)
+<!-- CITATION_END -->
+
+ **Table of contents**  
+ 
+<!-- TOC_START: {"heading_depth": 2} -->
+- [OpenData_Sandbox: Testdokumentation](#opendata_sandbox:-testdokumentation)
+  - [Beispieltext](#beispieltext)
+  - [Hinweise zur Nachnutzung der Daten](#hinweise-zur-nachnutzung-der-daten)
+  - [Appendix](#appendix)
+- [OpenData_Sandbox: Test documentation](#opendata_sandbox:-test-documentation)
+  - [Example text](#example-text)
+  - [Guidelines for Reuse of the Data](#guidelines-for-reuse-of-the-data)
+  - [Appendix](#appendix)
+<!-- TOC_END -->
+
+## Example text 
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+
+Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+ 
+### Formatting tests
+
+#### Links
+Link: [Robert Koch-Institut](https://rki.de) 
+
+#### Email
+Email: [OpenData@rki.de](mailto:opendata@rki.de)
+
+#### Bullet points
+
+* Point 1  
+* Point 2
+
+1. Point 1
+2. Point 2
+
+
+#### Mathematical formulae
+
+##### Block
+
+$$ Gene_{normalized} = {Q_{KA\_current}}/{Q_{KA\_median}} \cdot Gene_{averaged} $$
+
+##### Inline
+
+- $Q_{KA\_median}$ : Median of the volume flow of the wastewater treatment plant  
+
+
+
+#### Variables and Values 
+
+
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Sandbox_Data", "lang": "en"} -->
+
+The file [Sandbox_Data.tsv](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Sandbox_Data.tsv) contains the variables and their values shown in the following table. A machine-readable data schema is stored in [Data Package Format](https://datapackage.org/) in [tableschema_Sandbox_Data.en.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.en.json):
+> [tableschema_Sandbox_Data.en.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.en.json)
+
+<!-- DATA_SCHEMA_TABLE_START -->
+| Variable   | Type    | Characteristic   | Description        |
+|:-----------|:--------|:-----------------|:-------------------|
+| A          | integer | Values: `1`      | Dataset Variable A |
+| B          | number  | Values: `1`      | Dataset Variable B |
+
+<!-- DATA_SCHEMA_TABLE_END -->
+
+<!-- DATA_SCHEMA_SPECIFICATION_END -->
+
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Sandbox_Data_lfs", "lang": "en"} -->
+
+The file [Sandbox_Data_lfs.tsv](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Sandbox_Data_lfs.tsv) contains the variables and their values shown in the following table. A machine-readable data schema is stored in [Data Package Format](https://datapackage.org/) in [tableschema_Sandbox_Data_lfs.en.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.en.json):
+> [tableschema_Sandbox_Data_lfs.en.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.en.json)
+
+<!-- DATA_SCHEMA_TABLE_START -->
+| Variable   | Type    | Characteristic   | Description        |
+|:-----------|:--------|:-----------------|:-------------------|
+| A          | integer | Values: `1`      | Dataset Variable A |
+| B          | number  | Values: `1`      | Dataset Variable B |
+
+<!-- DATA_SCHEMA_TABLE_END -->
+
+<!-- DATA_SCHEMA_SPECIFICATION_END -->
+
+
+<!-- FOOTER_START: {"lang": "en"} -->
+
+
+### Metadata
+
+To increase findability, the provided data are described with metadata. The Metadata are distributed to the relevant platforms via GitHub Actions. There is a specific metadata file for each platform; these are stored in the metadata folder:
+
+> [Metadaten/](https://github.com/robert-koch-institut/OpenData_Sandbox/tree/main/Metadaten/)
+
+Versioning and DOI assignment are performed via [Zenodo.org](https://zenodo.org). The metadata prepared for import into Zenodo are stored in the [zenodo.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/zenodo.json). Documentation of the individual metadata variables can be found at https://developers.zenodo.org/representation.
+
+> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/zenodo.json)
+
+The zenodo.json includes the publication date and the date of the data status in the following format (example):
+```
+  "publication_date": "2024-06-19",
+  "dates": [
+    {
+      "start": "2023-09-11T15:00:21+02:00",
+      "end": "2023-09-11T15:00:21+02:00",
+      "type": "Collected",
+      "description": "Date when the Dataset was created"
+    }
+  ],
+```
+
+## Guidelines for Reuse of the Data
+
+Open data from the RKI are available on [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de), and [Edoc.rki.de](http://Edoc.rki.de/):
+
+- https://zenodo.org/communities/robertkochinstitut
+- https://github.com/robert-koch-institut
+- https://gitlab.opencode.de/robert-koch-institut
+- https://edoc.rki.de/
+
+### License
+
+The "Open Data Sandbox" dataset is licensed under the [Creative Commons Attribution 4.0 International Public License | CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en).
+
+The data provided in the dataset are freely available, with the condition of attributing the Robert Koch Institute as the source, for anyone to process and modify, create derivatives of the dataset and use them for commercial and non-commercial purposes.      
+Further information about the license can be found in the [LICENSE](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/LICENSE) or [LIZENZ](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/LIZENZ) file of the dataset.
+
+
+<!-- FOOTER_END -->
+
+
+<!-- CUSTOM_MARKDOWN_START: {"id": "appendix.en"} -->
+
+## Appendix
+
+This is an example appendix 📂.
+<!-- CUSTOM_MARKDOWN_END -->

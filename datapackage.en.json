@@ -1,0 +1,26 @@
+{
+    "name": "10.5281/zenodo.5139363",
+    "title": "OpenData_Sandbox",
+    "description": "This file gives an overview of the data provided in the dataset in Data Package Standard format (https://datapackage.org). The documented data set is available on Zenodo (https://doi.org/10.5281/zenodo.5139363) and Github (https://github.com/robert-koch-institut/SARS-CoV-2-Sequenzdaten_aus_Deutschland).",
+    "homepage": "https://doi.org/10.5281/zenodo.5139363",
+    "resources": [
+      {
+        "name": "sandbox_data",
+        "type": "table",
+        "path": "Sandbox_Data.tsv",
+        "scheme": "file",
+        "format": "tsv",
+        "mediatype": "text/csv",
+        "schema": "Metadaten/schemas/tableschema_Sandbox_Data.en.json"
+      },
+      {
+        "name": "sandbox_data_lfs",
+        "type": "table",
+        "path": "Sandbox_Data_lfs.tsv",
+        "scheme": "file",
+        "format": "tsv",
+        "mediatype": "text/csv",
+        "schema": "Metadaten/schemas/tableschema_Sandbox_Data_lfs.en.json"
+      }
+    ]
+}
