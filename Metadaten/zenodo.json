@@ -16,9 +16,10 @@
     "Open Data",
     "Offen Daten"
   ],
-  "publication_date": "2025-02-24",
+  "publication_date": "2025-02-28",
   "version": "2024-03-20",
-  "upload_type": "dataset",
+  "upload_type": "publication",
+  "publication_type": "report",
   "access_right": "open",
   "license": "CC-BY-4.0",
   "language": "deu",
@@ -57,16 +58,6 @@
     {
       "relation": "isSupplementTo",
       "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
-      "resource_type": "dataset"
-    },
-    {
-      "relation": "isDocumentedBy",
-      "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Readme.md",
-      "resource_type": "publication-report"
-    },
-    {
-      "relation": "isDocumentedBy",
-      "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/[Dokumentation]_OpenData_Sandbox.pdf",
       "resource_type": "publication-report"
     },
     {

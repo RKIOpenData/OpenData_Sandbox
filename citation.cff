@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-type: dataset
+type: software
 title: Open Data Sandbox
 abstract: >-
   Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
@@ -15,7 +15,7 @@ abstract: >-
   Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
   Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
   Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-date-released: '2025-02-24'
+date-released: '2025-02-28'
 keywords:
   - Deutschland
   - Germany
@@ -29,7 +29,7 @@ keywords:
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.173666
+doi: 10.5072/zenodo.176150
 version: '2024-03-20T10:00:00+01:00'
 authors:
   - family-names: Name
