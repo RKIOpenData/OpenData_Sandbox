@@ -1,48 +1,112 @@
 {
   "fields": [
     {
-      "name": "LINEAGE",
-      "type": "string",
-      "description": "Zugewiesene Pangolin Lineage",
+      "name": "date_and_time",
+      "type": "date",
+      "description": "Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone",
+      "format": "%Y-%m-%dT%H:%M:%S",
       "constraints": {
         "required": true
-      },
-      "example": "BA.2"
+      }
     },
     {
-      "name": "WHO_LABEL",
-      "type": "string",
-      "description": "Name der Virusvariante, der  von der World Health Organisation vergeben wurde",
+      "name": "date",
+      "type": "date",
+      "description": "Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone",
+      "format": "%Y-%m-%d",
       "constraints": {
         "required": true
-      },
-      "example": "Omikron"
+      }
     },
     {
-      "name": "CONTRIBUTING_LINEAGES",
+      "name": "week_as_date",
+      "type": "date",
+      "description": "Berichtswoche im ISO-8601 Format ohne Zeitzone",
+      "format": "%Y-%W",
+      "example": "2021-04"
+    },
+    {
+      "name": "season",
       "type": "string",
-      "description": "Pangolin Lineages, die von der Lineage abstammen",
-      "constraints": {
-        "required": true
-      },
-      "example": "JN.13.1"
+      "description": "Saison jeweils von Kalenderwoche 40 bis Kalenderwoche 39 des Folgejahres (z.B. Saison 2012/13 = 2012W40 bis\n2013W39)",
+      "example": "2012/13"
     },
     {
-      "name": "COLOR",
-      "type": "any",
-      "description": "Veraltete Variable. Ist nicht mehr relevant und wird persepektivisch entfernt."
-    },
-    {
-      "name": "variant_category",
+      "name": "text_with_fixed_set_of_possible_values",
       "type": "string",
-      "description": "WHO Einstufung der Variante als VOC (variant of concern) oder VOI (variant of interest)",
+      "description": "Mögliche Werte: `random`, `requested`, `clinical`, `unknown, other` ",
       "constraints": {
         "required": true,
         "enum": [
-          "VOC",
-          "VOI"
+          "random",
+          "requested",
+          "clinical",
+          "unknown, other"
         ]
       }
+    },
+    {
+      "name": "text_with_very_long_example",
+      "type": "string",
+      "description": "Eine Variable die eine lange ID enthält",
+      "constraints": {
+        "required": true
+      },
+      "example": "873a7cc28d29e3f17b0544ea6e9e8436defe32f6d60649159ee8ac78d4147ac9"
+    },
+    {
+      "name": "number_with_minimum",
+      "type": "number",
+      "description": "Gleitkommazahl mit inklusivem Minimum",
+      "constraints": {
+        "required": true,
+        "minimum": 2.5
+      }
+    },
+    {
+      "name": "integer_with_range",
+      "type": "integer",
+      "description": "Ganze Zahl (Zählwerte)",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 99999
+      },
+      "example": "1095"
+    },
+    {
+      "name": "integer_with_missing_values",
+      "type": "integer",
+      "description": "Ganze Zahl mit fehlenden Werten",
+      "missingValues": [
+        "NA"
+      ],
+      "constraints": {
+        "minimum": 1
+      }
+    },
+    {
+      "name": "text_with_json_example",
+      "type": "string",
+      "description": "Text mit Beispiel im JSON-Format",
+      "constraints": {
+        "required": true
+      },
+      "example": "[{'method': 'PANGOLIN_LATEST', 'classification_version': 'PUSHER-v1.28.1', 'tool_version': '4.3', 'lineage': 'BA.2', '@qc_notes': 'Ambiguous_content:0.02', '@is_designated': False, '@qc_status': 'pass', '@conflict': 0.0, '@note': 'Usher placements: BA.2(1/1)'}]"
+    },
+    {
+      "name": "unique_variable",
+      "type": "integer",
+      "description": "Jeder Wert kommt nur einmal im Datensatz vor.",
+      "constraints": {
+        "unique": true
+      }
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "description": "Link zu Ressource",
+      "example": "https://www.gbe.rki.de/DE/Themen/EinflussfaktorenAufDieGesundheit/GesundheitsUndRisikoverhalten/Alkoholkonsum/Rauschtrinken/rauschtrinken_node.html"
     }
   ]
 }

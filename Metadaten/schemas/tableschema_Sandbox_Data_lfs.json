@@ -1,112 +1,112 @@
 {
   "fields": [
     {
-      "name": "igs_id",
-      "type": "string",
-      "description": "Ein eindeutiger Identifikator der Sequenzdaten und Metadaten zusammenführt. Dieser Identifikator wird als Teil der FASTA ID in den Sequenzdaten genutzt.",
-      "constraints": {
-        "unique": true,
-        "required": true
-      },
-      "example": "IGS-10099-CVDP-01A2C74B-54A8-47B1-B7E4-6562C6231234"
-    },
-    {
-      "name": "date_of_sampling",
+      "name": "date_and_time",
       "type": "date",
       "description": "Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone",
-      "format": "%Y-%m-%dT%H:%M:%S"
-    },
-    {
-      "name": "sequencing_platform",
-      "type": "string",
-      "description": "Die verwendete Sequenzierungs-Plattform auf Basis der von ENA zugelassenen Ontologie (siehe [ena](https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html#permitted-values-for-platform)).",
-      "constraints": {
-        "required": true
-      },
-      "example": "ILLUMINA"
-    },
-    {
-      "name": "sequencing_reason",
-      "type": "string",
-      "description": "Grund für die Durchführung der Sequenzierung `random`: Die Probe  wurde randomisiert genommen. `requested`: Die Probe wurde aufgrund von Bedenken/Verdacht auf eine neue Variante oder Vergleichbares genommen. `clinical`: Die Probe kommt aus einem klinischem Umfeld. `other`: Der Grund it keiner der oben genannten.",
-      "constraints": {
-        "required": true,
-        "enum": [
-          "random",
-          "requested",
-          "clinical",
-          "other"
-        ]
-      }
-    },
-    {
-      "name": "isolation_source",
-      "type": "string",
-      "description": "[DEMIS Vokabular](https://simplifier.net/rki.demis.laboratory/materialcvdp)",
-      "example": "Nasopharyngeal swab (specimen)"
-    },
-    {
-      "name": "lab_sequence_id",
-      "type": "string",
-      "description": "Vom Labor genutzte FASTA ID in verschlüsselter Form",
-      "constraints": {
-        "required": true
-      },
-      "example": "873a7cc28d29e3f17b0544ea6e9e8436defe32f6d60649159ee8ac78d4147ac9"
-    },
-    {
-      "name": "date_of_submission",
-      "type": "date",
-      "description": "Datum des Eingangs des Genoms am RKI im ISO 8601 Format ohne Zeitzone",
       "format": "%Y-%m-%dT%H:%M:%S",
       "constraints": {
         "required": true
       }
     },
     {
-      "name": "version",
-      "type": "integer",
-      "description": "Version der Sequenz startend mit 0",
+      "name": "date",
+      "type": "date",
+      "description": "Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone",
+      "format": "%Y-%m-%d",
       "constraints": {
-        "required": true,
-        "minimum": 0
+        "required": true
       }
     },
     {
-      "name": "prime_diagnostic_lab.demis_lab_id",
-      "type": "string",
-      "description": "Identifikationsnummer  des primärdiagnostischen Labors",
-      "example": "DEMIS-10099"
+      "name": "week_as_date",
+      "type": "date",
+      "description": "Berichtswoche im ISO-8601 Format ohne Zeitzone",
+      "format": "%Y-%W",
+      "example": "2021-04"
     },
     {
-      "name": "prime_diagnostic_lab.postal_code",
+      "name": "season",
       "type": "string",
-      "description": "Postleitzahl des primärdiagnostischen Labors",
-      "example": "50858"
+      "description": "Saison jeweils von Kalenderwoche 40 bis Kalenderwoche 39 des Folgejahres (z.B. Saison 2012/13 = 2012W40 bis\n2013W39)",
+      "example": "2012/13"
     },
     {
-      "name": "sequencing_lab.demis_lab_id",
+      "name": "text_with_fixed_set_of_possible_values",
       "type": "string",
-      "description": "Identifikationsnummer  des sequenzierenden Labors",
+      "description": "Mögliche Werte: `random`, `requested`, `clinical`, `unknown, other` ",
+      "constraints": {
+        "required": true,
+        "enum": [
+          "random",
+          "requested",
+          "clinical",
+          "unknown, other"
+        ]
+      }
+    },
+    {
+      "name": "text_with_very_long_example",
+      "type": "string",
+      "description": "Eine Variable die eine lange ID enthält",
       "constraints": {
         "required": true
       },
-      "example": "DEMIS-10099"
+      "example": "873a7cc28d29e3f17b0544ea6e9e8436defe32f6d60649159ee8ac78d4147ac9"
     },
     {
-      "name": "sequencing_lab.postal_code",
-      "type": "string",
-      "description": "Postleitzahl des sequenzierenden Labors",
-      "example": "50858"
+      "name": "number_with_minimum",
+      "type": "number",
+      "description": "Gleitkommazahl mit inklusivem Minimum",
+      "constraints": {
+        "required": true,
+        "minimum": 2.5
+      }
     },
     {
-      "name": "lineages",
+      "name": "integer_with_range",
+      "type": "integer",
+      "description": "Ganze Zahl (Zählwerte)",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 99999
+      },
+      "example": "1095"
+    },
+    {
+      "name": "integer_with_missing_values",
+      "type": "integer",
+      "description": "Ganze Zahl mit fehlenden Werten",
+      "missingValues": [
+        "NA"
+      ],
+      "constraints": {
+        "minimum": 1
+      }
+    },
+    {
+      "name": "text_with_json_example",
       "type": "string",
-      "description": "Pangolin Zuordnung im JSON-Format",
+      "description": "Text mit Beispiel im JSON-Format",
       "constraints": {
         "required": true
       },
       "example": "[{'method': 'PANGOLIN_LATEST', 'classification_version': 'PUSHER-v1.28.1', 'tool_version': '4.3', 'lineage': 'BA.2', '@qc_notes': 'Ambiguous_content:0.02', '@is_designated': False, '@qc_status': 'pass', '@conflict': 0.0, '@note': 'Usher placements: BA.2(1/1)'}]"
+    },
+    {
+      "name": "unique_variable",
+      "type": "integer",
+      "description": "Jeder Wert kommt nur einmal im Datensatz vor.",
+      "constraints": {
+        "unique": true
+      }
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "description": "Link zu Ressource",
+      "example": "https://www.gbe.rki.de/DE/Themen/EinflussfaktorenAufDieGesundheit/GesundheitsUndRisikoverhalten/Alkoholkonsum/Rauschtrinken/rauschtrinken_node.html"
     }
   ]
 }

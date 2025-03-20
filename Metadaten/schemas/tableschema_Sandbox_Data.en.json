@@ -1,48 +1,112 @@
 {
   "fields": [
     {
-      "name": "LINEAGE",
-      "type": "string",
+      "name": "date_and_time",
+      "type": "date",
       "description": "",
+      "format": "%Y-%m-%dT%H:%M:%S",
       "constraints": {
         "required": true
-      },
-      "example": "BA.2"
+      }
     },
     {
-      "name": "WHO_LABEL",
-      "type": "string",
+      "name": "date",
+      "type": "date",
       "description": "",
+      "format": "%Y-%m-%d",
       "constraints": {
         "required": true
-      },
-      "example": "Omikron"
+      }
     },
     {
-      "name": "CONTRIBUTING_LINEAGES",
+      "name": "week_as_date",
+      "type": "date",
+      "description": "",
+      "format": "%Y-%W",
+      "example": "2021-04"
+    },
+    {
+      "name": "season",
       "type": "string",
       "description": "",
-      "constraints": {
-        "required": true
-      },
-      "example": "JN.13.1"
+      "example": "2012/13"
     },
     {
-      "name": "COLOR",
-      "type": "any",
-      "description": ""
-    },
-    {
-      "name": "variant_category",
+      "name": "text_with_fixed_set_of_possible_values",
       "type": "string",
       "description": "",
       "constraints": {
         "required": true,
         "enum": [
-          "VOC",
-          "VOI"
+          "random",
+          "requested",
+          "clinical",
+          "unknown, other"
         ]
       }
+    },
+    {
+      "name": "text_with_very_long_example",
+      "type": "string",
+      "description": "",
+      "constraints": {
+        "required": true
+      },
+      "example": "873a7cc28d29e3f17b0544ea6e9e8436defe32f6d60649159ee8ac78d4147ac9"
+    },
+    {
+      "name": "number_with_minimum",
+      "type": "number",
+      "description": "",
+      "constraints": {
+        "required": true,
+        "minimum": 2.5
+      }
+    },
+    {
+      "name": "integer_with_range",
+      "type": "integer",
+      "description": "",
+      "constraints": {
+        "required": true,
+        "minimum": 1,
+        "maximum": 99999
+      },
+      "example": "1095"
+    },
+    {
+      "name": "integer_with_missing_values",
+      "type": "integer",
+      "description": "",
+      "missingValues": [
+        "NA"
+      ],
+      "constraints": {
+        "minimum": 1
+      }
+    },
+    {
+      "name": "text_with_json_example",
+      "type": "string",
+      "description": "",
+      "constraints": {
+        "required": true
+      },
+      "example": "[{'method': 'PANGOLIN_LATEST', 'classification_version': 'PUSHER-v1.28.1', 'tool_version': '4.3', 'lineage': 'BA.2', '@qc_notes': 'Ambiguous_content:0.02', '@is_designated': False, '@qc_status': 'pass', '@conflict': 0.0, '@note': 'Usher placements: BA.2(1/1)'}]"
+    },
+    {
+      "name": "unique_variable",
+      "type": "integer",
+      "description": "",
+      "constraints": {
+        "unique": true
+      }
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "description": "",
+      "example": "https://www.gbe.rki.de/DE/Themen/EinflussfaktorenAufDieGesundheit/GesundheitsUndRisikoverhalten/Alkoholkonsum/Rauschtrinken/rauschtrinken_node.html"
     }
   ]
 }
