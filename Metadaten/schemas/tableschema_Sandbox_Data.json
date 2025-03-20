@@ -69,7 +69,7 @@
       "description": "Ganze Zahl (Zählwerte)",
       "constraints": {
         "required": true,
-        "minimum": 1,
+        "minimum": 0,
         "maximum": 99999
       },
       "example": "1095"
@@ -82,7 +82,7 @@
         "NA"
       ],
       "constraints": {
-        "minimum": 1
+        "minimum": -1
       }
     },
     {
