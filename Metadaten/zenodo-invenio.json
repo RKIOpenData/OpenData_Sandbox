@@ -20,8 +20,7 @@
       },
       "affiliations": [
         {
-          "name": "Robert Koch-Institut",
-          "id": "01k5qnb77"
+          "name": "Robert-Koch Institut"
         }
       ]
     }
@@ -75,6 +74,9 @@
     },
     {
       "subject": "Offen Daten"
+    },
+    {
+      "subject": "Gesundheitsförderung"
     }
   ],
   "custom_fields": {

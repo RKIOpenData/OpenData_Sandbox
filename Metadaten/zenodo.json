@@ -4,7 +4,7 @@
   "creators": [
     {
       "name": "Name, Vorname",
-      "affiliation": "Robert Koch-Institut",
+      "affiliation": "Robert-Koch Institut",
       "orcid": "0000-0002-2818-3641"
     }
   ],
@@ -14,7 +14,8 @@
     "Germany",
     "RKI",
     "Open Data",
-    "Offen Daten"
+    "Offen Daten",
+    "Gesundheitsförderung"
   ],
   "publication_date": "2025-05-02",
   "version": "2024-03-20",
