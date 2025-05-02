@@ -30,10 +30,10 @@ keywords:
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.213183
+doi: 10.5072/zenodo.213184
 version: '2024-03-20T10:00:00+01:00'
 authors:
   - family-names: Name
     given-names: Vorname
-    affiliation: Robert-Koch Institut
+    affiliation: Robert Koch-Institut
     orcid: 0000-0002-2818-3641
