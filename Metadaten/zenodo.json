@@ -17,11 +17,11 @@
     "Offen Daten",
     "Gesundheitsförderung"
   ],
-  "publication_date": "2025-05-02",
+  "publication_date": "2025-05-14",
   "version": "2024-03-20",
-  "upload_type": "dataset",
+  "upload_type": "software",
   "access_right": "open",
-  "license": "CC-BY-4.0",
+  "license": "MIT",
   "language": "deu",
   "communities": [
     {
@@ -58,7 +58,7 @@
     {
       "relation": "isSupplementTo",
       "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
-      "resource_type": "dataset"
+      "resource_type": "software"
     },
     {
       "relation": "isDescribedBy",
