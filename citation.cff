@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-type: software
+type: dataset
 title: Open Data Sandbox
 abstract: >-
   Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
@@ -29,8 +29,8 @@ keywords:
   - Gesundheitsförderung
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
-license: MIT
-doi: 10.5072/zenodo.248832
+license: CC-BY-4.0
+doi: 10.5072/zenodo.248868
 version: '2024-03-20T10:00:00+01:00'
 authors:
   - family-names: Name
