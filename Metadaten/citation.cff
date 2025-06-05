@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+type: dataset
+title: Open Data Sandbox
+abstract: >-
+  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+  Lorem Ipsum Lorem Ipsum Lorem Ipsum.
+date-released: '2025-06-05'
+keywords:
+  - Deutschland
+  - Germany
+  - RKI
+  - Open Data
+  - Offen Daten
+  - Gesundheitsberichterstattung
+  - Epidemiologie
+  - Public health surveillance
+  - Epidemiology
+  - Gesundheitsförderung
+message: Cite me!
+url: https://www.github.io/RKIOpenData/OpenData_Sandbox
+license: CC-BY-4.0
+doi: 10.5072/zenodo.266062
+version: '2024-03-20T10:00:00+01:00'
+authors:
+  - family-names: Name
+    given-names: Vorname
+    affiliation: Robert Koch-Institut
+    orcid: 0000-0002-2818-3641
