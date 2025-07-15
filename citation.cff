@@ -30,8 +30,8 @@ keywords:
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.290099
-version: v0.0.10
+doi: 10.5072/zenodo.290100
+version: v0.0.11
 authors:
   - name: AKTIN-Notaufnahmeregister
   - name: Robert Koch-Institut
