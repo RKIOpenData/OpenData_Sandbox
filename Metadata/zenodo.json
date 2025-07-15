@@ -9,6 +9,11 @@
     {
       "name": "Robert Koch-Institut",
       "affiliation": "Robert Koch-Institut"
+    },
+    {
+      "name": "Schranz, Madlen",
+      "affiliation": "Robert Koch-Institut",
+      "orcid": "0000-0002-2426-5770"
     }
   ],
   "contributors": [
@@ -41,12 +46,6 @@
       "affiliation": "Universitätsklinik RWTH Aachen",
       "type": "Researcher",
       "orcid": "0000-0001-9745-8576"
-    },
-    {
-      "name": "Schranz, Madlen",
-      "affiliation": "Robert Koch-Institut",
-      "type": "Researcher",
-      "orcid": "0000-0002-2426-5770"
     },
     {
       "name": "Kocher, Theresa",

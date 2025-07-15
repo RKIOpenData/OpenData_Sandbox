@@ -17,6 +17,25 @@
         "type": "organizational",
         "name": "Robert Koch-Institut"
       }
+    },
+    {
+      "person_or_org": {
+        "type": "personal",
+        "family_name": "Schranz",
+        "given_name": "Madlen",
+        "identifiers": [
+          {
+            "scheme": "orcid",
+            "identifier": "0000-0002-2426-5770"
+          }
+        ]
+      },
+      "affiliations": [
+        {
+          "name": "Robert Koch-Institut",
+          "id": "01k5qnb77"
+        }
+      ]
     }
   ],
   "contributors": [
@@ -119,28 +138,6 @@
       "affiliations": [
         {
           "name": "Universitätsklinik RWTH Aachen"
-        }
-      ],
-      "role": {
-        "id": "researcher"
-      }
-    },
-    {
-      "person_or_org": {
-        "type": "personal",
-        "family_name": "Schranz",
-        "given_name": "Madlen",
-        "identifiers": [
-          {
-            "scheme": "orcid",
-            "identifier": "0000-0002-2426-5770"
-          }
-        ]
-      },
-      "affiliations": [
-        {
-          "name": "Robert Koch-Institut",
-          "id": "01k5qnb77"
         }
       ],
       "role": {

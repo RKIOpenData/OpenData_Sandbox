@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.290015",
+        "identifier": "10.5072/zenodo.290020",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
@@ -228,7 +228,7 @@
         ],
         "nameType": "Personal",
         "personal": {
-          "type": "Researcher",
+          "type": "Creator/Author",
           "givenName": "Madlen",
           "familyName": "Schranz",
           "identifiers": [
