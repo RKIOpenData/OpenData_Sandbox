@@ -11,25 +11,6 @@
         "type": "organizational",
         "name": "AKTIN-Notaufnahmeregister"
       }
-    },
-    {
-      "person_or_org": {
-        "type": "personal",
-        "family_name": "Schranz",
-        "given_name": "Madlen",
-        "identifiers": [
-          {
-            "scheme": "orcid",
-            "identifier": "0000-0002-2426-5770"
-          }
-        ]
-      },
-      "affiliations": [
-        {
-          "name": "Robert Koch-Institut",
-          "id": "01k5qnb77"
-        }
-      ]
     }
   ],
   "contributors": [
@@ -80,6 +61,15 @@
     },
     {
       "person_or_org": {
+        "type": "organizational",
+        "name": "Org-DataCollector"
+      },
+      "role": {
+        "id": "datacollector"
+      }
+    },
+    {
+      "person_or_org": {
         "type": "personal",
         "family_name": "Drynda",
         "given_name": "Susanne",
@@ -96,7 +86,7 @@
         }
       ],
       "role": {
-        "id": "researcher"
+        "id": "datacollector"
       }
     },
     {
@@ -186,6 +176,28 @@
     {
       "person_or_org": {
         "type": "personal",
+        "family_name": "Schranz",
+        "given_name": "Madlen",
+        "identifiers": [
+          {
+            "scheme": "orcid",
+            "identifier": "0000-0002-2426-5770"
+          }
+        ]
+      },
+      "affiliations": [
+        {
+          "name": "Robert Koch-Institut",
+          "id": "01k5qnb77"
+        }
+      ],
+      "role": {
+        "id": "rightsholder"
+      }
+    },
+    {
+      "person_or_org": {
+        "type": "personal",
         "family_name": "Kocher",
         "given_name": "Theresa",
         "identifiers": [
@@ -202,12 +214,12 @@
         }
       ],
       "role": {
-        "id": "researcher"
+        "id": "supervisor"
       }
     }
   ],
   "publisher": "Zenodo",
-  "version": "v0.0.13",
+  "version": "v0.0.14",
   "dates": [
     {
       "date": "2024-03-20T10:00:00+01:00",

@@ -30,11 +30,7 @@ keywords:
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.290733
-version: v0.0.13
+doi: 10.5072/zenodo.290748
+version: v0.0.14
 authors:
   - name: AKTIN-Notaufnahmeregister
-  - family-names: Schranz
-    given-names: Madlen
-    affiliation: Robert Koch-Institut | Fachgebiet 32, Robert Koch-Institut | Fachgebiet 33
-    orcid: 0000-0002-2426-5770

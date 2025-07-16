@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.290733",
+        "identifier": "10.5072/zenodo.290748",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
@@ -85,7 +85,7 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "v0.0.13"
+      "version": "v0.0.14"
     },
     "webpage": "https://www.github.io/RKIOpenData/OpenData_Sandbox",
     "contributors": [
@@ -164,12 +164,24 @@
       {
         "affiliations": [
           {
+            "name": "Org-DataCollector"
+          }
+        ],
+        "nameType": "Organisational",
+        "organisational": {
+          "name": "Org-DataCollector",
+          "type": "Data collector"
+        }
+      },
+      {
+        "affiliations": [
+          {
             "name": "Otto-von-Guericke Universität Magdeburg"
           }
         ],
         "nameType": "Personal",
         "personal": {
-          "type": "Researcher",
+          "type": "Data collector",
           "givenName": "Susanne",
           "familyName": "Drynda",
           "identifiers": [
@@ -270,7 +282,7 @@
         ],
         "nameType": "Personal",
         "personal": {
-          "type": "Creator/Author",
+          "type": "Rights holder",
           "givenName": "Madlen",
           "familyName": "Schranz",
           "identifiers": [
@@ -295,7 +307,7 @@
         ],
         "nameType": "Personal",
         "personal": {
-          "type": "Researcher",
+          "type": "Supervisor",
           "givenName": "Theresa",
           "familyName": "Kocher",
           "identifiers": [
