@@ -7,10 +7,6 @@
       "affiliation": "AKTIN-Notaufnahmeregister"
     },
     {
-      "name": "Robert Koch-Institut",
-      "affiliation": "Robert Koch-Institut"
-    },
-    {
       "name": "Schranz, Madlen",
       "affiliation": "Robert Koch-Institut",
       "orcid": "0000-0002-2426-5770"
@@ -62,8 +58,8 @@
     "Offen Daten",
     "Gesundheitsförderung"
   ],
-  "publication_date": "2025-07-15",
-  "version": "v0.0.12",
+  "publication_date": "2025-07-16",
+  "version": "v0.0.13",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "CC-BY-4.0",

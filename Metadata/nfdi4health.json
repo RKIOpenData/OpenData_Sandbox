@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.290216",
+        "identifier": "10.5072/zenodo.290733",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
@@ -85,7 +85,7 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "v0.0.12"
+      "version": "v0.0.13"
     },
     "webpage": "https://www.github.io/RKIOpenData/OpenData_Sandbox",
     "contributors": [
@@ -104,19 +104,61 @@
       {
         "affiliations": [
           {
-            "name": "Robert Koch-Institut",
-            "identifiers": [
-              {
-                "identifier": "01k5qnb77",
-                "scheme": "ROR"
-              }
-            ]
+            "name": "Org-HostingInstitution"
           }
         ],
         "nameType": "Organisational",
         "organisational": {
-          "name": "Robert Koch-Institut",
-          "type": "Creator/Author"
+          "name": "Org-HostingInstitution",
+          "type": "Hosting institution"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Org-ResearchGroup"
+          }
+        ],
+        "nameType": "Organisational",
+        "organisational": {
+          "name": "Org-ResearchGroup",
+          "type": "Research group"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Org-RightsHolder"
+          }
+        ],
+        "nameType": "Organisational",
+        "organisational": {
+          "name": "Org-RightsHolder",
+          "type": "Rights holder"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Org-Supervisor"
+          }
+        ],
+        "nameType": "Organisational",
+        "organisational": {
+          "name": "Org-Supervisor",
+          "type": "Supervisor"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Org-ProjectManager"
+          }
+        ],
+        "nameType": "Organisational",
+        "organisational": {
+          "name": "Org-ProjectManager",
+          "type": "Project manager"
         }
       },
       {

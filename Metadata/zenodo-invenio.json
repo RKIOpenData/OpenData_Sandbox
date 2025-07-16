@@ -4,18 +4,12 @@
   "resource_type": {
     "id": "dataset"
   },
-  "publication_date": "2025-07-15",
+  "publication_date": "2025-07-16",
   "creators": [
     {
       "person_or_org": {
         "type": "organizational",
         "name": "AKTIN-Notaufnahmeregister"
-      }
-    },
-    {
-      "person_or_org": {
-        "type": "organizational",
-        "name": "Robert Koch-Institut"
       }
     },
     {
@@ -39,6 +33,51 @@
     }
   ],
   "contributors": [
+    {
+      "person_or_org": {
+        "type": "organizational",
+        "name": "Org-HostingInstitution"
+      },
+      "role": {
+        "id": "hostinginstitution"
+      }
+    },
+    {
+      "person_or_org": {
+        "type": "organizational",
+        "name": "Org-ResearchGroup"
+      },
+      "role": {
+        "id": "researchgroup"
+      }
+    },
+    {
+      "person_or_org": {
+        "type": "organizational",
+        "name": "Org-RightsHolder"
+      },
+      "role": {
+        "id": "rightsholder"
+      }
+    },
+    {
+      "person_or_org": {
+        "type": "organizational",
+        "name": "Org-Supervisor"
+      },
+      "role": {
+        "id": "supervisor"
+      }
+    },
+    {
+      "person_or_org": {
+        "type": "organizational",
+        "name": "Org-ProjectManager"
+      },
+      "role": {
+        "id": "projectmanager"
+      }
+    },
     {
       "person_or_org": {
         "type": "personal",
@@ -168,7 +207,7 @@
     }
   ],
   "publisher": "Zenodo",
-  "version": "v0.0.12",
+  "version": "v0.0.13",
   "dates": [
     {
       "date": "2024-03-20T10:00:00+01:00",
