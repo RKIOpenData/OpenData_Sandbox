@@ -15,7 +15,7 @@ abstract: >-
   Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
   Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
   Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-date-released: '2025-07-16'
+date-released: '2025-07-24'
 keywords:
   - Deutschland
   - Germany
@@ -30,7 +30,7 @@ keywords:
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.290748
-version: v0.0.14
+doi: 10.5072/zenodo.296505
+version: v0.0.15
 authors:
   - name: AKTIN-Notaufnahmeregister

@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.290748",
+        "identifier": "10.5072/zenodo.296505",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
@@ -85,7 +85,7 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "v0.0.14"
+      "version": "v0.0.15"
     },
     "webpage": "https://www.github.io/RKIOpenData/OpenData_Sandbox",
     "contributors": [
