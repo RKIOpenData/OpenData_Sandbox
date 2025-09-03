@@ -4,31 +4,28 @@
   "resource_type": {
     "id": "dataset"
   },
-  "publication_date": "2025-06-06",
+  "publication_date": "2025-09-03",
   "creators": [
     {
       "person_or_org": {
-        "type": "personal",
-        "family_name": "Name",
-        "given_name": "Vorname",
-        "identifiers": [
-          {
-            "scheme": "orcid",
-            "identifier": "0000-0002-2818-3641"
-          }
-        ]
-      },
-      "affiliations": [
-        {
-          "name": "Robert Koch-Institut",
-          "id": "01k5qnb77"
-        }
-      ]
+        "type": "organizational",
+        "name": "Robert Koch-Institut"
+      }
     }
   ],
-  "contributors": [],
+  "contributors": [
+    {
+      "person_or_org": {
+        "type": "organizational",
+        "name": "Team der Nationalen Diabetes-Surveillance"
+      },
+      "role": {
+        "id": "datamanager"
+      }
+    }
+  ],
   "publisher": "Zenodo",
-  "version": "v0.0.1",
+  "version": "2025-09-03",
   "dates": [
     {
       "date": "2024-03-20T10:00:00+01:00",

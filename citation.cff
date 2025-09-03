@@ -15,7 +15,7 @@ abstract: >-
   Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
   Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
   Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-date-released: '2025-07-24'
+date-released: '2025-09-03'
 keywords:
   - Deutschland
   - Germany
@@ -30,7 +30,8 @@ keywords:
 message: Cite me!
 url: https://www.github.io/RKIOpenData/OpenData_Sandbox
 license: CC-BY-4.0
-doi: 10.5072/zenodo.296505
-version: v0.0.15
+doi: 10.5072/zenodo.311349
+version: '2024-03-20T10:00:00+01:00'
 authors:
-  - name: AKTIN-Notaufnahmeregister
+  - name: Robert Koch-Institut
+    email: info@rki.de
