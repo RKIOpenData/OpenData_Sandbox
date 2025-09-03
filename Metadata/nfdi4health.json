@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.296505",
+        "identifier": "10.5072/zenodo.324569",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
@@ -85,237 +85,38 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "v0.0.15"
+      "version": "v0.0.17"
     },
     "webpage": "https://www.github.io/RKIOpenData/OpenData_Sandbox",
     "contributors": [
       {
         "affiliations": [
           {
-            "name": "AKTIN-Notaufnahmeregister"
+            "name": "Robert Koch-Institut",
+            "identifiers": [
+              {
+                "identifier": "01k5qnb77",
+                "scheme": "ROR"
+              }
+            ]
           }
         ],
         "nameType": "Organisational",
         "organisational": {
-          "name": "AKTIN-Notaufnahmeregister",
+          "name": "Robert Koch-Institut",
           "type": "Creator/Author"
         }
       },
       {
         "affiliations": [
           {
-            "name": "Org-HostingInstitution"
+            "name": "Team der Nationalen Diabetes-Surveillance"
           }
         ],
         "nameType": "Organisational",
         "organisational": {
-          "name": "Org-HostingInstitution",
-          "type": "Hosting institution"
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Org-ResearchGroup"
-          }
-        ],
-        "nameType": "Organisational",
-        "organisational": {
-          "name": "Org-ResearchGroup",
-          "type": "Research group"
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Org-RightsHolder"
-          }
-        ],
-        "nameType": "Organisational",
-        "organisational": {
-          "name": "Org-RightsHolder",
-          "type": "Rights holder"
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Org-Supervisor"
-          }
-        ],
-        "nameType": "Organisational",
-        "organisational": {
-          "name": "Org-Supervisor",
-          "type": "Supervisor"
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Org-ProjectManager"
-          }
-        ],
-        "nameType": "Organisational",
-        "organisational": {
-          "name": "Org-ProjectManager",
-          "type": "Project manager"
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Org-DataCollector"
-          }
-        ],
-        "nameType": "Organisational",
-        "organisational": {
-          "name": "Org-DataCollector",
-          "type": "Data collector"
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Otto-von-Guericke Universität Magdeburg"
-          }
-        ],
-        "nameType": "Personal",
-        "personal": {
-          "type": "Data collector",
-          "givenName": "Susanne",
-          "familyName": "Drynda",
-          "identifiers": [
-            {
-              "identifier": "0000-0002-5992-7578",
-              "scheme": "ORCID"
-            }
-          ]
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Otto-von-Guericke Universität Magdeburg"
-          }
-        ],
-        "nameType": "Personal",
-        "personal": {
-          "type": "Researcher",
-          "givenName": "Ronny",
-          "familyName": "Otto",
-          "identifiers": [
-            {
-              "identifier": "0000-0002-5914-1129",
-              "scheme": "ORCID"
-            }
-          ]
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Otto-von-Guericke Universität Magdeburg"
-          }
-        ],
-        "nameType": "Personal",
-        "personal": {
-          "type": "Researcher",
-          "givenName": "Wiebke",
-          "familyName": "Schirrmeister",
-          "identifiers": [
-            {
-              "identifier": "0000-0003-1861-8741",
-              "scheme": "ORCID"
-            }
-          ]
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Universitätsklinik RWTH Aachen"
-          }
-        ],
-        "nameType": "Personal",
-        "personal": {
-          "type": "Researcher",
-          "givenName": "Jonas",
-          "familyName": "Bienzeisler",
-          "identifiers": [
-            {
-              "identifier": "0000-0003-3633-147X",
-              "scheme": "ORCID"
-            }
-          ]
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Universitätsklinik RWTH Aachen"
-          }
-        ],
-        "nameType": "Personal",
-        "personal": {
-          "type": "Researcher",
-          "givenName": "Alexander",
-          "familyName": "Kombeiz",
-          "identifiers": [
-            {
-              "identifier": "0000-0001-9745-8576",
-              "scheme": "ORCID"
-            }
-          ]
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Robert Koch-Institut",
-            "identifiers": [
-              {
-                "identifier": "01k5qnb77",
-                "scheme": "ROR"
-              }
-            ]
-          }
-        ],
-        "nameType": "Personal",
-        "personal": {
-          "type": "Rights holder",
-          "givenName": "Madlen",
-          "familyName": "Schranz",
-          "identifiers": [
-            {
-              "identifier": "0000-0002-2426-5770",
-              "scheme": "ORCID"
-            }
-          ]
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Robert Koch-Institut",
-            "identifiers": [
-              {
-                "identifier": "01k5qnb77",
-                "scheme": "ROR"
-              }
-            ]
-          }
-        ],
-        "nameType": "Personal",
-        "personal": {
-          "type": "Supervisor",
-          "givenName": "Theresa",
-          "familyName": "Kocher",
-          "identifiers": [
-            {
-              "identifier": "0000-0001-8958-4150",
-              "scheme": "ORCID"
-            }
-          ]
+          "name": "Team der Nationalen Diabetes-Surveillance",
+          "type": "Creator/Author"
         }
       }
     ]
