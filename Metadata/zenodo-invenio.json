@@ -17,11 +17,30 @@
         "type": "organizational",
         "name": "Team der Nationalen Diabetes-Surveillance"
       }
+    },
+    {
+      "person_or_org": {
+        "type": "personal",
+        "family_name": "Kocher",
+        "given_name": "Theresa",
+        "identifiers": [
+          {
+            "scheme": "orcid",
+            "identifier": "0000-0001-8958-4150"
+          }
+        ]
+      },
+      "affiliations": [
+        {
+          "name": "Robert Koch-Institut",
+          "id": "01k5qnb77"
+        }
+      ]
     }
   ],
   "contributors": [],
   "publisher": "Zenodo",
-  "version": "v0.0.17",
+  "version": "v0.0.18",
   "dates": [
     {
       "date": "2024-03-20T10:00:00+01:00",
