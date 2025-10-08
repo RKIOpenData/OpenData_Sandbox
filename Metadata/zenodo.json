@@ -5,6 +5,15 @@
     {
       "name": "Robert Koch-Institut",
       "affiliation": "Robert Koch-Institut"
+    },
+    {
+      "name": "Team der Nationalen Diabetes-Surveillance",
+      "affiliation": "Team der Nationalen Diabetes-Surveillance"
+    },
+    {
+      "name": "Kocher, Theresa",
+      "affiliation": "Robert Koch-Institut",
+      "orcid": "0000-0001-8958-4150"
     }
   ],
   "contributors": [],
@@ -17,7 +26,7 @@
     "Gesundheitsförderung"
   ],
   "publication_date": "2025-09-03",
-  "version": "2024-03-20",
+  "version": "v0.0.19",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "CC-BY-4.0",

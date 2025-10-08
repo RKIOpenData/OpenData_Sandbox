@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.324540",
+        "identifier": "10.5072/zenodo.324600",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
@@ -85,7 +85,7 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "2024-03-20"
+      "version": "v0.0.19"
     },
     "webpage": "https://www.github.io/RKIOpenData/OpenData_Sandbox",
     "contributors": [
@@ -116,7 +116,32 @@
         "nameType": "Organisational",
         "organisational": {
           "name": "Team der Nationalen Diabetes-Surveillance",
-          "type": "Data manager"
+          "type": "Creator/Author"
+        }
+      },
+      {
+        "affiliations": [
+          {
+            "name": "Robert Koch-Institut",
+            "identifiers": [
+              {
+                "identifier": "01k5qnb77",
+                "scheme": "ROR"
+              }
+            ]
+          }
+        ],
+        "nameType": "Personal",
+        "personal": {
+          "type": "Creator/Author",
+          "givenName": "Theresa",
+          "familyName": "Kocher",
+          "identifiers": [
+            {
+              "identifier": "0000-0001-8958-4150",
+              "scheme": "ORCID"
+            }
+          ]
         }
       }
     ]

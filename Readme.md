@@ -1,44 +1,54 @@
 <!-- HEADER_START: {"lang": "de"} -->
 
 
-Datensatzdokumentation
-# Open Data Sandbox
+Dokumentation  
+# Ergebnisse der Diabetes-Surveillance 2015 - 2024
 
 <br> 
 <br> 
+<br> 
 
+[**Robert Koch-Institut**](https://www.rki.de/)
 
-[**AKTIN-Notaufnahmeregister**](http://aktin.org/), [**Robert Koch-Institut**](https://rki.de/)
+<br> 
 
 **Beitragende**   
-Susanne Drynda&sup1; (ProjectLeader), Ronny Otto&sup1; (DataManager), Wiebke Schirrmeister&sup1; (ProjectLeader), Jonas Bienzeisler&sup2; (DataManager), Alexander Kombeiz&sup2; (DataCurator), [Robert Koch-Institut | Fachgebiet 32](https://www.rki.de/DE/Institut/Organisation/Abteilungen/Abteilung-3/FG32/fg32-surveillance-und-elektronisches-melde-und-informationssystem-demis-oegd-kontaktstelle-node.html), [Madlen Schranz](https://orcid.org/0000-0002-2426-5770)&sup3; (Researcher), [Theresa Kocher](https://orcid.org/0000-0002-9300-6625)&sup3; (Researcher)
+Team der Nationalen Diabetes-Surveillance&sup1;&#119058;&sup2;
 
-&emsp;&emsp;&sup1;[AKTIN-Notaufnahmeregister](http://aktin.org/) | [AKTIN-Geschäftsstelle](https://kchu.med.ovgu.de/Forschung/AG+Register_+und+Versorgungsforschung+in+der+Notfallmedizin/AKTIN.html)  
-&emsp;&emsp;&sup2;[AKTIN-Notaufnahmeregister](http://aktin.org/) | [AKTIN-IT](https://www.medizin.rwth-aachen.de/cms/medizin/die-fakultaet/institute-und-kliniken/die-institute/klinisch-theoretische-institute/~ezkv/institut-fuer-medizinische-informatik/)  
-&emsp;&emsp;&sup3;[Robert Koch-Institut](https://rki.de/) | [Fachgebiet 32](https://www.rki.de/DE/Institut/Organisation/Abteilungen/Abteilung-3/FG32/fg32-surveillance-und-elektronisches-melde-und-informationssystem-demis-oegd-kontaktstelle-node.html)
+&emsp;&emsp;&sup1; [Robert Koch-Institut](https://www.rki.de/) | [Fachgebiet 24](https://www.rki.de/fg24)  
+&emsp;&emsp;&sup2; [Robert Koch-Institut](https://www.rki.de/) | [Fachgebiet 25](https://www.rki.de/fg25)
+
+<br> 
 
 **Zitieren**  
-Drynda, S., Otto, R., Schirrmeister, W., Bienzeisler, J., Kombeiz, A., Schranz, M., & Kocher, T. (2025). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.171784](https://doi.org/10.5072/zenodo.171784)
+Robert Koch-Institut. (2025). Ergebnisse der Diabetes-Surveillance 2015 - 2024 [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.14935276](https://doi.org/10.5281/zenodo.14935276)
+
+<br>
 
 
+**Zusammenfassung**    
+Im Datensatz "Ergebnisse der Diabetes-Surveillance 2015 - 2024" des Robert Koch-Instituts werden Informationen zu Diabetes mellitus in Deutschland bereitgestellt. Im Rahmen des zugrundeliegenden Projekts "Diabetes-Surveillance" wurde ein indikatorbasiertes Surveillance-System für die zeitnahe und regelmäßige Berichterstattung zu Krankheitsdynamik, Versorgungsqualität, Determinanten und Folgeerkrankungen von Diabetes mellitus in Deutschland etabliert. Der Datensatz umfasst aggregierte Auswertungen zu 40 Indikatoren und Indikatorgruppen, strukturiert nach vier gesundheitsrelevanten Handlungsfeldern: Diabetesrisiko reduzieren, Diabetesfrüherkennung und -behandlung verbessern, Diabeteskomplikationen reduzieren sowie Krankheitslast und -kosten senken. Die Indikatoren basieren auf Primär- und Sekundärdaten (u.a. Gesundheitsbefragungen, amtliche Statistik, Krankenkassendaten) und wurden standardisiert nach Geschlecht, Alter, Region und Bildung aufbereitet. Zudem wird zwischen Kindern und Jugendlichen sowie Erwachsenen unterschieden. Der Ergebnisstand der Diabetes-Surveillance zum Projektende 2024 ist auf dem Publikationsserver des RKI veröffentlicht (https://edoc.rki.de/handle/176904/12467).
 
-**Zusammenfassung**  
-Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
+<br>
 
+**Inhaltsverzeichnis** 
+<!-- TOC_START: {"heading_depth": 2} -->
+  - [Informationen zum Datensatz und Entstehungskontext](#informationen-zum-datensatz-und-entstehungskontext)
+  - [Administrative und organisatorische Angaben](#administrative-und-organisatorische-angaben)
+  - [Entstehungskontext](#entstehungskontext)
+  - [Daten und Datenaufbereitung](#daten-und-datenaufbereitung)
+  - [Indikatoren](#indikatoren)
+  - [Aufbau und Inhalt des Datensatzes](#aufbau-und-inhalt-des-datensatzes)
+  - [Hinweise zur Nachnutzung der Daten](#hinweise-zur-nachnutzung-der-daten)
+<!-- TOC_END -->
 
-
+<br>
 
 <!-- HEADER_END -->
 
 
 **Inhaltsverzeichnis**   
 
-<!-- TOC_START: {"heading_depth": 2} -->
-- [Open Data Sandbox](#open-data-sandbox)
-  - [Beispieltext](#beispieltext)
-  - [Hinweise zur Nachnutzung der Daten](#hinweise-zur-nachnutzung-der-daten)
-  - [Appendix](#appendix)
-<!-- TOC_END -->
 
 ## Beispieltext 
 
