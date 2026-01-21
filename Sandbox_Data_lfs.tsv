@@ -130,3 +130,4 @@ date_and_time	date	week_as_date	season	text_with_fixed_set_of_possible_values	te
 2023-07-10T06:00:00	2023-07-10	2023-28	2023/24	requested	873a7cc28d29e3f17b0544ea6e9e8436defe32f6d60649159ee8ac78d41607	71.21	252	256	[{'method': 'PANGOLIN_LATEST', 'classification_version': 'PUSHER-v1.28.1', 'tool_version': '4.3', 'lineage': 'BA.2', '@qc_notes': 'Ambiguous_content:0.02', '@is_designated': False, '@qc_status': 'pass', '@conflict': 0.0, '@note': 'Usher placements: BA.2(1/1)'}]	129	https://www.gbe.rki.de/DE/Themen/EinflussfaktorenAufDieGesundheit/GesundheitsUndRisikoverhalten/Alkoholkonsum/Rauschtrinken/rauschtrinken_node.html1	1
 1	1
 1	1
+1	1
