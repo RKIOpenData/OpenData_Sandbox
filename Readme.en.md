@@ -1,7 +1,7 @@
 <!-- HEADER_START: {"lang": "en"} -->
 
 
-Dokumentation  
+Documentation  
 
 # Open Data Sandbox
 
@@ -15,25 +15,26 @@ Dokumentation
 
 
 
-&emsp;&emsp;&sup1; Robert Koch-Institut
+&emsp;&emsp;&sup1; Robert Koch Institute
 
 <br> 
 
-**Zitieren**  
-Name, V. (2025). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.324600](https://doi.org/10.5072/zenodo.324600)
+**Cite**  
+Name, V. (2026). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.318172](https://doi.org/10.5072/zenodo.318172)
+
 
 <br>
 
-
-**Zusammenfassung**    
+**Abstract**    
 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
 
 <br>
 
-**Inhaltsverzeichnis**  
+**Table of Content**  
+
 <!-- TOC_START: {"heading_depth": 2} -->
-  - [Beispieltext](#beispieltext)  
-  - [Hinweise zur Nachnutzung der Daten](#hinweise-zur-nachnutzung-der-daten)  
+  - [Example text](#example-text)  
+  - [Guidelines for reuse of the data](#guidelines-for-reuse-of-the-data)  
   - [Appendix](#appendix)  
 <!-- TOC_END -->
 
@@ -57,24 +58,25 @@ Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, v
 
 <!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Sandbox_Data", "lang": "en"} -->
 
-Die Datei [Sandbox_Data.tsv](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Sandbox_Data.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_Sandbox_Data.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.json) hinterlegt:
-> [tableschema_Sandbox_Data.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.json)
+The file [Sandbox_Data.tsv](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Sandbox_Data.tsv) contains the variables and their values shown in the following table. A machine-readable data schema is stored in [Data Package Format](https://datapackage.org/) in [tableschema_Sandbox_Data.en.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.en.json):
+
+> [tableschema_Sandbox_Data.en.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data.en.json)
 
 <!-- DATA_SCHEMA_TABLE_START -->
-| Variable                                   | Typ     | Ausprägungen                                                                                                                                                                                                                                                                                       | Beschreibung                                                                                                            |
-|:-------------------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| date_and_time                              | date    | Format: `YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                      | Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone                                                                |
-| date                                       | date    | Format: `YYYY-MM-DD`                                                                                                                                                                                                                                                                               | Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone                                                                |
-| week_as_date                               | date    | Beispiel: `2021-04`<br>Format: `YYYY-ww`                                                                                                                                                                                                                                                           | Berichtswoche im ISO-8601 Format ohne Zeitzone                                                                          |
-| season                                     | string  | Beispiel: `2012/13`                                                                                                                                                                                                                                                                                | Saison jeweils von Kalenderwoche 40 bis Kalenderwoche 39 des Folgejahres (z.B. Saison 2012/13 = 2012W40 bis<br>2013W39) |
-| text_with_fixed_set_of_<br>possible_values | string  | Werte: `random`, `requested`, `clinical`, `unknown, other`                                                                                                                                                                                                                                         | Mögliche Werte: `random`, `requested`, `clinical`, `unknown, other`                                                     |
-| text_with_very_long_example                | string  | Beispiel: `873a7cc28d29e3f17b0544ea6e9e84`<br>`36defe32f6d60649159ee8ac78d414`<br>`7ac9`                                                                                                                                                                                                           | Eine Variable die eine lange ID enthält                                                                                 |
-| number_with_minimum                        | number  | Werte: `≥2.5`                                                                                                                                                                                                                                                                                      | Gleitkommazahl mit inklusivem Minimum                                                                                   |
-| integer_with_range                         | integer | Werte: `0` - `99999`<br>Beispiel: `1095`                                                                                                                                                                                                                                                           | Ganze Zahl (Zählwerte)                                                                                                  |
-| integer_with_missing_values                | integer | Werte: `≥-1`<br>Fehlende Werte: `NA`                                                                                                                                                                                                                                                               | Ganze Zahl mit fehlenden Werten                                                                                         |
-| text_with_json_example                     | string  | Beispiele: `[{'method': 'PANGOLIN_LATEST'`, `'classification_version': 'PUSHER-v1.28.1'`, `'tool_version': '4.3'`, `'lineage': 'BA.2'`, `'@qc_notes': 'Ambiguous_content:0.02'`, `'@is_designated': False`, `'@qc_status': 'pass'`, `'@conflict': 0.0`, `'@note': 'Usher placements: BA.2(1/1)'}]` | Text mit Beispiel im JSON-Format                                                                                        |
-| unique_variable                            | integer |                                                                                                                                                                                                                                                                                                    | Jeder Wert kommt nur einmal im Datensatz vor.                                                                           |
-| url                                        | string  | Beispiel: `https://www.gbe.rki.de/DE/Them`<br>`en/EinflussfaktorenAufDieGesun`<br>`dheit/GesundheitsUndRisikoverh`<br>`alten/Alkoholkonsum/Rauschtrin`<br>`ken/rauschtrinken_node.html`                                                                                                            | Link zu Ressource                                                                                                       |
+| Variable                                   | Type    | Characteristic                                                                                                                                                                                                                                                                                    | Description   |
+|:-------------------------------------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------|
+| date_and_time                              | date    | Format: `YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                     |               |
+| date                                       | date    | Format: `YYYY-MM-DD`                                                                                                                                                                                                                                                                              |               |
+| week_as_date                               | date    | Example: `2021-04`<br>Format: `YYYY-ww`                                                                                                                                                                                                                                                           |               |
+| season                                     | string  | Example: `2012/13`                                                                                                                                                                                                                                                                                |               |
+| text_with_fixed_set_of_<br>possible_values | string  | Values:<br>`random`, `requested`, `clinical`, `unknown, other`                                                                                                                                                                                                                                    |               |
+| text_with_very_long_<br>example            | string  | Example: `873a7cc28d29e3f17b0544ea6`<wbr>`e9e8436defe32f6d60649159e`<wbr>`e8ac78d4147ac9`                                                                                                                                                                                                         |               |
+| number_with_minimum                        | number  | Values: `≥2.5`                                                                                                                                                                                                                                                                                    |               |
+| integer_with_range                         | integer | Values: `0` - `99999`<br>Example: `1095`                                                                                                                                                                                                                                                          |               |
+| integer_with_missing_<br>values            | integer | Values: `≥-1`<br>Missing values:<br>`NA`                                                                                                                                                                                                                                                          |               |
+| text_with_json_example                     | string  | Examples: `[{'method': 'PANGOLIN_LATEST'`, `'classification_version': 'PUSHER-v1.28.1'`, `'tool_version': '4.3'`, `'lineage': 'BA.2'`, `'@qc_notes': 'Ambiguous_content:0.02'`, `'@is_designated': False`, `'@qc_status': 'pass'`, `'@conflict': 0.0`, `'@note': 'Usher placements: BA.2(1/1)'}]` |               |
+| unique_variable                            | integer |                                                                                                                                                                                                                                                                                                   |               |
+| url                                        | string  | Example: `https://www.gbe.rki.de/DE`<wbr>`/Themen/EinflussfaktorenA`<wbr>`ufDieGesundheit/Gesundhei`<wbr>`tsUndRisikoverhalten/Alko`<wbr>`holkonsum/Rauschtrinken/r`<wbr>`auschtrinken_node.html`                                                                                                 |               |
 
 <!-- DATA_SCHEMA_TABLE_END -->
 
@@ -83,24 +85,25 @@ Die Datei [Sandbox_Data.tsv](https://github.com/robert-koch-institut/OpenData_Sa
 
 <!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Sandbox_Data_lfs", "lang": "en"} -->
 
-Die Datei [Sandbox_Data_lfs.tsv](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Sandbox_Data_lfs.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_Sandbox_Data_lfs.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.json) hinterlegt:
-> [tableschema_Sandbox_Data_lfs.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.json)
+The file [Sandbox_Data_lfs.tsv](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Sandbox_Data_lfs.tsv) contains the variables and their values shown in the following table. A machine-readable data schema is stored in [Data Package Format](https://datapackage.org/) in [tableschema_Sandbox_Data_lfs.en.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.en.json):
+
+> [tableschema_Sandbox_Data_lfs.en.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/schemas/tableschema_Sandbox_Data_lfs.en.json)
 
 <!-- DATA_SCHEMA_TABLE_START -->
-| Variable                                   | Typ     | Ausprägungen                                                                                                                                                                                                                                                                                       | Beschreibung                                                                                                            |
-|:-------------------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| date_and_time                              | date    | Format: `YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                      | Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone                                                                |
-| date                                       | date    | Format: `YYYY-MM-DD`                                                                                                                                                                                                                                                                               | Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone                                                                |
-| week_as_date                               | date    | Beispiel: `2021-04`<br>Format: `YYYY-ww`                                                                                                                                                                                                                                                           | Berichtswoche im ISO-8601 Format ohne Zeitzone                                                                          |
-| season                                     | string  | Beispiel: `2012/13`                                                                                                                                                                                                                                                                                | Saison jeweils von Kalenderwoche 40 bis Kalenderwoche 39 des Folgejahres (z.B. Saison 2012/13 = 2012W40 bis<br>2013W39) |
-| text_with_fixed_set_of_<br>possible_values | string  | Werte: `random`, `requested`, `clinical`, `unknown, other`                                                                                                                                                                                                                                         | Mögliche Werte: `random`, `requested`, `clinical`, `unknown, other`                                                     |
-| text_with_very_long_example                | string  | Beispiel: `873a7cc28d29e3f17b0544ea6e9e84`<br>`36defe32f6d60649159ee8ac78d414`<br>`7ac9`                                                                                                                                                                                                           | Eine Variable die eine lange ID enthält                                                                                 |
-| number_with_minimum                        | number  | Werte: `≥2.5`                                                                                                                                                                                                                                                                                      | Gleitkommazahl mit inklusivem Minimum                                                                                   |
-| integer_with_range                         | integer | Werte: `0` - `99999`<br>Beispiel: `1095`                                                                                                                                                                                                                                                           | Ganze Zahl (Zählwerte)                                                                                                  |
-| integer_with_missing_values                | integer | Werte: `≥-1`<br>Fehlende Werte: `NA`                                                                                                                                                                                                                                                               | Ganze Zahl mit fehlenden Werten                                                                                         |
-| text_with_json_example                     | string  | Beispiele: `[{'method': 'PANGOLIN_LATEST'`, `'classification_version': 'PUSHER-v1.28.1'`, `'tool_version': '4.3'`, `'lineage': 'BA.2'`, `'@qc_notes': 'Ambiguous_content:0.02'`, `'@is_designated': False`, `'@qc_status': 'pass'`, `'@conflict': 0.0`, `'@note': 'Usher placements: BA.2(1/1)'}]` | Text mit Beispiel im JSON-Format                                                                                        |
-| unique_variable                            | integer |                                                                                                                                                                                                                                                                                                    | Jeder Wert kommt nur einmal im Datensatz vor.                                                                           |
-| url                                        | string  | Beispiel: `https://www.gbe.rki.de/DE/Them`<br>`en/EinflussfaktorenAufDieGesun`<br>`dheit/GesundheitsUndRisikoverh`<br>`alten/Alkoholkonsum/Rauschtrin`<br>`ken/rauschtrinken_node.html`                                                                                                            | Link zu Ressource                                                                                                       |
+| Variable                                   | Type    | Characteristic                                                                                                                                                                                                                                                                                    | Description   |
+|:-------------------------------------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------|
+| date_and_time                              | date    | Format: `YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                     |               |
+| date                                       | date    | Format: `YYYY-MM-DD`                                                                                                                                                                                                                                                                              |               |
+| week_as_date                               | date    | Example: `2021-04`<br>Format: `YYYY-ww`                                                                                                                                                                                                                                                           |               |
+| season                                     | string  | Example: `2012/13`                                                                                                                                                                                                                                                                                |               |
+| text_with_fixed_set_of_<br>possible_values | string  | Values:<br>`random`, `requested`, `clinical`, `unknown, other`                                                                                                                                                                                                                                    |               |
+| text_with_very_long_<br>example            | string  | Example: `873a7cc28d29e3f17b0544ea6`<wbr>`e9e8436defe32f6d60649159e`<wbr>`e8ac78d4147ac9`                                                                                                                                                                                                         |               |
+| number_with_minimum                        | number  | Values: `≥2.5`                                                                                                                                                                                                                                                                                    |               |
+| integer_with_range                         | integer | Values: `0` - `99999`<br>Example: `1095`                                                                                                                                                                                                                                                          |               |
+| integer_with_missing_<br>values            | integer | Values: `≥-1`<br>Missing values:<br>`NA`                                                                                                                                                                                                                                                          |               |
+| text_with_json_example                     | string  | Examples: `[{'method': 'PANGOLIN_LATEST'`, `'classification_version': 'PUSHER-v1.28.1'`, `'tool_version': '4.3'`, `'lineage': 'BA.2'`, `'@qc_notes': 'Ambiguous_content:0.02'`, `'@is_designated': False`, `'@qc_status': 'pass'`, `'@conflict': 0.0`, `'@note': 'Usher placements: BA.2(1/1)'}]` |               |
+| unique_variable                            | integer |                                                                                                                                                                                                                                                                                                   |               |
+| url                                        | string  | Example: `https://www.gbe.rki.de/DE`<wbr>`/Themen/EinflussfaktorenA`<wbr>`ufDieGesundheit/Gesundhei`<wbr>`tsUndRisikoverhalten/Alko`<wbr>`holkonsum/Rauschtrinken/r`<wbr>`auschtrinken_node.html`                                                                                                 |               |
 
 <!-- DATA_SCHEMA_TABLE_END -->
 
@@ -111,20 +114,19 @@ Die Datei [Sandbox_Data_lfs.tsv](https://github.com/robert-koch-institut/OpenDat
 <!-- FOOTER_START: {"lang": "en"} -->
 
 
+### Metadata
 
-### Metadaten  
+To increase findability, the provided data are described with metadata. The Metadata are distributed to the relevant platforms via GitHub Actions. There is a specific metadata file for each platform; these are stored in the metadata folder:
 
-Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:  
+> [Metadaten/](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/Metadaten/)
 
-> [Metadaten/](https://github.com/robert-koch-institut/OpenData_Sandbox/tree/main/Metadaten/) 
+Versioning and DOI assignment are performed via [Zenodo.org](https://zenodo.org). The metadata prepared for import into Zenodo are stored in the [zenodo.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/zenodo.json). Documentation of the individual metadata variables can be found at [https://developers.zenodo.org/representation](https://developers.zenodo.org/#representation).
 
-Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.
- 
-> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/Metadaten/zenodo.json)  
+> [Metadaten/zenodo.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/zenodo.json)
 
-In der zenodo.json ist neben dem Publikationsdatum (`"publication_date"`) auch der Datenstand in folgendem Format enthalten (Beispiel):  
-
+The zenodo.json includes the publication date and the date of the data status in the following format (example):
 ```
+  "publication_date": "2024-06-19",
   "dates": [
     {
       "start": "2023-09-11T15:00:21+02:00",
@@ -133,38 +135,43 @@ In der zenodo.json ist neben dem Publikationsdatum (`"publication_date"`) auch d
       "description": "Date when the published data was created"
     }
   ],
-```    
+```
 
 
-Zusätzlich beschreiben wir tabellarische Daten mithilfe des [Data Package Standards](https://datapackage.org/).
-Ein Data Package ist eine strukturierte Sammlung von Daten und zugehörigen Metadaten, die den Austausch und die Wiederverwendung von Daten erleichtert. Es besteht aus einer datapackage.json-Datei, die zentrale Informationen wie die enthaltenen Ressourcen, ihre Formate und Schema-Definitionen beschreibt.
+Additionally, we describe tabular data using the [Data Package Standard](https://datapackage.org/).  
+A Data Package is a structured collection of data and associated metadata that facilitates data exchange and reuse. It consists of a `datapackage.json` file that contains key information such as the included resources, their formats, and schema definitions.  
 
-Der Data Package Standard wird von der [Open Knowledge Foundation](https://okfn.org/) bereitgestellt und ist ein offenes Format, das eine einfache, maschinenlesbare Beschreibung von Datensätzen ermöglicht.
+The Data Package Standard is provided by the [Open Knowledge Foundation](https://okfn.org/) and is an open format that enables a simple, machine-readable description of datasets.  
 
-Die Liste der in diesem Repository enthaltenen Daten ist in folgender Datei hinterlegt:
+The list of data included in this repository can be found in the following file:  
 
-> [datapackage.json](https://github.com/robert-koch-institut/OpenData_Sandbox/tree/main/datapackage.json)
+> [datapackage.json](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/datapackage.json)  
 
-Für tabellarische Daten definieren wir zusätzlich ein [Table Schema](https://datapackage.org/standard/table-schema/), das die Struktur der Tabellen beschreibt, einschließlich Spaltennamen, Datentypen und Validierungsregeln. Diese Schema-Dateien finden sich unter:
+For tabular data, we additionally define a [Table Schema](https://datapackage.org/standard/table-schema/) that describes the structure of the tables, including column names, data types, and validation rules. These schema files can be found in:  
 
-> [Metadaten/schemas/](https://github.com/robert-koch-institut/OpenData_Sandbox/tree/main/Metadaten/schemas) 
+> [Metadaten/schemas/](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/Metadaten/schemas)  
 
 
 
-## Hinweise zur Nachnutzung der Daten  
+## Guidelines for reuse of the data
 
-Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:  
+Open data from the RKI are available on [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de), and [Edoc.rki.de](http://Edoc.rki.de/):
 
-- https://zenodo.org/communities/robertkochinstitut  
-- https://github.com/robert-koch-institut  
-- https://gitlab.opencode.de/robert-koch-institut  
-- https://edoc.rki.de/  
- 
-### Lizenz  
+- https://zenodo.org/communities/robertkochinstitut
+- https://github.com/robert-koch-institut
+- https://gitlab.opencode.de/robert-koch-institut
+- https://edoc.rki.de/
 
-Der Datensatz "Open Data Sandbox" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/OpenData_Sandbox/blob/main/LIZENZ) Datei des Datensatzes.  
+
+### License
+
+The "Open Data Sandbox" dataset is licensed under the [Creative Commons Attribution 4.0 International Public License | CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en).
+
+The data provided in the dataset are freely available, with the condition of attributing the Robert Koch Institute as the source, for anyone to process and modify, create derivatives of the dataset and use them for commercial and non-commercial purposes.      
+Further information about the license can be found in the [LICENSE](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/LICENSE) or [LIZENZ](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/LIZENZ) file of the dataset.
+
+
 <!-- FOOTER_END -->
 
 

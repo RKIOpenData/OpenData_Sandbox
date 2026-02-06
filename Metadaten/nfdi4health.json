@@ -20,15 +20,15 @@
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.324540",
+        "identifier": "10.5072/zenodo.318172",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
       },
       {
-        "identifier": "https://github.com/robert-koch-institut/OpenData_Sandbox",
-        "relationType": "A references B",
+        "identifier": "https://github.com/RKIOpenData/OpenData_Sandbox",
         "typeGeneral": "Dataset",
+        "relationType": "A references B",
         "scheme": "URL"
       }
     ],
@@ -66,10 +66,6 @@
       {
         "label": "Epidemiology",
         "code": "info:ddc/22/eng//614.4"
-      },
-      {
-        "label": "Gesundheitsförderung",
-        "code": "http://id.nlm.nih.gov/mesh/D006293"
       }
     ],
     "languages": [
@@ -85,11 +81,12 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "2024-03-20"
+      "version": "2026-02-06"
     },
-    "webpage": "https://www.github.io/RKIOpenData/OpenData_Sandbox",
+    "webpage": "https://robert-koch-institut.github.io/OpenData_Sandbox",
     "contributors": [
       {
+        "nameType": "Personal",
         "affiliations": [
           {
             "name": "Robert Koch-Institut",
@@ -101,22 +98,16 @@
             ]
           }
         ],
-        "nameType": "Organisational",
-        "organisational": {
-          "name": "Robert Koch-Institut",
-          "type": "Creator/Author"
-        }
-      },
-      {
-        "affiliations": [
-          {
-            "name": "Team der Nationalen Diabetes-Surveillance"
-          }
-        ],
-        "nameType": "Organisational",
-        "organisational": {
-          "name": "Team der Nationalen Diabetes-Surveillance",
-          "type": "Data manager"
+        "personal": {
+          "type": "Creator/Author",
+          "givenName": "Vorname",
+          "familyName": "Name",
+          "identifiers": [
+            {
+              "identifier": "0000-0002-2818-3641",
+              "scheme": "ORCID"
+            }
+          ]
         }
       }
     ]
