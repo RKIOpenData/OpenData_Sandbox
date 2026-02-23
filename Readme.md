@@ -46,104 +46,22 @@ Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ip
 
 ## Informationen zum Datensatz und Entstehungskontext  
 
-Adipositas ist bereits im Kindesalter mit einem erhöhten Risiko für Folgeerkrankungen verbunden. Als beeinflussbare Gesundheitsrisiken spielen Übergewicht und Adipositas daher eine zentrale Rolle im Gesundheitsmonitoring.  
 
-Eine potenziell wertvolle  Quelle von kleinräumigen Daten zu Übergewicht und Adipositas im Vorschulalter stellen Schuleingangsuntersuchungen (SEU) dar. Diese sind deutschlandweit verpflichtend und die Daten liegen auf Kreisebene vor.   
-
-Im Pilotprojekt AdiRaum wurde die Nutzbarkeit von SEU-Daten zu Übergewicht und Adipositas für das bundesweite Gesundheitsmonitoring geprüft und die Daten in einem Dashboard visualisiert.  
-
-Details finden sich in Kühnelt C, Starker A, Varnaccia G, Schienkiewitz A (2023) Schuleingangsuntersuchungen als kleinräumige Datenquelle für ein Monitoring der Kindergesundheit am Beispiel Adipositas. J Health Monit 8(2): 6–20. DOI [10.25646/11297](https://doi.org/10.25646/11297)  
-
-### Administrative und organisatorische Angaben  
-Das Pilotprojekt AdiRaum ("Erschließung kleinräumig aussagekräftiger Daten aus den Schuleingangsuntersuchungen für das bundesweite Gesundheitsmonitoring am Beispiel der Übergewichts- und Adipositasprävalenzen") wurde im Zeitraum 01.05.2022 bis 31.12.2022 durchgeführt und aus Sonderforschungsmitteln des Robert Koch-Instituts finanziert.  
-
-Das Nachfolgeprojekt [AdiRaum 2.0](https://www.rki.de/DE/Themen/Nichtuebertragbare-Krankheiten/Studien-und-Surveillance/Studien/adi_raum_inhalt.html) wird derzeit für den Zeitraum 01.12.2023 bis 30.11.2025 vom [Bundesministerium für Gesundheit (BMG)](https://www.bundesgesundheitsministerium.de/) gefördert (Förderkennzeichen ZMII2-2523KIG913).  
-
-Die Projekte wurden in Zusammenarbeit mit den Landesgesundheitsämtern oder vergleichbaren Institutionen durchgeführt. Vertreter:innen der Gesundheitsberichterstattung der folgenden Länder waren aktiv an der Projektgestaltung und den Projektergebnissen beteiligt.
-
-- Baden-Württemberg
-- Bayern
-- Berlin
-- Brandenburg
-- Bremen
-- Hamburg
-- Hessen
-- Mecklenburg-Vorpommern
-- Niedersachsen
-- Nordrhein-Westfalen (Pilotprojekt)
-- Rheinland-Pfalz
-- Saarland
-- Sachsen
-- Sachsen-Anhalt
-- Schleswig-Holstein
-- Thüringen
-
-An dieser Stelle werden die Daten der Länder veröffentlicht, die dem RKI die erforderlichen Nutzungsrechte eingeräumt haben.
-
-Die Projektleitung und -koordination, das Datenmanagement und die Datenauswertung erfolgten durch das Fachgebiet [FG 27 | Gesundheitsverhalten](https://www.rki.de/fg27). 
-
-Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgten durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/mf4).   
-
-Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.  
-
-
-## Erhebung und Aufbereitung der Daten  
-
-Der Datensatz enthält Daten aus Schuleingangsuntersuchungen und Daten zu gesundheitsrelevanten Risiko- und Schutzfaktoren aus öffentlichen Datenbanken, die auf Kreisebene verknüpft wurden.
-
-### 1. Daten aus den Schuleingangsuntersuchungen (SEU)
-
-Die Teilnahme an den SEU ist für Kinder vor der Einschulung verpflichtend. Aufgrund der föderalen Strukturen bilden die Landesgesetze, u.a. die Schulgesetze, die gesetzliche Grundlage. In der Regel werden die SEU vom Kinder- und Jugendgesundheitsdienst (KJGD) des öffentlichen Gesundheitsdienstes (ÖGD) durchgeführt. Ihr primäres Ziel liegt in der Einschätzung des Entwicklungs- und Gesundheitszustandes und schulrelevanter Stärken und Schwächen  und der Feststellung von Förderbedarfen vor dem Schuleintritt. Unter anderem erfolgt eine standardisierte körperlich-medizinische Untersuchung, in der Körpergröße und -gewicht gemessen werden.  
-
-Mithilfe von Angaben zu Körpergröße und -gewicht, Alter und Geschlecht wird der BMI und daraus die Anzahl der Kinder mit Übergewicht (BMI-Perzentile > P90 nach Kromeyer-Hauschild) bzw. Adipositas (BMI-Perzentile > P97) bestimmt. 
-
-Im Rahmen der Projekte wurden dem RKI für die Kreise, kreisfreien Städte bzw. Bezirke (`Landkreis_Name`, `Kreisschlüssel`) der teilnehmenden Länder (`Bundesland_Name`) für die verfügbaren Einschulungsjahrgänge
-
-- die Anzahl der untersuchten Kinder (`Anzahl_Untersucht`)  
-- die Anzahl der Kinder mit Übergewicht (`Anzahl_Uebergewicht`)  
-- die Anzahl der Kinder mit Adipositas (`Anzahl_Adipositas`)  
-
-differenziert nach Alter (4-7 Jahre, `Alter`) und Geschlecht (`Geschlecht`) übermittelt.  
-
-Daraus wurden je Kreis und Einschulungsjahrgang  die Übergewichts- und Adipositasprävalenzen je Altersgruppe und Geschlecht bestimmt. 
-
-
-**Hinweis Geheimhaltungsregeln der Länder:** Für geringe Fallzahlen (größer 0) wurde unter Berücksichtigung der Geheimhaltungsregeln der Länder (z.B. ≤ 5) der Mittelpunkt imputiert.  
-
-### 2. Daten zu gesundheitsrelevanten Risiko- und Schutzfaktoren
-Die Daten aus den SEU wurden mit Indikatoren aus verschiedenen Datenquellen ergänzt. Es handelt sich dabei zum einen um Risiko- und Schutzfaktoren für Adipositas im Kindesalter, die im Rahmen einer systematischen Literaturrecherche im [AdiMon-Projekt](https://www.rki.de/DE/Themen/Nichtuebertragbare-Krankheiten/Studien-und-Surveillance/Studien/Adipositas-Monitoring/adi_mon_inhalt.html) ("Bevölkerungsweites Monitoring adipositasrelevanter Einflussfaktoren im Kindes- und Jugendalter") identifiziert und in Abstimmung mit den an AdiRaum teilnehmenden Ländern ausgewählt wurden.
-Zum anderen handelt es sich um siedlungsstrukturelle Merkmale, die einen Vergleich der Kreise ermöglichen sollen. 
-
-Es werden die folgenden Indikatoren dargestellt:  
-
-
-- Siedlungsstruktureller Kreistyp (`Kreistyp`): Dieser Indikator zur Siedlungsstruktur stammt vom Bundesinstitut für Bau-, Stadt- und Raumforschung  
-- Regionale sozioökonomische Deprivation des Landkreises (`GISD`): Dieser Indikator zur Soziodemografie stammt vom Robert Koch-Institut  
-- Situation von Kinderarmut im Landkreis (`Bedarfsgemeinschaften`): Dieser Indikator zur Soziodemografie stammt aus der Statistik der Bundesagentur für Arbeit  
-- Schulabgänger:innen ohne Schulabschluss (`Ohne_Schulabschluss`): Dieser Bildungs-Indikator stammt aus der Statistik der allgemeinbildenden Schulen  
-- Mitgliedschaften in Sportvereinen (`Vereinsmitgliedschaft`): Dieser Indikator zur Ausprägung der sportlichen Aktivität im Landkreis stammt von den Landessportbünden und dem Amt für Statistik Berlin Brandenburg  
-- Betreuungsumfang (`Ganztagsbetreuung`): Dieser Indikator stammt aus der Statistik der Kinder- und Jugendhilfe  
-- Verfügbarkeit von Bewegungsräumen im Landkreis (`Erholungsflaeche`): Dieser Indikator  stammt von den Statistischen Ämtern der Länder und des Bundes  
-
-
-
-## Aufbau und Inhalt des Datensatzes
-
-Der Datensatz enthält Daten zu Übergewicht und Adipositas aus den SEU der am Projekt beteiligten Bundesländer und die in der Datenverarbeitung unterstützenden Kontextmaterialien. Im Datensatz enthalten sind:  
-
-* Daten zu Adipositas und Übergewicht aus den Schuleingangsuntersuchungen   
-* Datenschema der Adipositasdaten  
-* Lizenz Datei mit der Nutzungslizenz des Datensatzes  
-* Datensatzdokumentation in deutscher Sprache  
-* Metadaten Datei zum Import in Zenodo  
-
-
-### Daten zu Adipositas aus den Schuleingangsuntersuchungen 
-
-Die Daten zu Übergewicht und Adipositas aus Schuleingangsuntersuchungen der Landkreise in den beteiligten Ländern sowie relevante kleinräumige Indikatoren sind im Hauptverzeichnis unter "Landkreise_Adipositas_Schuleingangsuntersuchungen.tsv" abrufbar.  
-
-> [Landkreise_Adipositas_Schuleingangsuntersuchungen.tsv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Landkreise_Adipositas_Schuleingangsuntersuchungen.tsv)  
-
+| Variable                        | Typ     | Ausprägungen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Beschreibung                                                                                                                                                                                                                                                                                                               |
+|:--------------------------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| igs_id                          | string  | Beispiel:<br>`IGS-10099-CVDP-01A2C74B-54A8-47B1-B7E4-6562C6231234`                                                                                                                                                                                                                                                                                                                                                                                                                                            | Ein eindeutiger Identifikator der Sequenzdaten und Metadaten zusammenführt. Dieser Identifikator wird als Teil der FASTA ID in den Sequenzdaten genutzt.                                                                                                                                                                   |
+| date_of_sampling                | date    | Format:<br>`YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone                                                                                                                                                                                                                                                                   |
+| sequencing_platform             | string  | Beispiel:<br>`ILLUMINA`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Die verwendete Sequenzierungs-Plattform auf Basis der von ENA zugelassenen Ontologie (siehe [ena](https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html#permitted-values-for-platform)).                                                                                                                   |
+| sequencing_reason               | string  | Werte:<br>`random`, `requested`, `clinical`, `other`                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Grund für die Durchführung der Sequenzierung. `random`: Die Probe  wurde randomisiert genommen. `requested`: Die Probe wurde aufgrund von Bedenken/Verdacht auf eine neue Variante oder Vergleichbares genommen. `clinical`: Die Probe kommt aus einem klinischem Umfeld. `other`: Der Grund it keiner der oben genannten. |
+| isolation_source                | string  | Beispiel:<br>`Nasopharyngeal swab (specimen)`                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | [DEMIS Vokabular](https://simplifier.net/rki.demis.laboratory/materialcvdp)                                                                                                                                                                                                                                                |
+| lab_sequence_id                 | string  | Beispiel:<br>`873a7cc28d29e3f17b0544ea6e9e8436defe32f6d60649159ee8ac78d4147ac9`                                                                                                                                                                                                                                                                                                                                                                                                                               | Vom Labor genutzte FASTA ID in verschlüsselter Form                                                                                                                                                                                                                                                                        |
+| date_of_submission              | date    | Format:<br>`YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Datum des Eingangs des Genoms am RKI im ISO 8601 Format ohne Zeitzone                                                                                                                                                                                                                                                      |
+| version                         | integer | Werte:<br>`≥0`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Version der Sequenz startend mit 0                                                                                                                                                                                                                                                                                         |
+| diagnostic_lab.demis_lab_<br>id | string  | Beispiel:<br>`DEMIS-10099`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Identifikationsnummer  des primärdiagnostischen Labors                                                                                                                                                                                                                                                                     |
+| diagnostic_lab.postal_<br>code  | string  | Beispiel:<br>`50858`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Postleitzahl des primärdiagnostischen Labors                                                                                                                                                                                                                                                                               |
+| sequencing_lab.demis_lab_<br>id | string  | Beispiel:<br>`DEMIS-10099`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Identifikationsnummer  des sequenzierenden Labors                                                                                                                                                                                                                                                                          |
+| sequencing_lab.postal_<br>code  | string  | Beispiel:<br>`50858`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Postleitzahl des sequenzierenden Labors                                                                                                                                                                                                                                                                                    |
+| genome.gtrs                     | string  | Beispiel:<br>`[{"date_of_creation": "2025-05-19T11:35:46.427598","method_version": "4.3.1","database_version": "PUSHER-v1.32","genomic_typing_result": "BA.2","date_of_assignment": "2025-01-30T16:14:14.218144","genomic_method": {"name": "Pangolin Lineage"},"additional_information": "{\"note\": \"Usher placements: BA.2(1/1)\", \"conflict\": 0, \"qc_notes\": \"Ambiguous_content:0.02\", \"qc_status\": \"pass\", \"is_designated\": false}","date_of_modification": "2025-05-19T11:35:46.427598"}]` | Genomische Typisierungs Resultate (GTR) im JSON-Format                                                                                                                                                                                                                                                                     |
 
 #### Variablen und Variablenausprägungen 
 
