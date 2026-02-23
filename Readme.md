@@ -3,30 +3,31 @@
 
 Dokumentation  
 
-# Open Data Sandbox
+# Respiratorische Synzytialvirusfälle in Deutschland
 
 <br> 
 <br> 
 <br> 
 
-[**Vorname Name**](https://orcid.org/0000-0002-2818-3641)&sup1;
+[**Robert Koch-Institut**](https://www.rki.de/)
 
 <br> 
 
+**Beitragende**   
+[Fachgebiet 32](https://www.rki.de/fg32)&sup1;, [Fachgebiet 36](https://www.rki.de/fg36)&sup1;, & [Fachgebiet IT 4](https://www.rki.de/it4)&sup1;
 
-
-&emsp;&emsp;&sup1; Robert Koch-Institut
+&emsp;&emsp;&sup1; [Robert Koch-Institut](https://www.rki.de/)
 
 <br> 
 
 **Zitieren**  
-Name, V. (2026). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.318172](https://doi.org/10.5072/zenodo.318172)
+Robert Koch-Institut. (2026). Respiratorische Synzytialvirusfälle in Deutschland [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.18739882](https://doi.org/10.5281/zenodo.18739882)
 
 <br>
 
 
 **Zusammenfassung**    
-Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
+Im Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" des Robert Koch-Instituts werden die Daten basierend auf Meldungen zu Infektionen mit dem Respiratorischen Synzytial-Virus (RSV) nach dem Infektionsschutzgesetz (IfSG) bereitgestellt. Darin enthalten sind Informationen auf Bundeslandebene zu Infektionen nach Falldefinition des Robert Koch-Instituts, differenziert nach Altersgruppen. Diese Daten dienen als Grundlage für epidemiologische Bewertungen und gesundheitspolitische Maßnahmen.
 
 <br>
 
@@ -34,78 +35,142 @@ Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ip
 
 <!-- TOC_START: {"heading_depth": 2} -->
   - [Informationen zum Datensatz und Entstehungskontext](#informationen-zum-datensatz-und-entstehungskontext)  
-  - [Erhebung und Aufbereitung der Daten](#erhebung-und-aufbereitung-der-daten)  
-  - [Aufbau und Inhalt des Datensatzes](#aufbau-und-inhalt-des-datensatzes)  
+  - [Daten und Datenaufbereitung](#daten-und-datenaufbereitung)  
   - [Hinweise zur Nachnutzung der Daten](#hinweise-zur-nachnutzung-der-daten)  
-  - [Danksagung](#danksagung)  
 <!-- TOC_END -->
 
 <br>
 
 <!-- HEADER_END -->
 
-## Informationen zum Datensatz und Entstehungskontext  
 
 
-| Variable                        | Typ     | Ausprägungen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Beschreibung                                                                                                                                                                                                                                                                                                               |
-|:--------------------------------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| igs_id                          | string  | Beispiel:<br>`IGS-10099-CVDP-01A2C74B-54A8-47B1-B7E4-6562C6231234`                                                                                                                                                                                                                                                                                                                                                                                                                                            | Ein eindeutiger Identifikator der Sequenzdaten und Metadaten zusammenführt. Dieser Identifikator wird als Teil der FASTA ID in den Sequenzdaten genutzt.                                                                                                                                                                   |
-| date_of_sampling                | date    | Format:<br>`YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Datum der Probeentnahme im ISO 8601 Format ohne Zeitzone                                                                                                                                                                                                                                                                   |
-| sequencing_platform             | string  | Beispiel:<br>`ILLUMINA`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Die verwendete Sequenzierungs-Plattform auf Basis der von ENA zugelassenen Ontologie (siehe [ena](https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html#permitted-values-for-platform)).                                                                                                                   |
-| sequencing_reason               | string  | Werte:<br>`random`, `requested`, `clinical`, `other`                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Grund für die Durchführung der Sequenzierung. `random`: Die Probe  wurde randomisiert genommen. `requested`: Die Probe wurde aufgrund von Bedenken/Verdacht auf eine neue Variante oder Vergleichbares genommen. `clinical`: Die Probe kommt aus einem klinischem Umfeld. `other`: Der Grund it keiner der oben genannten. |
-| isolation_source                | string  | Beispiel:<br>`Nasopharyngeal swab (specimen)`                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | [DEMIS Vokabular](https://simplifier.net/rki.demis.laboratory/materialcvdp)                                                                                                                                                                                                                                                |
-| lab_sequence_id                 | string  | Beispiel:<br>`873a7cc28d29e3f17b0544ea6e9e8436defe32f6d60649159ee8ac78d4147ac9`                                                                                                                                                                                                                                                                                                                                                                                                                               | Vom Labor genutzte FASTA ID in verschlüsselter Form                                                                                                                                                                                                                                                                        |
-| date_of_submission              | date    | Format:<br>`YYYY-MM-DDTHH:MM:SS`                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Datum des Eingangs des Genoms am RKI im ISO 8601 Format ohne Zeitzone                                                                                                                                                                                                                                                      |
-| version                         | integer | Werte:<br>`≥0`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Version der Sequenz startend mit 0                                                                                                                                                                                                                                                                                         |
-| diagnostic_lab.demis_lab_<br>id | string  | Beispiel:<br>`DEMIS-10099`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Identifikationsnummer  des primärdiagnostischen Labors                                                                                                                                                                                                                                                                     |
-| diagnostic_lab.postal_<br>code  | string  | Beispiel:<br>`50858`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Postleitzahl des primärdiagnostischen Labors                                                                                                                                                                                                                                                                               |
-| sequencing_lab.demis_lab_<br>id | string  | Beispiel:<br>`DEMIS-10099`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Identifikationsnummer  des sequenzierenden Labors                                                                                                                                                                                                                                                                          |
-| sequencing_lab.postal_<br>code  | string  | Beispiel:<br>`50858`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Postleitzahl des sequenzierenden Labors                                                                                                                                                                                                                                                                                    |
-| genome.gtrs                     | string  | Beispiel:<br>`[{"date_of_creation": "2025-05-19T11:35:46.427598","method_version": "4.3.1","database_version": "PUSHER-v1.32","genomic_typing_result": "BA.2","date_of_assignment": "2025-01-30T16:14:14.218144","genomic_method": {"name": "Pangolin Lineage"},"additional_information": "{\"note\": \"Usher placements: BA.2(1/1)\", \"conflict\": 0, \"qc_notes\": \"Ambiguous_content:0.02\", \"qc_status\": \"pass\", \"is_designated\": false}","date_of_modification": "2025-05-19T11:35:46.427598"}]` | Genomische Typisierungs Resultate (GTR) im JSON-Format                                                                                                                                                                                                                                                                     |
+## Informationen zum Datensatz und Entstehungskontext
 
-#### Variablen und Variablenausprägungen 
+Im Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" werden die Fallzahlen und Inzidenzen (Fälle pro 100.000 Personen) der nach den Vorgaben des [Infektionsschutzgesetzes (IfSG)](https://www.gesetze-im-internet.de/ifsg/index.html) von den Gesundheitsämtern in Deutschland an die zuständigen Landesbehörden und das Robert Koch-Institut (RKI) übermittelten Infektionen mit dem Respiratorischen Synzytial-Virus (RSV) nach Meldewoche bereitgestellt. 
 
-<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Landkreise_Adipositas_Schuleingangsuntersuchungen", "lang": "de"} -->
+### Administrative und organisatorische Angaben
 
-Die Datei [Landkreise_Adipositas_Schuleingangsuntersuchungen.tsv](https://github.com/robert-koch-institut/AdiRaum_Daten_zu_Adipositas_aus_Schuleingangsuntersuchungen/blob/main/Landkreise_Adipositas_Schuleingangsuntersuchungen.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_Landkreise_Adipositas_Schuleingangsuntersuchungen.json](https://github.com/robert-koch-institut/AdiRaum_Daten_zu_Adipositas_aus_Schuleingangsuntersuchungen/blob/main/Metadaten/schemas/tableschema_Landkreise_Adipositas_Schuleingangsuntersuchungen.json) hinterlegt:
-> [tableschema_Landkreise_Adipositas_Schuleingangsuntersuchungen.json](https://github.com/robert-koch-institut/AdiRaum_Daten_zu_Adipositas_aus_Schuleingangsuntersuchungen/blob/main/Metadaten/schemas/tableschema_Landkreise_Adipositas_Schuleingangsuntersuchungen.json)
+Die zugrundeliegenden Daten werden im Rahmen des Meldesystems gemäß [IfSG](https://www.gesetze-im-internet.de/ifsg/index.html) erhoben und verarbeitet. Zuständig für die fachliche Umsetzung des Meldesystems ist das [Fachgebiet 32 | Surveillance und elektronisches Melde- und Informationssystem (DEMIS) | ÖGD Kontaktstelle](https://www.rki.de/fg32) des RKI.  
+Das Qualitätsmanagement einschließlich Trend- und Todesfallkontrollen sowie die epidemiologische Bewertung der Daten erfolgt duch das [Fachgebiet 36 | Respiratorisch übertragbare Erkrankungen](https://www.rki.de/fg36) des RKI.  
+Die Verarbeitung und Aufbereitung der im Meldesystem vorliegenden Rohdaten erfolgt durch das Fachgebiet [IT4 | Softwarearchitektur und -entwicklung](https://www.rki.de/it4).  
+Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/mf4). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open-Data-Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.  
+
+### Entstehungskontext
+
+Das RKI ist ein Bundesinstitut im Geschäftsbereich des [Bundesministeriums für Gesundheit](https://www.bundesgesundheitsministerium.de/) (BMG) und ist die zentrale Einrichtung des Bundes auf den Gebieten der  Krankheitsüberwachung und -prävention sowie der anwendungsorientierten biomedizinischen Forschung. Es berät die zuständigen Bundesministerien, insbesondere das Bundesministerium für Gesundheit, und wirkt bei der Entwicklung von Normen und Standards mit. Wesentliche Aufgaben des RKI leiten sich aus dem [Infektionsschutzgesetz (IfSG)](https://www.gesetze-im-internet.de/ifsg/index.html) ab. Dazu gehört neben der in [§ 4 Abs. 1 IfSG](https://www.gesetze-im-internet.de/ifsg/__4.html) beschriebenen Aufgabe der „Vorbeugung übertragbarer Krankheiten sowie zur frühzeitigen Erkennung und Verhinderung der Weiterverbreitung von Infektionen“ auch die Erstellung von „Falldefinitionen für die Bewertung von Verdachts-, Erkrankungs- oder Todesfällen und Nachweisen von Krankheitserregern“ (vgl. [§ 11 Abs. 2 IfSG](https://www.gesetze-im-internet.de/ifsg/__11.html)).
+
+#### Infektionsschutzgesetz
+
+Das [Infektionsschutzgesetz ](https://www.gesetze-im-internet.de/ifsg/index.html) hat den Zweck, der Übertragung von Krankheiten beim Menschen vorzubeugen und Infektionen frühzeitig zu erkennen sowie die Verbreitung dieser zu verhindern. Es regelt, welche Krankheiten bei Verdacht, Erkrankung oder Tod und welche Nachweise von Krankheitserregern meldepflichtig sind. Zusätzlich wird neben der Art der zu meldenden Krankheit auch festgelegt, welche Personen zur Meldung verpflichtet sind, welche Angaben solch eine Meldung enthalten muss, an wen diese Meldung erfolgen muss und welche Fristen eingehalten werden müssen.
+
+Dem Gesundheitsamt wird gemäß § 7 Abs. 1 Nr. 38a IfSG der direkte oder indirekte Nachweis von Respiratorischen Synzytial-Viren, soweit er auf eine akute Infektion hinweist, namentlich gemeldet. Die bundesweite Meldepflicht besteht seit 21.07.2023.
+
+#### Falldefinition  
+
+Gemäß § 11 Abs. 2 IfSG hat das RKI die Aufgabe, Falldefinitionen zu erstellen, die die Kriterien für die Übermittlung von Meldedaten vom Gesundheitsamt an die zuständige Landesbehörde und von dort an das RKI festlegen. Die Falldefinitionen haben zum Ziel, bundesweit einheitliche Kriterien im Rahmen der epidemiologischen Überwachung von Infektionskrankheiten sicherzustellen. Damit sollen sie zu standardisierten Bewertungen, aussagekräftigeren Statistiken und letztlich objektiveren Entscheidungen beitragen.  
+Die Falldefinitionen ändern sich in unregelmäßigen Abständen, z.B. aufgrund neuer wissenschaftlicher Erkenntnisse, und werden auf der [Website des RKI](https://www.rki.de/DE/Themen/Infektionskrankheiten/Meldewesen/Falldefinitionen/falldefinitionen-node.html) veröffentlicht. Die Falldefinition orientiert sich dabei an den drei Evidenztypen:  
+
+Klinisches Bild  
+- Aufführung von klinischen Symptomen, Zeichen, Befunden und anamnestischen Angaben, die je nach Übermittlungskategorie einzeln oder in Kombination zutreffen müssen 
+
+Labordiagnostischer Nachweis  
+- Aufführung von direkten, indirekten und anderen Nachweisen, die je nach Übermittlungskategorie einzeln oder in Kombination zutreffen müssen 
+
+Epidemiologische Bestätigung  
+- Explizite Nennung von epidemiologischen Zusammenhängen und epidemiologisch bestätigten Expositionen 
+
+Diese Evidenztypen werden zu einer von fünf Falldefinitionskategorien zusammengefasst. Aus den Falldefinitionskategorien leitet sich für jede Krankheit die jeweilige Referenzdefinition ab. Diese legt fest, welche übermittelten Fälle in den Veröffentlichungen des RKI erscheinen. In den Kontextmaterialien des Datensatzes ist die Falldefinition und die darin enthaltene Referenzdefinition für RSV-Infektionen zu finden.
+
+
+
+> [Kontextmaterialien/2023-09-01_RKI-Falldefinition.pdf](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Kontextmaterialien/2023-09-01_RKI-Falldefinition.pdf)  
+
+
+#### Melde- und Übermittlungsweg
+
+Die Meldung an das Gesundheitsamt hat gemäß § 14 IfSG elektronisch zu erfolgen. Die Spezifikationen für die elektronische Meldung sind im Implementierungsleitfaden beschrieben: https://simplifier.net/guide/implementierungsleitfadenfrdemis?version=current.
+
+Die im Gesundheitsamt eingehenden Meldungen werden weitgehend automatisiert in der Gesundheitsamtssoftware weiterverarbeitet, durch weitere Ermittlungen ggf. vervollständigt und gemäß Falldefinition bewertet. Ggf. werden mehrere Meldungen zum selben Fall zusammengeführt.
+
+Erfüllt ein Fall die Falldefinition des RKI, müssen die Daten vom zuständigen Gesundheitsamt spätestens am nächsten Arbeitstag elektronisch an die zuständige Landesbehörde und von dort spätestens am nächsten Arbeitstag an das RKI übermittelt werden. Der Umfang der an das RKI übermittelten Daten ist in § 11 IfSG festgelegt. Dies beinhaltet demografische und epidemiologische Angaben. Im Verlauf einer meldepflichtigen Infektion kann zwischen verschiedenen Kennzeitpunkten unterschieden werden:  
+
+* Erkrankungsdatum des Falls  
+* Datum der Meldung, z.B. von Laboren, Krankenhäusern oder Ärzt:innen  
+* Meldedatum, Eingang/Eingabe im Gesundheitsamt  
+* Übermittlungsdatum nach IfSG  
+* Erfassungsdatum des Falls am RKI  
+
+![Abbildung: Melde- und Übermittlungsweg gemäß IfSG](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/.github/pictures/IfSG_Meldeweg-Schema.png?raw=true "Abbildung: Melde- und Übermittlungsweg gemäß IfSG")
+
+In den Statistiken des RKI wird in der Regel das Meldedatum verwendet. Das Meldedatum ist das Datum, an dem das Gesundheitsamt Kenntnis von dem Fall erlangt und ihn als solchen anlegt. Mit Einführung der elektronischen Meldung liegen das Datum der Meldung (z.B. durch das Labor) und das Meldedatum (Erfassung des Falls im Gesundheitsamt) eng beeinander. Entgegen den gesetzlichen Vorgaben kann es dazu kommen, dass die Meldung an das Gesundheitsamt oder die Übermittlung des Falls an die zuständige Landesbehörde oder von dort an das RKI verzögert erfolgt. Dies wird allgemein als Melde- bzw. Übermittlungsverzug bezeichnet.
+
+## Daten und Datenaufbereitung  
+
+Der Datensatz enthält epidemiologische Daten über die Anzahl der Respiratorische Synzytialvirusfälle in Deutschland im zeitlichen Verlauf. Genauere Informationen finden sich im Abschnitt [Falldefinition](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland?tab=readme-ov-file#Falldefinition).
+
+Im Datensatz enthalten sind:  
+
+- wöchentliche Fallzahlen- und Inzidenzdaten von RSV-Infektionen  
+- Datensatzdokumentation in deutscher Sprache  
+- Kontextmaterialien zur Datenpublikation  
+- Metadaten zur Datenpublikation  
+- Lizenz-Datei mit der Nutzungslizenz des Datensatzes  
+
+Der Datensatz enthält die aktuellen Fallzahlen der RSV-Infektionen. Diese sind im Hauptverzeichnis unter "IfSG_RSVfaelle.tsv" abrufbar und werden wöchentlich überschrieben.
+
+
+> [IfSG_RSVfaelle.tsv](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/IfSG_RSVfaelle.tsv)  
+
+Die Fallzahlendaten bilden den wochenaktuellen Datenstand, mittwochs 00:00 Uhr, aller bisher übermittelten Respiratorische Synzytialvirusfälle in Deutschland ab. Das bedeutet, dass alle bis 24:00 Uhr des Vortags von den Gesundheitsämtern über die zuständigen Landesbehörden an das RKI übermittelten RSV-Infektionen im Datenstand enthalten sind.
+
+Die Daten werden wöchentlich vollständig neu erzeugt und dieser Datenstand ersetzt den vorherigen Datenstand.
+
+Die Publikation der Daten erfolgt planmäßig donnerstags zusammen mit der aktuellen Ausgabe des [Epidemiologischen Bulletins](https://www.rki.de/DE/Aktuelles/Publikationen/Epidemiologisches-Bulletin/epidemiologisches-bulletin-node.html) des RKI. 
+
+> [!NOTE]
+> Von März 2025 bis Februar 2026 wurden nicht alle an das RKI übermittelten RSV-Infektionen zeitnah veröffentlicht, da bei Infrastrukturanpassungen die Datenabfrage technisch nicht korrekt umgesetzt wurde. Am 23.02.2026 wurden die korrigierten Daten nachträglich veröffentlicht. Die Differenz, die aufgrund dieser Anpassung entstanden ist, finden Sie in der [entsprechenden Veröffentlichung](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/pull/5/changes).
+
+### Variablen und Variablenausprägungen
+
+In den Fallzahlen differenzieren die Spalten nach verschiedenen Merkmalen einer Fallgruppe. Pro Zeile ist eine ein-eindeutige Fallgruppe abgebildet. Fallgruppen werden durch folgende Eigenschaften charakterisiert (in den Klammern finden sich die Merkmale dieser Eigenschaften):  
+
+- Zeitlicher Verlauf (Meldewoche)  
+- Geografische Zuordnung (Region, Region_ID)  
+- Personengruppe (Altersgruppe)  
+- Größe der Gruppe (Anzahl, Inzidenz pro 100.000)  
+
+
+#### Variablenausprägungen
+
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "IfSG_RSVfaelle", "lang": "de"} -->
+
+Die Datei [IfSG_RSVfaelle.tsv](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/IfSG_RSVfaelle.tsv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Data Package Standard](https://datapackage.org/) in [tableschema_IfSG_RSVfaelle.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/schemas/tableschema_IfSG_RSVfaelle.json) hinterlegt:
+> [tableschema_IfSG_RSVfaelle.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/schemas/tableschema_IfSG_RSVfaelle.json)
 
 <!-- DATA_SCHEMA_TABLE_START -->
-| Variable                            | Typ     | Ausprägungen                                                                                                                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                         |
-|:------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Bundesland_Name                     | string  | Werte:<br>`Baden-Württemberg`, `Bayern`, `Berlin`, `Brandenburg`, `Bremen`, `Saarland`, `Sachsen-Anhalt`, …                                                                                                     | Bundesländer Deutschlands                                                                                                                                                                                                                                                                                                                                                                                            |
-| Landkreis_Name                      | string  | Werte:<br>`Aichach-Friedberg`, `Alb-Donau-Kreis`, `Altmarkkreis Salzwedel`, `Altötting`, `Amberg-Sulzbach`, `Anhalt-Bitterfeld`, `Ansbach`, …                                                                   | Name des Landkreises bzw. der kreisfreien Stadt (inkl. Berliner Bezirke)                                                                                                                                                                                                                                                                                                                                             |
-| Landkreis_ID                        | string  | Werte:<br>`1001`, `1002`, `1003`, `1004`, `10041`, `10042`, `10043`, …<br>Fehlende Werte:<br>leeres Feld                                                                                                        | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel zuzüglich der 12 Bezirke Berlins (11000001 bis 11000012)                                                                                                                                                                                                                                                                         |
-| Einschulungsjahr                    | integer | Werte: `2006` - `2025`                                                                                                                                                                                          | Einschulungsjahrgang. Die verfügbaren Einschulungsjahrgänge, für welche die Länder Daten zur Verfügung stellten                                                                                                                                                                                                                                                                                                      |
-| Geschlecht                          | string  | Werte:<br>`Junge`, `Mädchen`<br>Fehlende Werte:<br>`Jahr nicht verfügbar`, `Daten des Kreises nicht übermittelt`                                                                                                | Sex (biologisches Geschlecht). Ausprägung „divers“ wurde nicht in allen Ländern und somit nicht einheitlich bzw. vergleichbar erfasst.                                                                                                                                                                                                                                                                               |
-| Anzahl_Untersucht                   | integer | Werte: `≥0`<br>Fehlende Werte:<br>`Altersgruppe nicht übermittelt`, `Daten des Kreises nicht übermittelt`, `Geheimhaltungsregel`, `Jahr nicht verfügbar`                                                        | Anzahl untersuchter Kinder (mit vollständigen Daten zu Alter, Geschlecht, Körpergröße und Körpergewicht)                                                                                                                                                                                                                                                                                                             |
-| Anzahl_Uebergewicht                 | number  | Werte: `≥0`<br>Fehlende Werte:<br>`Altersgruppe nicht übermittelt`, `Daten des Kreises nicht übermittelt`, `Geheimhaltungsregel`, `Jahr nicht verfügbar`, `keine untersuchten Kinder`                           | Anzahl Kinder mit Übergewicht (>90. Perzentil nach Kromeyer Hauschild)                                                                                                                                                                                                                                                                                                                                               |
-| Anzahl_Adipositas                   | number  | Werte: `≥0`<br>Fehlende Werte:<br>`Altersgruppe nicht übermittelt`, `Daten des Kreises nicht übermittelt`, `Geheimhaltungsregel`, `Jahr nicht verfügbar`, `keine untersuchten Kinder`                           | Anzahl Kinder mit Adipositas (>97. Perzentil nach Kromeyer Hauschild)                                                                                                                                                                                                                                                                                                                                                |
-| Alter                               | string  | Werte:<br>`4 Jahre`, `5 Jahre`, `6 Jahre`, `7 Jahre`<br>Fehlende Werte:<br>`Jahr nicht verfügbar`, `Daten des Kreises nicht übermittelt`                                                                        | Alter der untersuchten Kinder                                                                                                                                                                                                                                                                                                                                                                                        |
-| GISD                                | string  | Werte:<br>`niedrig`, `mittel`, `hoch`<br>Fehlende Werte:<br>`geänderte Kreisstruktur`, `Jahr nicht verfügbar`, `Kontextfaktor nicht verfügbar`                                                                  | German Index of Socioeconomic deprivation. Kategorisierung basiert auf den drei Kategorien des GISD ([https://www.doi.org/10.25646/10640](https://www.doi.org/10.25646/10640)). Daten dazu unter [https://www.doi.org/10.5281/zenodo.6840303](https://www.doi.org/10.5281/zenodo.6840303)                                                                                                                            |
-| Kreistyp                            | string  | Werte:<br>`dünn besiedelter ländlicher Kreis`, `kreisfreie Großstadt`, `ländlicher Kreis mit Verdichtungsansätzen`, `städtischer Kreis`<br>Fehlende Werte:<br>`Jahr nicht verfügbar`, `geänderte Kreisstruktur` | Siedlungsstruktureller Kreistyp (BBSR). Kategorisierung nach [https://www.bbsr.bund.de/BBSR/DE/forschung/raumbeobachtung/Raumabgrenzungen/deutschland/kreise/siedlungsstrukturelle-kreistypen/kreistypen.html](https://www.bbsr.bund.de/BBSR/DE/forschung/raumbeobachtung/Raumabgrenzungen/deutschland/kreise/siedlungsstrukturelle-kreistypen/kreistypen.html)                                                      |
-| Ganztagsbetreuung                   | number  | Werte: `0` - `100`<br>Fehlende Werte:<br>leeres Feld                                                                                                                                                            | Anteil der in Ganztagsbetreuung (> 7h/Tag) betreuten Kinder an den Kindern gleichen Alters in % (3-5 Jahre).                                                                                                                                                                                                                                                                                                         |
-| Ganztagsbetreuung_<br>Kategorie     | string  | Werte:<br>`< 20%`, `20 bis < 40%`, `40 bis < 60%`, `60 bis < 80%`, `≥ 80%`<br>Fehlende Werte:<br>`geänderte Kreisstruktur`, `Jahr nicht verfügbar`, `Kontextfaktor nicht verfügbar`                             | Anteil der in Ganztagsbetreuung (> 7h/Tag) betreuten Kinder an den Kindern gleichen Alters in % (3-5 Jahre). Diese 5 Kategorien wurden bereits im Ländermonitor Frühkindliche Bildungssysteme verwendet [https://www.laendermonitor.de/de/fokus-regionale-daten/kinder-und-eltern/betreuungsumfang-in-kitas-2](https://www.laendermonitor.de/de/fokus-regionale-daten/kinder-und-eltern/betreuungsumfang-in-kitas-2) |
-| Ohne_Schulabschluss                 | number  | Werte: `0` - `100`<br>Fehlende Werte:<br>leeres Feld                                                                                                                                                            | Anteil Schulabgänger:innen ohne Hauptschulabschluss an Schulabgänger:innen allgemeinbildender Schulen                                                                                                                                                                                                                                                                                                                |
-| Ohne_Schulabschluss_<br>Kategorie   | string  | Werte:<br>`≤ 6%`, `> 6%`<br>Fehlende Werte:<br>`geänderte Kreisstruktur`, `Jahr nicht verfügbar`, `Kontextfaktor nicht verfügbar`                                                                               | Anteil Schulabgänger:innen ohne Hauptschulabschluss an Schulabgänger:innen allgemeinbildender Schulen. Einteilung auf Grundlage des deutschlandweiten Medians in `viel` (Wert liegt über dem Median) oder `wenig` (Wert liegt unter dem Median)                                                                                                                                                                      |
-| Vereinsmitgliedschaft               | number  | Werte: `≥0`<br>Fehlende Werte:<br>leeres Feld                                                                                                                                                                   | Anzahl Mitgliedschaften in Sportvereinen je 100 Kinder                                                                                                                                                                                                                                                                                                                                                               |
-| Vereinsmitgliedschaft_<br>Kategorie | string  | Werte:<br>`≤ 25`, `> 25`<br>Fehlende Werte:<br>`geänderte Kreisstruktur`, `Jahr nicht verfügbar`, `Kontextfaktor nicht verfügbar`                                                                               | Anzahl Mitgliedschaften in Sportvereinen je 100 Kinder. Einteilung auf Grundlage des deutschlandweiten Medians in `viel` (Wert liegt über dem Median) oder `wenig` (Wert liegt unter dem Median)                                                                                                                                                                                                                     |
-| Bedarfsgemeinschaften               | number  | Werte: `0` - `100`<br>Fehlende Werte:<br>leeres Feld                                                                                                                                                            | Anteil Kinder in SGB-II-Bedarfsgemeinschaften an der Altersgruppe in %                                                                                                                                                                                                                                                                                                                                               |
-| Bedarfsgemeinschaften_<br>Kategorie | string  | Werte:<br>`< 5%`, `10 bis < 15%`, `15 bis < 20%`, `5 bis < 10%`, `≥ 20%`<br>Fehlende Werte:<br>`geänderte Kreisstruktur`, `Jahr nicht verfügbar`                                                                | Anteil Kinder in SGB-II-Bedarfsgemeinschaften an der Altersgruppe in %. Diese 5 Kategorien wurde bis 2021 im Deutschlandatlas verwendet [https://www.deutschlandatlas.bund.de/DE/Karten/Wie-wir-lernen/181/_node.html](https://www.deutschlandatlas.bund.de/DE/Karten/Wie-wir-lernen/181/_node.html)                                                                                                                 |
-| Erholungsflaeche                    | number  | Werte: `≥0`<br>Fehlende Werte:<br>leeres Feld                                                                                                                                                                   | Sport-, Freizeit- und Erholungsfläche (ha) je 1.000 Kinder                                                                                                                                                                                                                                                                                                                                                           |
-| Erholungsflaeche_<br>Kategorie      | string  | Werte:<br>`> 82`, `≤ 82`<br>Fehlende Werte:<br>`geänderte Kreisstruktur`, `Jahr nicht verfügbar`, `Kontextfaktor nicht verfügbar`                                                                               | Sport-, Freizeit- und Erholungsfläche (ha) je 1.000 Kinder. Einteilung auf Grundlage des deutschlandweiten Medians in `viel` (Wert liegt über dem Median) oder `wenig` (Wert liegt unter dem Median)                                                                                                                                                                                                                 |
+| Variable     | Typ     | Ausprägungen                                                                                       | Beschreibung                                                                                                                                                                                                                                                                |
+|:-------------|:--------|:---------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Meldewoche   | date    | Format: `YYYY-Www`                                                                                 | Kalenderwoche, in der der Fall dem Gesundheitsamt bekannt geworden ist. `JJJJ` entspricht der Jahresangabe, `Www` entspricht der Wochenangabe nach [ISO 8601](https://de.wikipedia.org/wiki/ISO_8601) (beispielsweise `2021-W34` für die 34. Kalenderwoche des Jahres 2021) |
+| Region       | string  | Werte:<br>`Baden-Württemberg`, `Bayern`, `Berlin`, `Brandenburg`, `Bremen`, `Hamburg`, `Hessen`, … | Name der Bezugsregion, Bundesland bzw. Deutschland gesamt                                                                                                                                                                                                                   |
+| Region_Id    | string  | Werte:<br>`01`, `02`, `03`, `04`, `05`, `06`, `07`, …<br>Fehlende Werte:<br>`NA`                   | ID nach dem Amtlichen Gemeindeschlüssel. Zusätzlich `00` für Deutschland gesamt und `NA` für unbekannt                                                                                                                                                                      |
+| Altersgruppe | string  | Werte:<br>`00-04`, `05-14`, `15-34`, `35-59`, `60-79`, `80+`, `00+`, …                             | Altersspanne der in der Gruppe enthaltenen Fälle                                                                                                                                                                                                                            |
+| Fallzahl     | integer | Werte: `≥0`                                                                                        | Anzahl der Fälle in der Fallgruppe                                                                                                                                                                                                                                          |
+| Inzidenz     | number  | Fehlende Werte:<br>`NA`                                                                            | Anzahl der Fälle pro 100.000 Personen bezogen auf die Gesamtbevölkerung der Fallgruppe (`NA`, falls Altersgruppe oder Region unbekannt sind)                                                                                                                                |
 
 <!-- DATA_SCHEMA_TABLE_END -->
 
 <!-- DATA_SCHEMA_SPECIFICATION_END -->
 
 
-#### Formatierung  
+#### Formatierung der Daten 
 
-Die Daten sind im Datensatz als .xlsx-Datei und Tab-separierte .tsv-Datei enthalten. Der verwendete Zeichensatz der .tsv-Datei ist UTF-8.  
+Die Daten sind im Datensatz als tabulatorseparierte .tsv-Datei enthalten. Der verwendete Zeichensatz der .tsv-Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Tabulator [tab]. Datumsangaben sind im ISO-8601-Standard formatiert.
 
 * Zeichensatz: UTF-8  
-* .tsv-Trennzeichen: Tab "\t"  
+* Datumsformat: ISO 8601  
+* .tsv-Trennzeichen: Tabulator [tab]  
+
 
 <!-- FOOTER_START: {"lang": "de"} -->
 
@@ -115,11 +180,11 @@ Die Daten sind im Datensatz als .xlsx-Datei und Tab-separierte .tsv-Datei enthal
 
 Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:  
 
-> [Metadaten/](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/Metadaten/) 
+> [Metadaten/](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/tree/main/Metadaten/) 
 
-Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter [https://developers.zenodo.org/#representation](https://developers.zenodo.org/#representation) nachlesbar.
+Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter [https://developers.zenodo.org/#representation](https://developers.zenodo.org/#representation) nachlesbar.
  
-> [Metadaten/zenodo.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/zenodo.json)  
+> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/zenodo.json)  
 
 In der zenodo.json ist neben dem Publikationsdatum (`"publication_date"`) auch der Datenstand in folgendem Format enthalten (Beispiel):  
 
@@ -142,11 +207,11 @@ Der Data Package Standard wird von der [Open Knowledge Foundation](https://okfn.
 
 Die Liste der in diesem Repository enthaltenen Daten ist in folgender Datei hinterlegt:
 
-> [datapackage.json](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/datapackage.json)
+> [datapackage.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/tree/main/datapackage.json)
 
 Für tabellarische Daten definieren wir zusätzlich ein [Table Schema](https://datapackage.org/standard/table-schema/), das die Struktur der Tabellen beschreibt, einschließlich Spaltennamen, Datentypen und Validierungsregeln. Diese Schema-Dateien finden sich unter:
 
-> [Metadaten/schemas/](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/Metadaten/schemas) 
+> [Metadaten/schemas/](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/tree/main/Metadaten/schemas) 
 
 
 
@@ -163,12 +228,7 @@ Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [Git
  
 ### Lizenz  
 
-Der Datensatz "Open Data Sandbox" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
+Der Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/LIZENZ) Datei des Datensatzes.  
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/LIZENZ) Datei des Datensatzes.  
 <!-- FOOTER_END -->
-
-## Danksagung  
-
-
-Für die Erhebung und Bereitstellung der Daten und der Untertützung des Projektes danken wir den Gesundheitsämtern bzw. den Kinder- und Jugendgesundheitsdiensten der Kreise und kreisfreien Städte in Baden-Württemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, im Saarland, Sachsen, Sachsen-Anhalt, und Schleswig-Holstein und Thüringen.
