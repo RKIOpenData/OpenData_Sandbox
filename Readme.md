@@ -128,7 +128,7 @@ Die Daten werden wöchentlich vollständig neu erzeugt und dieser Datenstand ers
 
 Die Publikation der Daten erfolgt planmäßig donnerstags zusammen mit der aktuellen Ausgabe des [Epidemiologischen Bulletins](https://www.rki.de/DE/Aktuelles/Publikationen/Epidemiologisches-Bulletin/epidemiologisches-bulletin-node.html) des RKI. 
 
-> [!NOTE]
+> [!Note]
 > Von März 2025 bis Februar 2026 wurden nicht alle an das RKI übermittelten RSV-Infektionen zeitnah veröffentlicht, da bei Infrastrukturanpassungen die Datenabfrage technisch nicht korrekt umgesetzt wurde. Am 23.02.2026 wurden die korrigierten Daten nachträglich veröffentlicht. Die Differenz, die aufgrund dieser Anpassung entstanden ist, finden Sie in der [entsprechenden Veröffentlichung](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/pull/5/changes).
 
 ### Variablen und Variablenausprägungen
