@@ -3,31 +3,32 @@
 
 Dokumentation  
 
-# Respiratorische Synzytialvirusfälle in Deutschland
+# Open Data Sandbox
 
 <br> 
 <br> 
 <br> 
 
-[**Robert Koch-Institut**](https://www.rki.de/)
+[**Vorname Name**](https://orcid.org/0000-0002-2818-3641)&sup1;
 
 <br> 
 
-**Beitragende**   
-[Fachgebiet 32](https://www.rki.de/fg32)&sup1;, [Fachgebiet 36](https://www.rki.de/fg36)&sup1;, & [Fachgebiet IT 4](https://www.rki.de/it4)&sup1;
 
-&emsp;&emsp;&sup1; [Robert Koch-Institut](https://www.rki.de/)
+
+&emsp;&emsp;&sup1; Robert Koch-Institut
 
 <br> 
 
 **Zitieren**  
-Robert Koch-Institut. (2026). Respiratorische Synzytialvirusfälle in Deutschland [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.18739882](https://doi.org/10.5281/zenodo.18739882)
+<!-- CITATION_START: {"citation_style": "apa", "markdown_style": "plain"} -->
+Name, V. (2026). Open Data Sandbox [Data set]. Zenodo. [https://doi.org/10.5072/zenodo.493872](https://doi.org/10.5072/zenodo.493872)
+<!-- CITATION_END -->
+
 
 <br>
 
-
 **Zusammenfassung**    
-Im Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" des Robert Koch-Instituts werden die Daten basierend auf Meldungen zu Infektionen mit dem Respiratorischen Synzytial-Virus (RSV) nach dem Infektionsschutzgesetz (IfSG) bereitgestellt. Darin enthalten sind Informationen auf Bundeslandebene zu Infektionen nach Falldefinition des Robert Koch-Instituts, differenziert nach Altersgruppen. Diese Daten dienen als Grundlage für epidemiologische Bewertungen und gesundheitspolitische Maßnahmen.
+Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
 
 <br>
 
@@ -193,17 +194,15 @@ Die Daten sind im Datensatz als tabulatorseparierte .tsv-Datei enthalten. Der ve
 
 <!-- FOOTER_START: {"lang": "de"} -->
 
-
-
 ### Metadaten  
 
 Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadatenordner hinterlegt:  
 
-> [Metadaten/](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/tree/main/Metadaten/) 
+> [Metadaten/](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/Metadaten/) 
 
-Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter [https://developers.zenodo.org/#representation](https://developers.zenodo.org/#representation) nachlesbar.
+Versionierung und DOI-Vergabe erfolgt über [Zenodo.org](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter [https://developers.zenodo.org/#representation](https://developers.zenodo.org/#representation) nachlesbar.
  
-> [Metadaten/zenodo.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/Metadaten/zenodo.json)  
+> [Metadaten/zenodo.json](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/Metadaten/zenodo.json)  
 
 In der zenodo.json ist neben dem Publikationsdatum (`"publication_date"`) auch der Datenstand in folgendem Format enthalten (Beispiel):  
 
@@ -226,11 +225,11 @@ Der Data Package Standard wird von der [Open Knowledge Foundation](https://okfn.
 
 Die Liste der in diesem Repository enthaltenen Daten ist in folgender Datei hinterlegt:
 
-> [datapackage.json](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/tree/main/datapackage.json)
+> [datapackage.json](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/datapackage.json)
 
 Für tabellarische Daten definieren wir zusätzlich ein [Table Schema](https://datapackage.org/standard/table-schema/), das die Struktur der Tabellen beschreibt, einschließlich Spaltennamen, Datentypen und Validierungsregeln. Diese Schema-Dateien finden sich unter:
 
-> [Metadaten/schemas/](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/tree/main/Metadaten/schemas) 
+> [Metadaten/schemas/](https://github.com/RKIOpenData/OpenData_Sandbox/tree/main/Metadaten/schemas) 
 
 
 
@@ -238,16 +237,16 @@ Für tabellarische Daten definieren wir zusätzlich ein [Table Schema](https://d
 
 Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [GitHub.com](http://GitHub.com/), [OpenCoDE](https://gitlab.opencode.de) und [Edoc.rki.de](http://Edoc.rki.de/) bereitgestellt:  
 
-- https://zenodo.org/communities/robertkochinstitut  
-- https://github.com/robert-koch-institut  
-- https://gitlab.opencode.de/robert-koch-institut  
-- https://edoc.rki.de/  
+- [https://zenodo.org/communities/robertkochinstitut](https://zenodo.org/communities/robertkochinstitut)  
+- [https://github.com/robert-koch-institut](https://github.com/robert-koch-institut)  
+- [https://gitlab.opencode.de/robert-koch-institut](https://gitlab.opencode.de/robert-koch-institut)  
+- [https://edoc.rki.de/](https://edoc.rki.de/) 
 
 
- 
+
 ### Lizenz  
 
-Der Datensatz "Respiratorische Synzytialvirusfälle in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
+Der Datensatz "Open Data Sandbox" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/Respiratorische_Synzytialvirusfaelle_in_Deutschland/blob/main/LIZENZ) Datei des Datensatzes.  
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/RKIOpenData/OpenData_Sandbox/blob/main/LIZENZ) Datei des Datensatzes.  
 <!-- FOOTER_END -->

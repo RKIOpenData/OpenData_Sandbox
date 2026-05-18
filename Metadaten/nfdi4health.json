@@ -3,12 +3,13 @@
     "classification": {
       "type": "Dataset"
     },
-    "collection": [
-      "Robert Koch Institute"
-    ],
     "descriptions": [
       {
         "language": "DE (German)",
+        "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum."
+      },
+      {
+        "language": "EN (English)",
         "text": "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum."
       }
     ],
@@ -16,11 +17,15 @@
       {
         "language": "DE (German)",
         "text": "Open Data Sandbox"
+      },
+      {
+        "language": "EN (English)",
+        "text": "Open Data Sandbox"
       }
     ],
     "ids": [
       {
-        "identifier": "10.5072/zenodo.318172",
+        "identifier": "10.5072/zenodo.493872",
         "typeGeneral": "Dataset",
         "relationType": "A references B",
         "scheme": "DOI"
@@ -37,10 +42,12 @@
     },
     "keywords": [
       {
-        "label": "Deutschland"
+        "label": "Deutschland",
+        "code": "http://id.nlm.nih.gov/mesh/D005858"
       },
       {
-        "label": "Germany"
+        "label": "Germany",
+        "code": "http://id.nlm.nih.gov/mesh/D005858"
       },
       {
         "label": "RKI"
@@ -53,19 +60,19 @@
       },
       {
         "label": "Gesundheitsberichterstattung",
-        "code": "info:ddc/22/de//614.42"
+        "code": "http://id.nlm.nih.gov/mesh/D062486"
       },
       {
         "label": "Epidemiologie",
-        "code": "info:ddc/22/de//614.4"
+        "code": "http://id.nlm.nih.gov/mesh/D004813"
       },
       {
         "label": "Public health surveillance",
-        "code": "info:ddc/22/eng//614.42"
+        "code": "http://id.nlm.nih.gov/mesh/D062486"
       },
       {
         "label": "Epidemiology",
-        "code": "info:ddc/22/eng//614.4"
+        "code": "http://id.nlm.nih.gov/mesh/D004813"
       }
     ],
     "languages": [
@@ -81,7 +88,7 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "2026-02-06"
+      "version": "2026-05-18"
     },
     "webpage": "https://robert-koch-institut.github.io/OpenData_Sandbox",
     "contributors": [
