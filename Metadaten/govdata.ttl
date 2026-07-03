@@ -9,16 +9,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a dcat:Dataset ;
     dcatde:contributor <https://zenodo.org/record/493872#author-1> ;
     dcatde:contributorID <http://dcat-ap.de/def/contributors/robertKochInstitut> ;
-    dcatde:maintainer
-        [
-            a foaf:Agent ;
-            foaf:mbox "opendata@rki.de" ;
-            foaf:name "Robert Koch-Institut | Open Data Team" ;
-        ] ;
     dct:description "<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p>" ;
-    dct:issued "2026-05-18T12:42:31+02:00"^^xsd:dateTime ;
-    dct:license <https://dcat-ap.de/def/licenses/cc-by/4.0> ;
-    dct:modified "2024-03-20T10:00:00+01:00"^^xsd:dateTime ;
+    dct:issued "2026-07-03T15:45:06+02:00"^^xsd:dateTime ;
+    dct:modified "2024-06-20T11:00:00+02:00"^^xsd:dateTime ;
     dct:publisher
         [
             a foaf:Organization ;
@@ -29,9 +22,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcat:contactPoint
         [
             a vcard:Organization ;
-            vcard:fn "Robert Koch-Institut | Open Data Projektteam" ;
+            vcard:fn "Robert Koch-Institut | Open Data Team" ;
             vcard:hasCountryName "Deutschland" ;
-            vcard:hasEmail "opendata@rki.de" ;
+            vcard:hasEmail <mailto:opendata@rki.de> ;
             vcard:hasLocality "Berlin" ;
             vcard:hasPostalCode "13353" ;
             vcard:hasStreetAddress "Nordufer 20" ;
@@ -70,7 +63,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte." ;
     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
     dct:license <https://dcat-ap.de/def/licenses/cc-by/4.0> ;
-    dct:modified "2026-05-18T12:42:31+02:00"^^xsd:dateTime ;
+    dct:modified "2026-07-03T15:45:06+02:00"^^xsd:dateTime ;
     dct:title "Github - Open Data Sandbox" ;
     dcat:accessURL <https://github.com/RKIOpenData/OpenData_Sandbox> ;
 .
@@ -82,7 +75,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dct:description "Zenodo ist eine europäische Plattform, die es Forschern, Wissenschaftlern und anderen Personen ermöglicht, Forschungsdaten, Publikationen, Präsentationen und andere wissenschaftliche Inhalte kostenlos zu teilen und zu veröffentlichen. Eine der Hauptstärken von Zenodo ist die Bereitstellung der Daten nach den FAIR Prinzipien, Daten sind langzeitarchiviert und wissenschaftlich zitierbar, um den Datenaustausch und die Zusammenarbeit zwischen Forschern zu erleichtern." ;
     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
     dct:license <https://dcat-ap.de/def/licenses/cc-by/4.0> ;
-    dct:modified "2026-05-18T12:42:31+02:00"^^xsd:dateTime ;
+    dct:modified "2026-07-03T15:45:06+02:00"^^xsd:dateTime ;
     dct:title "Zenodo - Open Data Sandbox" ;
     dcat:accessURL <https://zenodo.org/record/493872> ;
 .
@@ -95,7 +88,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dct:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
     dct:license <https://dcat-ap.de/def/licenses/cc-by/4.0> ;
-    dct:modified "2026-05-18T12:42:31+02:00"^^xsd:dateTime ;
-    dct:title "Dokumentation_OpenData_Sandbox.pdf" ;
-    dcat:accessURL <https://zenodo.org/record/493872/files/Dokumentation_OpenData_Sandbox.pdf> ;
+    dct:modified "2026-07-03T15:45:06+02:00"^^xsd:dateTime ;
+    dct:title "[Dokumentation]_OpenData_Sandbox.pdf" ;
+    dcat:accessURL <https://zenodo.org/record/493872/files/[Dokumentation]_OpenData_Sandbox.pdf> ;
 .
